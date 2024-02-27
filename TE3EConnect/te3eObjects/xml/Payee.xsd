@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="Payee">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="PayeeID" type="xs:string" minOccurs="0" />
+        <xs:element name="PayeeIndex" type="xs:string" minOccurs="0" />
+        <xs:element name="PayeeNum" type="xs:string" minOccurs="0" />
+        <xs:element name="Vendor" type="xs:string" minOccurs="0" />
+        <xs:element name="RelatedPayee" type="xs:string" minOccurs="0" />
+        <xs:element name="Entity" type="xs:string" minOccurs="0" />
+        <xs:element name="DisplayName" type="xs:string" minOccurs="0" />
+        <xs:element name="SortString" type="xs:string" minOccurs="0" />
+        <xs:element name="Terms" type="xs:string" minOccurs="0" />
+        <xs:element name="Timekeeper" type="xs:string" minOccurs="0" />
+        <xs:element name="Number" type="xs:string" minOccurs="0" />
+        <xs:element name="Comments" type="xs:string" minOccurs="0" />
+        <xs:element name="Office" type="xs:string" minOccurs="0" />
+        <xs:element name="IsOnlyOffice" type="xs:string" minOccurs="0" />
+        <xs:element name="NxUnit" type="xs:string" minOccurs="0" />
+        <xs:element name="IsOnlyUnit" type="xs:string" minOccurs="0" />
+        <xs:element name="Language" type="xs:string" minOccurs="0" />
+        <xs:element name="Currency" type="xs:string" minOccurs="0" />
+        <xs:element name="PayeeType" type="xs:string" minOccurs="0" />
+        <xs:element name="PayeeStatus" type="xs:string" minOccurs="0" />
+        <xs:element name="ReferenceNum" type="xs:string" minOccurs="0" />
+        <xs:element name="TaxCode" type="xs:string" minOccurs="0" />
+        <xs:element name="OpenDate" type="xs:string" minOccurs="0" />
+        <xs:element name="CloseDate" type="xs:string" minOccurs="0" />
+        <xs:element name="IsPORequired" type="xs:string" minOccurs="0" />
+        <xs:element name="POMatchList" type="xs:string" minOccurs="0" />
+        <xs:element name="TemplatePO" type="xs:string" minOccurs="0" />
+        <xs:element name="Is1099" type="xs:string" minOccurs="0" />
+        <xs:element name="Flag1099" type="xs:string" minOccurs="0" />
+        <xs:element name="TaxNum" type="xs:string" minOccurs="0" />
+        <xs:element name="AltNum" type="xs:string" minOccurs="0" />
+        <xs:element name="NameCtrl" type="xs:string" minOccurs="0" />
+        <xs:element name="Project" type="xs:string" minOccurs="0" />
+        <xs:element name="CkSite" type="xs:string" minOccurs="0" />
+        <xs:element name="POSite" type="xs:string" minOccurs="0" />
+        <xs:element name="Site1099" type="xs:string" minOccurs="0" />
+        <xs:element name="APGLNat" type="xs:string" minOccurs="0" />
+        <xs:element name="ExpenseGLNat" type="xs:string" minOccurs="0" />
+        <xs:element name="VchrStatus" type="xs:string" minOccurs="0" />
+        <xs:element name="ShipMethod" type="xs:string" minOccurs="0" />
+        <xs:element name="BankAcct" type="xs:string" minOccurs="0" />
+        <xs:element name="IsEFTOnly" type="xs:string" minOccurs="0" />
+        <xs:element name="IsSeparateCheck" type="xs:string" minOccurs="0" />
+        <xs:element name="ContactInfo" type="xs:string" minOccurs="0" />
+        <xs:element name="PayeeCategory" type="xs:string" minOccurs="0" />
+        <xs:element name="PayeeAttribute" type="xs:string" minOccurs="0" />
+        <xs:element name="CostType" type="xs:string" minOccurs="0" />
+        <xs:element name="APGLAcct" type="xs:string" minOccurs="0" />
+        <xs:element name="APTranType" type="xs:string" minOccurs="0" />
+        <xs:element name="APUnitLocal" type="xs:string" minOccurs="0" />
+        <xs:element name="ExpenseUnitLocal" type="xs:string" minOccurs="0" />
+        <xs:element name="TaxArea" type="xs:string" minOccurs="0" />
+        <xs:element name="IsIncurPayeeRequired" type="xs:string" minOccurs="0" />
+        <xs:element name="ExpenseAcct" type="xs:string" minOccurs="0" />
+        <xs:element name="IsRemittanceSent" type="xs:string" minOccurs="0" />
+        <xs:element name="RemittanceDeliveryMethodList" type="xs:string" minOccurs="0" />
+        <xs:element name="WithholdingTax" type="xs:string" minOccurs="0" />
+        <xs:element name="WithholdingTaxRef" type="xs:string" minOccurs="0" />
+        <xs:element name="IsPreferred" type="xs:string" minOccurs="0" />
+        <xs:element name="IsConfidential" type="xs:string" minOccurs="0" />
+        <xs:element name="Name" nillable="true" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:simpleContent msdata:ColumnName="Name_Text" msdata:Ordinal="0">
+              <xs:extension base="xs:string">
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Description" nillable="true" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:simpleContent msdata:ColumnName="Description_Text" msdata:Ordinal="0">
+              <xs:extension base="xs:string">
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GLNat" nillable="true" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:simpleContent msdata:ColumnName="GLNat_Text" msdata:Ordinal="0">
+              <xs:extension base="xs:string">
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GLLocal" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="Payee" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

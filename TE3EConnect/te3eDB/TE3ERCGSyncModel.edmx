@@ -1,0 +1,785 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="TE3ERCGSyncModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ClientMaster">
+          <Key>
+            <PropertyRef Name="ClientKeyId" />
+          </Key>
+          <Property Name="ClientKeyId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AppId" Type="varchar" MaxLength="500" />
+          <Property Name="AppKey" Type="varchar" MaxLength="500" />
+          <Property Name="ClientName" Type="varchar" MaxLength="100" />
+          <Property Name="CreatedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="CustomSubjectLine">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ClientIndex" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="ClientName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="SpecialSubjectLine" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="SpecificEmail" Type="nvarchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'TE_3E_RCG_SYNC.dbo.ExcludedClientCollectionWF' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="ExcludedClientCollectionWF">
+          <Key>
+            <PropertyRef Name="ClientID" />
+            <PropertyRef Name="ClientIndex" />
+            <PropertyRef Name="Number" />
+            <PropertyRef Name="DisplayName" />
+            <PropertyRef Name="RelatedClient" />
+            <PropertyRef Name="IsExcluded" />
+          </Key>
+          <Property Name="ClientID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ClientIndex" Type="int" Nullable="false" />
+          <Property Name="Number" Type="nvarchar" MaxLength="64" Nullable="false" />
+          <Property Name="DisplayName" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="SortString" Type="nvarchar" MaxLength="128" />
+          <Property Name="RelatedClient" Type="int" Nullable="false" />
+          <Property Name="IsExcluded" Type="bit" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'TE_3E_RCG_SYNC.dbo.TrackerSafeEMSImport' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="TrackerSafeEMSImport">
+          <Key>
+            <PropertyRef Name="MatterID" />
+            <PropertyRef Name="MattIndex" />
+          </Key>
+          <Property Name="MatterID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="MattIndex" Type="int" Nullable="false" />
+          <Property Name="MattNumber" Type="nvarchar" MaxLength="64" />
+          <Property Name="MattName" Type="nvarchar" MaxLength="255" />
+          <Property Name="Description" Type="nvarchar" MaxLength="1024" />
+          <Property Name="MattStatus" Type="nvarchar" MaxLength="16" />
+          <Property Name="MattStatusDate" Type="datetime" />
+          <Property Name="MattType" Type="nvarchar" MaxLength="16" />
+          <Property Name="OpenDate" Type="datetime" />
+          <Property Name="ClientIndex" Type="int" />
+          <Property Name="ClientNumber" Type="nvarchar" MaxLength="64" />
+          <Property Name="ClientName" Type="nvarchar" MaxLength="128" />
+          <Property Name="ClientFormattedString" Type="nvarchar" MaxLength="500" />
+          <Property Name="ClientStreet" Type="nvarchar" MaxLength="500" />
+          <Property Name="ClientCity" Type="nvarchar" MaxLength="500" />
+          <Property Name="ClientState" Type="nvarchar" MaxLength="500" />
+          <Property Name="ClientZipCode" Type="nvarchar" MaxLength="500" />
+          <Property Name="Contact Email" Type="nvarchar" MaxLength="255" />
+          <Property Name="ClaimNo" Type="nvarchar" MaxLength="255" />
+          <Property Name="ReferenceNumber" Type="nvarchar" MaxLength="255" />
+          <Property Name="Contact Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Contact Phone" Type="nvarchar" MaxLength="64" />
+          <Property Name="Insured Name" Type="nvarchar" MaxLength="512" />
+          <Property Name="Claimant" Type="nvarchar" MaxLength="512" />
+          <Property Name="Style" Type="nvarchar" MaxLength="512" />
+          <Property Name="Cause Number" Type="nvarchar" MaxLength="512" />
+          <Property Name="Date of Loss" Type="nvarchar" MaxLength="64" />
+          <Property Name="OfficeCode" Type="nvarchar" MaxLength="16" />
+          <Property Name="OfficeDescription" Type="nvarchar(max)" />
+          <Property Name="OfficeFormattedString" Type="nvarchar" MaxLength="500" />
+          <Property Name="OfficeName" Type="nvarchar" MaxLength="500" />
+          <Property Name="OfficeStreet" Type="nvarchar" MaxLength="500" />
+          <Property Name="OfficeCity" Type="nvarchar" MaxLength="500" />
+          <Property Name="OfficeState" Type="nvarchar" MaxLength="500" />
+          <Property Name="OfficeZipCode" Type="nvarchar" MaxLength="500" />
+          <Property Name="OfficePhone" Type="nvarchar" MaxLength="500" />
+          <Property Name="OfficeFax" Type="nvarchar" MaxLength="500" />
+          <Property Name="CertAuthNo" Type="nvarchar" MaxLength="500" />
+          <Property Name="Exported" Type="int" />
+          <Property Name="ErrorMsg" Type="varchar(max)" />
+          <Property Name="TransDate" Type="datetime" />
+        </EntityType>
+        <Function Name="GetLookupCodes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="lookupType" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="GetLookupTypes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="RetrieveCollectionItemsByPastDueDays" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="numOfDays" Type="int" Mode="In" />
+        </Function>
+        <Function Name="RetrieveItemizedInvCollection" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="collectionItem" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="RetrieveLetterHeaderAddress" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="matterNo" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="RetrieveMatteCPC" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="matterNo" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="RetrieveMatterByNum" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="matterNo" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <EntityContainer Name="TE3ERCGSyncModelStoreContainer">
+          <EntitySet Name="ClientMaster" EntityType="Self.ClientMaster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CustomSubjectLine" EntityType="Self.CustomSubjectLine" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ExcludedClientCollectionWF" EntityType="Self.ExcludedClientCollectionWF" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ExcludedClientCollectionWF].[ClientID] AS [ClientID], 
+    [ExcludedClientCollectionWF].[ClientIndex] AS [ClientIndex], 
+    [ExcludedClientCollectionWF].[Number] AS [Number], 
+    [ExcludedClientCollectionWF].[DisplayName] AS [DisplayName], 
+    [ExcludedClientCollectionWF].[SortString] AS [SortString], 
+    [ExcludedClientCollectionWF].[RelatedClient] AS [RelatedClient], 
+    [ExcludedClientCollectionWF].[IsExcluded] AS [IsExcluded]
+    FROM [dbo].[ExcludedClientCollectionWF] AS [ExcludedClientCollectionWF]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="TrackerSafeEMSImport" EntityType="Self.TrackerSafeEMSImport" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [TrackerSafeEMSImport].[MatterID] AS [MatterID], 
+    [TrackerSafeEMSImport].[MattIndex] AS [MattIndex], 
+    [TrackerSafeEMSImport].[MattNumber] AS [MattNumber], 
+    [TrackerSafeEMSImport].[MattName] AS [MattName], 
+    [TrackerSafeEMSImport].[Description] AS [Description], 
+    [TrackerSafeEMSImport].[MattStatus] AS [MattStatus], 
+    [TrackerSafeEMSImport].[MattStatusDate] AS [MattStatusDate], 
+    [TrackerSafeEMSImport].[MattType] AS [MattType], 
+    [TrackerSafeEMSImport].[OpenDate] AS [OpenDate], 
+    [TrackerSafeEMSImport].[ClientIndex] AS [ClientIndex], 
+    [TrackerSafeEMSImport].[ClientNumber] AS [ClientNumber], 
+    [TrackerSafeEMSImport].[ClientName] AS [ClientName], 
+    [TrackerSafeEMSImport].[ClientFormattedString] AS [ClientFormattedString], 
+    [TrackerSafeEMSImport].[ClientStreet] AS [ClientStreet], 
+    [TrackerSafeEMSImport].[ClientCity] AS [ClientCity], 
+    [TrackerSafeEMSImport].[ClientState] AS [ClientState], 
+    [TrackerSafeEMSImport].[ClientZipCode] AS [ClientZipCode], 
+    [TrackerSafeEMSImport].[Contact Email] AS [Contact Email], 
+    [TrackerSafeEMSImport].[ClaimNo] AS [ClaimNo], 
+    [TrackerSafeEMSImport].[ReferenceNumber] AS [ReferenceNumber], 
+    [TrackerSafeEMSImport].[Contact Name] AS [Contact Name], 
+    [TrackerSafeEMSImport].[Contact Phone] AS [Contact Phone], 
+    [TrackerSafeEMSImport].[Insured Name] AS [Insured Name], 
+    [TrackerSafeEMSImport].[Claimant] AS [Claimant], 
+    [TrackerSafeEMSImport].[Style] AS [Style], 
+    [TrackerSafeEMSImport].[Cause Number] AS [Cause Number], 
+    [TrackerSafeEMSImport].[Date of Loss] AS [Date of Loss], 
+    [TrackerSafeEMSImport].[OfficeCode] AS [OfficeCode], 
+    [TrackerSafeEMSImport].[OfficeDescription] AS [OfficeDescription], 
+    [TrackerSafeEMSImport].[OfficeFormattedString] AS [OfficeFormattedString], 
+    [TrackerSafeEMSImport].[OfficeName] AS [OfficeName], 
+    [TrackerSafeEMSImport].[OfficeStreet] AS [OfficeStreet], 
+    [TrackerSafeEMSImport].[OfficeCity] AS [OfficeCity], 
+    [TrackerSafeEMSImport].[OfficeState] AS [OfficeState], 
+    [TrackerSafeEMSImport].[OfficeZipCode] AS [OfficeZipCode], 
+    [TrackerSafeEMSImport].[OfficePhone] AS [OfficePhone], 
+    [TrackerSafeEMSImport].[OfficeFax] AS [OfficeFax], 
+    [TrackerSafeEMSImport].[CertAuthNo] AS [CertAuthNo], 
+    [TrackerSafeEMSImport].[Exported] AS [Exported], 
+    [TrackerSafeEMSImport].[ErrorMsg] AS [ErrorMsg], 
+    [TrackerSafeEMSImport].[TransDate] AS [TransDate]
+    FROM [dbo].[TrackerSafeEMSImport] AS [TrackerSafeEMSImport]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TE3ERCGSyncModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ClientMaster">
+          <Key>
+            <PropertyRef Name="ClientKeyId" />
+          </Key>
+          <Property Name="ClientKeyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AppId" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="AppKey" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="ClientName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="CustomSubjectLine">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClientIndex" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ClientName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SpecialSubjectLine" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SpecificEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ExcludedClientCollectionWF">
+          <Key>
+            <PropertyRef Name="ClientID" />
+            <PropertyRef Name="ClientIndex" />
+            <PropertyRef Name="Number" />
+            <PropertyRef Name="DisplayName" />
+            <PropertyRef Name="RelatedClient" />
+            <PropertyRef Name="IsExcluded" />
+          </Key>
+          <Property Name="ClientID" Type="Guid" Nullable="false" />
+          <Property Name="ClientIndex" Type="Int32" Nullable="false" />
+          <Property Name="Number" Type="String" MaxLength="64" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DisplayName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SortString" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="RelatedClient" Type="Int32" Nullable="false" />
+          <Property Name="IsExcluded" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="TE3ERCGSyncEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ClientMasters" EntityType="Self.ClientMaster" />
+          <EntitySet Name="CustomSubjectLines" EntityType="Self.CustomSubjectLine" />
+          <EntitySet Name="ExcludedClientCollectionWFs" EntityType="Self.ExcludedClientCollectionWF" />
+          <FunctionImport Name="GetLookupCodes" ReturnType="Collection(TE3ERCGSyncModel.GetLookupCodes_Result)">
+          <Parameter Name="lookupType" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="GetLookupTypes" ReturnType="Collection(TE3ERCGSyncModel.GetLookupTypes_Result)" />
+          <FunctionImport Name="RetrieveCollectionItemsByPastDueDays" ReturnType="Collection(TE3ERCGSyncModel.RetrieveCollectionItemsByPastDueDays_Result)">
+          <Parameter Name="numOfDays" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="RetrieveItemizedInvCollection" ReturnType="Collection(TE3ERCGSyncModel.RetrieveItemizedInvCollection_Result)">
+          <Parameter Name="collectionItem" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="RetrieveLetterHeaderAddress" ReturnType="Collection(TE3ERCGSyncModel.RetrieveLetterHeaderAddress_Result)">
+          <Parameter Name="matterNo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="RetrieveMatteCPC" ReturnType="Collection(TE3ERCGSyncModel.RetrieveMatteCPC_Result)">
+          <Parameter Name="matterNo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="RetrieveMatterByNum" ReturnType="Collection(TE3ERCGSyncModel.RetrieveMatterByNum_Result)">
+          <Parameter Name="matterNo" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="TrackerSafeEMSImports" EntityType="TE3ERCGSyncModel.TrackerSafeEMSImport" />
+        </EntityContainer>
+        <ComplexType Name="GetLookupCodes_Result">
+          <Property Type="Guid" Name="ID" Nullable="true" />
+          <Property Type="String" Name="Code" Nullable="true" />
+          <Property Type="String" Name="Description" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="GetLookupTypes_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Type" Nullable="true" />
+          <Property Type="String" Name="Description" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="RetrieveCollectionItemsByPastDueDays_Result">
+          <Property Type="String" Name="MatterNumber" Nullable="true" />
+          <Property Type="String" Name="MatterName" Nullable="true" />
+          <Property Type="Int32" Name="ClientIndex" Nullable="true" />
+          <Property Type="String" Name="ClientName" Nullable="true" />
+          <Property Type="Int32" Name="PrimaryRelatedClient" Nullable="true" />
+          <Property Type="Int32" Name="PayorRelatedClient" Nullable="true" />
+          <Property Type="Int32" Name="MattSpecialInstrRelatedClient" Nullable="true" />
+          <Property Type="String" Name="Office" Nullable="true" />
+          <Property Type="String" Name="DateOfLoss" Nullable="true" />
+          <Property Type="String" Name="Insured_Name" Nullable="true" />
+          <Property Type="String" Name="Claimant" Nullable="true" />
+          <Property Type="String" Name="Style" Nullable="true" />
+          <Property Type="String" Name="Cause_Number" Nullable="true" />
+          <Property Type="Int32" Name="InvMaster" Nullable="true" />
+          <Property Type="DateTime" Name="InvDate" Nullable="true" Precision="23" />
+          <Property Type="Guid" Name="InvPayor" Nullable="true" />
+          <Property Type="Int32" Name="Payor" Nullable="true" />
+          <Property Type="String" Name="PayorName" Nullable="true" />
+          <Property Type="Int32" Name="CollectionItem" Nullable="true" />
+          <Property Type="Int32" Name="CollectionStep" Nullable="true" />
+          <Property Type="Guid" Name="Collector" Nullable="true" />
+          <Property Type="String" Name="CollectorName" Nullable="true" />
+          <Property Type="Decimal" Name="OpenAmt" Nullable="true" Precision="18" Scale="0" />
+          <Property Type="Decimal" Name="OrigAmt" Nullable="true" Precision="18" Scale="0" />
+          <Property Type="Decimal" Name="OrigCollAmt" Nullable="true" Precision="18" Scale="0" />
+          <Property Type="Int32" Name="DaysOverdue" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="RetrieveItemizedInvCollection_Result">
+          <Property Type="Guid" Name="MatterCollectionInvoiceID" Nullable="false" />
+          <Property Type="Int32" Name="MatterCollectionItem" Nullable="false" />
+          <Property Type="DateTime" Name="CollectionInvoice_TimeStamp" Nullable="true" Precision="23" />
+          <Property Type="Guid" Name="CollectionInvoice_InvPayor" Nullable="false" />
+          <Property Type="String" Name="CollectionInvoice_BillingGroup" Nullable="true" MaxLength="32" />
+          <Property Type="Int32" Name="CollectionInvoice_CollectionItem" Nullable="false" />
+          <Property Type="Decimal" Name="CollectionInvoice_OrigColAmt" Nullable="true" Precision="16" Scale="2" />
+          <Property Type="Decimal" Name="CollectionInvoice_DisputedAmount" Nullable="true" Precision="16" Scale="2" />
+          <Property Type="Int32" Name="CollectionInvoice_DisputeResolutionResp" Nullable="true" />
+          <Property Type="String" Name="CollectionInvoice_InvoiceDisputeReason" Nullable="true" MaxLength="64" />
+          <Property Type="String" Name="CollectionInvoice_Comments" Nullable="true" />
+          <Property Type="Int32" Name="CollectionInvoice_ProformaSite" Nullable="true" />
+          <Property Type="Int32" Name="InvPayor_InvMaster" Nullable="false" />
+          <Property Type="String" Name="InvPayor_InvNumber" Nullable="false" MaxLength="40" />
+          <Property Type="Int32" Name="InvPayor_Payor" Nullable="false" />
+          <Property Type="String" Name="InvPayor_Currency" Nullable="false" MaxLength="8" />
+          <Property Type="DateTime" Name="InvPayor_CurrDate" Nullable="false" Precision="23" />
+          <Property Type="Decimal" Name="InvPayor_OrgAmt" Nullable="true" Precision="16" Scale="2" />
+          <Property Type="Decimal" Name="InvPayor_AdjAmt" Nullable="true" Precision="16" Scale="2" />
+          <Property Type="Decimal" Name="InvPayor_BalAmt" Nullable="true" Precision="16" Scale="2" />
+          <Property Type="Int32" Name="InvPayor_Site" Nullable="true" />
+          <Property Type="Byte" Name="InvPayor_IsPaid" Nullable="false" />
+          <Property Type="DateTime" Name="InvPayor_PaidDate" Nullable="true" Precision="23" />
+          <Property Type="Decimal" Name="InvPayor_DoubtfulAmt" Nullable="true" Precision="16" Scale="2" />
+          <Property Type="String" Name="InvPayor_ForAttentionOf" Nullable="true" MaxLength="64" />
+          <Property Type="String" Name="InvPayor_Layer" Nullable="true" MaxLength="64" />
+          <Property Type="String" Name="InvPayor_RefNumber" Nullable="true" MaxLength="64" />
+          <Property Type="String" Name="InvMaster_InvNumber" Nullable="false" MaxLength="40" />
+          <Property Type="DateTime" Name="InvMaster_InvDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="InvMaster_DueDate" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="InvMaster_LeadMatter" Nullable="true" />
+          <Property Type="Int32" Name="InvMaster_InvIndex" Nullable="false" />
+          <Property Type="Byte" Name="InvMaster_IsReversed" Nullable="false" />
+          <Property Type="String" Name="Matter_Number" Nullable="true" MaxLength="64" />
+          <Property Type="Int32" Name="Client_Index" Nullable="true" />
+          <Property Type="String" Name="Matter_Description" Nullable="true" MaxLength="1024" />
+          <Property Type="Int32" Name="Matter_Language" Nullable="true" />
+          <Property Type="String" Name="Client_Name" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Client_Number" Nullable="true" MaxLength="64" />
+          <Property Type="Int32" Name="Language_Locale" Nullable="true" />
+          <Property Type="String" Name="Language_Description" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Payor_Description" Nullable="false" MaxLength="255" />
+          <Property Type="String" Name="NxCurrencyCode_CurrCode" Nullable="false" MaxLength="8" />
+          <Property Type="Int32" Name="Site_Address" Nullable="true" />
+          <Property Type="String" Name="Site_Description" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="Address_City" Nullable="true" MaxLength="64" />
+          <Property Type="String" Name="Address_Country" Nullable="true" MaxLength="8" />
+          <Property Type="String" Name="Address_Street" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="Address_ZipCode" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Address_FormattedString" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="Address_State" Nullable="true" MaxLength="16" />
+          <Property Type="String" Name="Country_Code" Nullable="true" MaxLength="8" />
+          <Property Type="String" Name="Country_Description" Nullable="true" MaxLength="64" />
+          <Property Type="String" Name="State_Code" Nullable="true" MaxLength="16" />
+          <Property Type="String" Name="State_Description" Nullable="true" MaxLength="64" />
+          <Property Type="String" Name="BillingGroup_Description" Nullable="true" MaxLength="128" />
+          <Property Type="Guid" Name="CollectionItem_Collector" Nullable="false" />
+          <Property Type="String" Name="CollectionItem_Workflow" Nullable="false" MaxLength="32" />
+          <Property Type="Int32" Name="CollectionItem_Number" Nullable="false" />
+          <Property Type="String" Name="CollectionItem_Description" Nullable="false" MaxLength="1000" />
+          <Property Type="String" Name="Collector_Name" Nullable="false" MaxLength="64" />
+          <Property Type="String" Name="CollectionWorkflow_Description" Nullable="false" MaxLength="64" />
+          <Property Type="Int32" Name="Timekeeper_Entity" Nullable="true" />
+          <Property Type="String" Name="Timekeeper_Number" Nullable="true" MaxLength="64" />
+          <Property Type="String" Name="Entity_Description" Nullable="true" MaxLength="512" />
+          <Property Type="String" Name="InvoiceDisputeReason_Description" Nullable="true" MaxLength="64" />
+        </ComplexType>
+        <ComplexType Name="RetrieveLetterHeaderAddress_Result">
+          <Property Type="String" Name="ClientFormattedString" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="ClientOrgName" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="ClientStreet" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="ClientCity" Nullable="true" MaxLength="64" />
+          <Property Type="String" Name="ClientState" Nullable="true" MaxLength="16" />
+          <Property Type="String" Name="ClientZipCode" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="ClientEmail" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="ClaimNumber" Nullable="true" MaxLength="64" />
+          <Property Type="String" Name="ReferenceNumber" Nullable="true" MaxLength="64" />
+          <Property Type="String" Name="ClientContact" Nullable="true" MaxLength="64" />
+          <Property Type="String" Name="ClientPhone" Nullable="true" MaxLength="64" />
+          <Property Type="String" Name="BillingFormattedString" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="BillingOrgName" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="BillingStreet" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="BillingCity" Nullable="true" MaxLength="64" />
+          <Property Type="String" Name="BillingState" Nullable="true" MaxLength="16" />
+          <Property Type="String" Name="BillingZipCode" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="InvoiceTo" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="RetrieveMatteCPC_Result">
+          <Property Type="String" Name="MattNumber" Nullable="false" MaxLength="64" />
+          <Property Type="String" Name="MattName" Nullable="false" MaxLength="255" />
+          <Property Type="String" Name="Description" Nullable="true" MaxLength="1024" />
+          <Property Type="String" Name="BillingTkprName" Nullable="true" />
+          <Property Type="String" Name="RspTkprName" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="RspTkprEmail" Nullable="true" MaxLength="64" />
+          <Property Type="String" Name="RspTkprNetworkAlias" Nullable="true" MaxLength="256" />
+          <Property Type="String" Name="ReportingOffice" Nullable="false" MaxLength="64" />
+        </ComplexType>
+        <ComplexType Name="RetrieveMatterByNum_Result">
+          <Property Type="Guid" Name="MatterID" Nullable="false" />
+          <Property Type="Int32" Name="MattIndex" Nullable="false" />
+          <Property Type="String" Name="MattNumber" Nullable="false" MaxLength="64" />
+          <Property Type="String" Name="MattName" Nullable="false" MaxLength="255" />
+          <Property Type="String" Name="Description" Nullable="true" MaxLength="1024" />
+          <Property Type="String" Name="MattStatus" Nullable="false" MaxLength="16" />
+          <Property Type="DateTime" Name="MattStatusDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="MattType" Nullable="true" MaxLength="16" />
+          <Property Type="DateTime" Name="OpenDate" Nullable="false" Precision="23" />
+          <Property Type="Int32" Name="ClientIndex" Nullable="false" />
+          <Property Type="String" Name="ClientNumber" Nullable="false" MaxLength="64" />
+          <Property Type="String" Name="ClientName" Nullable="false" MaxLength="128" />
+          <Property Type="String" Name="ClientFormattedString" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="ClientStreet" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="ClientCity" Nullable="true" MaxLength="64" />
+          <Property Type="String" Name="ClientState" Nullable="true" MaxLength="16" />
+          <Property Type="String" Name="ClientZipCode" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Contact_Email" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="ClaimNo" Nullable="true" MaxLength="64" />
+          <Property Type="String" Name="ReferenceNumber" Nullable="true" MaxLength="64" />
+          <Property Type="String" Name="Contact_Name" Nullable="true" MaxLength="64" />
+          <Property Type="String" Name="Contact_Phone" Nullable="true" MaxLength="64" />
+          <Property Type="String" Name="Insured_Name" Nullable="true" />
+          <Property Type="String" Name="Claimant" Nullable="true" />
+          <Property Type="String" Name="Style" Nullable="true" MaxLength="1024" />
+          <Property Type="String" Name="Cause_Number" Nullable="true" MaxLength="64" />
+          <Property Type="String" Name="Date_of_Loss" Nullable="true" MaxLength="64" />
+          <Property Type="String" Name="OfficeCode" Nullable="true" MaxLength="16" />
+          <Property Type="String" Name="OfficeDescription" Nullable="true" MaxLength="64" />
+          <Property Type="String" Name="OfficeFormattedString" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="OfficeName" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="OfficeStreet" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="OfficeCity" Nullable="true" MaxLength="64" />
+          <Property Type="String" Name="OfficeState" Nullable="true" MaxLength="16" />
+          <Property Type="String" Name="OfficeZipCode" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="OfficePhone" Nullable="true" />
+          <Property Type="String" Name="OfficeFax" Nullable="true" />
+          <Property Type="String" Name="CertAuthNo" Nullable="true" MaxLength="64" />
+          <Property Type="Int32" Name="Exported" Nullable="false" />
+          <Property Type="Int32" Name="ErrorMsg" Nullable="true" />
+          <Property Type="Int32" Name="TransDate" Nullable="true" />
+        </ComplexType>
+        <EntityType Name="TrackerSafeEMSImport">
+          <Key>
+            <PropertyRef Name="MatterID" />
+            <PropertyRef Name="MattIndex" />
+          </Key>
+          <Property Name="MatterID" Type="Guid" Nullable="false" />
+          <Property Name="MattIndex" Type="Int32" Nullable="false" />
+          <Property Name="MattNumber" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="MattName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Name="MattStatus" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="MattStatusDate" Type="DateTime" Precision="3" />
+          <Property Name="MattType" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="OpenDate" Type="DateTime" Precision="3" />
+          <Property Name="ClientIndex" Type="Int32" />
+          <Property Name="ClientNumber" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="ClientName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ClientFormattedString" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ClientStreet" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ClientCity" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ClientState" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ClientZipCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Contact_Email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ClaimNo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ReferenceNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Contact_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Contact_Phone" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="Insured_Name" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Name="Claimant" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Name="Style" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Name="Cause_Number" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Name="Date_of_Loss" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="OfficeCode" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="OfficeDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OfficeFormattedString" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="OfficeName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="OfficeStreet" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="OfficeCity" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="OfficeState" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="OfficeZipCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="OfficePhone" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="OfficeFax" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="CertAuthNo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Exported" Type="Int32" />
+          <Property Name="ErrorMsg" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TransDate" Type="DateTime" Precision="3" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TE3ERCGSyncModelStoreContainer" CdmEntityContainer="TE3ERCGSyncEntities">
+          <EntitySetMapping Name="ClientMasters">
+            <EntityTypeMapping TypeName="TE3ERCGSyncModel.ClientMaster">
+              <MappingFragment StoreEntitySet="ClientMaster">
+                <ScalarProperty Name="ClientKeyId" ColumnName="ClientKeyId" />
+                <ScalarProperty Name="AppId" ColumnName="AppId" />
+                <ScalarProperty Name="AppKey" ColumnName="AppKey" />
+                <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CustomSubjectLines">
+            <EntityTypeMapping TypeName="TE3ERCGSyncModel.CustomSubjectLine">
+              <MappingFragment StoreEntitySet="CustomSubjectLine">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ClientIndex" ColumnName="ClientIndex" />
+                <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+                <ScalarProperty Name="SpecialSubjectLine" ColumnName="SpecialSubjectLine" />
+                <ScalarProperty Name="SpecificEmail" ColumnName="SpecificEmail" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ExcludedClientCollectionWFs">
+            <EntityTypeMapping TypeName="TE3ERCGSyncModel.ExcludedClientCollectionWF">
+              <MappingFragment StoreEntitySet="ExcludedClientCollectionWF">
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+                <ScalarProperty Name="ClientIndex" ColumnName="ClientIndex" />
+                <ScalarProperty Name="Number" ColumnName="Number" />
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+                <ScalarProperty Name="SortString" ColumnName="SortString" />
+                <ScalarProperty Name="RelatedClient" ColumnName="RelatedClient" />
+                <ScalarProperty Name="IsExcluded" ColumnName="IsExcluded" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="GetLookupCodes" FunctionName="TE3ERCGSyncModel.Store.GetLookupCodes">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TE3ERCGSyncModel.GetLookupCodes_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetLookupTypes" FunctionName="TE3ERCGSyncModel.Store.GetLookupTypes">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TE3ERCGSyncModel.GetLookupTypes_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="RetrieveCollectionItemsByPastDueDays" FunctionName="TE3ERCGSyncModel.Store.RetrieveCollectionItemsByPastDueDays">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TE3ERCGSyncModel.RetrieveCollectionItemsByPastDueDays_Result">
+                <ScalarProperty Name="MatterNumber" ColumnName="MatterNumber" />
+                <ScalarProperty Name="MatterName" ColumnName="MatterName" />
+                <ScalarProperty Name="ClientIndex" ColumnName="ClientIndex" />
+                <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+                <ScalarProperty Name="PrimaryRelatedClient" ColumnName="PrimaryRelatedClient" />
+                <ScalarProperty Name="PayorRelatedClient" ColumnName="PayorRelatedClient" />
+                <ScalarProperty Name="MattSpecialInstrRelatedClient" ColumnName="MattSpecialInstrRelatedClient" />
+                <ScalarProperty Name="Office" ColumnName="Office" />
+                <ScalarProperty Name="DateOfLoss" ColumnName="DateOfLoss" />
+                <ScalarProperty Name="Insured_Name" ColumnName="Insured Name" />
+                <ScalarProperty Name="Claimant" ColumnName="Claimant" />
+                <ScalarProperty Name="Style" ColumnName="Style" />
+                <ScalarProperty Name="Cause_Number" ColumnName="Cause Number" />
+                <ScalarProperty Name="InvMaster" ColumnName="InvMaster" />
+                <ScalarProperty Name="InvDate" ColumnName="InvDate" />
+                <ScalarProperty Name="InvPayor" ColumnName="InvPayor" />
+                <ScalarProperty Name="Payor" ColumnName="Payor" />
+                <ScalarProperty Name="PayorName" ColumnName="PayorName" />
+                <ScalarProperty Name="CollectionItem" ColumnName="CollectionItem" />
+                <ScalarProperty Name="CollectionStep" ColumnName="CollectionStep" />
+                <ScalarProperty Name="Collector" ColumnName="Collector" />
+                <ScalarProperty Name="CollectorName" ColumnName="CollectorName" />
+                <ScalarProperty Name="OpenAmt" ColumnName="OpenAmt" />
+                <ScalarProperty Name="OrigAmt" ColumnName="OrigAmt" />
+                <ScalarProperty Name="OrigCollAmt" ColumnName="OrigCollAmt" />
+                <ScalarProperty Name="DaysOverdue" ColumnName="DaysOverdue" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="RetrieveItemizedInvCollection" FunctionName="TE3ERCGSyncModel.Store.RetrieveItemizedInvCollection">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TE3ERCGSyncModel.RetrieveItemizedInvCollection_Result">
+                <ScalarProperty Name="MatterCollectionInvoiceID" ColumnName="MatterCollectionInvoiceID" />
+                <ScalarProperty Name="MatterCollectionItem" ColumnName="MatterCollectionItem" />
+                <ScalarProperty Name="CollectionInvoice_TimeStamp" ColumnName="CollectionInvoice_TimeStamp" />
+                <ScalarProperty Name="CollectionInvoice_InvPayor" ColumnName="CollectionInvoice_InvPayor" />
+                <ScalarProperty Name="CollectionInvoice_BillingGroup" ColumnName="CollectionInvoice_BillingGroup" />
+                <ScalarProperty Name="CollectionInvoice_CollectionItem" ColumnName="CollectionInvoice_CollectionItem" />
+                <ScalarProperty Name="CollectionInvoice_OrigColAmt" ColumnName="CollectionInvoice_OrigColAmt" />
+                <ScalarProperty Name="CollectionInvoice_DisputedAmount" ColumnName="CollectionInvoice_DisputedAmount" />
+                <ScalarProperty Name="CollectionInvoice_DisputeResolutionResp" ColumnName="CollectionInvoice_DisputeResolutionResp" />
+                <ScalarProperty Name="CollectionInvoice_InvoiceDisputeReason" ColumnName="CollectionInvoice_InvoiceDisputeReason" />
+                <ScalarProperty Name="CollectionInvoice_Comments" ColumnName="CollectionInvoice_Comments" />
+                <ScalarProperty Name="CollectionInvoice_ProformaSite" ColumnName="CollectionInvoice_ProformaSite" />
+                <ScalarProperty Name="InvPayor_InvMaster" ColumnName="InvPayor_InvMaster" />
+                <ScalarProperty Name="InvPayor_InvNumber" ColumnName="InvPayor_InvNumber" />
+                <ScalarProperty Name="InvPayor_Payor" ColumnName="InvPayor_Payor" />
+                <ScalarProperty Name="InvPayor_Currency" ColumnName="InvPayor_Currency" />
+                <ScalarProperty Name="InvPayor_CurrDate" ColumnName="InvPayor_CurrDate" />
+                <ScalarProperty Name="InvPayor_OrgAmt" ColumnName="InvPayor_OrgAmt" />
+                <ScalarProperty Name="InvPayor_AdjAmt" ColumnName="InvPayor_AdjAmt" />
+                <ScalarProperty Name="InvPayor_BalAmt" ColumnName="InvPayor_BalAmt" />
+                <ScalarProperty Name="InvPayor_Site" ColumnName="InvPayor_Site" />
+                <ScalarProperty Name="InvPayor_IsPaid" ColumnName="InvPayor_IsPaid" />
+                <ScalarProperty Name="InvPayor_PaidDate" ColumnName="InvPayor_PaidDate" />
+                <ScalarProperty Name="InvPayor_DoubtfulAmt" ColumnName="InvPayor_DoubtfulAmt" />
+                <ScalarProperty Name="InvPayor_ForAttentionOf" ColumnName="InvPayor_ForAttentionOf" />
+                <ScalarProperty Name="InvPayor_Layer" ColumnName="InvPayor_Layer" />
+                <ScalarProperty Name="InvPayor_RefNumber" ColumnName="InvPayor_RefNumber" />
+                <ScalarProperty Name="InvMaster_InvNumber" ColumnName="InvMaster_InvNumber" />
+                <ScalarProperty Name="InvMaster_InvDate" ColumnName="InvMaster_InvDate" />
+                <ScalarProperty Name="InvMaster_DueDate" ColumnName="InvMaster_DueDate" />
+                <ScalarProperty Name="InvMaster_LeadMatter" ColumnName="InvMaster_LeadMatter" />
+                <ScalarProperty Name="InvMaster_InvIndex" ColumnName="InvMaster_InvIndex" />
+                <ScalarProperty Name="InvMaster_IsReversed" ColumnName="InvMaster_IsReversed" />
+                <ScalarProperty Name="Matter_Number" ColumnName="Matter_Number" />
+                <ScalarProperty Name="Client_Index" ColumnName="Client_Index" />
+                <ScalarProperty Name="Matter_Description" ColumnName="Matter_Description" />
+                <ScalarProperty Name="Matter_Language" ColumnName="Matter_Language" />
+                <ScalarProperty Name="Client_Name" ColumnName="Client_Name" />
+                <ScalarProperty Name="Client_Number" ColumnName="Client_Number" />
+                <ScalarProperty Name="Language_Locale" ColumnName="Language_Locale" />
+                <ScalarProperty Name="Language_Description" ColumnName="Language_Description" />
+                <ScalarProperty Name="Payor_Description" ColumnName="Payor_Description" />
+                <ScalarProperty Name="NxCurrencyCode_CurrCode" ColumnName="NxCurrencyCode_CurrCode" />
+                <ScalarProperty Name="Site_Address" ColumnName="Site_Address" />
+                <ScalarProperty Name="Site_Description" ColumnName="Site_Description" />
+                <ScalarProperty Name="Address_City" ColumnName="Address_City" />
+                <ScalarProperty Name="Address_Country" ColumnName="Address_Country" />
+                <ScalarProperty Name="Address_Street" ColumnName="Address_Street" />
+                <ScalarProperty Name="Address_ZipCode" ColumnName="Address_ZipCode" />
+                <ScalarProperty Name="Address_FormattedString" ColumnName="Address_FormattedString" />
+                <ScalarProperty Name="Address_State" ColumnName="Address_State" />
+                <ScalarProperty Name="Country_Code" ColumnName="Country_Code" />
+                <ScalarProperty Name="Country_Description" ColumnName="Country_Description" />
+                <ScalarProperty Name="State_Code" ColumnName="State_Code" />
+                <ScalarProperty Name="State_Description" ColumnName="State_Description" />
+                <ScalarProperty Name="BillingGroup_Description" ColumnName="BillingGroup_Description" />
+                <ScalarProperty Name="CollectionItem_Collector" ColumnName="CollectionItem_Collector" />
+                <ScalarProperty Name="CollectionItem_Workflow" ColumnName="CollectionItem_Workflow" />
+                <ScalarProperty Name="CollectionItem_Number" ColumnName="CollectionItem_Number" />
+                <ScalarProperty Name="CollectionItem_Description" ColumnName="CollectionItem_Description" />
+                <ScalarProperty Name="Collector_Name" ColumnName="Collector_Name" />
+                <ScalarProperty Name="CollectionWorkflow_Description" ColumnName="CollectionWorkflow_Description" />
+                <ScalarProperty Name="Timekeeper_Entity" ColumnName="Timekeeper_Entity" />
+                <ScalarProperty Name="Timekeeper_Number" ColumnName="Timekeeper_Number" />
+                <ScalarProperty Name="Entity_Description" ColumnName="Entity_Description" />
+                <ScalarProperty Name="InvoiceDisputeReason_Description" ColumnName="InvoiceDisputeReason_Description" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="RetrieveLetterHeaderAddress" FunctionName="TE3ERCGSyncModel.Store.RetrieveLetterHeaderAddress">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TE3ERCGSyncModel.RetrieveLetterHeaderAddress_Result">
+                <ScalarProperty Name="ClientFormattedString" ColumnName="ClientFormattedString" />
+                <ScalarProperty Name="ClientOrgName" ColumnName="ClientOrgName" />
+                <ScalarProperty Name="ClientStreet" ColumnName="ClientStreet" />
+                <ScalarProperty Name="ClientCity" ColumnName="ClientCity" />
+                <ScalarProperty Name="ClientState" ColumnName="ClientState" />
+                <ScalarProperty Name="ClientZipCode" ColumnName="ClientZipCode" />
+                <ScalarProperty Name="ClientEmail" ColumnName="ClientEmail" />
+                <ScalarProperty Name="ClaimNumber" ColumnName="ClaimNumber" />
+                <ScalarProperty Name="ReferenceNumber" ColumnName="ReferenceNumber" />
+                <ScalarProperty Name="ClientContact" ColumnName="ClientContact" />
+                <ScalarProperty Name="ClientPhone" ColumnName="ClientPhone" />
+                <ScalarProperty Name="BillingFormattedString" ColumnName="BillingFormattedString" />
+                <ScalarProperty Name="BillingOrgName" ColumnName="BillingOrgName" />
+                <ScalarProperty Name="BillingStreet" ColumnName="BillingStreet" />
+                <ScalarProperty Name="BillingCity" ColumnName="BillingCity" />
+                <ScalarProperty Name="BillingState" ColumnName="BillingState" />
+                <ScalarProperty Name="BillingZipCode" ColumnName="BillingZipCode" />
+                <ScalarProperty Name="InvoiceTo" ColumnName="InvoiceTo" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="RetrieveMatteCPC" FunctionName="TE3ERCGSyncModel.Store.RetrieveMatteCPC">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TE3ERCGSyncModel.RetrieveMatteCPC_Result">
+                <ScalarProperty Name="MattNumber" ColumnName="MattNumber" />
+                <ScalarProperty Name="MattName" ColumnName="MattName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="BillingTkprName" ColumnName="BillingTkprName" />
+                <ScalarProperty Name="RspTkprName" ColumnName="RspTkprName" />
+                <ScalarProperty Name="RspTkprEmail" ColumnName="RspTkprEmail" />
+                <ScalarProperty Name="RspTkprNetworkAlias" ColumnName="RspTkprNetworkAlias" />
+                <ScalarProperty Name="ReportingOffice" ColumnName="ReportingOffice" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="RetrieveMatterByNum" FunctionName="TE3ERCGSyncModel.Store.RetrieveMatterByNum">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TE3ERCGSyncModel.RetrieveMatterByNum_Result">
+                <ScalarProperty Name="MatterID" ColumnName="MatterID" />
+                <ScalarProperty Name="MattIndex" ColumnName="MattIndex" />
+                <ScalarProperty Name="MattNumber" ColumnName="MattNumber" />
+                <ScalarProperty Name="MattName" ColumnName="MattName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="MattStatus" ColumnName="MattStatus" />
+                <ScalarProperty Name="MattStatusDate" ColumnName="MattStatusDate" />
+                <ScalarProperty Name="MattType" ColumnName="MattType" />
+                <ScalarProperty Name="OpenDate" ColumnName="OpenDate" />
+                <ScalarProperty Name="ClientIndex" ColumnName="ClientIndex" />
+                <ScalarProperty Name="ClientNumber" ColumnName="ClientNumber" />
+                <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+                <ScalarProperty Name="ClientFormattedString" ColumnName="ClientFormattedString" />
+                <ScalarProperty Name="ClientStreet" ColumnName="ClientStreet" />
+                <ScalarProperty Name="ClientCity" ColumnName="ClientCity" />
+                <ScalarProperty Name="ClientState" ColumnName="ClientState" />
+                <ScalarProperty Name="ClientZipCode" ColumnName="ClientZipCode" />
+                <ScalarProperty Name="Contact_Email" ColumnName="Contact Email" />
+                <ScalarProperty Name="ClaimNo" ColumnName="ClaimNo" />
+                <ScalarProperty Name="ReferenceNumber" ColumnName="ReferenceNumber" />
+                <ScalarProperty Name="Contact_Name" ColumnName="Contact Name" />
+                <ScalarProperty Name="Contact_Phone" ColumnName="Contact Phone" />
+                <ScalarProperty Name="Insured_Name" ColumnName="Insured Name" />
+                <ScalarProperty Name="Claimant" ColumnName="Claimant" />
+                <ScalarProperty Name="Style" ColumnName="Style" />
+                <ScalarProperty Name="Cause_Number" ColumnName="Cause Number" />
+                <ScalarProperty Name="Date_of_Loss" ColumnName="Date of Loss" />
+                <ScalarProperty Name="OfficeCode" ColumnName="OfficeCode" />
+                <ScalarProperty Name="OfficeDescription" ColumnName="OfficeDescription" />
+                <ScalarProperty Name="OfficeFormattedString" ColumnName="OfficeFormattedString" />
+                <ScalarProperty Name="OfficeName" ColumnName="OfficeName" />
+                <ScalarProperty Name="OfficeStreet" ColumnName="OfficeStreet" />
+                <ScalarProperty Name="OfficeCity" ColumnName="OfficeCity" />
+                <ScalarProperty Name="OfficeState" ColumnName="OfficeState" />
+                <ScalarProperty Name="OfficeZipCode" ColumnName="OfficeZipCode" />
+                <ScalarProperty Name="OfficePhone" ColumnName="OfficePhone" />
+                <ScalarProperty Name="OfficeFax" ColumnName="OfficeFax" />
+                <ScalarProperty Name="CertAuthNo" ColumnName="CertAuthNo" />
+                <ScalarProperty Name="Exported" ColumnName="Exported" />
+                <ScalarProperty Name="ErrorMsg" ColumnName="ErrorMsg" />
+                <ScalarProperty Name="TransDate" ColumnName="TransDate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="TrackerSafeEMSImports">
+            <EntityTypeMapping TypeName="TE3ERCGSyncModel.TrackerSafeEMSImport">
+              <MappingFragment StoreEntitySet="TrackerSafeEMSImport">
+                <ScalarProperty Name="TransDate" ColumnName="TransDate" />
+                <ScalarProperty Name="ErrorMsg" ColumnName="ErrorMsg" />
+                <ScalarProperty Name="Exported" ColumnName="Exported" />
+                <ScalarProperty Name="CertAuthNo" ColumnName="CertAuthNo" />
+                <ScalarProperty Name="OfficeFax" ColumnName="OfficeFax" />
+                <ScalarProperty Name="OfficePhone" ColumnName="OfficePhone" />
+                <ScalarProperty Name="OfficeZipCode" ColumnName="OfficeZipCode" />
+                <ScalarProperty Name="OfficeState" ColumnName="OfficeState" />
+                <ScalarProperty Name="OfficeCity" ColumnName="OfficeCity" />
+                <ScalarProperty Name="OfficeStreet" ColumnName="OfficeStreet" />
+                <ScalarProperty Name="OfficeName" ColumnName="OfficeName" />
+                <ScalarProperty Name="OfficeFormattedString" ColumnName="OfficeFormattedString" />
+                <ScalarProperty Name="OfficeDescription" ColumnName="OfficeDescription" />
+                <ScalarProperty Name="OfficeCode" ColumnName="OfficeCode" />
+                <ScalarProperty Name="Date_of_Loss" ColumnName="Date of Loss" />
+                <ScalarProperty Name="Cause_Number" ColumnName="Cause Number" />
+                <ScalarProperty Name="Style" ColumnName="Style" />
+                <ScalarProperty Name="Claimant" ColumnName="Claimant" />
+                <ScalarProperty Name="Insured_Name" ColumnName="Insured Name" />
+                <ScalarProperty Name="Contact_Phone" ColumnName="Contact Phone" />
+                <ScalarProperty Name="Contact_Name" ColumnName="Contact Name" />
+                <ScalarProperty Name="ReferenceNumber" ColumnName="ReferenceNumber" />
+                <ScalarProperty Name="ClaimNo" ColumnName="ClaimNo" />
+                <ScalarProperty Name="Contact_Email" ColumnName="Contact Email" />
+                <ScalarProperty Name="ClientZipCode" ColumnName="ClientZipCode" />
+                <ScalarProperty Name="ClientState" ColumnName="ClientState" />
+                <ScalarProperty Name="ClientCity" ColumnName="ClientCity" />
+                <ScalarProperty Name="ClientStreet" ColumnName="ClientStreet" />
+                <ScalarProperty Name="ClientFormattedString" ColumnName="ClientFormattedString" />
+                <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+                <ScalarProperty Name="ClientNumber" ColumnName="ClientNumber" />
+                <ScalarProperty Name="ClientIndex" ColumnName="ClientIndex" />
+                <ScalarProperty Name="OpenDate" ColumnName="OpenDate" />
+                <ScalarProperty Name="MattType" ColumnName="MattType" />
+                <ScalarProperty Name="MattStatusDate" ColumnName="MattStatusDate" />
+                <ScalarProperty Name="MattStatus" ColumnName="MattStatus" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="MattName" ColumnName="MattName" />
+                <ScalarProperty Name="MattNumber" ColumnName="MattNumber" />
+                <ScalarProperty Name="MattIndex" ColumnName="MattIndex" />
+                <ScalarProperty Name="MatterID" ColumnName="MatterID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

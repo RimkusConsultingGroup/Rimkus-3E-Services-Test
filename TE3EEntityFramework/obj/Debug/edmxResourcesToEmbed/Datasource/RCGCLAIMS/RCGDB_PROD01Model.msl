@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RCGDB_PROD01ModelStoreContainer" CdmEntityContainer="RCGDB_PROD01Entities">
+    <EntitySetMapping Name="rcg_rl_ClientJob">
+      <EntityTypeMapping TypeName="RCGDB_PROD01Model.rcg_rl_ClientJob">
+        <MappingFragment StoreEntitySet="rcg_rl_ClientJob">
+          <ScalarProperty Name="submission_id" ColumnName="submission_id" />
+          <ScalarProperty Name="submission_type" ColumnName="submission_type" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="created_date" ColumnName="created_date" />
+          <ScalarProperty Name="created_date_time" ColumnName="created_date_time" />
+          <ScalarProperty Name="billing_name" ColumnName="billing_name" />
+          <ScalarProperty Name="billing_title" ColumnName="billing_title" />
+          <ScalarProperty Name="billing_company" ColumnName="billing_company" />
+          <ScalarProperty Name="billing_address" ColumnName="billing_address" />
+          <ScalarProperty Name="billing_city" ColumnName="billing_city" />
+          <ScalarProperty Name="billing_state" ColumnName="billing_state" />
+          <ScalarProperty Name="billing_zip" ColumnName="billing_zip" />
+          <ScalarProperty Name="billing_email" ColumnName="billing_email" />
+          <ScalarProperty Name="billing_phone" ColumnName="billing_phone" />
+          <ScalarProperty Name="billing_cell" ColumnName="billing_cell" />
+          <ScalarProperty Name="billing_fax" ColumnName="billing_fax" />
+          <ScalarProperty Name="client_name" ColumnName="client_name" />
+          <ScalarProperty Name="adverse_party" ColumnName="adverse_party" />
+          <ScalarProperty Name="claim_number" ColumnName="claim_number" />
+          <ScalarProperty Name="tpa_file_number" ColumnName="tpa_file_number" />
+          <ScalarProperty Name="exact_engineer_request" ColumnName="exact_engineer_request" />
+          <ScalarProperty Name="claim_description" ColumnName="claim_description" />
+          <ScalarProperty Name="unlisted_service" ColumnName="unlisted_service" />
+          <ScalarProperty Name="occurrence_date" ColumnName="occurrence_date" />
+          <ScalarProperty Name="loss_date" ColumnName="loss_date" />
+          <ScalarProperty Name="occurrence_location" ColumnName="occurrence_location" />
+          <ScalarProperty Name="occurrence_city" ColumnName="occurrence_city" />
+          <ScalarProperty Name="occurrence_state" ColumnName="occurrence_state" />
+          <ScalarProperty Name="occurrence_zip" ColumnName="occurrence_zip" />
+          <ScalarProperty Name="inspection_contact_name" ColumnName="inspection_contact_name" />
+          <ScalarProperty Name="inspection_contact_phone" ColumnName="inspection_contact_phone" />
+          <ScalarProperty Name="inspection_contact_number" ColumnName="inspection_contact_number" />
+          <ScalarProperty Name="request_design_permit_drawings" ColumnName="request_design_permit_drawings" />
+          <ScalarProperty Name="request_business_interruption" ColumnName="request_business_interruption" />
+          <ScalarProperty Name="request_accident_reconstruction" ColumnName="request_accident_reconstruction" />
+          <ScalarProperty Name="request_full_mechanical_inspection" ColumnName="request_full_mechanical_inspection" />
+          <ScalarProperty Name="request_limited_mechanical_inspection" ColumnName="request_limited_mechanical_inspection" />
+          <ScalarProperty Name="request_biomechanical_evaluation" ColumnName="request_biomechanical_evaluation" />
+          <ScalarProperty Name="request_fire_cause_and_origin" ColumnName="request_fire_cause_and_origin" />
+          <ScalarProperty Name="request_repair_cost_estimate" ColumnName="request_repair_cost_estimate" />
+          <ScalarProperty Name="request_environmental" ColumnName="request_environmental" />
+          <ScalarProperty Name="request_request_other" ColumnName="request_request_other" />
+          <ScalarProperty Name="request_site_visit" ColumnName="request_site_visit" />
+          <ScalarProperty Name="request_mechanical_inspection" ColumnName="request_mechanical_inspection" />
+          <ScalarProperty Name="request_structural_analysis" ColumnName="request_structural_analysis" />
+          <ScalarProperty Name="property_damage" ColumnName="property_damage" />
+          <ScalarProperty Name="cost_estimate" ColumnName="cost_estimate" />
+          <ScalarProperty Name="evidence_return" ColumnName="evidence_return" />
+          <ScalarProperty Name="insurance_company" ColumnName="insurance_company" />
+          <ScalarProperty Name="insured_name" ColumnName="insured_name" />
+          <ScalarProperty Name="insured_phone" ColumnName="insured_phone" />
+          <ScalarProperty Name="insured_cell" ColumnName="insured_cell" />
+          <ScalarProperty Name="adjustment_company" ColumnName="adjustment_company" />
+          <ScalarProperty Name="adjustment_address" ColumnName="adjustment_address" />
+          <ScalarProperty Name="adjustment_city" ColumnName="adjustment_city" />
+          <ScalarProperty Name="adjustment_state" ColumnName="adjustment_state" />
+          <ScalarProperty Name="adjustment_zip" ColumnName="adjustment_zip" />
+          <ScalarProperty Name="adjustment_phone" ColumnName="adjustment_phone" />
+          <ScalarProperty Name="adjustor_name" ColumnName="adjustor_name" />
+          <ScalarProperty Name="adjustor_cell" ColumnName="adjustor_cell" />
+          <ScalarProperty Name="adjustor_email" ColumnName="adjustor_email" />
+          <ScalarProperty Name="adjustor_file_number" ColumnName="adjustor_file_number" />
+          <ScalarProperty Name="adjustor_fax" ColumnName="adjustor_fax" />
+          <ScalarProperty Name="insurance_same_as_billing" ColumnName="insurance_same_as_billing" />
+          <ScalarProperty Name="invoice_to" ColumnName="invoice_to" />
+          <ScalarProperty Name="invoice_company" ColumnName="invoice_company" />
+          <ScalarProperty Name="invoice_phone" ColumnName="invoice_phone" />
+          <ScalarProperty Name="invoice_address" ColumnName="invoice_address" />
+          <ScalarProperty Name="invoice_city" ColumnName="invoice_city" />
+          <ScalarProperty Name="invoice_state" ColumnName="invoice_state" />
+          <ScalarProperty Name="upload_count" ColumnName="upload_count" />
+          <ScalarProperty Name="assignment_file_1" ColumnName="assignment_file_1" />
+          <ScalarProperty Name="assignment_file_2" ColumnName="assignment_file_2" />
+          <ScalarProperty Name="user_agent" ColumnName="user_agent" />
+          <ScalarProperty Name="ip_address" ColumnName="ip_address" />
+          <ScalarProperty Name="XMLDate" ColumnName="XMLDate" />
+          <ScalarProperty Name="XMLDateTime" ColumnName="XMLDateTime" />
+          <ScalarProperty Name="IsSent" ColumnName="IsSent" />
+          <ScalarProperty Name="IsSentDate" ColumnName="IsSentDate" />
+          <ScalarProperty Name="AssignmentID" ColumnName="AssignmentID" />
+          <ScalarProperty Name="AssignmentIDDate" ColumnName="AssignmentIDDate" />
+          <ScalarProperty Name="AssignmentIDDateTime" ColumnName="AssignmentIDDateTime" />
+          <ScalarProperty Name="AdditionalData" ColumnName="AdditionalData" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="rcg_rl_ClientJob_Min_Save" FunctionName="RCGDB_PROD01Model.Store.rcg_rl_ClientJob_Min_Save" />
+    <FunctionImportMapping FunctionImportName="rcg_rl_ClientJob_Save" FunctionName="RCGDB_PROD01Model.Store.rcg_rl_ClientJob_Save" />
+  </EntityContainerMapping>
+</Mapping>

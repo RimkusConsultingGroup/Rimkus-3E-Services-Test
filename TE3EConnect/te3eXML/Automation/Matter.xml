@@ -1,0 +1,126 @@
+<Matter_Srv_RC xmlns="http://elite.com/schemas/transaction/process/write/Matter_Srv_RC">
+    <Initialize xmlns="http://elite.com/schemas/transaction/object/write/Matter">
+        <Add>
+            <Matter>
+                 <Attributes>
+                    <DisplayName>@DisplayName</DisplayName>
+                    <Client>@Client</Client>
+                    <MattStatus>MattStatus</MattStatus> <!-- Pending (60)-->
+                    <MattStatusDate>@MattStatusDate</MattStatusDate>
+                    <OpenDate>@OpenDate</OpenDate>
+                    <Language>1033</Language>
+                    <TimeTaxCode>0</TimeTaxCode>
+                    <Currency>USD</Currency>
+                    <LoadSource>Kentico</LoadSource>
+                	<OpenTkpr>@OpenTkpr</OpenTkpr> <!-- Administrative Division (46)-->
+			 		<CurrencyDateList>Work</CurrencyDateList>
+                </Attributes>
+                <Children>
+                <MattDate>
+					<Add>
+                    	<MattDate>
+                        	<Attributes>
+                                    <EffStart>@EffStart</EffStart>
+                                    <PracticeGroup>Undefined</PracticeGroup>
+                                    <Department>000</Department>
+                                    <Section>000</Section>
+                                    <Arrangement>100</Arrangement>
+                                    <PTAGroup>Default</PTAGroup>
+                                    <NxStartDate>@NxStartDate</NxStartDate>
+					 				<BillTkpr>@BillTkpr</BillTkpr>
+                                    <RspTkpr>@RspTkpr</RspTkpr>
+                                    <SpvTkpr>@SpvTkpr</SpvTkpr>
+									<Office>@Office</Office> <!-- Houston (001)-->
+                                </Attributes>
+                            </MattDate>
+                        </Add>
+                    </MattDate>
+					<MattSite>
+                        <Add>
+                            <MattSite>
+                                <Attributes>
+                                    <Site>@Site</Site>
+                                    <MattSiteType>@MattSiteType</MattSiteType>
+                                </Attributes>
+                            </MattSite>
+                        </Add>
+                    </MattSite>
+                    <MattRate>
+                        <Add>
+                            <MattRate>
+                                <Attributes>
+                                    <Rate>DNU</Rate>
+                                </Attributes>
+                            </MattRate>
+                        </Add>
+                    </MattRate>
+                    <MattIndustryGroup>
+                        <Add>
+                            <MattIndustryGroup>
+                                <Attributes>
+                                    <IndustryGroup>@IndustryGroup</IndustryGroup> <!-- IndustryGroup_CCC - Undefined (Other) (15) -->
+                                </Attributes>
+                            </MattIndustryGroup>
+                        </Add>
+                    </MattIndustryGroup>
+                    <MattPayor> <!-- Payor should be related to the matter client -->
+                        <Add>
+                            <MattPayor>
+                                <Attributes>
+                                    <StartDate>@StartDate</StartDate>
+                                </Attributes>
+                                <Children>
+                                    <MattPayorDetail>
+                                        <Add>
+                                            <MattPayorDetail>
+                                                <Attributes>
+                                                    <IsDefault>1</IsDefault> <!-- only one payor can have default specification -->
+                                                    <PctFee>1</PctFee> <!-- total of all payors must be 1 for percent fields -->
+                                                    <PctHCo>1</PctHCo>
+                                                    <PctSCo>1</PctSCo>
+                                                    <PctTax>1</PctTax>
+                                                    <PctInt>1</PctInt>
+                                                    <PctBOA>1</PctBOA>
+                                                    <PctOth>1</PctOth>
+                                                    <CftRole_CCC>@CftRole_CCC</CftRole_CCC> <!-- CftRole - Insurance Company (600) -->
+                                                    <CftRelationship_CCC>@CftRelationship_CCC</CftRelationship_CCC> <!-- CftRelationshipCode - Both (01) -->
+													<Payor>@Payor</Payor> <!-- Payor (Client) EntityIndex -->
+													<Email_CCC>@Email_CCC</Email_CCC>
+													<Contact_CCC>@Contact_CCC</Contact_CCC>
+													<PhoneNum_CCC>@PhoneNum_CCC</PhoneNum_CCC>
+							 						<Site>@Site</Site> <!-- Site must be related to payor (client) entity -->
+                                                </Attributes>
+                                            </MattPayorDetail>
+                                        </Add>
+                                    </MattPayorDetail>
+                                </Children>
+                            </MattPayor>
+                        </Add>
+                    </MattPayor>
+                    <MatterSpecialInstructions_CCC>
+                        <Add>
+                            <MatterSpecialInstructions_CCC>
+                                <Attributes>
+                                    <Client>@Client</Client> <!-- Payor (Client) EntityIndex -->
+                                    <StartDate>@StartDate</StartDate>
+                                    <ReportsTo>Undefined</ReportsTo>
+                                </Attributes>
+                                <Children>
+                                    <MatterSpecialInvoiceTo_CCC>
+                                        <Add>
+                                            <MatterSpecialInvoiceTo_CCC>
+                                                <Attributes>
+                                                    <InvoiceTo>@InvoiceTo</InvoiceTo> <!-- Payor email -->
+                                                </Attributes>
+                                            </MatterSpecialInvoiceTo_CCC>
+                                        </Add>
+                                    </MatterSpecialInvoiceTo_CCC>
+                                </Children>
+                            </MatterSpecialInstructions_CCC>
+                        </Add>
+                    </MatterSpecialInstructions_CCC>
+                </Children>
+            </Matter>
+        </Add>
+    </Initialize>
+</Matter_Srv_RC>

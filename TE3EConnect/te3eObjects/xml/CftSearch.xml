@@ -1,0 +1,56 @@
+<CftSearch>
+                         
+                                    <Description>NewValue</Description>
+                                    <NumResults>1</NumResults>
+                                    <DateRun>0001-01-02T00:00:00</DateRun>
+                                    <Comments>NewValue</Comments>
+                                    <IsErrored>1</IsErrored>
+                                    <OrigNumResults>1</OrigNumResults>
+                                    <NumResultsLiteral>NewValue</NumResultsLiteral>
+                                    <RanBy />
+                                    <SimpleSearchTerms>NewValue</SimpleSearchTerms>
+                                    <CurrentWorkflowStep />
+                                    <ContinueWorkflow>1</ContinueWorkflow>
+                                    <WorkflowEndReason>1</WorkflowEndReason>
+                                    <ElapsedDataTime>1</ElapsedDataTime>
+                                    <ElapsedSearchTime>1</ElapsedSearchTime>
+                                    <FinalDecision />
+                                    <IsRouted>1</IsRouted>
+                                    <DCSReportID>NewValue</DCSReportID>
+                                    <DecisionBy />
+                                    <DateRouted>0001-01-02T00:00:00</DateRouted>
+                                    <DateDecided>0001-01-02T00:00:00</DateDecided>
+                                    <IsSelectedResults>1</IsSelectedResults>
+                                    <isFiltersPopulated>1</isFiltersPopulated>
+                                    <ParentId>NewValue</ParentId>
+                                    <CftAuthority />
+                                    <IsAccessToRoutedResults>1</IsAccessToRoutedResults>
+                                    <CftSearchTypeList />
+                                    <IsPhoneticSearch>1</IsPhoneticSearch>
+                                    <NxBaseUser />
+                                    <CftSearchAuthorityList />
+                                    <CftSearchResultsViewList />
+                                    <StepDate>0001-01-02T00:00:00</StepDate>
+                                    <EstimatedNumResults>1</EstimatedNumResults>
+                                    <IsProspectiveUnfiltered>1</IsProspectiveUnfiltered>
+                                    <CopyDescription>NewValue</CopyDescription>
+                                    <CopySavedDate>0001-01-02T00:00:00</CopySavedDate>
+                                    <CopySavedBy />
+                                    <IsReadOnlyAccess>1</IsReadOnlyAccess>
+                                    <LblDecisionReview2>NewValue</LblDecisionReview2>
+                                    <CurrentOwner />
+                                    <DisplayCurrentOwner />
+                                    <IsAllowReRouteAll>1</IsAllowReRouteAll>
+                                    <IsRouteAllReleaseReciepient>1</IsRouteAllReleaseReciepient>
+                                    <IsSearchReexecuted>1</IsSearchReexecuted>
+                                    <IsUnboundDataPopulated>1</IsUnboundDataPopulated>
+                                    <IsSearchForViewOnly>1</IsSearchForViewOnly>
+                                    <IsRouteSelected>1</IsRouteSelected>
+                                    <MaxProcessedPageNumber>1</MaxProcessedPageNumber>
+                                    <IsViewAllPages>1</IsViewAllPages>
+                                    <RoutingBGStatus>NewValue</RoutingBGStatus>
+                                    <IsRoutingBG>1</IsRoutingBG>
+                                    <IsProcessAllPages>1</IsProcessAllPages>
+                                    <UseHighlighting>1</UseHighlighting>
+                                    <UseEquivalency>1</UseEquivalency>
+</CftSearch>

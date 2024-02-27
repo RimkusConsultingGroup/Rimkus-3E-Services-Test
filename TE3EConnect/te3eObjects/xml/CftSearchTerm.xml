@@ -1,0 +1,25 @@
+<CftSearchTerm>
+                                                
+		<SearchTerm>NewValue</SearchTerm>
+		<NumResults>1</NumResults>
+		<Name>NewValue</Name>
+		<IsErrored>1</IsErrored>
+		<CftRelationshipCode />
+		<SortOrder>1</SortOrder>
+		<OrigNumResults>1</OrigNumResults>
+		<NumResultsLiteral>NewValue</NumResultsLiteral>
+		<CftRole />
+		<RiskImage />
+		<FullTextSearchRequestID>NewValue</FullTextSearchRequestID>
+		<ElapsedTotalTime>1</ElapsedTotalTime>
+		<ElapsedResultTime>1</ElapsedResultTime>
+		<DateRun>0001-01-02T00:00:00</DateRun>
+		<IsPhoneticSearch>1</IsPhoneticSearch>
+		<CftNewBizSearchName>NewValue</CftNewBizSearchName>
+		<IsNotSearch>1</IsNotSearch>
+		<IsNotCreateLink>1</IsNotCreateLink>
+		<OrigSearchTerm>NewValue</OrigSearchTerm>
+		<SearchTerms>NewValue</SearchTerms>
+		<EstimatedResultCount>1</EstimatedResultCount>
+  
+</CftSearchTerm>

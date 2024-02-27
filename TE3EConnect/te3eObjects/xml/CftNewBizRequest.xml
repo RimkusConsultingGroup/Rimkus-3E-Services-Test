@@ -1,0 +1,54 @@
+<CftNewBizRequest>
+    <CftNewBizRequestID>97b33fd9-a3a0-4c5f-a855-fd2e633dd02b</CftNewBizRequestID>
+    <CftSearchReason>NewMatterExistingClient</CftSearchReason>
+    <Description>New Matter For Existing Client</Description>
+    <Client>33681</Client>
+    <Number>0005192</Number>
+    <Matter>417518</Matter>
+    <Number>100000000</Number>
+    <Entity />
+    <DisplayName />
+    <RequestDateTime>4/15/2019 6:31:40 AM</RequestDateTime>
+    <JobNumber>1</JobNumber>
+    <Description>Mercedes Benz of Marietta | Adebayo Fire Origin &amp; Cause</Description>
+    <IsCreatedMatter>1</IsCreatedMatter>
+    <IsCreatedClient>0</IsCreatedClient>
+    <CftNBRStatus>Approved</CftNBRStatus>
+    <Description>Approved</Description>
+    <CurrentWorkflowStep />
+    <Description />
+    <OrgProc>NewBizRequest</OrgProc>
+    <ClientSearchNameId />
+    <Submitter>dd1ab842-f3e3-47a1-8e02-0266a73b4638</Submitter>
+    <BaseUserName>Piper, Chris M.</BaseUserName>
+    <FinalizeResult>Approved</FinalizeResult>
+    <Description>Approved</Description>
+    <RouteTo />
+    <BaseUserName />
+    <DateRouted />
+    <DateDecided />
+    <DeclineReason />
+    <Description />
+    <DeclineComment />
+    <DecidedBy />
+    <BaseUserName />
+    <CftSearchAuthority />
+    <CftAuthority />
+    <LoadNumber />
+    <LoadSource />
+    <LoadGroup />
+    <LoadBatchID />
+    <LoadFlag>0</LoadFlag>
+    <LastEditedBy>ef2df787-3d90-443a-9a8d-8c847ae32746</LastEditedBy>
+    <BaseUserName>Davis, Andre L.</BaseUserName>
+    <FromCMCase>0</FromCMCase>
+    <CmCase />
+    <Description />
+    <CftResultView />
+    <Description />
+    <AdminComments />
+    <AdminComments_FormattedText />
+    <ClientMatterCreationRouteTo />
+    <BaseUserName />
+    <IsNoSearchNecessary>0</IsNoSearchNecessary>
+  </CftNewBizRequest>

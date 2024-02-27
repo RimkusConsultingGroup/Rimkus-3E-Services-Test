@@ -1,0 +1,97 @@
+<POEntry xmlns="http://elite.com/schemas/transaction/process/write/POEntry">
+    <Initialize xmlns="http://elite.com/schemas/transaction/object/write/PO">
+        <Add>
+            <PO>
+                <Attributes>
+                    <PONum>NewValue</PONum>
+                    <Payee />
+                    <RequestNxUser />
+                    <OrderNxUser />
+                    <DateOrdered>0001-01-02T00:00:00</DateOrdered>
+                    <Terms />
+                    <BillSite />
+                    <ShipSite />
+                    <Phone />
+                    <ShipMethod />
+                    <ShipInstructions>NewValue</ShipInstructions>
+                    <Comments>NewValue</Comments>
+                    <ModifyBy>NewValue</ModifyBy>
+                    <ModifyDateTime>NewValue</ModifyDateTime>
+                    <IsClosed>1</IsClosed>
+                    <PayeeSite />
+                    <PayeePhone>NewValue</PayeePhone>
+                    <POMatchList />
+                    <TemplatePO />
+                    <AutoGenPONum>1</AutoGenPONum>
+                    <Amount>1</Amount>
+                    <Currency />
+                </Attributes>
+                <Children>
+                    <PODetail>
+                        <Add>
+                            <PODetail>
+                                <Attributes>
+                                    <DateRequired>0001-01-02T00:00:00</DateRequired>
+                                    <InitialShipDate>0001-01-02T00:00:00</InitialShipDate>
+                                    <ExpectedShipDate>0001-01-02T00:00:00</ExpectedShipDate>
+                                    <QntOrder>1</QntOrder>
+                                    <ProductCode />
+                                    <Description>NewValue</Description>
+                                    <Currency />
+                                    <UnitCost>1</UnitCost>
+                                    <TotalCost>1</TotalCost>
+                                    <Matter />
+                                    <ExpenseGLAcct />
+                                    <IsEncumb>1</IsEncumb>
+                                    <EncumbMap />
+                                    <Comments>NewValue</Comments>
+                                    <QntRcpt>1</QntRcpt>
+                                    <QntInvHold>1</QntInvHold>
+                                    <LineNum>1</LineNum>
+                                    <UOM />
+                                    <Project />
+                                    <Office />
+                                    <Timekeeper />
+                                    <RequestNxUser />
+                                    <QntInvApp>1</QntInvApp>
+                                    <QntInsp>1</QntInsp>
+                                    <IsClosed>1</IsClosed>
+                                    <IsRush>1</IsRush>
+                                    <DeliverNxUser />
+                                    <POReqDetail />
+                                    <FACategory />
+                                    <TaxCode />
+                                    <QntReq>1</QntReq>
+                                    <PayeeSKU>NewValue</PayeeSKU>
+                                    <Category />
+                                    <IsActive>1</IsActive>
+                                    <CostType />
+                                    <OrigPODetail>NewValue</OrigPODetail>
+                                    <GLDate>0001-01-02T00:00:00</GLDate>
+                                    <PostDate>0001-01-02T00:00:00</PostDate>
+                                    <CurrDate>0001-01-02T00:00:00</CurrDate>
+                                    <IsAddedForEncumb>1</IsAddedForEncumb>
+                                    <ShippingCost_CCC>1</ShippingCost_CCC>
+                                    <Tax_CCC>1</Tax_CCC>
+                                </Attributes>
+                            </PODetail>
+                        </Add>
+                    </PODetail>
+                    <POAuditTrail_CCC>
+                        <Add>
+                            <POAuditTrail_CCC>
+                                <Attributes>
+                                    <Action>NewValue</Action>
+                                    <NxUser />
+                                    <POReq />
+                                    <RejectionReason>NewValue</RejectionReason>
+                                    <MsgTimestamp>0001-01-02T00:00:00</MsgTimestamp>
+                                </Attributes>
+                            </POAuditTrail_CCC>
+                        </Add>
+                    </POAuditTrail_CCC>
+                </Children>
+            </PO>
+        </Add>
+    </Initialize>
+</POEntry>

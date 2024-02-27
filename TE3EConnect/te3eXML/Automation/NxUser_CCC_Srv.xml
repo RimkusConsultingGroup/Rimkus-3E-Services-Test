@@ -1,0 +1,5 @@
+<NxUser_CCC_Srv xmlns="http://elite.com/schemas/transaction/process/write/NxUser_CCC_Srv">
+<Initialize xmlns="http://elite.com/schemas/transaction/object/write/NxUser">
+  @AddNxUser
+</Initialize>
+</NxUser_CCC_Srv>

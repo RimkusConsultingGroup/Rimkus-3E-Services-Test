@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="RateExcDet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="RateExcDetID" type="xs:string" minOccurs="0" />
+        <xs:element name="RateExc" type="xs:string" minOccurs="0" />
+        <xs:element name="RateOverride" type="xs:string" minOccurs="0" />
+        <xs:element name="Rate" type="xs:string" minOccurs="0" />
+        <xs:element name="MaxRate" type="xs:string" minOccurs="0" />
+        <xs:element name="Currency" type="xs:string" minOccurs="0" />
+        <xs:element name="CurrencyDate" type="xs:string" minOccurs="0" />
+        <xs:element name="Timekeeper" type="xs:string" minOccurs="0" />
+        <xs:element name="Number" type="xs:string" minOccurs="0" />
+        <xs:element name="Title" type="xs:string" minOccurs="0" />
+        <xs:element name="Office" type="xs:string" minOccurs="0" />
+        <xs:element name="Department" type="xs:string" minOccurs="0" />
+        <xs:element name="Section" type="xs:string" minOccurs="0" />
+        <xs:element name="RateClass" type="xs:string" minOccurs="0" />
+        <xs:element name="CostType" type="xs:string" minOccurs="0" />
+        <xs:element name="Startdate" type="xs:string" minOccurs="0" />
+        <xs:element name="FinishDate" type="xs:string" minOccurs="0" />
+        <xs:element name="OverridePercent" type="xs:string" minOccurs="0" />
+        <xs:element name="RoundingMethod" type="xs:string" minOccurs="0" />
+        <xs:element name="RateYearRangeMin" type="xs:string" minOccurs="0" />
+        <xs:element name="RateYearRangeMax" type="xs:string" minOccurs="0" />
+        <xs:element name="MatterRateMin" type="xs:string" minOccurs="0" />
+        <xs:element name="MatterRateMax" type="xs:string" minOccurs="0" />
+        <xs:element name="MultiDimensionOrdinal" type="xs:string" minOccurs="0" />
+        <xs:element name="DeviationAmount" type="xs:string" minOccurs="0" />
+        <xs:element name="Description" nillable="true" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:simpleContent msdata:ColumnName="Description_Text" msdata:Ordinal="0">
+              <xs:extension base="xs:string">
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="RateExcDet" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

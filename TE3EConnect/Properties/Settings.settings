@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TE3EConnect.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="TE3EConnect_e3ewapiprod_TransactionService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://rcg3ewap02.rimkus.net/TE_3E_PROD/Webui/transactionservice.asmx</Value>
+    </Setting>
+    <Setting Name="TE3EConnect_e3ewapiuat2_TransactionService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://rcg3edev.rimkus.net/TE_3E_uat/Webui/transactionservice.asmx</Value>
+    </Setting>
+    <Setting Name="TE3EConnect_e3ewapidev2_TransactionService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://rcg3edev.rimkus.net/TE_3E_dev/Webui/transactionservice.asmx</Value>
+    </Setting>
+    <Setting Name="TE3EConnect_e3ewapiprodupgrade_ITransactionService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://elite3e.rimkus.com/TE_3E_PROD/web/transactionservice.asmx</Value>
+    </Setting>
+    <Setting Name="TE3EConnect_elite3edev3_ITransactionService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://elite3edev.rimkus.com/TE_3E_DEV/web/TransactionService.asmx</Value>
+    </Setting>
+    <Setting Name="TE3EConnect_elite3edev_uat_ITransactionService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://elite3edev.rimkus.com/TE_3E_UAT/web/TransactionService.asmx</Value>
+    </Setting>
+    <Setting Name="TE3EConnect_elite3edev_staging_ITransactionService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://elite3edev.rimkus.com/TE_3E_STAGING/web/TransactionService.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

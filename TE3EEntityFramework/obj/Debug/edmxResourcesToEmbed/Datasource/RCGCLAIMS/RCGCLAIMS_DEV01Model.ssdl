@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RCGCLAIMS_DEV01Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AppConfig">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KeyName" Type="nvarchar" MaxLength="50" />
+    <Property Name="DevValue" Type="nvarchar(max)" />
+    <Property Name="ProdValue" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Timestamp" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RCGCLAIMS_DEV01.dbo.KeyVaults' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="KeyVaults">
+    <Key>
+      <PropertyRef Name="ClientKeyId" />
+    </Key>
+    <Property Name="ClientKeyId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ApiKey" Type="varchar" MaxLength="500" />
+    <Property Name="ClientName" Type="varchar" MaxLength="100" />
+    <Property Name="CreatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="LMAssignment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClaimUniqueId" Type="nvarchar" MaxLength="100" />
+    <Property Name="AssignmentSentDate" Type="date" />
+    <Property Name="BillingName" Type="nvarchar" MaxLength="100" />
+    <Property Name="BillingTitle" Type="nvarchar" MaxLength="100" />
+    <Property Name="BillingCompany" Type="nvarchar" MaxLength="100" />
+    <Property Name="BillingAddress" Type="nvarchar" MaxLength="150" />
+    <Property Name="BillingCity" Type="nvarchar" MaxLength="50" />
+    <Property Name="BillingState" Type="nvarchar" MaxLength="50" />
+    <Property Name="BillingZip" Type="nvarchar" MaxLength="20" />
+    <Property Name="BillingEmail" Type="nvarchar" MaxLength="200" />
+    <Property Name="BillingPhone" Type="nvarchar" MaxLength="25" />
+    <Property Name="BillingCell" Type="nvarchar" MaxLength="25" />
+    <Property Name="BillingFax" Type="nvarchar" MaxLength="25" />
+    <Property Name="ClientName" Type="nvarchar" MaxLength="100" />
+    <Property Name="ClaimNumber" Type="varchar" MaxLength="250" />
+    <Property Name="TPAFileNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="ClaimDescription" Type="nvarchar(max)" />
+    <Property Name="UnlistedService" Type="nvarchar(max)" />
+    <Property Name="OccurrenceDate" Type="date" />
+    <Property Name="OccurrenceLocation" Type="nvarchar" MaxLength="150" />
+    <Property Name="OccurrenceCity" Type="nvarchar" MaxLength="50" />
+    <Property Name="OccurrenceState" Type="nvarchar" MaxLength="50" />
+    <Property Name="OccurrenceZip" Type="nvarchar" MaxLength="20" />
+    <Property Name="InsuranceCompany" Type="nvarchar" MaxLength="150" />
+    <Property Name="InsuredName" Type="nvarchar" MaxLength="150" />
+    <Property Name="InsuredPhone" Type="nvarchar" MaxLength="25" />
+    <Property Name="InsuredCell" Type="nvarchar" MaxLength="25" />
+    <Property Name="AdjustmentCompany" Type="nvarchar" MaxLength="100" />
+    <Property Name="AdjustmentPhone" Type="nvarchar" MaxLength="25" />
+    <Property Name="AdjustorName" Type="nvarchar" MaxLength="100" />
+    <Property Name="AdjustorEmail" Type="nvarchar" MaxLength="200" />
+    <Property Name="InvoiceTo" Type="nvarchar" MaxLength="100" />
+    <Property Name="InvoiceCompany" Type="nvarchar" MaxLength="100" />
+    <Property Name="InvoicePhone" Type="nvarchar" MaxLength="25" />
+    <Property Name="InvoiceAddress" Type="nvarchar" MaxLength="150" />
+    <Property Name="InvoiceCity" Type="nvarchar" MaxLength="50" />
+    <Property Name="InvoiceState" Type="nvarchar" MaxLength="50" />
+    <Property Name="AdditionalData" Type="nvarchar(max)" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="Title" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="LMAssignmentServiceLogs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClaimNumber" Type="varchar" MaxLength="250" />
+    <Property Name="ClaimUniqueId" Type="varchar" MaxLength="250" />
+    <Property Name="SubmissionId" Type="int" />
+    <Property Name="Status" Type="varchar" MaxLength="250" />
+    <Property Name="Message" Type="nvarchar(max)" />
+    <Property Name="TimeStamp" Type="date" />
+  </EntityType>
+  <EntityType Name="LMClaimNotifications">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClaimNumber" Type="nvarchar(max)" />
+    <Property Name="ClaimUniqueId" Type="nvarchar(max)" />
+    <Property Name="ExternalReference" Type="nvarchar(max)" />
+    <Property Name="PolicyNumber" Type="nvarchar(max)" />
+    <Property Name="FileNumber" Type="nvarchar(max)" />
+    <Property Name="Status" Type="nvarchar(max)" />
+    <Property Name="OriginatorCompanyID" Type="nvarchar(max)" />
+    <Property Name="OriginatorCompanyName" Type="nvarchar(max)" />
+    <Property Name="NotificationJson" Type="nvarchar(max)" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="ImportedAt" Type="datetime" />
+    <Property Name="NumOfAttempts" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="RCGCLAIMS_DEV01ModelStoreContainer">
+    <EntitySet Name="AppConfig" EntityType="Self.AppConfig" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMAssignment" EntityType="Self.LMAssignment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMAssignmentServiceLogs" EntityType="Self.LMAssignmentServiceLogs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMClaimNotifications" EntityType="Self.LMClaimNotifications" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KeyVaults" EntityType="Self.KeyVaults" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [KeyVaults].[ClientKeyId] AS [ClientKeyId], 
+    [KeyVaults].[ApiKey] AS [ApiKey], 
+    [KeyVaults].[ClientName] AS [ClientName], 
+    [KeyVaults].[CreatedOn] AS [CreatedOn]
+    FROM [dbo].[KeyVaults] AS [KeyVaults]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

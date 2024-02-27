@@ -1,0 +1,27 @@
+<RateExcDet>
+                                              
+                                                    <RateOverride>1</RateOverride>
+                                                    <Rate />
+                                                    <MaxRate>1</MaxRate>
+                                                    <Currency />
+                                                    <CurrencyDate>0001-01-02T00:00:00</CurrencyDate>
+                                                    <Timekeeper />
+                                                    <Title />
+                                                    <Office />
+                                                    <Section />
+                                                    <RateClass />
+                                                    <Description>NewValue</Description>
+                                                    <Department />
+                                                    <CostType />
+                                                    <Startdate>0001-01-02T00:00:00</Startdate>
+                                                    <FinishDate>0001-01-02T00:00:00</FinishDate>
+                                                    <OverridePercent>1</OverridePercent>
+                                                    <RoundingMethod />
+                                                    <RateYearRangeMin>1</RateYearRangeMin>
+                                                    <RateYearRangeMax>1</RateYearRangeMax>
+                                                    <MatterRateMax>1</MatterRateMax>
+                                                    <MultiDimensionOrdinal>1</MultiDimensionOrdinal>
+                                                    <MatterRateMin>1</MatterRateMin>
+                                                    <DeviationAmount>1</DeviationAmount>
+                                             
+                                            </RateExcDet>

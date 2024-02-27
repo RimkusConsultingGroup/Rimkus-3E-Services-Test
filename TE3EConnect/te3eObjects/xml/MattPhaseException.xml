@@ -1,0 +1,10 @@
+<MattPhaseException>
+                             
+                                    <Phase />
+                                    <MilestoneDate>0001-01-02T00:00:00</MilestoneDate>
+                                    <IsTimeEntry>1</IsTimeEntry>
+                                    <IsCostEntry>1</IsCostEntry>
+                                    <IsChargeEntry>1</IsChargeEntry>
+                                    <PTAGroup />
+                         
+                            </MattPhaseException>

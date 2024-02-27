@@ -1,0 +1,15 @@
+<CftEntityClientRelatedParty>
+                                                                               
+		<CftEntityClientRelatedPartyID />
+		<CftDisplayName>NewValue</CftDisplayName>
+		<EntityId>NewValue</EntityId>
+		<RoleCode>NewValue</RoleCode>
+		<Role>NewValue</Role>
+		<Relationship>NewValue</Relationship>
+		<RelationshipCode>NewValue</RelationshipCode>
+		<Status>NewValue</Status>
+		<EntityIndex>1</EntityIndex>
+		<Notes>NewValue</Notes>
+		<ParentID>NewValue</ParentID>
+  
+</CftEntityClientRelatedParty>

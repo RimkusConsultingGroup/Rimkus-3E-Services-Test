@@ -1,0 +1,56 @@
+<CftSearch>
+
+                                    <Description>S&amp;S Lines &amp; Drains/Simpson Water Supply Line Evaluation</Description>
+                                    <NumResults>4</NumResults>
+                                    <DateRun>2019-04-20T15:59:32</DateRun>
+                                    <Comments>NewValue</Comments>
+                                    <IsErrored>1</IsErrored>
+                                    <OrigNumResults>4</OrigNumResults>
+                                    <NumResultsLiteral>3 of 3</NumResultsLiteral>
+                                    <RanBy>7356c8e1-de08-40ba-a0f1-5a8bc02707af</RanBy>
+                                    <SimpleSearchTerms>NewValue</SimpleSearchTerms>
+                                    <CurrentWorkflowStep>Finalized</CurrentWorkflowStep>
+                                    <ContinueWorkflow>1</ContinueWorkflow>
+                                    <WorkflowEndReason>1</WorkflowEndReason>
+                                    <ElapsedDataTime>2</ElapsedDataTime>
+                                    <ElapsedSearchTime>532</ElapsedSearchTime>
+                                    <FinalDecision>Approved</FinalDecision>
+                                    <IsRouted>0</IsRouted>
+                                    <DCSReportID>NewValue</DCSReportID>
+                                    <DecisionBy>7356c8e1-de08-40ba-a0f1-5a8bc02707af</DecisionBy>
+                                    <DateRouted>2019-04-20T00:00:00</DateRouted>
+                                    <DateDecided>2019-04-20T00:00:00</DateDecided>
+                                    <IsSelectedResults>1</IsSelectedResults>
+                                    <isFiltersPopulated>1</isFiltersPopulated>
+                                    <ParentId>NewValue</ParentId>
+                                    <CftAuthority />
+                                    <IsAccessToRoutedResults>1</IsAccessToRoutedResults>
+                                    <CftSearchTypeList>Conflicts Search</CftSearchTypeList>
+                                    <IsPhoneticSearch>1</IsPhoneticSearch>
+                                    <NxBaseUser>653df626-eb1d-46ee-b8de-5f677e6432e4</NxBaseUser>
+                                    <CftSearchAuthorityList>Decision Maker</CftSearchAuthorityList>
+                                    <CftSearchResultsViewList>Detail</CftSearchResultsViewList>
+                                    <StepDate>2019-04-20T16:00:05</StepDate>
+                                    <EstimatedNumResults>1</EstimatedNumResults>
+                                    <IsProspectiveUnfiltered>1</IsProspectiveUnfiltered>
+                                    <CopyDescription>NewValue</CopyDescription>
+                                    <CopySavedDate>1900-01-02T00:00:00</CopySavedDate>
+                                    <CopySavedBy />
+                                    <IsReadOnlyAccess>1</IsReadOnlyAccess>
+                                    <LblDecisionReview2>NewValue</LblDecisionReview2>
+                                    <CurrentOwner>b7e5705f-bb7a-4727-8c70-4bce9b4a5e4b</CurrentOwner>
+                                    <DisplayCurrentOwner>b7e5705f-bb7a-4727-8c70-4bce9b4a5e4b</DisplayCurrentOwner>
+                                    <IsAllowReRouteAll>0</IsAllowReRouteAll>
+                                    <IsRouteAllReleaseReciepient>1</IsRouteAllReleaseReciepient>
+                                    <IsSearchReexecuted>1</IsSearchReexecuted>
+                                    <IsUnboundDataPopulated>1</IsUnboundDataPopulated>
+                                    <IsSearchForViewOnly>1</IsSearchForViewOnly>
+                                    <IsRouteSelected>1</IsRouteSelected>
+                                    <MaxProcessedPageNumber>2</MaxProcessedPageNumber>
+                                    <IsViewAllPages>1</IsViewAllPages>
+                                    <RoutingBGStatus>NewValue</RoutingBGStatus>
+                                    <IsRoutingBG>1</IsRoutingBG>
+                                    <IsProcessAllPages>1</IsProcessAllPages>
+                                    <UseHighlighting>0</UseHighlighting>
+                                    <UseEquivalency>0</UseEquivalency>
+</CftSearch>

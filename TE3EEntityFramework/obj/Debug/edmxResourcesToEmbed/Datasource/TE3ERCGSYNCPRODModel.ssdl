@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TE3ERCGSYNCPRODModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ClientMaster">
+    <Key>
+      <PropertyRef Name="ClientKeyId" />
+    </Key>
+    <Property Name="ClientKeyId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AppId" Type="varchar" MaxLength="500" />
+    <Property Name="AppKey" Type="varchar" MaxLength="500" />
+    <Property Name="ClientName" Type="varchar" MaxLength="100" />
+    <Property Name="CreatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="CustomSubjectLine">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientIndex" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="ClientName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SpecialSubjectLine" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SpecificEmail" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TE_3E_RCG_SYNC.dbo.ExcludedClientCollectionWF' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ExcludedClientCollectionWF">
+    <Key>
+      <PropertyRef Name="ClientID" />
+      <PropertyRef Name="ClientIndex" />
+      <PropertyRef Name="Number" />
+      <PropertyRef Name="DisplayName" />
+      <PropertyRef Name="RelatedClient" />
+      <PropertyRef Name="IsExcluded" />
+    </Key>
+    <Property Name="ClientID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ClientIndex" Type="int" Nullable="false" />
+    <Property Name="Number" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="DisplayName" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="SortString" Type="nvarchar" MaxLength="128" />
+    <Property Name="RelatedClient" Type="int" Nullable="false" />
+    <Property Name="IsExcluded" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TrackerSafeDecisionLetter">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EvidenceId" Type="nvarchar" MaxLength="50" />
+    <Property Name="MattNum" Type="nvarchar" MaxLength="50" />
+    <Property Name="InsuredName" Type="nvarchar(max)" />
+    <Property Name="IsInsured" Type="bit" />
+    <Property Name="ClaimNo" Type="nvarchar(max)" />
+    <Property Name="DateOfLoss" Type="datetime" />
+    <Property Name="ClientName" Type="nvarchar(max)" />
+    <Property Name="ClientCompanyName" Type="nvarchar(max)" />
+    <Property Name="ClientAddress" Type="nvarchar(max)" />
+    <Property Name="ClientCity" Type="nvarchar(max)" />
+    <Property Name="ClientState" Type="nvarchar" MaxLength="2" />
+    <Property Name="ClientZipCode" Type="nvarchar" MaxLength="16" />
+    <Property Name="ClientEmail" Type="nvarchar(max)" />
+    <Property Name="DecisionOption" Type="int" />
+    <Property Name="ReceivedAt" Type="datetime" />
+    <Property Name="SentAt" Type="datetime" />
+    <Property Name="RecipientName" Type="nvarchar" MaxLength="50" />
+    <Property Name="RecipientCompany" Type="nvarchar" MaxLength="50" />
+    <Property Name="RecipientAddress" Type="nvarchar(max)" />
+    <Property Name="RecipientCity" Type="nvarchar(max)" />
+    <Property Name="RecipientState" Type="nvarchar" MaxLength="2" />
+    <Property Name="RecipientZipCode" Type="nvarchar" MaxLength="16" />
+    <Property Name="RecipientPhone" Type="nvarchar" MaxLength="16" />
+    <Property Name="RecipientCarrierName" Type="nvarchar" MaxLength="50" />
+    <Property Name="InsuranceAmount" Type="int" />
+    <Property Name="Expiration" Type="datetime" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="AuthorizedRepresentative" Type="nvarchar" MaxLength="50" />
+    <Property Name="NumOfTries" Type="int" />
+    <Property Name="PDFFilePath" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TE_3E_RCG_SYNC.dbo.TrackerSafeEMSImport' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TrackerSafeEMSImport">
+    <Key>
+      <PropertyRef Name="MatterID" />
+      <PropertyRef Name="MattIndex" />
+    </Key>
+    <Property Name="MatterID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="MattIndex" Type="int" Nullable="false" />
+    <Property Name="MattNumber" Type="nvarchar" MaxLength="64" />
+    <Property Name="MattName" Type="nvarchar" MaxLength="255" />
+    <Property Name="Description" Type="nvarchar" MaxLength="1024" />
+    <Property Name="MattStatus" Type="nvarchar" MaxLength="16" />
+    <Property Name="MattStatusDate" Type="datetime" />
+    <Property Name="MattType" Type="nvarchar" MaxLength="16" />
+    <Property Name="OpenDate" Type="datetime" />
+    <Property Name="ClientIndex" Type="int" />
+    <Property Name="ClientNumber" Type="nvarchar" MaxLength="64" />
+    <Property Name="ClientName" Type="nvarchar(max)" />
+    <Property Name="ClientFormattedString" Type="nvarchar(max)" />
+    <Property Name="ClientStreet" Type="nvarchar(max)" />
+    <Property Name="ClientCity" Type="nvarchar" MaxLength="500" />
+    <Property Name="ClientState" Type="nvarchar" MaxLength="500" />
+    <Property Name="ClientZipCode" Type="nvarchar" MaxLength="500" />
+    <Property Name="Contact Email" Type="nvarchar(max)" />
+    <Property Name="ClaimNo" Type="nvarchar(max)" />
+    <Property Name="ReferenceNumber" Type="nvarchar(max)" />
+    <Property Name="Contact Name" Type="nvarchar(max)" />
+    <Property Name="Contact Phone" Type="nvarchar" MaxLength="64" />
+    <Property Name="Insured Name" Type="nvarchar(max)" />
+    <Property Name="Claimant" Type="nvarchar(max)" />
+    <Property Name="Style" Type="nvarchar(max)" />
+    <Property Name="Cause Number" Type="nvarchar(max)" />
+    <Property Name="Date of Loss" Type="nvarchar" MaxLength="64" />
+    <Property Name="OfficeFormattedString" Type="nvarchar(max)" />
+    <Property Name="OfficeName" Type="nvarchar(max)" />
+    <Property Name="OfficeStreet" Type="nvarchar(max)" />
+    <Property Name="OfficeCity" Type="nvarchar" MaxLength="500" />
+    <Property Name="OfficeState" Type="nvarchar" MaxLength="500" />
+    <Property Name="OfficeZipCode" Type="nvarchar" MaxLength="500" />
+    <Property Name="OfficePhone" Type="nvarchar" MaxLength="500" />
+    <Property Name="OfficeFax" Type="nvarchar" MaxLength="500" />
+    <Property Name="CertAuthNo" Type="nvarchar(max)" />
+    <Property Name="Exported" Type="int" />
+    <Property Name="ErrorMsg" Type="varchar(max)" />
+    <Property Name="TransDate" Type="datetime" />
+    <Property Name="Engineer1" Type="nvarchar" MaxLength="50" />
+    <Property Name="OfficeDescription" Type="nvarchar(max)" />
+  </EntityType>
+  <Function Name="ComputeTrackerBillRate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+    <Parameter Name="BillRateType" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="BillRateisSpecial" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="ConvertFirsLastName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar(max)">
+    <Parameter Name="name" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="ConvertTitleCase" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar(max)">
+    <Parameter Name="String" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="GetBillingRate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="mattNo" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="GetClaimantOrInsuredName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar(max)">
+    <Parameter Name="matterNo" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="isInsured" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetMatterSpecialInstrRelatedClient" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+    <Parameter Name="matterNo" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="GetMemberUsers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar(max)">
+    <Parameter Name="mattNo" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="GetPayorRelatedClient" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+    <Parameter Name="matterNo" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="GetPhoneOrFax" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar(max)">
+    <Parameter Name="matterNo" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="phoneType" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GetUserEmail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar(max)">
+    <Parameter Name="tkprIdx" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="IsBrasheerMatterExist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+    <Parameter Name="matterNo" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="IsMatterRelatedClientExist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+    <Parameter Name="matterNo" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="IsMultiPayorMatterExist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+    <Parameter Name="matterNo" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="IsRBCLondonCandaMatterExist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+    <Parameter Name="matterNo" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="RetrieveCollectionItemsByPastDueDays" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numOfDays" Type="int" Mode="In" />
+  </Function>
+  <Function Name="RetrieveCollectionItemsByPastDueDaysNoFilter" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numOfDays" Type="int" Mode="In" />
+  </Function>
+  <Function Name="RetrieveItemizedInvCollection" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="collectionItem" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="RetrieveLetterHeaderAddress" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="matterNo" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="RetrieveMatteCPC" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="matterNo" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="RetrieveMatterByNum" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="matterNo" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="RetrieveMatters" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numOfDays" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="TE3ERCGSYNCPRODModelStoreContainer">
+    <EntitySet Name="ClientMaster" EntityType="Self.ClientMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CustomSubjectLine" EntityType="Self.CustomSubjectLine" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TrackerSafeDecisionLetter" EntityType="Self.TrackerSafeDecisionLetter" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ExcludedClientCollectionWF" EntityType="Self.ExcludedClientCollectionWF" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ExcludedClientCollectionWF].[ClientID] AS [ClientID], 
+    [ExcludedClientCollectionWF].[ClientIndex] AS [ClientIndex], 
+    [ExcludedClientCollectionWF].[Number] AS [Number], 
+    [ExcludedClientCollectionWF].[DisplayName] AS [DisplayName], 
+    [ExcludedClientCollectionWF].[SortString] AS [SortString], 
+    [ExcludedClientCollectionWF].[RelatedClient] AS [RelatedClient], 
+    [ExcludedClientCollectionWF].[IsExcluded] AS [IsExcluded]
+    FROM [dbo].[ExcludedClientCollectionWF] AS [ExcludedClientCollectionWF]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TrackerSafeEMSImport" EntityType="Self.TrackerSafeEMSImport" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TrackerSafeEMSImport].[MatterID] AS [MatterID], 
+    [TrackerSafeEMSImport].[MattIndex] AS [MattIndex], 
+    [TrackerSafeEMSImport].[MattNumber] AS [MattNumber], 
+    [TrackerSafeEMSImport].[MattName] AS [MattName], 
+    [TrackerSafeEMSImport].[Description] AS [Description], 
+    [TrackerSafeEMSImport].[MattStatus] AS [MattStatus], 
+    [TrackerSafeEMSImport].[MattStatusDate] AS [MattStatusDate], 
+    [TrackerSafeEMSImport].[MattType] AS [MattType], 
+    [TrackerSafeEMSImport].[OpenDate] AS [OpenDate], 
+    [TrackerSafeEMSImport].[ClientIndex] AS [ClientIndex], 
+    [TrackerSafeEMSImport].[ClientNumber] AS [ClientNumber], 
+    [TrackerSafeEMSImport].[ClientName] AS [ClientName], 
+    [TrackerSafeEMSImport].[ClientFormattedString] AS [ClientFormattedString], 
+    [TrackerSafeEMSImport].[ClientStreet] AS [ClientStreet], 
+    [TrackerSafeEMSImport].[ClientCity] AS [ClientCity], 
+    [TrackerSafeEMSImport].[ClientState] AS [ClientState], 
+    [TrackerSafeEMSImport].[ClientZipCode] AS [ClientZipCode], 
+    [TrackerSafeEMSImport].[Contact Email] AS [Contact Email], 
+    [TrackerSafeEMSImport].[ClaimNo] AS [ClaimNo], 
+    [TrackerSafeEMSImport].[ReferenceNumber] AS [ReferenceNumber], 
+    [TrackerSafeEMSImport].[Contact Name] AS [Contact Name], 
+    [TrackerSafeEMSImport].[Contact Phone] AS [Contact Phone], 
+    [TrackerSafeEMSImport].[Insured Name] AS [Insured Name], 
+    [TrackerSafeEMSImport].[Claimant] AS [Claimant], 
+    [TrackerSafeEMSImport].[Style] AS [Style], 
+    [TrackerSafeEMSImport].[Cause Number] AS [Cause Number], 
+    [TrackerSafeEMSImport].[Date of Loss] AS [Date of Loss], 
+    [TrackerSafeEMSImport].[OfficeFormattedString] AS [OfficeFormattedString], 
+    [TrackerSafeEMSImport].[OfficeName] AS [OfficeName], 
+    [TrackerSafeEMSImport].[OfficeStreet] AS [OfficeStreet], 
+    [TrackerSafeEMSImport].[OfficeCity] AS [OfficeCity], 
+    [TrackerSafeEMSImport].[OfficeState] AS [OfficeState], 
+    [TrackerSafeEMSImport].[OfficeZipCode] AS [OfficeZipCode], 
+    [TrackerSafeEMSImport].[OfficePhone] AS [OfficePhone], 
+    [TrackerSafeEMSImport].[OfficeFax] AS [OfficeFax], 
+    [TrackerSafeEMSImport].[CertAuthNo] AS [CertAuthNo], 
+    [TrackerSafeEMSImport].[Exported] AS [Exported], 
+    [TrackerSafeEMSImport].[ErrorMsg] AS [ErrorMsg], 
+    [TrackerSafeEMSImport].[TransDate] AS [TransDate], 
+    [TrackerSafeEMSImport].[Engineer1] AS [Engineer1], 
+    [TrackerSafeEMSImport].[OfficeDescription] AS [OfficeDescription]
+    FROM [dbo].[TrackerSafeEMSImport] AS [TrackerSafeEMSImport]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

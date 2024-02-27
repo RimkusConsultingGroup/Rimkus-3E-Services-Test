@@ -1,0 +1,16 @@
+<RateExc>
+                              
+                                    <Description>NewValue</Description>
+                                    <Client />
+                                    <StartDate>0001-01-02T00:00:00</StartDate>
+                                    <FinishDate>0001-01-02T00:00:00</FinishDate>
+                                    <RateExcList />
+                                    <IsMaximum>1</IsMaximum>
+                                    <IsValidate>1</IsValidate>
+                                    <IsMatchCurr>1</IsMatchCurr>
+                                    <OverrideDate>0001-01-02T00:00:00</OverrideDate>
+                                    <IsSkipClientExc>1</IsSkipClientExc>
+                                    <CostType />
+                                    <MultiDimensionOrdinal>1</MultiDimensionOrdinal>
+                                    <IsStdRateExc>1</IsStdRateExc>
+                                </RateExc>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="MattPayorLayerDet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ForAttentionOf" type="xs:string" minOccurs="0" />
+        <xs:element name="IsDefault" type="xs:string" minOccurs="0" />
+        <xs:element name="Payor" type="xs:string" minOccurs="0" />
+        <xs:element name="PctBOA" type="xs:string" minOccurs="0" />
+        <xs:element name="PctFee" type="xs:string" minOccurs="0" />
+        <xs:element name="PctHCo" type="xs:string" minOccurs="0" />
+        <xs:element name="PctInt" type="xs:string" minOccurs="0" />
+        <xs:element name="PctOth" type="xs:string" minOccurs="0" />
+        <xs:element name="PctSCo" type="xs:string" minOccurs="0" />
+        <xs:element name="PctTax" type="xs:string" minOccurs="0" />
+        <xs:element name="RefNumber" type="xs:string" minOccurs="0" />
+        <xs:element name="Site" type="xs:string" minOccurs="0" />
+        <xs:element name="StmtSite" type="xs:string" minOccurs="0" />
+        <xs:element name="FeeRate" type="xs:string" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="MattPayorLayerDet" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,9 @@
+<MattBillingContact>
+                                
+		<StartDate>0001-01-02T00:00:00</StartDate>
+		<FinishDate>0001-01-02T00:00:00</FinishDate>
+		<BillingContactType />
+		<EntityPerson />
+		<EntityPosition>NewValue</EntityPosition>
+  
+</MattBillingContact>

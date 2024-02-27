@@ -1,0 +1,34 @@
+<CftNewBizSearchName>
+	
+		<CftPartyType />
+		<CftRelationshipCode />
+		<SearchString>NewValue</SearchString>
+		<EntityDisplayName>NewValue</EntityDisplayName>
+		<UserModifiedSearchString>1</UserModifiedSearchString>
+		<FirstName>NewValue</FirstName>
+		<MiddleName>NewValue</MiddleName>
+		<LastName>NewValue</LastName>
+		<CompanyName>NewValue</CompanyName>
+		<DebugInfo>NewValue</DebugInfo>
+		<Entity />
+		<CftRole />
+		<IsCreatedEntity>1</IsCreatedEntity>
+		<AddedRelatedParty>1</AddedRelatedParty>
+		<NumDuplicates>1</NumDuplicates>
+		<RiskFlag />
+		<DebugData>NewValue</DebugData>
+		<Resolved>1</Resolved>
+		<CurEntityIndex>1</CurEntityIndex>
+		<LinkType />
+		<Notes>NewValue</Notes>
+		<IsPhoneticSearch>1</IsPhoneticSearch>
+		<SortOrder>1</SortOrder>
+		<IsClientAsSearchName>1</IsClientAsSearchName>
+		<IsNotSearch>1</IsNotSearch>
+		<IsNotCreateLink>1</IsNotCreateLink>
+		<SearchTerm>NewValue</SearchTerm>
+		<CftEntityType />
+		<CftRelatedParty />
+		<FullTextSearchResultCount>1</FullTextSearchResultCount>
+
+</CftNewBizSearchName>

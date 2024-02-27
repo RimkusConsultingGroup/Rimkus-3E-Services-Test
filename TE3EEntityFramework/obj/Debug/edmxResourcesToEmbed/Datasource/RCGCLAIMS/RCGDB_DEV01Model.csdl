@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RCGDB_Dev01Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="rcg_rl_ClientJob">
+    <Key>
+      <PropertyRef Name="submission_id" />
+      <PropertyRef Name="request_design_permit_drawings" />
+      <PropertyRef Name="request_business_interruption" />
+      <PropertyRef Name="request_accident_reconstruction" />
+      <PropertyRef Name="request_full_mechanical_inspection" />
+      <PropertyRef Name="request_limited_mechanical_inspection" />
+      <PropertyRef Name="request_biomechanical_evaluation" />
+      <PropertyRef Name="request_fire_cause_and_origin" />
+      <PropertyRef Name="request_repair_cost_estimate" />
+      <PropertyRef Name="request_environmental" />
+      <PropertyRef Name="request_request_other" />
+      <PropertyRef Name="request_site_visit" />
+      <PropertyRef Name="request_mechanical_inspection" />
+      <PropertyRef Name="request_structural_analysis" />
+      <PropertyRef Name="property_damage" />
+      <PropertyRef Name="cost_estimate" />
+      <PropertyRef Name="evidence_return" />
+      <PropertyRef Name="insurance_same_as_billing" />
+      <PropertyRef Name="upload_count" />
+      <PropertyRef Name="XMLDate" />
+      <PropertyRef Name="XMLDateTime" />
+      <PropertyRef Name="IsSent" />
+    </Key>
+    <Property Name="submission_id" Type="Int32" Nullable="false" />
+    <Property Name="submission_type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="created_date" Type="DateTime" Precision="0" />
+    <Property Name="created_date_time" Type="Time" Precision="7" />
+    <Property Name="billing_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="billing_title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="billing_company" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="billing_address" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="billing_city" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="billing_state" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="billing_zip" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="billing_email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="billing_phone" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="billing_cell" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="billing_fax" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="client_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="adverse_party" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="claim_number" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="tpa_file_number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="exact_engineer_request" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="claim_description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="unlisted_service" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="occurrence_date" Type="DateTime" Precision="0" />
+    <Property Name="loss_date" Type="DateTime" Precision="0" />
+    <Property Name="occurrence_location" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="occurrence_city" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="occurrence_state" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="occurrence_zip" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="inspection_contact_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="inspection_contact_phone" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="inspection_contact_number" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="request_design_permit_drawings" Type="Boolean" Nullable="false" />
+    <Property Name="request_business_interruption" Type="Boolean" Nullable="false" />
+    <Property Name="request_accident_reconstruction" Type="Boolean" Nullable="false" />
+    <Property Name="request_full_mechanical_inspection" Type="Boolean" Nullable="false" />
+    <Property Name="request_limited_mechanical_inspection" Type="Boolean" Nullable="false" />
+    <Property Name="request_biomechanical_evaluation" Type="Boolean" Nullable="false" />
+    <Property Name="request_fire_cause_and_origin" Type="Boolean" Nullable="false" />
+    <Property Name="request_repair_cost_estimate" Type="Boolean" Nullable="false" />
+    <Property Name="request_environmental" Type="Boolean" Nullable="false" />
+    <Property Name="request_request_other" Type="Boolean" Nullable="false" />
+    <Property Name="request_site_visit" Type="Boolean" Nullable="false" />
+    <Property Name="request_mechanical_inspection" Type="Boolean" Nullable="false" />
+    <Property Name="request_structural_analysis" Type="Boolean" Nullable="false" />
+    <Property Name="property_damage" Type="Boolean" Nullable="false" />
+    <Property Name="cost_estimate" Type="Boolean" Nullable="false" />
+    <Property Name="evidence_return" Type="Boolean" Nullable="false" />
+    <Property Name="insurance_company" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="insured_name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="insured_phone" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="insured_cell" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="adjustment_company" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="adjustment_address" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="adjustment_city" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="adjustment_state" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="adjustment_zip" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="adjustment_phone" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="adjustor_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="adjustor_cell" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="adjustor_email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="adjustor_file_number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="adjustor_fax" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="insurance_same_as_billing" Type="Boolean" Nullable="false" />
+    <Property Name="invoice_to" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="invoice_company" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="invoice_phone" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="invoice_address" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="invoice_city" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="invoice_state" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="upload_count" Type="Byte" Nullable="false" />
+    <Property Name="assignment_file_1" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="assignment_file_2" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="user_agent" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ip_address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="XMLDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="XMLDateTime" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="IsSent" Type="Boolean" Nullable="false" />
+    <Property Name="IsSentDate" Type="DateTime" Precision="3" />
+    <Property Name="AssignmentID" Type="Int32" />
+    <Property Name="AssignmentIDDate" Type="DateTime" Precision="0" />
+    <Property Name="AssignmentIDDateTime" Type="Time" Precision="7" />
+    <Property Name="AdditionalData" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="RCGDB_DEV01Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="rcg_rl_ClientJob" EntityType="Self.rcg_rl_ClientJob" />
+    <FunctionImport Name="rcg_rl_ClientJob_Min_Save" ReturnType="Collection(Int32)">
+      <Parameter Name="submission_id" Mode="In" Type="Int32" />
+      <Parameter Name="client_id" Mode="In" Type="String" />
+      <Parameter Name="submission_type" Mode="In" Type="String" />
+      <Parameter Name="title" Mode="In" Type="String" />
+      <Parameter Name="created_date" Mode="In" Type="DateTime" />
+      <Parameter Name="insurance_company" Mode="In" Type="String" />
+      <Parameter Name="billing_company" Mode="In" Type="String" />
+      <Parameter Name="billing_city" Mode="In" Type="String" />
+      <Parameter Name="billing_state" Mode="In" Type="String" />
+      <Parameter Name="billing_zip" Mode="In" Type="String" />
+      <Parameter Name="occurrence_city" Mode="In" Type="String" />
+      <Parameter Name="occurrence_state" Mode="In" Type="String" />
+      <Parameter Name="occurrence_zip" Mode="In" Type="String" />
+      <Parameter Name="user_agent" Mode="In" Type="String" />
+      <Parameter Name="ip_address" Mode="In" Type="String" />
+      <Parameter Name="AdditionalData" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="rcg_rl_ClientJob_Save">
+      <Parameter Name="submission_id" Mode="In" Type="Int32" />
+      <Parameter Name="submission_type" Mode="In" Type="String" />
+      <Parameter Name="title" Mode="In" Type="String" />
+      <Parameter Name="created_date" Mode="In" Type="DateTime" />
+      <Parameter Name="billing_name" Mode="In" Type="String" />
+      <Parameter Name="billing_title" Mode="In" Type="String" />
+      <Parameter Name="billing_company" Mode="In" Type="String" />
+      <Parameter Name="billing_address" Mode="In" Type="String" />
+      <Parameter Name="billing_city" Mode="In" Type="String" />
+      <Parameter Name="billing_state" Mode="In" Type="String" />
+      <Parameter Name="billing_zip" Mode="In" Type="String" />
+      <Parameter Name="billing_email" Mode="In" Type="String" />
+      <Parameter Name="billing_phone" Mode="In" Type="String" />
+      <Parameter Name="billing_cell" Mode="In" Type="String" />
+      <Parameter Name="billing_fax" Mode="In" Type="String" />
+      <Parameter Name="client_name" Mode="In" Type="String" />
+      <Parameter Name="adverse_party" Mode="In" Type="String" />
+      <Parameter Name="claim_number" Mode="In" Type="String" />
+      <Parameter Name="tpa_file_number" Mode="In" Type="String" />
+      <Parameter Name="exact_engineer_request" Mode="In" Type="String" />
+      <Parameter Name="claim_description" Mode="In" Type="String" />
+      <Parameter Name="unlisted_service" Mode="In" Type="String" />
+      <Parameter Name="occurrence_date" Mode="In" Type="DateTime" />
+      <Parameter Name="loss_date" Mode="In" Type="DateTime" />
+      <Parameter Name="occurrence_location" Mode="In" Type="String" />
+      <Parameter Name="occurrence_city" Mode="In" Type="String" />
+      <Parameter Name="occurrence_state" Mode="In" Type="String" />
+      <Parameter Name="occurrence_zip" Mode="In" Type="String" />
+      <Parameter Name="inspection_contact_name" Mode="In" Type="String" />
+      <Parameter Name="inspection_contact_phone" Mode="In" Type="String" />
+      <Parameter Name="inspection_contact_number" Mode="In" Type="String" />
+      <Parameter Name="request_design_permit_drawings" Mode="In" Type="Boolean" />
+      <Parameter Name="request_business_interruption" Mode="In" Type="Boolean" />
+      <Parameter Name="request_accident_reconstruction" Mode="In" Type="Boolean" />
+      <Parameter Name="request_full_mechanical_inspection" Mode="In" Type="Boolean" />
+      <Parameter Name="request_limited_mechanical_inspection" Mode="In" Type="Boolean" />
+      <Parameter Name="request_biomechanical_evaluation" Mode="In" Type="Boolean" />
+      <Parameter Name="request_fire_cause_and_origin" Mode="In" Type="Boolean" />
+      <Parameter Name="request_repair_cost_estimate" Mode="In" Type="Boolean" />
+      <Parameter Name="request_environmental" Mode="In" Type="Boolean" />
+      <Parameter Name="request_request_other" Mode="In" Type="Boolean" />
+      <Parameter Name="request_site_visit" Mode="In" Type="Boolean" />
+      <Parameter Name="request_mechanical_inspection" Mode="In" Type="Boolean" />
+      <Parameter Name="request_structural_analysis" Mode="In" Type="Boolean" />
+      <Parameter Name="property_damage" Mode="In" Type="Boolean" />
+      <Parameter Name="cost_estimate" Mode="In" Type="Boolean" />
+      <Parameter Name="evidence_return" Mode="In" Type="Boolean" />
+      <Parameter Name="insurance_company" Mode="In" Type="String" />
+      <Parameter Name="insured_name" Mode="In" Type="String" />
+      <Parameter Name="insured_phone" Mode="In" Type="String" />
+      <Parameter Name="insured_cell" Mode="In" Type="String" />
+      <Parameter Name="adjustment_company" Mode="In" Type="String" />
+      <Parameter Name="adjustment_address" Mode="In" Type="String" />
+      <Parameter Name="adjustment_city" Mode="In" Type="String" />
+      <Parameter Name="adjustment_state" Mode="In" Type="String" />
+      <Parameter Name="adjustment_zip" Mode="In" Type="String" />
+      <Parameter Name="adjustment_phone" Mode="In" Type="String" />
+      <Parameter Name="adjustor_name" Mode="In" Type="String" />
+      <Parameter Name="adjustor_cell" Mode="In" Type="String" />
+      <Parameter Name="adjustor_email" Mode="In" Type="String" />
+      <Parameter Name="adjustor_file_number" Mode="In" Type="String" />
+      <Parameter Name="adjustor_fax" Mode="In" Type="String" />
+      <Parameter Name="insurance_same_as_billing" Mode="In" Type="Boolean" />
+      <Parameter Name="invoice_to" Mode="In" Type="String" />
+      <Parameter Name="invoice_company" Mode="In" Type="String" />
+      <Parameter Name="invoice_phone" Mode="In" Type="String" />
+      <Parameter Name="invoice_address" Mode="In" Type="String" />
+      <Parameter Name="invoice_city" Mode="In" Type="String" />
+      <Parameter Name="invoice_state" Mode="In" Type="String" />
+      <Parameter Name="upload_count" Mode="In" Type="Byte" />
+      <Parameter Name="assignment_file_1" Mode="In" Type="String" />
+      <Parameter Name="assignment_file_2" Mode="In" Type="String" />
+      <Parameter Name="user_agent" Mode="In" Type="String" />
+      <Parameter Name="ip_address" Mode="In" Type="String" />
+      <Parameter Name="AdditionalData" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+</Schema>

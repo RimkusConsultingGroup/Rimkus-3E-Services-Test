@@ -1,0 +1,576 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UKGTE3E_PROD01.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ONELOGIN_TE_3E_TRANSACTION_LOGS">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="TkprNumber" Type="nvarchar(max)" />
+    <Property Name="Logs" Type="nvarchar(max)" />
+    <Property Name="PayloadXml" Type="nvarchar(max)" />
+    <Property Name="ResultXml" Type="nvarchar(max)" />
+    <Property Name="ProcessedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ONELOGIN_TE_3E_USER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Number" Type="nvarchar" MaxLength="50" />
+    <Property Name="TkprIndex" Type="int" />
+    <Property Name="UserName" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="AltNumber" Type="nvarchar(max)" />
+    <Property Name="Entity" Type="nvarchar(max)" />
+    <Property Name="EntityIndex" Type="int" />
+    <Property Name="Entity_Type" Type="nvarchar(max)" />
+    <Property Name="FirstName" Type="nvarchar(max)" />
+    <Property Name="LastName" Type="nvarchar(max)" />
+    <Property Name="MiddleName" Type="nvarchar(max)" />
+    <Property Name="Display_Name" Type="nvarchar(max)" />
+    <Property Name="Type" Type="nvarchar(max)" />
+    <Property Name="Payroll_Number" Type="nvarchar(max)" />
+    <Property Name="HR_Number" Type="nvarchar(max)" />
+    <Property Name="Bill_Name" Type="nvarchar(max)" />
+    <Property Name="Bill_Initial" Type="nvarchar(max)" />
+    <Property Name="Status" Type="nvarchar(max)" />
+    <Property Name="Sort_Name" Type="nvarchar(max)" />
+    <Property Name="CompDate" Type="datetime" />
+    <Property Name="Timekeeper_Category" Type="nvarchar(max)" />
+    <Property Name="EffStart" Type="datetime" />
+    <Property Name="Office" Type="nvarchar(max)" />
+    <Property Name="Department" Type="nvarchar(max)" />
+    <Property Name="Section" Type="nvarchar(max)" />
+    <Property Name="Hire_Date" Type="datetime" />
+    <Property Name="Termination_Date" Type="datetime" />
+    <Property Name="Title" Type="nvarchar(max)" />
+    <Property Name="Rate_Class" Type="nvarchar(max)" />
+    <Property Name="Work_Calender" Type="nvarchar(max)" />
+    <Property Name="Unit" Type="nvarchar(max)" />
+    <Property Name="Supervising_timeKeeper" Type="nvarchar(max)" />
+    <Property Name="Work_type" Type="nvarchar(max)" />
+    <Property Name="Billing_Corodinator" Type="nvarchar(max)" />
+    <Property Name="Sitephone" Type="nvarchar(max)" />
+    <Property Name="LicenseType" Type="nvarchar" MaxLength="50" />
+    <Property Name="LicCountry" Type="nvarchar(max)" />
+    <Property Name="LicState" Type="nvarchar(max)" />
+    <Property Name="LicExpiration" Type="datetime" />
+    <Property Name="LicCertificationNo" Type="nvarchar(max)" />
+    <Property Name="LastChangeTimeStamp" Type="datetime" />
+    <Property Name="ImportedDate" Type="datetime" />
+    <Property Name="SvcOperation" Type="nvarchar" MaxLength="50" />
+    <Property Name="NumOfAttempt" Type="int" />
+    <Property Name="LogInfo" Type="nvarchar(max)" />
+    <Property Name="IsProcessed" Type="bit" />
+    <Property Name="ProcessedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ONELOGIN_TE_3E_USER_AUDIT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Number" Type="nvarchar" MaxLength="50" />
+    <Property Name="TkprIndex" Type="int" />
+    <Property Name="UserName" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="AltNumber" Type="nvarchar(max)" />
+    <Property Name="Entity" Type="nvarchar(max)" />
+    <Property Name="EntityIndex" Type="int" />
+    <Property Name="Entity_Type" Type="nvarchar(max)" />
+    <Property Name="FirstName" Type="nvarchar(max)" />
+    <Property Name="LastName" Type="nvarchar(max)" />
+    <Property Name="MiddleName" Type="nvarchar(max)" />
+    <Property Name="Display_Name" Type="nvarchar(max)" />
+    <Property Name="Type" Type="nvarchar(max)" />
+    <Property Name="Payroll_Number" Type="nvarchar(max)" />
+    <Property Name="HR_Number" Type="nvarchar(max)" />
+    <Property Name="Bill_Name" Type="nvarchar(max)" />
+    <Property Name="Bill_Initial" Type="nvarchar(max)" />
+    <Property Name="Status" Type="nvarchar(max)" />
+    <Property Name="Sort_Name" Type="nvarchar(max)" />
+    <Property Name="CompDate" Type="datetime" />
+    <Property Name="Timekeeper_Category" Type="nvarchar(max)" />
+    <Property Name="EffStart" Type="datetime" />
+    <Property Name="Office" Type="nvarchar(max)" />
+    <Property Name="Department" Type="nvarchar(max)" />
+    <Property Name="Section" Type="nvarchar(max)" />
+    <Property Name="Hire_Date" Type="datetime" />
+    <Property Name="Termination_Date" Type="datetime" />
+    <Property Name="Title" Type="nvarchar(max)" />
+    <Property Name="Rate_Class" Type="nvarchar(max)" />
+    <Property Name="Work_Calender" Type="nvarchar(max)" />
+    <Property Name="Unit" Type="nvarchar(max)" />
+    <Property Name="Supervising_timeKeeper" Type="nvarchar(max)" />
+    <Property Name="Work_type" Type="nvarchar(max)" />
+    <Property Name="Billing_Corodinator" Type="nvarchar(max)" />
+    <Property Name="Sitephone" Type="nvarchar(max)" />
+    <Property Name="LicenseType" Type="nvarchar" MaxLength="50" />
+    <Property Name="LicCountry" Type="nvarchar(max)" />
+    <Property Name="LicState" Type="nvarchar(max)" />
+    <Property Name="LicExpiration" Type="datetime" />
+    <Property Name="LicCertificationNo" Type="nvarchar(max)" />
+    <Property Name="LastChangeTimeStamp" Type="datetime" />
+    <Property Name="ImportedDate" Type="datetime" />
+    <Property Name="SvcOperation" Type="nvarchar" MaxLength="50" />
+    <Property Name="NumOfAttempt" Type="int" />
+    <Property Name="LogInfo" Type="nvarchar(max)" />
+    <Property Name="IsProcessed" Type="bit" />
+    <Property Name="ProcessedDate" Type="datetime" />
+    <Property Name="UpdatedAt" Type="datetime" Nullable="false" />
+    <Property Name="Operation" Type="char" MaxLength="3" Nullable="false" />
+  </EntityType>
+  <EntityType Name="REQUISITION_TE_3E_PO_REF">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubmissionID" Type="nvarchar(max)" />
+    <Property Name="IsBudgetedPosition" Type="bit" />
+    <Property Name="JobGroupCode" Type="nvarchar(max)" />
+    <Property Name="JobGroupDescription" Type="nvarchar(max)" />
+    <Property Name="JobLocationCode" Type="nvarchar(max)" />
+    <Property Name="JobLocationDescription" Type="nvarchar(max)" />
+    <Property Name="PriorityLevel" Type="nvarchar(max)" />
+    <Property Name="JobTitleCode" Type="nvarchar(max)" />
+    <Property Name="JobTitleDescription" Type="nvarchar(max)" />
+    <Property Name="BundlesCode" Type="nvarchar(max)" />
+    <Property Name="IsConfidentialPosition" Type="bit" />
+    <Property Name="PositionType" Type="nvarchar(max)" />
+    <Property Name="CandidateLocationPreference" Type="nvarchar(max)" />
+    <Property Name="SalaryRange" Type="nvarchar(max)" />
+    <Property Name="ReportingManager" Type="nvarchar(max)" />
+    <Property Name="NewRoleDetails" Type="nvarchar(max)" />
+    <Property Name="KeywordRequirements" Type="nvarchar(max)" />
+    <Property Name="DegreeRequirements" Type="nvarchar(max)" />
+    <Property Name="YearsOfExperience" Type="nvarchar(max)" />
+    <Property Name="TargetCompaniesAndSchools" Type="nvarchar(max)" />
+    <Property Name="TravelRequirements" Type="nvarchar(max)" />
+    <Property Name="AdditionalComments" Type="nvarchar(max)" />
+    <Property Name="Comments" Type="nvarchar(max)" />
+    <Property Name="HiringManager" Type="nvarchar(max)" />
+    <Property Name="HiringManagerEmail" Type="nvarchar(max)" />
+    <Property Name="ReqDate" Type="datetime" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="ProductBundle_CCC" Type="nvarchar" MaxLength="250" />
+    <Property Name="BundleName" Type="nvarchar" MaxLength="250" />
+    <Property Name="Status" Type="nvarchar(max)" />
+    <Property Name="ImportedDate" Type="datetime" />
+    <Property Name="ProcessedDate" Type="datetime" />
+    <Property Name="NumOfAttempt" Type="int" />
+    <Property Name="ErrorMsg" Type="nvarchar(max)" />
+    <Property Name="PositionPostingType" Type="nvarchar(max)" />
+    <Property Name="IsBackFillPosition" Type="nvarchar(max)" />
+    <Property Name="WorkLocation" Type="nvarchar(max)" />
+    <Property Name="NumOfPositions" Type="nvarchar(max)" />
+    <Property Name="BackfillPositionFor" Type="nvarchar(max)" />
+    <Property Name="OtherJobTitle" Type="nvarchar(max)" />
+    <Property Name="WorkLocationOfficeCode" Type="nvarchar(max)" />
+    <Property Name="WorkLocationOfficeDescription" Type="nvarchar(max)" />
+    <Property Name="Department" Type="nvarchar(max)" />
+    <Property Name="Submitter" Type="nvarchar(max)" />
+    <Property Name="ExcludeProducts" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="UKG_TE_3E_BILLING_TITLE_DASHBOARD">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UKG_Billing_Title" Type="nvarchar(max)" />
+    <Property Name="3E_Title_Code" Type="varchar" MaxLength="10" />
+    <Property Name="3E_Title_Description" Type="varchar(max)" />
+    <Property Name="DashboardID" Type="uniqueidentifier" />
+    <Property Name="DashboardName" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="UKG_TE_3E_CONFIGURATION">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Key" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="Value" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="UKG_TE_3E_DASHBOARD_ROLE">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DashboardID" Type="uniqueidentifier" />
+    <Property Name="RoleId" Type="uniqueidentifier" />
+    <Property Name="RoleDesciption" Type="varchar(max)" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UKG_TE_3E_PO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Supplier" Type="nvarchar(max)" />
+    <Property Name="ShipSite" Type="nvarchar" MaxLength="250" />
+    <Property Name="ShipInstructions" Type="nvarchar(max)" />
+    <Property Name="Comments" Type="nvarchar(max)" />
+    <Property Name="NxUser" Type="nvarchar(max)" />
+    <Property Name="EmailAddress" Type="nvarchar(max)" />
+    <Property Name="ReqDate" Type="datetime" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="EmployeeName" Type="nvarchar(max)" />
+    <Property Name="EmployeeType" Type="nvarchar(max)" />
+    <Property Name="ProductBundle_CCC" Type="nvarchar" MaxLength="250" />
+    <Property Name="BundleName" Type="nvarchar(max)" />
+    <Property Name="OptionalEquipments" Type="nvarchar(max)" />
+    <Property Name="OptionalEquipmentCodes" Type="nvarchar(max)" />
+    <Property Name="Address1" Type="nvarchar(max)" />
+    <Property Name="Address2" Type="nvarchar(max)" />
+    <Property Name="City" Type="varchar" MaxLength="500" />
+    <Property Name="State" Type="varchar" MaxLength="100" />
+    <Property Name="Zip" Type="varchar" MaxLength="50" />
+    <Property Name="ListItemId" Type="nvarchar(max)" />
+    <Property Name="ImportedDate" Type="datetime" />
+    <Property Name="SvcOperation" Type="nvarchar" MaxLength="50" />
+    <Property Name="NumOfAttempt" Type="int" />
+    <Property Name="LogInfo" Type="nvarchar(max)" />
+    <Property Name="IsProcessed" Type="bit" />
+    <Property Name="ProcessedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="UKG_TE_3E_PO_AUDIT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Supplier" Type="nvarchar(max)" />
+    <Property Name="ShipSite" Type="nvarchar" MaxLength="250" />
+    <Property Name="ShipInstructions" Type="nvarchar(max)" />
+    <Property Name="Comments" Type="nvarchar(max)" />
+    <Property Name="NxUser" Type="nvarchar(max)" />
+    <Property Name="EmailAddress" Type="nvarchar(max)" />
+    <Property Name="ReqDate" Type="datetime" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="EmployeeName" Type="nvarchar(max)" />
+    <Property Name="EmployeeType" Type="nvarchar(max)" />
+    <Property Name="ProductBundle_CCC" Type="nvarchar" MaxLength="250" />
+    <Property Name="BundleName" Type="nvarchar(max)" />
+    <Property Name="OptionalEquipments" Type="nvarchar(max)" />
+    <Property Name="OptionalEquipmentCodes" Type="nvarchar(max)" />
+    <Property Name="Address1" Type="nvarchar(max)" />
+    <Property Name="Address2" Type="nvarchar(max)" />
+    <Property Name="City" Type="varchar" MaxLength="500" />
+    <Property Name="State" Type="varchar" MaxLength="100" />
+    <Property Name="Zip" Type="varchar" MaxLength="50" />
+    <Property Name="ListItemId" Type="nvarchar(max)" />
+    <Property Name="ImportedDate" Type="datetime" />
+    <Property Name="SvcOperation" Type="nvarchar" MaxLength="50" />
+    <Property Name="NumOfAttempt" Type="int" />
+    <Property Name="LogInfo" Type="nvarchar(max)" />
+    <Property Name="IsProcessed" Type="bit" />
+    <Property Name="ProcessedDate" Type="datetime" />
+    <Property Name="UpdatedAt" Type="datetime" Nullable="false" />
+    <Property Name="Operation" Type="char" MaxLength="3" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UKG_TE_3E_PO_TRANSACTION_LOGS">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="TkprNumber" Type="nvarchar(max)" />
+    <Property Name="Logs" Type="nvarchar(max)" />
+    <Property Name="PayloadXml" Type="nvarchar(max)" />
+    <Property Name="ResultXml" Type="nvarchar(max)" />
+    <Property Name="ProcessedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="UKG_TE_3E_TIMEKEEPER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Number" Type="nvarchar" MaxLength="50" />
+    <Property Name="TkprIndex" Type="int" />
+    <Property Name="UserName" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="AltNumber" Type="nvarchar(max)" />
+    <Property Name="Entity" Type="nvarchar(max)" />
+    <Property Name="EntityIndex" Type="int" />
+    <Property Name="Entity_Type" Type="nvarchar(max)" />
+    <Property Name="FirstName" Type="nvarchar(max)" />
+    <Property Name="LastName" Type="nvarchar(max)" />
+    <Property Name="MiddleName" Type="nvarchar(max)" />
+    <Property Name="Display_Name" Type="nvarchar(max)" />
+    <Property Name="Type" Type="nvarchar(max)" />
+    <Property Name="Payroll_Number" Type="nvarchar(max)" />
+    <Property Name="HR_Number" Type="nvarchar(max)" />
+    <Property Name="Bill_Name" Type="nvarchar(max)" />
+    <Property Name="Bill_Initial" Type="nvarchar(max)" />
+    <Property Name="Status" Type="nvarchar(max)" />
+    <Property Name="Sort_Name" Type="nvarchar(max)" />
+    <Property Name="CompDate" Type="datetime" />
+    <Property Name="Timekeeper_Category" Type="nvarchar(max)" />
+    <Property Name="EffStart" Type="datetime" />
+    <Property Name="Office" Type="nvarchar(max)" />
+    <Property Name="Department" Type="nvarchar(max)" />
+    <Property Name="Section" Type="nvarchar(max)" />
+    <Property Name="Hire_Date" Type="datetime" />
+    <Property Name="Termination_Date" Type="datetime" />
+    <Property Name="Title" Type="nvarchar(max)" />
+    <Property Name="Rate_Class" Type="nvarchar(max)" />
+    <Property Name="Work_Calender" Type="nvarchar(max)" />
+    <Property Name="Unit" Type="nvarchar(max)" />
+    <Property Name="Supervising_timeKeeper" Type="nvarchar(max)" />
+    <Property Name="Work_type" Type="nvarchar(max)" />
+    <Property Name="Billing_Corodinator" Type="nvarchar(max)" />
+    <Property Name="Sitephone" Type="nvarchar(max)" />
+    <Property Name="LicenseType" Type="nvarchar" MaxLength="50" />
+    <Property Name="LicCountry" Type="nvarchar(max)" />
+    <Property Name="LicState" Type="nvarchar(max)" />
+    <Property Name="LicExpiration" Type="datetime" />
+    <Property Name="LicCertificationNo" Type="nvarchar(max)" />
+    <Property Name="LastChangeTimeStamp" Type="datetime" />
+    <Property Name="ImportedDate" Type="datetime" />
+    <Property Name="SvcOperation" Type="nvarchar" MaxLength="50" />
+    <Property Name="NumOfAttempt" Type="int" />
+    <Property Name="LogInfo" Type="nvarchar(max)" />
+    <Property Name="IsProcessed" Type="bit" />
+    <Property Name="ProcessedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="UKG_TE_3E_TIMEKEEPER_AUDIT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Number" Type="nvarchar" MaxLength="50" />
+    <Property Name="TkprIndex" Type="int" />
+    <Property Name="UserName" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="AltNumber" Type="nvarchar(max)" />
+    <Property Name="Entity" Type="nvarchar(max)" />
+    <Property Name="EntityIndex" Type="int" />
+    <Property Name="Entity_Type" Type="nvarchar(max)" />
+    <Property Name="FirstName" Type="nvarchar(max)" />
+    <Property Name="LastName" Type="nvarchar(max)" />
+    <Property Name="MiddleName" Type="nvarchar(max)" />
+    <Property Name="Display_Name" Type="nvarchar(max)" />
+    <Property Name="Type" Type="nvarchar(max)" />
+    <Property Name="Payroll_Number" Type="nvarchar(max)" />
+    <Property Name="HR_Number" Type="nvarchar(max)" />
+    <Property Name="Bill_Name" Type="nvarchar(max)" />
+    <Property Name="Bill_Initial" Type="nvarchar(max)" />
+    <Property Name="Status" Type="nvarchar(max)" />
+    <Property Name="Sort_Name" Type="nvarchar(max)" />
+    <Property Name="CompDate" Type="datetime" />
+    <Property Name="Timekeeper_Category" Type="nvarchar(max)" />
+    <Property Name="EffStart" Type="datetime" />
+    <Property Name="Office" Type="nvarchar(max)" />
+    <Property Name="Department" Type="nvarchar(max)" />
+    <Property Name="Section" Type="nvarchar(max)" />
+    <Property Name="Hire_Date" Type="datetime" />
+    <Property Name="Termination_Date" Type="datetime" />
+    <Property Name="Title" Type="nvarchar(max)" />
+    <Property Name="Rate_Class" Type="nvarchar(max)" />
+    <Property Name="Work_Calender" Type="nvarchar(max)" />
+    <Property Name="Unit" Type="nvarchar(max)" />
+    <Property Name="Supervising_timeKeeper" Type="nvarchar(max)" />
+    <Property Name="Work_type" Type="nvarchar(max)" />
+    <Property Name="Billing_Corodinator" Type="nvarchar(max)" />
+    <Property Name="Sitephone" Type="nvarchar(max)" />
+    <Property Name="LicenseType" Type="nvarchar" MaxLength="50" />
+    <Property Name="LicCountry" Type="nvarchar(max)" />
+    <Property Name="LicState" Type="nvarchar(max)" />
+    <Property Name="LicExpiration" Type="datetime" />
+    <Property Name="LicCertificationNo" Type="nvarchar(max)" />
+    <Property Name="LastChangeTimeStamp" Type="datetime" />
+    <Property Name="ImportedDate" Type="datetime" />
+    <Property Name="SvcOperation" Type="nvarchar" MaxLength="50" />
+    <Property Name="NumOfAttempt" Type="int" />
+    <Property Name="LogInfo" Type="nvarchar(max)" />
+    <Property Name="IsProcessed" Type="bit" />
+    <Property Name="ProcessedDate" Type="datetime" />
+    <Property Name="UpdatedAt" Type="datetime" Nullable="false" />
+    <Property Name="Operation" Type="char" MaxLength="3" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UKG_TE_3E_TRANSACTION_LOGS">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="TkprNumber" Type="nvarchar(max)" />
+    <Property Name="Logs" Type="nvarchar(max)" />
+    <Property Name="PayloadXml" Type="nvarchar(max)" />
+    <Property Name="ResultXml" Type="nvarchar(max)" />
+    <Property Name="ProcessedDate" Type="datetime" />
+  </EntityType>
+  <Function Name="onelogin3e_add_user_sp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Number" Type="nvarchar" Mode="In" />
+    <Parameter Name="TkprIndex" Type="int" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="AltNumber" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Entity" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="EntityIndex" Type="int" Mode="In" />
+    <Parameter Name="Entity_Type" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="FirstName" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="LastName" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="MiddleName" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Display_Name" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Type" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Payroll_Number" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="HR_Number" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Bill_Name" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Bill_Initial" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Status" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Sort_Name" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="CompDate" Type="datetime" Mode="In" />
+    <Parameter Name="Timekeeper_Category" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="EffStart" Type="datetime" Mode="In" />
+    <Parameter Name="Office" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Department" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Section" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Hire_Date" Type="datetime" Mode="In" />
+    <Parameter Name="Termination_Date" Type="datetime" Mode="In" />
+    <Parameter Name="Title" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Rate_Class" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Work_Calender" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Unit" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Supervising_timeKeeper" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Work_type" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Billing_Corodinator" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Sitephone" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="LicenseType" Type="nvarchar" Mode="In" />
+    <Parameter Name="LicCountry" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="LicState" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="LicExpiration" Type="datetime" Mode="In" />
+    <Parameter Name="LicCertificationNo" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="LastChangeTimeStamp" Type="datetime" Mode="In" />
+    <Parameter Name="ImportedDate" Type="datetime" Mode="In" />
+    <Parameter Name="SvcOperation" Type="nvarchar" Mode="In" />
+    <Parameter Name="NumOfAttempt" Type="int" Mode="In" />
+    <Parameter Name="LogInfo" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="IsProcessed" Type="bit" Mode="In" />
+    <Parameter Name="ProcessedDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="onelogin3e_delete_user_sp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TkprNumber" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="onelogin3e_get_user_by_email_sp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="email" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="onelogin3e_get_user_by_networkid_sp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="userName" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="onelogin3e_get_user_sp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numOfAttempt" Type="int" Mode="In" />
+  </Function>
+  <Function Name="onelogin3e_update_user_sp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TkprNumber" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="NumOfAttempt" Type="int" Mode="In" />
+    <Parameter Name="LogInfo" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="IsProcessed" Type="bit" Mode="In" />
+    <Parameter Name="ProcessedDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="ukg3e_add_timekeeper_sp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Number" Type="nvarchar" Mode="In" />
+    <Parameter Name="TkprIndex" Type="int" Mode="In" />
+    <Parameter Name="AltNumber" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Entity" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="EntityIndex" Type="int" Mode="In" />
+    <Parameter Name="Entity_Type" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="FirstName" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="LastName" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="MiddleName" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Display_Name" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Type" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Payroll_Number" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="HR_Number" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Bill_Name" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Bill_Initial" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Status" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Sort_Name" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="CompDate" Type="datetime" Mode="In" />
+    <Parameter Name="Timekeeper_Category" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="EffStart" Type="datetime" Mode="In" />
+    <Parameter Name="Office" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Department" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Section" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Hire_Date" Type="datetime" Mode="In" />
+    <Parameter Name="Termination_Date" Type="datetime" Mode="In" />
+    <Parameter Name="Title" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Rate_Class" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Work_Calender" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Unit" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Supervising_timeKeeper" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Work_type" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Billing_Corodinator" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Sitephone" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="LicenseType" Type="nvarchar" Mode="In" />
+    <Parameter Name="LicCountry" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="LicState" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="LicExpiration" Type="datetime" Mode="In" />
+    <Parameter Name="LicCertificationNo" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="LastChangeTimeStamp" Type="datetime" Mode="In" />
+    <Parameter Name="ImportedDate" Type="datetime" Mode="In" />
+    <Parameter Name="SvcOperation" Type="nvarchar" Mode="In" />
+    <Parameter Name="NumOfAttempt" Type="int" Mode="In" />
+    <Parameter Name="LogInfo" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="IsProcessed" Type="bit" Mode="In" />
+    <Parameter Name="ProcessedDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="ukg3e_delete_timekeeper_sp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TkprNumber" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="ukg3e_get_dashboard_roles_by_billingtitle_sp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="BillingTitle" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="ukg3e_get_entityperson_by_first_middle_last_name_sp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="firstName" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="middleName" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="lastName" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="ukg3e_get_entityperson_sp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="displayName" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="ukg3e_get_timekeeper_sp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numOfAttempt" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ukg3e_get_tkpr_accreditation_sp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="certNumber" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="licType" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="state" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="ukg3e_get_tkpr_by_displayname_sp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="displayName" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="ukg3e_get_tkpr_by_num_sp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="tkprNumber" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="ukg3e_get_tkpr_date_sp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="tkprNumber" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="tkprEffStart" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="ukg3e_lookup_code_sp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="description" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="lookupType" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="ukg3e_update_timekeeper_sp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TkprNumber" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="NumOfAttempt" Type="int" Mode="In" />
+    <Parameter Name="LogInfo" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="IsProcessed" Type="bit" Mode="In" />
+    <Parameter Name="ProcessedDate" Type="datetime" Mode="In" />
+  </Function>
+  <EntityContainer Name="UKGTE3E_PROD01StoreContainer">
+    <EntitySet Name="ONELOGIN_TE_3E_TRANSACTION_LOGS" EntityType="Self.ONELOGIN_TE_3E_TRANSACTION_LOGS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ONELOGIN_TE_3E_USER" EntityType="Self.ONELOGIN_TE_3E_USER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ONELOGIN_TE_3E_USER_AUDIT" EntityType="Self.ONELOGIN_TE_3E_USER_AUDIT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="REQUISITION_TE_3E_PO_REF" EntityType="Self.REQUISITION_TE_3E_PO_REF" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UKG_TE_3E_BILLING_TITLE_DASHBOARD" EntityType="Self.UKG_TE_3E_BILLING_TITLE_DASHBOARD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UKG_TE_3E_CONFIGURATION" EntityType="Self.UKG_TE_3E_CONFIGURATION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UKG_TE_3E_DASHBOARD_ROLE" EntityType="Self.UKG_TE_3E_DASHBOARD_ROLE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UKG_TE_3E_PO" EntityType="Self.UKG_TE_3E_PO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UKG_TE_3E_PO_AUDIT" EntityType="Self.UKG_TE_3E_PO_AUDIT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UKG_TE_3E_PO_TRANSACTION_LOGS" EntityType="Self.UKG_TE_3E_PO_TRANSACTION_LOGS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UKG_TE_3E_TIMEKEEPER" EntityType="Self.UKG_TE_3E_TIMEKEEPER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UKG_TE_3E_TIMEKEEPER_AUDIT" EntityType="Self.UKG_TE_3E_TIMEKEEPER_AUDIT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UKG_TE_3E_TRANSACTION_LOGS" EntityType="Self.UKG_TE_3E_TRANSACTION_LOGS" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

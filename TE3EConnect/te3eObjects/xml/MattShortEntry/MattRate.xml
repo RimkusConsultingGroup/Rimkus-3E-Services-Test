@@ -1,0 +1,20 @@
+<MattRate>
+                               
+                                    <Rate />
+                                    <MaxHours>1</MaxHours>
+                                    <MaxBillAmt>1</MaxBillAmt>
+                                    <Currency />
+                                    <CurrDate>0001-01-02T00:00:00</CurrDate>
+                                    <IsActive>1</IsActive>
+                                    <RefRate />
+                                    <RateGroup />
+                                    <MaxFees>1</MaxFees>
+                                    <MaxHCo>1</MaxHCo>
+                                    <MaxSCo>1</MaxSCo>
+                                    <MaxInt>1</MaxInt>
+                                    <MaxBOA>1</MaxBOA>
+                                    <MaxTax>1</MaxTax>
+                                    <MaxOth>1</MaxOth>
+                                    <IsEnforceMaximums>1</IsEnforceMaximums>
+                               
+                            </MattRate>

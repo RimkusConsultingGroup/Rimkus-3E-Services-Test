@@ -1,0 +1,21 @@
+<RateExc>
+    <RateExcID>0f3e6a0d-6a06-43ca-98c2-168d9e855ab1</RateExcID>
+    <Description>Client Quote</Description>
+    <Client />
+    <Number />
+    <Matter>417804</Matter>
+    <Number>100000283</Number>
+    <StartDate>4/16/2019 12:00:00 AM</StartDate>
+    <FinishDate />
+    <Currency>USD</Currency>
+    <RateExcList>MultiDimension</RateExcList>
+    <Description>Multi Dimension</Description>
+    <IsMaximum>0</IsMaximum>
+    <IsMatchCurr>0</IsMatchCurr>
+    <OverrideDate />
+    <IsSkipClientExc>0</IsSkipClientExc>
+    <CostType />
+    <Description />
+    <MultiDimensionOrdinal />
+    <IsStdRateExc>0</IsStdRateExc>
+  </RateExc>

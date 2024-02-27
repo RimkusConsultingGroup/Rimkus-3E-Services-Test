@@ -1,0 +1,5 @@
+<Entity_Srv_RC xmlns="http://elite.com/schemas/transaction/process/write/Entity_Srv_RC">
+    <Initialize xmlns="http://elite.com/schemas/transaction/object/write/Entity">
+        @AddPersonEntity
+    </Initialize>
+</Entity_Srv_RC>

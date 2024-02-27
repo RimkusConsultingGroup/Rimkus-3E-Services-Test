@@ -1,0 +1,783 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UKGTE3E_PROD01" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="UKG_TE_3E_TIMEKEEPER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TkprIndex" Type="Int32" />
+    <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AltNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Entity" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EntityIndex" Type="Int32" />
+    <Property Name="Entity_Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MiddleName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Display_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Payroll_Number" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="HR_Number" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Bill_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Bill_Initial" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Sort_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompDate" Type="DateTime" Precision="3" />
+    <Property Name="Timekeeper_Category" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EffStart" Type="DateTime" Precision="3" />
+    <Property Name="Office" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Department" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Section" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Hire_Date" Type="DateTime" Precision="3" />
+    <Property Name="Termination_Date" Type="DateTime" Precision="3" />
+    <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Rate_Class" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Work_Calender" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Unit" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Supervising_timeKeeper" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Work_type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Billing_Corodinator" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Sitephone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LicenseType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LicCountry" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LicState" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LicExpiration" Type="DateTime" Precision="3" />
+    <Property Name="LicCertificationNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LastChangeTimeStamp" Type="DateTime" Precision="3" />
+    <Property Name="ImportedDate" Type="DateTime" Precision="3" />
+    <Property Name="SvcOperation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NumOfAttempt" Type="Int32" />
+    <Property Name="LogInfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsProcessed" Type="Boolean" />
+    <Property Name="ProcessedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="UKG_TE_3E_TIMEKEEPER_AUDIT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TkprIndex" Type="Int32" />
+    <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AltNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Entity" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EntityIndex" Type="Int32" />
+    <Property Name="Entity_Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MiddleName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Display_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Payroll_Number" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="HR_Number" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Bill_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Bill_Initial" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Sort_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompDate" Type="DateTime" Precision="3" />
+    <Property Name="Timekeeper_Category" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EffStart" Type="DateTime" Precision="3" />
+    <Property Name="Office" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Department" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Section" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Hire_Date" Type="DateTime" Precision="3" />
+    <Property Name="Termination_Date" Type="DateTime" Precision="3" />
+    <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Rate_Class" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Work_Calender" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Unit" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Supervising_timeKeeper" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Work_type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Billing_Corodinator" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Sitephone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LicenseType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LicCountry" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LicState" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LicExpiration" Type="DateTime" Precision="3" />
+    <Property Name="LicCertificationNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LastChangeTimeStamp" Type="DateTime" Precision="3" />
+    <Property Name="ImportedDate" Type="DateTime" Precision="3" />
+    <Property Name="SvcOperation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NumOfAttempt" Type="Int32" />
+    <Property Name="LogInfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsProcessed" Type="Boolean" />
+    <Property Name="ProcessedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedAt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Operation" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="UKGTE3E_PROD01Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="UKG_TE_3E_TIMEKEEPER" EntityType="Self.UKG_TE_3E_TIMEKEEPER" />
+    <EntitySet Name="UKG_TE_3E_TIMEKEEPER_AUDIT" EntityType="Self.UKG_TE_3E_TIMEKEEPER_AUDIT" />
+    <FunctionImport Name="ukg3e_add_timekeeper_sp">
+      <Parameter Name="Number" Mode="In" Type="String" />
+      <Parameter Name="TkprIndex" Mode="In" Type="Int32" />
+      <Parameter Name="AltNumber" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="Entity" Mode="In" Type="String" />
+      <Parameter Name="EntityIndex" Mode="In" Type="Int32" />
+      <Parameter Name="Entity_Type" Mode="In" Type="String" />
+      <Parameter Name="FirstName" Mode="In" Type="String" />
+      <Parameter Name="LastName" Mode="In" Type="String" />
+      <Parameter Name="MiddleName" Mode="In" Type="String" />
+      <Parameter Name="Display_Name" Mode="In" Type="String" />
+      <Parameter Name="Type" Mode="In" Type="String" />
+      <Parameter Name="Payroll_Number" Mode="In" Type="String" />
+      <Parameter Name="HR_Number" Mode="In" Type="String" />
+      <Parameter Name="Bill_Name" Mode="In" Type="String" />
+      <Parameter Name="Bill_Initial" Mode="In" Type="String" />
+      <Parameter Name="Status" Mode="In" Type="String" />
+      <Parameter Name="Sort_Name" Mode="In" Type="String" />
+      <Parameter Name="CompDate" Mode="In" Type="DateTime" />
+      <Parameter Name="Timekeeper_Category" Mode="In" Type="String" />
+      <Parameter Name="EffStart" Mode="In" Type="DateTime" />
+      <Parameter Name="Office" Mode="In" Type="String" />
+      <Parameter Name="Department" Mode="In" Type="String" />
+      <Parameter Name="Section" Mode="In" Type="String" />
+      <Parameter Name="Hire_Date" Mode="In" Type="DateTime" />
+      <Parameter Name="Termination_Date" Mode="In" Type="DateTime" />
+      <Parameter Name="Title" Mode="In" Type="String" />
+      <Parameter Name="Rate_Class" Mode="In" Type="String" />
+      <Parameter Name="Work_Calender" Mode="In" Type="String" />
+      <Parameter Name="Unit" Mode="In" Type="String" />
+      <Parameter Name="Supervising_timeKeeper" Mode="In" Type="String" />
+      <Parameter Name="Work_type" Mode="In" Type="String" />
+      <Parameter Name="Billing_Corodinator" Mode="In" Type="String" />
+      <Parameter Name="Sitephone" Mode="In" Type="String" />
+      <Parameter Name="LicenseType" Mode="In" Type="String" />
+      <Parameter Name="LicCountry" Mode="In" Type="String" />
+      <Parameter Name="LicState" Mode="In" Type="String" />
+      <Parameter Name="LicExpiration" Mode="In" Type="DateTime" />
+      <Parameter Name="LicCertificationNo" Mode="In" Type="String" />
+      <Parameter Name="LastChangeTimeStamp" Mode="In" Type="DateTime" />
+      <Parameter Name="ImportedDate" Mode="In" Type="DateTime" />
+      <Parameter Name="SvcOperation" Mode="In" Type="String" />
+      <Parameter Name="NumOfAttempt" Mode="In" Type="Int32" />
+      <Parameter Name="LogInfo" Mode="In" Type="String" />
+      <Parameter Name="IsProcessed" Mode="In" Type="Boolean" />
+      <Parameter Name="ProcessedDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="ukg3e_delete_timekeeper_sp">
+      <Parameter Name="TkprNumber" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ukg3e_get_entityperson_by_first_middle_last_name_sp" ReturnType="Collection(UKGTE3E_PROD01.ukg3e_get_entityperson_by_first_middle_last_name_sp_Result)">
+      <Parameter Name="firstName" Mode="In" Type="String" />
+      <Parameter Name="middleName" Mode="In" Type="String" />
+      <Parameter Name="lastName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ukg3e_get_entityperson_sp" ReturnType="Collection(UKGTE3E_PROD01.ukg3e_get_entityperson_sp_Result)">
+      <Parameter Name="displayName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ukg3e_get_timekeeper_sp" ReturnType="Collection(UKGTE3E_PROD01.ukg3e_get_timekeeper_sp_Result)">
+      <Parameter Name="numOfAttempt" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ukg3e_get_tkpr_accreditation_sp" ReturnType="Collection(UKGTE3E_PROD01.ukg3e_get_tkpr_accreditation_sp_Result)">
+      <Parameter Name="certNumber" Mode="In" Type="String" />
+      <Parameter Name="licType" Mode="In" Type="String" />
+      <Parameter Name="state" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ukg3e_get_tkpr_by_displayname_sp" ReturnType="Collection(UKGTE3E_PROD01.ukg3e_get_tkpr_by_displayname_sp_Result)">
+      <Parameter Name="displayName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ukg3e_get_tkpr_by_num_sp" ReturnType="Collection(UKGTE3E_PROD01.ukg3e_get_tkpr_by_num_sp_Result)">
+      <Parameter Name="tkprNumber" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ukg3e_get_tkpr_date_sp" ReturnType="Collection(UKGTE3E_PROD01.ukg3e_get_tkpr_date_sp_Result)">
+      <Parameter Name="tkprNumber" Mode="In" Type="String" />
+      <Parameter Name="tkprEffStart" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ukg3e_lookup_code_sp" ReturnType="Collection(UKGTE3E_PROD01.ukg3e_lookup_code_sp_Result)">
+      <Parameter Name="description" Mode="In" Type="String" />
+      <Parameter Name="lookupType" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ukg3e_update_timekeeper_sp">
+      <Parameter Name="TkprNumber" Mode="In" Type="String" />
+      <Parameter Name="NumOfAttempt" Mode="In" Type="Int32" />
+      <Parameter Name="LogInfo" Mode="In" Type="String" />
+      <Parameter Name="IsProcessed" Mode="In" Type="Boolean" />
+      <Parameter Name="ProcessedDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <EntitySet Name="ONELOGIN_TE_3E_TRANSACTION_LOGS" EntityType="UKGTE3E_PROD01.ONELOGIN_TE_3E_TRANSACTION_LOGS" />
+    <EntitySet Name="ONELOGIN_TE_3E_USER" EntityType="UKGTE3E_PROD01.ONELOGIN_TE_3E_USER" />
+    <EntitySet Name="ONELOGIN_TE_3E_USER_AUDIT" EntityType="UKGTE3E_PROD01.ONELOGIN_TE_3E_USER_AUDIT" />
+    <FunctionImport Name="onelogin3e_add_user_sp">
+      <Parameter Name="Number" Mode="In" Type="String" />
+      <Parameter Name="TkprIndex" Mode="In" Type="Int32" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="AltNumber" Mode="In" Type="String" />
+      <Parameter Name="Entity" Mode="In" Type="String" />
+      <Parameter Name="EntityIndex" Mode="In" Type="Int32" />
+      <Parameter Name="Entity_Type" Mode="In" Type="String" />
+      <Parameter Name="FirstName" Mode="In" Type="String" />
+      <Parameter Name="LastName" Mode="In" Type="String" />
+      <Parameter Name="MiddleName" Mode="In" Type="String" />
+      <Parameter Name="Display_Name" Mode="In" Type="String" />
+      <Parameter Name="Type" Mode="In" Type="String" />
+      <Parameter Name="Payroll_Number" Mode="In" Type="String" />
+      <Parameter Name="HR_Number" Mode="In" Type="String" />
+      <Parameter Name="Bill_Name" Mode="In" Type="String" />
+      <Parameter Name="Bill_Initial" Mode="In" Type="String" />
+      <Parameter Name="Status" Mode="In" Type="String" />
+      <Parameter Name="Sort_Name" Mode="In" Type="String" />
+      <Parameter Name="CompDate" Mode="In" Type="DateTime" />
+      <Parameter Name="Timekeeper_Category" Mode="In" Type="String" />
+      <Parameter Name="EffStart" Mode="In" Type="DateTime" />
+      <Parameter Name="Office" Mode="In" Type="String" />
+      <Parameter Name="Department" Mode="In" Type="String" />
+      <Parameter Name="Section" Mode="In" Type="String" />
+      <Parameter Name="Hire_Date" Mode="In" Type="DateTime" />
+      <Parameter Name="Termination_Date" Mode="In" Type="DateTime" />
+      <Parameter Name="Title" Mode="In" Type="String" />
+      <Parameter Name="Rate_Class" Mode="In" Type="String" />
+      <Parameter Name="Work_Calender" Mode="In" Type="String" />
+      <Parameter Name="Unit" Mode="In" Type="String" />
+      <Parameter Name="Supervising_timeKeeper" Mode="In" Type="String" />
+      <Parameter Name="Work_type" Mode="In" Type="String" />
+      <Parameter Name="Billing_Corodinator" Mode="In" Type="String" />
+      <Parameter Name="Sitephone" Mode="In" Type="String" />
+      <Parameter Name="LicenseType" Mode="In" Type="String" />
+      <Parameter Name="LicCountry" Mode="In" Type="String" />
+      <Parameter Name="LicState" Mode="In" Type="String" />
+      <Parameter Name="LicExpiration" Mode="In" Type="DateTime" />
+      <Parameter Name="LicCertificationNo" Mode="In" Type="String" />
+      <Parameter Name="LastChangeTimeStamp" Mode="In" Type="DateTime" />
+      <Parameter Name="ImportedDate" Mode="In" Type="DateTime" />
+      <Parameter Name="SvcOperation" Mode="In" Type="String" />
+      <Parameter Name="NumOfAttempt" Mode="In" Type="Int32" />
+      <Parameter Name="LogInfo" Mode="In" Type="String" />
+      <Parameter Name="IsProcessed" Mode="In" Type="Boolean" />
+      <Parameter Name="ProcessedDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="onelogin3e_delete_user_sp">
+      <Parameter Name="TkprNumber" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="onelogin3e_get_user_by_networkid_sp" ReturnType="Collection(UKGTE3E_PROD01.onelogin3e_get_user_by_networkid_sp_Result)">
+      <Parameter Name="userName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="onelogin3e_get_user_sp" ReturnType="Collection(UKGTE3E_PROD01.onelogin3e_get_user_sp_Result)">
+      <Parameter Name="numOfAttempt" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="onelogin3e_update_user_sp">
+      <Parameter Name="TkprNumber" Mode="In" Type="String" />
+      <Parameter Name="NumOfAttempt" Mode="In" Type="Int32" />
+      <Parameter Name="LogInfo" Mode="In" Type="String" />
+      <Parameter Name="IsProcessed" Mode="In" Type="Boolean" />
+      <Parameter Name="ProcessedDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <EntitySet Name="UKG_TE_3E_TRANSACTION_LOGS" EntityType="UKGTE3E_PROD01.UKG_TE_3E_TRANSACTION_LOGS" />
+    <FunctionImport Name="ukg3e_get_dashboard_roles_by_billingtitle_sp" ReturnType="Collection(UKGTE3E_PROD01.ukg3e_get_dashboard_roles_by_billingtitle_sp_Result)">
+      <Parameter Name="BillingTitle" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="onelogin3e_get_user_by_email_sp" ReturnType="Collection(UKGTE3E_PROD01.onelogin3e_get_user_by_email_sp_Result)">
+      <Parameter Name="email" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="UKG_TE_3E_CONFIGURATION" EntityType="UKGTE3E_PROD01.UKG_TE_3E_CONFIGURATION" />
+    <EntitySet Name="UKG_TE_3E_PO" EntityType="UKGTE3E_PROD01.UKG_TE_3E_PO" />
+    <EntitySet Name="UKG_TE_3E_PO_AUDIT" EntityType="UKGTE3E_PROD01.UKG_TE_3E_PO_AUDIT" />
+    <EntitySet Name="UKG_TE_3E_PO_TRANSACTION_LOGS" EntityType="UKGTE3E_PROD01.UKG_TE_3E_PO_TRANSACTION_LOGS" />
+    <EntitySet Name="UKG_TE_3E_BILLING_TITLE_DASHBOARD" EntityType="UKGTE3E_PROD01.UKG_TE_3E_BILLING_TITLE_DASHBOARD" />
+    <EntitySet Name="UKG_TE_3E_DASHBOARD_ROLE" EntityType="UKGTE3E_PROD01.UKG_TE_3E_DASHBOARD_ROLE" />
+    <EntitySet Name="REQUISITION_TE_3E_PO_REF" EntityType="UKGTE3E_PROD01.REQUISITION_TE_3E_PO_REF" />
+  </EntityContainer>
+  <ComplexType Name="ukg3e_get_entityperson_by_first_middle_last_name_sp_Result">
+    <Property Type="Int32" Name="EntIndex" Nullable="false" />
+    <Property Type="String" Name="DisplayName" Nullable="false" MaxLength="512" />
+    <Property Type="String" Name="FirstName" Nullable="false" MaxLength="64" />
+    <Property Type="String" Name="MiddleName" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="LastName" Nullable="false" MaxLength="64" />
+    <Property Type="String" Name="EntityType" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="LoadSource" Nullable="true" MaxLength="64" />
+    <Property Type="DateTime" Name="TimeStamp" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="ukg3e_get_entityperson_sp_Result">
+    <Property Type="Int32" Name="EntIndex" Nullable="false" />
+    <Property Type="String" Name="DisplayName" Nullable="false" MaxLength="512" />
+    <Property Type="String" Name="EntityType" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="LoadSource" Nullable="true" MaxLength="64" />
+    <Property Type="DateTime" Name="TimeStamp" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="ukg3e_get_timekeeper_sp_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Number" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="TkprIndex" Nullable="true" />
+    <Property Type="String" Name="UserName" Nullable="true" />
+    <Property Type="String" Name="Email" Nullable="true" />
+    <Property Type="String" Name="AltNumber" Nullable="true" />
+    <Property Type="String" Name="Entity" Nullable="true" />
+    <Property Type="Int32" Name="EntityIndex" Nullable="true" />
+    <Property Type="String" Name="Entity_Type" Nullable="true" />
+    <Property Type="String" Name="FirstName" Nullable="true" />
+    <Property Type="String" Name="LastName" Nullable="true" />
+    <Property Type="String" Name="MiddleName" Nullable="true" />
+    <Property Type="String" Name="Display_Name" Nullable="true" />
+    <Property Type="String" Name="Type" Nullable="true" />
+    <Property Type="String" Name="Payroll_Number" Nullable="true" />
+    <Property Type="String" Name="HR_Number" Nullable="true" />
+    <Property Type="String" Name="Bill_Name" Nullable="true" />
+    <Property Type="String" Name="Bill_Initial" Nullable="true" />
+    <Property Type="String" Name="Status" Nullable="true" />
+    <Property Type="String" Name="Sort_Name" Nullable="true" />
+    <Property Type="DateTime" Name="CompDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Timekeeper_Category" Nullable="true" />
+    <Property Type="DateTime" Name="EffStart" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Office" Nullable="true" />
+    <Property Type="String" Name="Department" Nullable="true" />
+    <Property Type="String" Name="Section" Nullable="true" />
+    <Property Type="DateTime" Name="Hire_Date" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="Termination_Date" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Title" Nullable="true" />
+    <Property Type="String" Name="Rate_Class" Nullable="true" />
+    <Property Type="String" Name="Work_Calender" Nullable="true" />
+    <Property Type="String" Name="Unit" Nullable="true" />
+    <Property Type="String" Name="Supervising_timeKeeper" Nullable="true" />
+    <Property Type="String" Name="Work_type" Nullable="true" />
+    <Property Type="String" Name="Billing_Corodinator" Nullable="true" />
+    <Property Type="String" Name="Sitephone" Nullable="true" />
+    <Property Type="String" Name="LicenseType" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="LicCountry" Nullable="true" />
+    <Property Type="String" Name="LicState" Nullable="true" />
+    <Property Type="DateTime" Name="LicExpiration" Nullable="true" Precision="23" />
+    <Property Type="String" Name="LicCertificationNo" Nullable="true" />
+    <Property Type="DateTime" Name="LastChangeTimeStamp" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ImportedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="SvcOperation" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="NumOfAttempt" Nullable="true" />
+    <Property Type="String" Name="LogInfo" Nullable="true" />
+    <Property Type="Boolean" Name="IsProcessed" Nullable="true" />
+    <Property Type="DateTime" Name="ProcessedDate" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="ukg3e_get_tkpr_accreditation_sp_Result">
+    <Property Type="Guid" Name="TkprAccreditationID" Nullable="false" />
+    <Property Type="Int32" Name="Timekeeper" Nullable="false" />
+    <Property Type="DateTime" Name="AccrDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="CertificateNumber" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="LicenseType_CCC" Nullable="false" MaxLength="64" />
+    <Property Type="String" Name="State" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="Country" Nullable="true" MaxLength="8" />
+  </ComplexType>
+  <ComplexType Name="ukg3e_get_tkpr_by_displayname_sp_Result">
+    <Property Type="Int32" Name="TkprIndex" Nullable="false" />
+    <Property Type="String" Name="Number" Nullable="false" MaxLength="64" />
+    <Property Type="Int32" Name="Entity" Nullable="false" />
+    <Property Type="String" Name="DisplayName" Nullable="false" MaxLength="64" />
+    <Property Type="String" Name="BillName" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="BillInitial" Nullable="true" MaxLength="8" />
+    <Property Type="String" Name="TkprStatus" Nullable="false" MaxLength="16" />
+    <Property Type="String" Name="SortName" Nullable="true" MaxLength="64" />
+  </ComplexType>
+  <ComplexType Name="ukg3e_get_tkpr_by_num_sp_Result">
+    <Property Type="Int32" Name="TkprIndex" Nullable="false" />
+    <Property Type="String" Name="Number" Nullable="false" MaxLength="64" />
+    <Property Type="Int32" Name="Entity" Nullable="false" />
+    <Property Type="String" Name="DisplayName" Nullable="false" MaxLength="64" />
+    <Property Type="String" Name="BillName" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="BillInitial" Nullable="true" MaxLength="8" />
+    <Property Type="String" Name="TkprStatus" Nullable="false" MaxLength="16" />
+    <Property Type="String" Name="SortName" Nullable="true" MaxLength="64" />
+  </ComplexType>
+  <ComplexType Name="ukg3e_get_tkpr_date_sp_Result">
+    <Property Type="Int32" Name="TkprIndex" Nullable="false" />
+    <Property Type="String" Name="Number" Nullable="false" MaxLength="64" />
+    <Property Type="Int32" Name="Entity" Nullable="false" />
+    <Property Type="String" Name="DisplayName" Nullable="false" MaxLength="64" />
+    <Property Type="String" Name="TkprStatus" Nullable="false" MaxLength="16" />
+    <Property Type="Guid" Name="TkprDateID" Nullable="false" />
+    <Property Type="Int32" Name="TimekeeperLkUp" Nullable="true" />
+    <Property Type="DateTime" Name="EffStart" Nullable="false" Precision="23" />
+    <Property Type="String" Name="Office" Nullable="false" MaxLength="16" />
+    <Property Type="String" Name="Department" Nullable="false" MaxLength="16" />
+    <Property Type="String" Name="Section" Nullable="false" MaxLength="16" />
+    <Property Type="DateTime" Name="HireDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="TimeStamp" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="ukg3e_lookup_code_sp_Result">
+    <Property Type="String" Name="Code" Nullable="false" MaxLength="16" />
+    <Property Type="String" Name="Description" Nullable="false" MaxLength="64" />
+  </ComplexType>
+  <EntityType Name="ONELOGIN_TE_3E_TRANSACTION_LOGS">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TkprNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Logs" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PayloadXml" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ResultXml" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProcessedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ONELOGIN_TE_3E_USER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TkprIndex" Type="Int32" />
+    <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AltNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Entity" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EntityIndex" Type="Int32" />
+    <Property Name="Entity_Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MiddleName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Display_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Payroll_Number" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="HR_Number" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Bill_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Bill_Initial" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Sort_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompDate" Type="DateTime" Precision="3" />
+    <Property Name="Timekeeper_Category" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EffStart" Type="DateTime" Precision="3" />
+    <Property Name="Office" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Department" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Section" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Hire_Date" Type="DateTime" Precision="3" />
+    <Property Name="Termination_Date" Type="DateTime" Precision="3" />
+    <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Rate_Class" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Work_Calender" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Unit" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Supervising_timeKeeper" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Work_type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Billing_Corodinator" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Sitephone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LicenseType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LicCountry" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LicState" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LicExpiration" Type="DateTime" Precision="3" />
+    <Property Name="LicCertificationNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LastChangeTimeStamp" Type="DateTime" Precision="3" />
+    <Property Name="ImportedDate" Type="DateTime" Precision="3" />
+    <Property Name="SvcOperation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NumOfAttempt" Type="Int32" />
+    <Property Name="LogInfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsProcessed" Type="Boolean" />
+    <Property Name="ProcessedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ONELOGIN_TE_3E_USER_AUDIT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TkprIndex" Type="Int32" />
+    <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AltNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Entity" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EntityIndex" Type="Int32" />
+    <Property Name="Entity_Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MiddleName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Display_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Payroll_Number" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="HR_Number" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Bill_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Bill_Initial" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Sort_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompDate" Type="DateTime" Precision="3" />
+    <Property Name="Timekeeper_Category" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EffStart" Type="DateTime" Precision="3" />
+    <Property Name="Office" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Department" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Section" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Hire_Date" Type="DateTime" Precision="3" />
+    <Property Name="Termination_Date" Type="DateTime" Precision="3" />
+    <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Rate_Class" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Work_Calender" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Unit" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Supervising_timeKeeper" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Work_type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Billing_Corodinator" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Sitephone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LicenseType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LicCountry" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LicState" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LicExpiration" Type="DateTime" Precision="3" />
+    <Property Name="LicCertificationNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LastChangeTimeStamp" Type="DateTime" Precision="3" />
+    <Property Name="ImportedDate" Type="DateTime" Precision="3" />
+    <Property Name="SvcOperation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NumOfAttempt" Type="Int32" />
+    <Property Name="LogInfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsProcessed" Type="Boolean" />
+    <Property Name="ProcessedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedAt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Operation" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <ComplexType Name="onelogin3e_get_user_by_networkid_sp_Result">
+    <Property Type="Guid" Name="NxFWKUserID" Nullable="false" />
+    <Property Type="String" Name="BaseUserName" Nullable="false" MaxLength="64" />
+    <Property Type="Int32" Name="Entity" Nullable="true" />
+    <Property Type="String" Name="Office" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="Department_CCC" Nullable="true" MaxLength="16" />
+    <Property Type="Guid" Name="Supervisor_CCC" Nullable="true" />
+    <Property Type="String" Name="TimeZone" Nullable="true" MaxLength="64" />
+    <Property Type="Guid" Name="Language" Nullable="true" />
+    <Property Type="String" Name="NetworkAlias" Nullable="true" MaxLength="256" />
+    <Property Type="Guid" Name="Dashboard" Nullable="true" />
+    <Property Type="String" Name="DefaultUnit" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="EmailAddr" Nullable="true" MaxLength="64" />
+    <Property Type="Byte" Name="CanSwitchOperatingUnit" Nullable="false" />
+    <Property Type="Guid" Name="DataRole" Nullable="false" />
+    <Property Type="Byte" Name="CanProxy" Nullable="true" />
+    <Property Type="Byte" Name="CanEditDashboard" Nullable="true" />
+    <Property Type="Guid" Name="WinTimeZone" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="onelogin3e_get_user_sp_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Number" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="TkprIndex" Nullable="true" />
+    <Property Type="String" Name="UserName" Nullable="true" />
+    <Property Type="String" Name="Email" Nullable="true" />
+    <Property Type="String" Name="AltNumber" Nullable="true" />
+    <Property Type="String" Name="Entity" Nullable="true" />
+    <Property Type="Int32" Name="EntityIndex" Nullable="true" />
+    <Property Type="String" Name="Entity_Type" Nullable="true" />
+    <Property Type="String" Name="FirstName" Nullable="true" />
+    <Property Type="String" Name="LastName" Nullable="true" />
+    <Property Type="String" Name="MiddleName" Nullable="true" />
+    <Property Type="String" Name="Display_Name" Nullable="true" />
+    <Property Type="String" Name="Type" Nullable="true" />
+    <Property Type="String" Name="Payroll_Number" Nullable="true" />
+    <Property Type="String" Name="HR_Number" Nullable="true" />
+    <Property Type="String" Name="Bill_Name" Nullable="true" />
+    <Property Type="String" Name="Bill_Initial" Nullable="true" />
+    <Property Type="String" Name="Status" Nullable="true" />
+    <Property Type="String" Name="Sort_Name" Nullable="true" />
+    <Property Type="DateTime" Name="CompDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Timekeeper_Category" Nullable="true" />
+    <Property Type="DateTime" Name="EffStart" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Office" Nullable="true" />
+    <Property Type="String" Name="Department" Nullable="true" />
+    <Property Type="String" Name="Section" Nullable="true" />
+    <Property Type="DateTime" Name="Hire_Date" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="Termination_Date" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Title" Nullable="true" />
+    <Property Type="String" Name="Rate_Class" Nullable="true" />
+    <Property Type="String" Name="Work_Calender" Nullable="true" />
+    <Property Type="String" Name="Unit" Nullable="true" />
+    <Property Type="String" Name="Supervising_timeKeeper" Nullable="true" />
+    <Property Type="String" Name="Work_type" Nullable="true" />
+    <Property Type="String" Name="Billing_Corodinator" Nullable="true" />
+    <Property Type="String" Name="Sitephone" Nullable="true" />
+    <Property Type="String" Name="LicenseType" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="LicCountry" Nullable="true" />
+    <Property Type="String" Name="LicState" Nullable="true" />
+    <Property Type="DateTime" Name="LicExpiration" Nullable="true" Precision="23" />
+    <Property Type="String" Name="LicCertificationNo" Nullable="true" />
+    <Property Type="DateTime" Name="LastChangeTimeStamp" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ImportedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="SvcOperation" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="NumOfAttempt" Nullable="true" />
+    <Property Type="String" Name="LogInfo" Nullable="true" />
+    <Property Type="Boolean" Name="IsProcessed" Nullable="true" />
+    <Property Type="DateTime" Name="ProcessedDate" Nullable="true" Precision="23" />
+  </ComplexType>
+  <EntityType Name="UKG_TE_3E_TRANSACTION_LOGS">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TkprNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Logs" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProcessedDate" Type="DateTime" Precision="3" />
+    <Property Name="PayloadXml" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ResultXml" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <ComplexType Name="ukg3e_get_dashboard_roles_by_billingtitle_sp_Result">
+    <Property Type="Guid" Name="DashboardId" Nullable="true" />
+    <Property Type="Guid" Name="RoleId" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="onelogin3e_get_user_by_email_sp_Result">
+    <Property Type="Guid" Name="NxFWKUserID" Nullable="false" />
+    <Property Type="String" Name="BaseUserName" Nullable="false" MaxLength="64" />
+    <Property Type="Int32" Name="Entity" Nullable="true" />
+    <Property Type="String" Name="Office" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="Department_CCC" Nullable="true" MaxLength="16" />
+    <Property Type="Guid" Name="Supervisor_CCC" Nullable="true" />
+    <Property Type="String" Name="TimeZone" Nullable="true" MaxLength="64" />
+    <Property Type="Guid" Name="Language" Nullable="true" />
+    <Property Type="String" Name="NetworkAlias" Nullable="true" MaxLength="256" />
+    <Property Type="Guid" Name="Dashboard" Nullable="true" />
+    <Property Type="String" Name="DefaultUnit" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="EmailAddr" Nullable="true" MaxLength="64" />
+    <Property Type="Byte" Name="CanSwitchOperatingUnit" Nullable="false" />
+    <Property Type="Guid" Name="DataRole" Nullable="false" />
+    <Property Type="Byte" Name="CanProxy" Nullable="true" />
+    <Property Type="Byte" Name="CanEditDashboard" Nullable="true" />
+    <Property Type="Guid" Name="WinTimeZone" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="UKG_TE_3E_CONFIGURATION">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Key" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Value" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="UKG_TE_3E_PO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Supplier" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ShipSite" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ShipInstructions" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NxUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EmailAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReqDate" Type="DateTime" Precision="3" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="EmployeeName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProductBundle_CCC" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="BundleName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OptionalEquipments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OptionalEquipmentCodes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Address1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Address2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Zip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ListItemId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ImportedDate" Type="DateTime" Precision="3" />
+    <Property Name="SvcOperation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NumOfAttempt" Type="Int32" />
+    <Property Name="LogInfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsProcessed" Type="Boolean" />
+    <Property Name="ProcessedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="UKG_TE_3E_PO_AUDIT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Supplier" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ShipSite" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ShipInstructions" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NxUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EmailAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReqDate" Type="DateTime" Precision="3" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="EmployeeName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProductBundle_CCC" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="BundleName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OptionalEquipments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OptionalEquipmentCodes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Address1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Address2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Zip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ListItemId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ImportedDate" Type="DateTime" Precision="3" />
+    <Property Name="SvcOperation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NumOfAttempt" Type="Int32" />
+    <Property Name="LogInfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsProcessed" Type="Boolean" />
+    <Property Name="ProcessedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedAt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Operation" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="UKG_TE_3E_PO_TRANSACTION_LOGS">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TkprNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Logs" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PayloadXml" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ResultXml" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProcessedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="UKG_TE_3E_BILLING_TITLE_DASHBOARD">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UKG_Billing_Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C3E_Title_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="C3E_Title_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DashboardID" Type="Guid" />
+    <Property Name="DashboardName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="UKG_TE_3E_DASHBOARD_ROLE">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DashboardID" Type="Guid" />
+    <Property Name="RoleId" Type="Guid" />
+    <Property Name="RoleDesciption" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="REQUISITION_TE_3E_PO_REF">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SubmissionID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsBudgetedPosition" Type="Boolean" />
+    <Property Name="JobGroupCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="JobGroupDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="JobLocationCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="JobLocationDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PriorityLevel" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="JobTitleCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="JobTitleDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BundlesCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsConfidentialPosition" Type="Boolean" />
+    <Property Name="PositionType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CandidateLocationPreference" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SalaryRange" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReportingManager" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NewRoleDetails" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KeywordRequirements" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DegreeRequirements" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="YearsOfExperience" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TargetCompaniesAndSchools" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TravelRequirements" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AdditionalComments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="HiringManager" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="HiringManagerEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReqDate" Type="DateTime" Precision="3" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="ProductBundle_CCC" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="BundleName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ImportedDate" Type="DateTime" Precision="3" />
+    <Property Name="ProcessedDate" Type="DateTime" Precision="3" />
+    <Property Name="NumOfAttempt" Type="Int32" />
+    <Property Name="ErrorMsg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PositionPostingType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsBackFillPosition" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="WorkLocation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NumOfPositions" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BackfillPositionFor" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OtherJobTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="WorkLocationOfficeCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="WorkLocationOfficeDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Department" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Submitter" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ExcludeProducts" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

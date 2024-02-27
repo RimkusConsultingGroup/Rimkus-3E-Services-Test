@@ -1,0 +1,33 @@
+<CftEntityNewBizInfo>
+                                                                                
+		<CftEntityNewBizInfoID />
+		<CftEntityID>NewValue</CftEntityID>
+		<JobNumber>1</JobNumber>
+		<Description>NewValue</Description>
+		<RequestedBy>NewValue</RequestedBy>
+		<CftNewBizRequestID>NewValue</CftNewBizRequestID>
+		<RoleCode>NewValue</RoleCode>
+		<RelationshipCode>NewValue</RelationshipCode>
+		<DateRun>0001-01-02T00:00:00</DateRun>
+		<Role>NewValue</Role>
+		<Relationship>NewValue</Relationship>
+		<cftNBRStatus>NewValue</cftNBRStatus>
+		<DeclineReason>NewValue</DeclineReason>
+		<DeclineComments>NewValue</DeclineComments>
+		<ConflictsContact>NewValue</ConflictsContact>
+		<ClientNumber>NewValue</ClientNumber>
+		<ClientName>NewValue</ClientName>
+		<MatterNumber>NewValue</MatterNumber>
+		<MatterName>NewValue</MatterName>
+		<LinkType>NewValue</LinkType>
+		<RMImages />
+		<ClientIndex>1</ClientIndex>
+		<MatterIndex>1</MatterIndex>
+		<CftRelatedPartyID>NewValue</CftRelatedPartyID>
+		<ClientStatus>NewValue</ClientStatus>
+		<MatterStatus>NewValue</MatterStatus>
+		<EntityIndex>1</EntityIndex>
+		<NxUserContact />
+		<ParentID>NewValue</ParentID>
+   
+</CftEntityNewBizInfo>

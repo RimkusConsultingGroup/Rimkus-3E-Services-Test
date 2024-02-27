@@ -1,0 +1,13 @@
+<CftMatterPayorInfo>
+                                                                            
+		<CftMatterPayorInfoID />
+		<CftMatterID>NewValue</CftMatterID>
+		<ClientDisplayName>NewValue</ClientDisplayName>
+		<ClientIndex>1</ClientIndex>
+		<ClientNumber>NewValue</ClientNumber>
+		<PayorDisplayName>NewValue</PayorDisplayName>
+		<PayorIndex>1</PayorIndex>
+		<RMImages />
+		<IsDefault>1</IsDefault>
+ 
+</CftMatterPayorInfo>

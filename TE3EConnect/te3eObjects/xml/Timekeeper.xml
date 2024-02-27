@@ -1,0 +1,49 @@
+<Timekeeper>
+    <TimekeeperID>e114673e-f72d-49cd-a9ab-5d131f727f52</TimekeeperID>
+    <TkprIndex>3</TkprIndex>
+    <Number>00474</Number>
+    <AltNumber>0132</AltNumber>
+    <Entity>3881</Entity>
+    <DisplayName>KARIN ROUSE</DisplayName>
+    <DisplayName>Rouse, Karin</DisplayName>
+    <BillName>Rouse, Karin</BillName>
+    <BillInitial>0132</BillInitial>
+    <TkprStatus>250</TkprStatus>
+    <Description>Inactive</Description>
+    <SortName>ROUSE, KARIN</SortName>
+    <GLTimekeeper />
+    <GLValue />
+    <Language>1033</Language>
+    <Description>English</Description>
+    <Narrative />
+    <Narrative_FormattedText />
+    <PayrollNumber />
+    <PhysicalLocation />
+    <HRTitle />
+    <HRNumber />
+    <JDDate />
+    <CompDate />
+    <TkprType />
+    <Description />
+    <TkprAttribute />
+    <Description />
+    <TkprCategory />
+    <Description />
+    <ProfDCSTemplate />
+    <Name />
+    <BillDCSTemplate />
+    <Name />
+    <StmtDCSTemplate />
+    <Name />
+    <RateYear />
+    <WestLawUserIDNum />
+    <WestLawContactIDNum />
+    <CreditNoteDCSTemplate />
+    <Name />
+    <BillGroupDCSTemplate />
+    <Name />
+    <CreditNoteGroupDCSTemplate />
+    <Name />
+    <WF_User />
+    <BaseUserName />
+  </Timekeeper>

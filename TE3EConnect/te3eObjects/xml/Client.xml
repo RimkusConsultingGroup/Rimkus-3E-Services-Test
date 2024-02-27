@@ -1,0 +1,92 @@
+<Client>
+    <ClientID>88cb77c3-353c-4fe3-96bb-8873e49a60a7</ClientID>
+    <Entity>2593</Entity>
+    <DisplayName>AGL RESOURCES</DisplayName>
+    <ClientIndex>62876</ClientIndex>
+    <Number>0006636</Number>
+    <AltNumber>006636</AltNumber>
+    <DisplayName>AGL RESOURCES</DisplayName>
+    <SortString>AGL RESOURCES</SortString>
+    <RelatedClient>62876</RelatedClient>
+    <Number>0006636</Number>
+    <CliType>200</CliType>
+    <Description>Corporation</Description>
+    <CliStatusType>100</CliStatusType>
+    <Description>Active</Description>
+    <CliStatusDate>7/7/2010 12:00:00 AM</CliStatusDate>
+    <CreditLimit />
+    <Currency>USD</Currency>
+    <CurrencyDate />
+    <OpenDate>7/7/2010 12:00:00 AM</OpenDate>
+    <IsPayor>1</IsPayor>
+    <InvoiceSite>2101</InvoiceSite>
+    <Description>MASTER RELATED NUMBER</Description>
+    <StatementSite>2101</StatementSite>
+    <Description>MASTER RELATED NUMBER</Description>
+    <ContactInfo />
+    <Industry />
+    <Description />
+    <Narrative />
+    <Narrative_FormattedText />
+    <Language>1033</Language>
+    <Description>English</Description>
+    <BillingInstruc />
+    <Description />
+    <OpenTkpr>1316</OpenTkpr>
+    <Number>01689</Number>
+    <CloseTkpr />
+    <Number />
+    <CloseDate />
+    <ProfDCSTemplate />
+    <Name />
+    <BillDCSTemplate />
+    <Name />
+    <StmtDCSTemplate />
+    <Name />
+    <Country />
+    <Description />
+    <CliAttribute />
+    <Description />
+    <CliCategory />
+    <Description />
+    <EntryDate />
+    <VATRegistration />
+    <IsEngageLetterReq>0</IsEngageLetterReq>
+    <EngageLetterSubDate />
+    <EngageLetterRecDate />
+    <EngageLetterComment />
+    <IsWaiverLetterReq>0</IsWaiverLetterReq>
+    <WaiverLetterSubDate />
+    <WaiverLetterRecDate />
+    <WaiverLetterComment />
+    <IsConflictsConfidential>0</IsConflictsConfidential>
+    <ApproveTkpr />
+    <Number />
+    <ConflictStatus />
+    <Description />
+    <IsIdentified>0</IsIdentified>
+    <IdentificationDate />
+    <VolumeDiscountGroup />
+    <Description />
+    <IsEBill>0</IsEBill>
+    <DueDays />
+    <ApproveDate />
+    <IsICB>0</IsICB>
+    <ICBUnit />
+    <Description />
+    <IsCreateTaxInvOnRcpt>0</IsCreateTaxInvOnRcpt>
+    <LoadSource />
+    <LoadGroup />
+    <LoadNumber />
+    <EbillValidationList />
+    <RSSFeed />
+    <TickerSymbol />
+    <URL />
+    <CreditNoteDCSTemplate />
+    <Name />
+    <BillGroupDCSTemplate />
+    <Name />
+    <CreditNoteGroupDCSTemplate />
+    <Name />
+    <IsNoTC_CCC>0</IsNoTC_CCC>
+  </Client>

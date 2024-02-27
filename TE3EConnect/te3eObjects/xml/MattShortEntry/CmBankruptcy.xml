@@ -1,0 +1,7 @@
+<CmBankruptcy>
+                                                    <CmBkChList />
+                                                    <SettlementAmt>1</SettlementAmt>
+                                                    <Currency />
+                                                    <ConvDate>0001-01-02T00:00:00</ConvDate>
+                                                    <AssetDescription>NewValue</AssetDescription>
+                                            </CmBankruptcy>

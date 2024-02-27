@@ -1,0 +1,30 @@
+<CollectionStep>
+		<StepNumber>11</StepNumber>
+		<Action>300</Action>
+		<Collector>99c456cd-3a3e-4d1e-ac0a-65481b170fa8</Collector>
+		<ActionPriority>1</ActionPriority>
+		<IsDoneIfInvIsPaid>1</IsDoneIfInvIsPaid>
+		<IsDoneImmediately>1</IsDoneImmediately>
+		<DaysAfter>32</DaysAfter>
+		<DateSourceTypeList>InvoiceDueDate</DateSourceTypeList>
+		<ActionByTypeList>Manual</ActionByTypeList>
+		<Comments>NewValue</Comments>
+		<IsCompleted>1</IsCompleted>
+		<CompletedBy />
+		<CollectionActorList>Collector</CollectionActorList>
+		<ScheduledDate>2019-07-02T00:00:00</ScheduledDate>
+		<ActionByUnbound>Manual</ActionByUnbound>
+		<CollectionActorListUnbound>Collector</CollectionActorListUnbound>
+		<CollectorUnbound>99c456cd-3a3e-4d1e-ac0a-65481b170fa8</CollectorUnbound>
+		<ScheduledDateUnbound>2019-07-02T00:00:00</ScheduledDateUnbound>
+		<PrinterTemplate />
+		<EmailAddr>NewValue</EmailAddr>
+		<EmailSubject>NewValue</EmailSubject>
+		<IsStepRepeated>1</IsStepRepeated>
+		<EmailFromAddress>NewValue</EmailFromAddress>
+		<EmailCCAddress>NewValue</EmailCCAddress>
+		<EmailBCCAddress>NewValue</EmailBCCAddress>
+		<BillingOffice>001</BillingOffice>
+		<MatterLanguage>1033</MatterLanguage>
+		<CollectionOffice>000</CollectionOffice>
+</CollectionStep>

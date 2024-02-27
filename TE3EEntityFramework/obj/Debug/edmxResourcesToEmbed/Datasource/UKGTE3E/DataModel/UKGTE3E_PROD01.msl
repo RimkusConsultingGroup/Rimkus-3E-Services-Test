@@ -1,0 +1,677 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="UKGTE3E_PROD01StoreContainer" CdmEntityContainer="UKGTE3E_PROD01Entities">
+    <EntitySetMapping Name="UKG_TE_3E_TIMEKEEPER">
+      <EntityTypeMapping TypeName="UKGTE3E_PROD01.UKG_TE_3E_TIMEKEEPER">
+        <MappingFragment StoreEntitySet="UKG_TE_3E_TIMEKEEPER">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="TkprIndex" ColumnName="TkprIndex" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="AltNumber" ColumnName="AltNumber" />
+          <ScalarProperty Name="Entity" ColumnName="Entity" />
+          <ScalarProperty Name="EntityIndex" ColumnName="EntityIndex" />
+          <ScalarProperty Name="Entity_Type" ColumnName="Entity_Type" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+          <ScalarProperty Name="Display_Name" ColumnName="Display_Name" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Payroll_Number" ColumnName="Payroll_Number" />
+          <ScalarProperty Name="HR_Number" ColumnName="HR_Number" />
+          <ScalarProperty Name="Bill_Name" ColumnName="Bill_Name" />
+          <ScalarProperty Name="Bill_Initial" ColumnName="Bill_Initial" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Sort_Name" ColumnName="Sort_Name" />
+          <ScalarProperty Name="CompDate" ColumnName="CompDate" />
+          <ScalarProperty Name="Timekeeper_Category" ColumnName="Timekeeper_Category" />
+          <ScalarProperty Name="EffStart" ColumnName="EffStart" />
+          <ScalarProperty Name="Office" ColumnName="Office" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="Section" ColumnName="Section" />
+          <ScalarProperty Name="Hire_Date" ColumnName="Hire_Date" />
+          <ScalarProperty Name="Termination_Date" ColumnName="Termination_Date" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Rate_Class" ColumnName="Rate_Class" />
+          <ScalarProperty Name="Work_Calender" ColumnName="Work_Calender" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Supervising_timeKeeper" ColumnName="Supervising_timeKeeper" />
+          <ScalarProperty Name="Work_type" ColumnName="Work_type" />
+          <ScalarProperty Name="Billing_Corodinator" ColumnName="Billing_Corodinator" />
+          <ScalarProperty Name="Sitephone" ColumnName="Sitephone" />
+          <ScalarProperty Name="LicenseType" ColumnName="LicenseType" />
+          <ScalarProperty Name="LicCountry" ColumnName="LicCountry" />
+          <ScalarProperty Name="LicState" ColumnName="LicState" />
+          <ScalarProperty Name="LicExpiration" ColumnName="LicExpiration" />
+          <ScalarProperty Name="LicCertificationNo" ColumnName="LicCertificationNo" />
+          <ScalarProperty Name="LastChangeTimeStamp" ColumnName="LastChangeTimeStamp" />
+          <ScalarProperty Name="ImportedDate" ColumnName="ImportedDate" />
+          <ScalarProperty Name="SvcOperation" ColumnName="SvcOperation" />
+          <ScalarProperty Name="NumOfAttempt" ColumnName="NumOfAttempt" />
+          <ScalarProperty Name="LogInfo" ColumnName="LogInfo" />
+          <ScalarProperty Name="IsProcessed" ColumnName="IsProcessed" />
+          <ScalarProperty Name="ProcessedDate" ColumnName="ProcessedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UKG_TE_3E_TIMEKEEPER_AUDIT">
+      <EntityTypeMapping TypeName="UKGTE3E_PROD01.UKG_TE_3E_TIMEKEEPER_AUDIT">
+        <MappingFragment StoreEntitySet="UKG_TE_3E_TIMEKEEPER_AUDIT">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="TkprIndex" ColumnName="TkprIndex" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="AltNumber" ColumnName="AltNumber" />
+          <ScalarProperty Name="Entity" ColumnName="Entity" />
+          <ScalarProperty Name="EntityIndex" ColumnName="EntityIndex" />
+          <ScalarProperty Name="Entity_Type" ColumnName="Entity_Type" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+          <ScalarProperty Name="Display_Name" ColumnName="Display_Name" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Payroll_Number" ColumnName="Payroll_Number" />
+          <ScalarProperty Name="HR_Number" ColumnName="HR_Number" />
+          <ScalarProperty Name="Bill_Name" ColumnName="Bill_Name" />
+          <ScalarProperty Name="Bill_Initial" ColumnName="Bill_Initial" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Sort_Name" ColumnName="Sort_Name" />
+          <ScalarProperty Name="CompDate" ColumnName="CompDate" />
+          <ScalarProperty Name="Timekeeper_Category" ColumnName="Timekeeper_Category" />
+          <ScalarProperty Name="EffStart" ColumnName="EffStart" />
+          <ScalarProperty Name="Office" ColumnName="Office" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="Section" ColumnName="Section" />
+          <ScalarProperty Name="Hire_Date" ColumnName="Hire_Date" />
+          <ScalarProperty Name="Termination_Date" ColumnName="Termination_Date" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Rate_Class" ColumnName="Rate_Class" />
+          <ScalarProperty Name="Work_Calender" ColumnName="Work_Calender" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Supervising_timeKeeper" ColumnName="Supervising_timeKeeper" />
+          <ScalarProperty Name="Work_type" ColumnName="Work_type" />
+          <ScalarProperty Name="Billing_Corodinator" ColumnName="Billing_Corodinator" />
+          <ScalarProperty Name="Sitephone" ColumnName="Sitephone" />
+          <ScalarProperty Name="LicenseType" ColumnName="LicenseType" />
+          <ScalarProperty Name="LicCountry" ColumnName="LicCountry" />
+          <ScalarProperty Name="LicState" ColumnName="LicState" />
+          <ScalarProperty Name="LicExpiration" ColumnName="LicExpiration" />
+          <ScalarProperty Name="LicCertificationNo" ColumnName="LicCertificationNo" />
+          <ScalarProperty Name="LastChangeTimeStamp" ColumnName="LastChangeTimeStamp" />
+          <ScalarProperty Name="ImportedDate" ColumnName="ImportedDate" />
+          <ScalarProperty Name="SvcOperation" ColumnName="SvcOperation" />
+          <ScalarProperty Name="NumOfAttempt" ColumnName="NumOfAttempt" />
+          <ScalarProperty Name="LogInfo" ColumnName="LogInfo" />
+          <ScalarProperty Name="IsProcessed" ColumnName="IsProcessed" />
+          <ScalarProperty Name="ProcessedDate" ColumnName="ProcessedDate" />
+          <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+          <ScalarProperty Name="Operation" ColumnName="Operation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="ukg3e_add_timekeeper_sp" FunctionName="UKGTE3E_PROD01.Store.ukg3e_add_timekeeper_sp" />
+    <FunctionImportMapping FunctionImportName="ukg3e_delete_timekeeper_sp" FunctionName="UKGTE3E_PROD01.Store.ukg3e_delete_timekeeper_sp" />
+    <FunctionImportMapping FunctionImportName="ukg3e_get_entityperson_by_first_middle_last_name_sp" FunctionName="UKGTE3E_PROD01.Store.ukg3e_get_entityperson_by_first_middle_last_name_sp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="UKGTE3E_PROD01.ukg3e_get_entityperson_by_first_middle_last_name_sp_Result">
+          <ScalarProperty Name="EntIndex" ColumnName="EntIndex" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="EntityType" ColumnName="EntityType" />
+          <ScalarProperty Name="LoadSource" ColumnName="LoadSource" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ukg3e_get_entityperson_sp" FunctionName="UKGTE3E_PROD01.Store.ukg3e_get_entityperson_sp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="UKGTE3E_PROD01.ukg3e_get_entityperson_sp_Result">
+          <ScalarProperty Name="EntIndex" ColumnName="EntIndex" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="EntityType" ColumnName="EntityType" />
+          <ScalarProperty Name="LoadSource" ColumnName="LoadSource" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ukg3e_get_timekeeper_sp" FunctionName="UKGTE3E_PROD01.Store.ukg3e_get_timekeeper_sp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="UKGTE3E_PROD01.ukg3e_get_timekeeper_sp_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="TkprIndex" ColumnName="TkprIndex" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="AltNumber" ColumnName="AltNumber" />
+          <ScalarProperty Name="Entity" ColumnName="Entity" />
+          <ScalarProperty Name="EntityIndex" ColumnName="EntityIndex" />
+          <ScalarProperty Name="Entity_Type" ColumnName="Entity_Type" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+          <ScalarProperty Name="Display_Name" ColumnName="Display_Name" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Payroll_Number" ColumnName="Payroll_Number" />
+          <ScalarProperty Name="HR_Number" ColumnName="HR_Number" />
+          <ScalarProperty Name="Bill_Name" ColumnName="Bill_Name" />
+          <ScalarProperty Name="Bill_Initial" ColumnName="Bill_Initial" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Sort_Name" ColumnName="Sort_Name" />
+          <ScalarProperty Name="CompDate" ColumnName="CompDate" />
+          <ScalarProperty Name="Timekeeper_Category" ColumnName="Timekeeper_Category" />
+          <ScalarProperty Name="EffStart" ColumnName="EffStart" />
+          <ScalarProperty Name="Office" ColumnName="Office" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="Section" ColumnName="Section" />
+          <ScalarProperty Name="Hire_Date" ColumnName="Hire_Date" />
+          <ScalarProperty Name="Termination_Date" ColumnName="Termination_Date" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Rate_Class" ColumnName="Rate_Class" />
+          <ScalarProperty Name="Work_Calender" ColumnName="Work_Calender" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Supervising_timeKeeper" ColumnName="Supervising_timeKeeper" />
+          <ScalarProperty Name="Work_type" ColumnName="Work_type" />
+          <ScalarProperty Name="Billing_Corodinator" ColumnName="Billing_Corodinator" />
+          <ScalarProperty Name="Sitephone" ColumnName="Sitephone" />
+          <ScalarProperty Name="LicenseType" ColumnName="LicenseType" />
+          <ScalarProperty Name="LicCountry" ColumnName="LicCountry" />
+          <ScalarProperty Name="LicState" ColumnName="LicState" />
+          <ScalarProperty Name="LicExpiration" ColumnName="LicExpiration" />
+          <ScalarProperty Name="LicCertificationNo" ColumnName="LicCertificationNo" />
+          <ScalarProperty Name="LastChangeTimeStamp" ColumnName="LastChangeTimeStamp" />
+          <ScalarProperty Name="ImportedDate" ColumnName="ImportedDate" />
+          <ScalarProperty Name="SvcOperation" ColumnName="SvcOperation" />
+          <ScalarProperty Name="NumOfAttempt" ColumnName="NumOfAttempt" />
+          <ScalarProperty Name="LogInfo" ColumnName="LogInfo" />
+          <ScalarProperty Name="IsProcessed" ColumnName="IsProcessed" />
+          <ScalarProperty Name="ProcessedDate" ColumnName="ProcessedDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ukg3e_get_tkpr_accreditation_sp" FunctionName="UKGTE3E_PROD01.Store.ukg3e_get_tkpr_accreditation_sp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="UKGTE3E_PROD01.ukg3e_get_tkpr_accreditation_sp_Result">
+          <ScalarProperty Name="TkprAccreditationID" ColumnName="TkprAccreditationID" />
+          <ScalarProperty Name="Timekeeper" ColumnName="Timekeeper" />
+          <ScalarProperty Name="AccrDate" ColumnName="AccrDate" />
+          <ScalarProperty Name="CertificateNumber" ColumnName="CertificateNumber" />
+          <ScalarProperty Name="LicenseType_CCC" ColumnName="LicenseType_CCC" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ukg3e_get_tkpr_by_displayname_sp" FunctionName="UKGTE3E_PROD01.Store.ukg3e_get_tkpr_by_displayname_sp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="UKGTE3E_PROD01.ukg3e_get_tkpr_by_displayname_sp_Result">
+          <ScalarProperty Name="TkprIndex" ColumnName="TkprIndex" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Entity" ColumnName="Entity" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="BillName" ColumnName="BillName" />
+          <ScalarProperty Name="BillInitial" ColumnName="BillInitial" />
+          <ScalarProperty Name="TkprStatus" ColumnName="TkprStatus" />
+          <ScalarProperty Name="SortName" ColumnName="SortName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ukg3e_get_tkpr_by_num_sp" FunctionName="UKGTE3E_PROD01.Store.ukg3e_get_tkpr_by_num_sp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="UKGTE3E_PROD01.ukg3e_get_tkpr_by_num_sp_Result">
+          <ScalarProperty Name="TkprIndex" ColumnName="TkprIndex" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Entity" ColumnName="Entity" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="BillName" ColumnName="BillName" />
+          <ScalarProperty Name="BillInitial" ColumnName="BillInitial" />
+          <ScalarProperty Name="TkprStatus" ColumnName="TkprStatus" />
+          <ScalarProperty Name="SortName" ColumnName="SortName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ukg3e_get_tkpr_date_sp" FunctionName="UKGTE3E_PROD01.Store.ukg3e_get_tkpr_date_sp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="UKGTE3E_PROD01.ukg3e_get_tkpr_date_sp_Result">
+          <ScalarProperty Name="TkprIndex" ColumnName="TkprIndex" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Entity" ColumnName="Entity" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="TkprStatus" ColumnName="TkprStatus" />
+          <ScalarProperty Name="TkprDateID" ColumnName="TkprDateID" />
+          <ScalarProperty Name="TimekeeperLkUp" ColumnName="TimekeeperLkUp" />
+          <ScalarProperty Name="EffStart" ColumnName="EffStart" />
+          <ScalarProperty Name="Office" ColumnName="Office" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="Section" ColumnName="Section" />
+          <ScalarProperty Name="HireDate" ColumnName="HireDate" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ukg3e_lookup_code_sp" FunctionName="UKGTE3E_PROD01.Store.ukg3e_lookup_code_sp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="UKGTE3E_PROD01.ukg3e_lookup_code_sp_Result">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ukg3e_update_timekeeper_sp" FunctionName="UKGTE3E_PROD01.Store.ukg3e_update_timekeeper_sp" />
+    <EntitySetMapping Name="ONELOGIN_TE_3E_TRANSACTION_LOGS">
+      <EntityTypeMapping TypeName="UKGTE3E_PROD01.ONELOGIN_TE_3E_TRANSACTION_LOGS">
+        <MappingFragment StoreEntitySet="ONELOGIN_TE_3E_TRANSACTION_LOGS">
+          <ScalarProperty Name="ProcessedDate" ColumnName="ProcessedDate" />
+          <ScalarProperty Name="ResultXml" ColumnName="ResultXml" />
+          <ScalarProperty Name="PayloadXml" ColumnName="PayloadXml" />
+          <ScalarProperty Name="Logs" ColumnName="Logs" />
+          <ScalarProperty Name="TkprNumber" ColumnName="TkprNumber" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ONELOGIN_TE_3E_USER">
+      <EntityTypeMapping TypeName="UKGTE3E_PROD01.ONELOGIN_TE_3E_USER">
+        <MappingFragment StoreEntitySet="ONELOGIN_TE_3E_USER">
+          <ScalarProperty Name="ProcessedDate" ColumnName="ProcessedDate" />
+          <ScalarProperty Name="IsProcessed" ColumnName="IsProcessed" />
+          <ScalarProperty Name="LogInfo" ColumnName="LogInfo" />
+          <ScalarProperty Name="NumOfAttempt" ColumnName="NumOfAttempt" />
+          <ScalarProperty Name="SvcOperation" ColumnName="SvcOperation" />
+          <ScalarProperty Name="ImportedDate" ColumnName="ImportedDate" />
+          <ScalarProperty Name="LastChangeTimeStamp" ColumnName="LastChangeTimeStamp" />
+          <ScalarProperty Name="LicCertificationNo" ColumnName="LicCertificationNo" />
+          <ScalarProperty Name="LicExpiration" ColumnName="LicExpiration" />
+          <ScalarProperty Name="LicState" ColumnName="LicState" />
+          <ScalarProperty Name="LicCountry" ColumnName="LicCountry" />
+          <ScalarProperty Name="LicenseType" ColumnName="LicenseType" />
+          <ScalarProperty Name="Sitephone" ColumnName="Sitephone" />
+          <ScalarProperty Name="Billing_Corodinator" ColumnName="Billing_Corodinator" />
+          <ScalarProperty Name="Work_type" ColumnName="Work_type" />
+          <ScalarProperty Name="Supervising_timeKeeper" ColumnName="Supervising_timeKeeper" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Work_Calender" ColumnName="Work_Calender" />
+          <ScalarProperty Name="Rate_Class" ColumnName="Rate_Class" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Termination_Date" ColumnName="Termination_Date" />
+          <ScalarProperty Name="Hire_Date" ColumnName="Hire_Date" />
+          <ScalarProperty Name="Section" ColumnName="Section" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="Office" ColumnName="Office" />
+          <ScalarProperty Name="EffStart" ColumnName="EffStart" />
+          <ScalarProperty Name="Timekeeper_Category" ColumnName="Timekeeper_Category" />
+          <ScalarProperty Name="CompDate" ColumnName="CompDate" />
+          <ScalarProperty Name="Sort_Name" ColumnName="Sort_Name" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Bill_Initial" ColumnName="Bill_Initial" />
+          <ScalarProperty Name="Bill_Name" ColumnName="Bill_Name" />
+          <ScalarProperty Name="HR_Number" ColumnName="HR_Number" />
+          <ScalarProperty Name="Payroll_Number" ColumnName="Payroll_Number" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Display_Name" ColumnName="Display_Name" />
+          <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Entity_Type" ColumnName="Entity_Type" />
+          <ScalarProperty Name="EntityIndex" ColumnName="EntityIndex" />
+          <ScalarProperty Name="Entity" ColumnName="Entity" />
+          <ScalarProperty Name="AltNumber" ColumnName="AltNumber" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="TkprIndex" ColumnName="TkprIndex" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ONELOGIN_TE_3E_USER_AUDIT">
+      <EntityTypeMapping TypeName="UKGTE3E_PROD01.ONELOGIN_TE_3E_USER_AUDIT">
+        <MappingFragment StoreEntitySet="ONELOGIN_TE_3E_USER_AUDIT">
+          <ScalarProperty Name="Operation" ColumnName="Operation" />
+          <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+          <ScalarProperty Name="ProcessedDate" ColumnName="ProcessedDate" />
+          <ScalarProperty Name="IsProcessed" ColumnName="IsProcessed" />
+          <ScalarProperty Name="LogInfo" ColumnName="LogInfo" />
+          <ScalarProperty Name="NumOfAttempt" ColumnName="NumOfAttempt" />
+          <ScalarProperty Name="SvcOperation" ColumnName="SvcOperation" />
+          <ScalarProperty Name="ImportedDate" ColumnName="ImportedDate" />
+          <ScalarProperty Name="LastChangeTimeStamp" ColumnName="LastChangeTimeStamp" />
+          <ScalarProperty Name="LicCertificationNo" ColumnName="LicCertificationNo" />
+          <ScalarProperty Name="LicExpiration" ColumnName="LicExpiration" />
+          <ScalarProperty Name="LicState" ColumnName="LicState" />
+          <ScalarProperty Name="LicCountry" ColumnName="LicCountry" />
+          <ScalarProperty Name="LicenseType" ColumnName="LicenseType" />
+          <ScalarProperty Name="Sitephone" ColumnName="Sitephone" />
+          <ScalarProperty Name="Billing_Corodinator" ColumnName="Billing_Corodinator" />
+          <ScalarProperty Name="Work_type" ColumnName="Work_type" />
+          <ScalarProperty Name="Supervising_timeKeeper" ColumnName="Supervising_timeKeeper" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Work_Calender" ColumnName="Work_Calender" />
+          <ScalarProperty Name="Rate_Class" ColumnName="Rate_Class" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Termination_Date" ColumnName="Termination_Date" />
+          <ScalarProperty Name="Hire_Date" ColumnName="Hire_Date" />
+          <ScalarProperty Name="Section" ColumnName="Section" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="Office" ColumnName="Office" />
+          <ScalarProperty Name="EffStart" ColumnName="EffStart" />
+          <ScalarProperty Name="Timekeeper_Category" ColumnName="Timekeeper_Category" />
+          <ScalarProperty Name="CompDate" ColumnName="CompDate" />
+          <ScalarProperty Name="Sort_Name" ColumnName="Sort_Name" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Bill_Initial" ColumnName="Bill_Initial" />
+          <ScalarProperty Name="Bill_Name" ColumnName="Bill_Name" />
+          <ScalarProperty Name="HR_Number" ColumnName="HR_Number" />
+          <ScalarProperty Name="Payroll_Number" ColumnName="Payroll_Number" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Display_Name" ColumnName="Display_Name" />
+          <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Entity_Type" ColumnName="Entity_Type" />
+          <ScalarProperty Name="EntityIndex" ColumnName="EntityIndex" />
+          <ScalarProperty Name="Entity" ColumnName="Entity" />
+          <ScalarProperty Name="AltNumber" ColumnName="AltNumber" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="TkprIndex" ColumnName="TkprIndex" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="onelogin3e_add_user_sp" FunctionName="UKGTE3E_PROD01.Store.onelogin3e_add_user_sp" />
+    <FunctionImportMapping FunctionImportName="onelogin3e_delete_user_sp" FunctionName="UKGTE3E_PROD01.Store.onelogin3e_delete_user_sp" />
+    <FunctionImportMapping FunctionImportName="onelogin3e_get_user_by_networkid_sp" FunctionName="UKGTE3E_PROD01.Store.onelogin3e_get_user_by_networkid_sp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="UKGTE3E_PROD01.onelogin3e_get_user_by_networkid_sp_Result">
+          <ScalarProperty Name="NxFWKUserID" ColumnName="NxFWKUserID" />
+          <ScalarProperty Name="BaseUserName" ColumnName="BaseUserName" />
+          <ScalarProperty Name="Entity" ColumnName="Entity" />
+          <ScalarProperty Name="Office" ColumnName="Office" />
+          <ScalarProperty Name="Department_CCC" ColumnName="Department_CCC" />
+          <ScalarProperty Name="Supervisor_CCC" ColumnName="Supervisor_CCC" />
+          <ScalarProperty Name="TimeZone" ColumnName="TimeZone" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="NetworkAlias" ColumnName="NetworkAlias" />
+          <ScalarProperty Name="Dashboard" ColumnName="Dashboard" />
+          <ScalarProperty Name="DefaultUnit" ColumnName="DefaultUnit" />
+          <ScalarProperty Name="EmailAddr" ColumnName="EmailAddr" />
+          <ScalarProperty Name="CanSwitchOperatingUnit" ColumnName="CanSwitchOperatingUnit" />
+          <ScalarProperty Name="DataRole" ColumnName="DataRole" />
+          <ScalarProperty Name="CanProxy" ColumnName="CanProxy" />
+          <ScalarProperty Name="CanEditDashboard" ColumnName="CanEditDashboard" />
+          <ScalarProperty Name="WinTimeZone" ColumnName="WinTimeZone" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="onelogin3e_get_user_sp" FunctionName="UKGTE3E_PROD01.Store.onelogin3e_get_user_sp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="UKGTE3E_PROD01.onelogin3e_get_user_sp_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="TkprIndex" ColumnName="TkprIndex" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="AltNumber" ColumnName="AltNumber" />
+          <ScalarProperty Name="Entity" ColumnName="Entity" />
+          <ScalarProperty Name="EntityIndex" ColumnName="EntityIndex" />
+          <ScalarProperty Name="Entity_Type" ColumnName="Entity_Type" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+          <ScalarProperty Name="Display_Name" ColumnName="Display_Name" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Payroll_Number" ColumnName="Payroll_Number" />
+          <ScalarProperty Name="HR_Number" ColumnName="HR_Number" />
+          <ScalarProperty Name="Bill_Name" ColumnName="Bill_Name" />
+          <ScalarProperty Name="Bill_Initial" ColumnName="Bill_Initial" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Sort_Name" ColumnName="Sort_Name" />
+          <ScalarProperty Name="CompDate" ColumnName="CompDate" />
+          <ScalarProperty Name="Timekeeper_Category" ColumnName="Timekeeper_Category" />
+          <ScalarProperty Name="EffStart" ColumnName="EffStart" />
+          <ScalarProperty Name="Office" ColumnName="Office" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="Section" ColumnName="Section" />
+          <ScalarProperty Name="Hire_Date" ColumnName="Hire_Date" />
+          <ScalarProperty Name="Termination_Date" ColumnName="Termination_Date" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Rate_Class" ColumnName="Rate_Class" />
+          <ScalarProperty Name="Work_Calender" ColumnName="Work_Calender" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Supervising_timeKeeper" ColumnName="Supervising_timeKeeper" />
+          <ScalarProperty Name="Work_type" ColumnName="Work_type" />
+          <ScalarProperty Name="Billing_Corodinator" ColumnName="Billing_Corodinator" />
+          <ScalarProperty Name="Sitephone" ColumnName="Sitephone" />
+          <ScalarProperty Name="LicenseType" ColumnName="LicenseType" />
+          <ScalarProperty Name="LicCountry" ColumnName="LicCountry" />
+          <ScalarProperty Name="LicState" ColumnName="LicState" />
+          <ScalarProperty Name="LicExpiration" ColumnName="LicExpiration" />
+          <ScalarProperty Name="LicCertificationNo" ColumnName="LicCertificationNo" />
+          <ScalarProperty Name="LastChangeTimeStamp" ColumnName="LastChangeTimeStamp" />
+          <ScalarProperty Name="ImportedDate" ColumnName="ImportedDate" />
+          <ScalarProperty Name="SvcOperation" ColumnName="SvcOperation" />
+          <ScalarProperty Name="NumOfAttempt" ColumnName="NumOfAttempt" />
+          <ScalarProperty Name="LogInfo" ColumnName="LogInfo" />
+          <ScalarProperty Name="IsProcessed" ColumnName="IsProcessed" />
+          <ScalarProperty Name="ProcessedDate" ColumnName="ProcessedDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="onelogin3e_update_user_sp" FunctionName="UKGTE3E_PROD01.Store.onelogin3e_update_user_sp" />
+    <EntitySetMapping Name="UKG_TE_3E_TRANSACTION_LOGS">
+      <EntityTypeMapping TypeName="UKGTE3E_PROD01.UKG_TE_3E_TRANSACTION_LOGS">
+        <MappingFragment StoreEntitySet="UKG_TE_3E_TRANSACTION_LOGS">
+          <ScalarProperty Name="ResultXml" ColumnName="ResultXml" />
+          <ScalarProperty Name="PayloadXml" ColumnName="PayloadXml" />
+          <ScalarProperty Name="ProcessedDate" ColumnName="ProcessedDate" />
+          <ScalarProperty Name="Logs" ColumnName="Logs" />
+          <ScalarProperty Name="TkprNumber" ColumnName="TkprNumber" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="ukg3e_get_dashboard_roles_by_billingtitle_sp" FunctionName="UKGTE3E_PROD01.Store.ukg3e_get_dashboard_roles_by_billingtitle_sp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="UKGTE3E_PROD01.ukg3e_get_dashboard_roles_by_billingtitle_sp_Result">
+          <ScalarProperty Name="DashboardId" ColumnName="DashboardId" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="onelogin3e_get_user_by_email_sp" FunctionName="UKGTE3E_PROD01.Store.onelogin3e_get_user_by_email_sp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="UKGTE3E_PROD01.onelogin3e_get_user_by_email_sp_Result">
+          <ScalarProperty Name="NxFWKUserID" ColumnName="NxFWKUserID" />
+          <ScalarProperty Name="BaseUserName" ColumnName="BaseUserName" />
+          <ScalarProperty Name="Entity" ColumnName="Entity" />
+          <ScalarProperty Name="Office" ColumnName="Office" />
+          <ScalarProperty Name="Department_CCC" ColumnName="Department_CCC" />
+          <ScalarProperty Name="Supervisor_CCC" ColumnName="Supervisor_CCC" />
+          <ScalarProperty Name="TimeZone" ColumnName="TimeZone" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="NetworkAlias" ColumnName="NetworkAlias" />
+          <ScalarProperty Name="Dashboard" ColumnName="Dashboard" />
+          <ScalarProperty Name="DefaultUnit" ColumnName="DefaultUnit" />
+          <ScalarProperty Name="EmailAddr" ColumnName="EmailAddr" />
+          <ScalarProperty Name="CanSwitchOperatingUnit" ColumnName="CanSwitchOperatingUnit" />
+          <ScalarProperty Name="DataRole" ColumnName="DataRole" />
+          <ScalarProperty Name="CanProxy" ColumnName="CanProxy" />
+          <ScalarProperty Name="CanEditDashboard" ColumnName="CanEditDashboard" />
+          <ScalarProperty Name="WinTimeZone" ColumnName="WinTimeZone" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="UKG_TE_3E_CONFIGURATION">
+      <EntityTypeMapping TypeName="UKGTE3E_PROD01.UKG_TE_3E_CONFIGURATION">
+        <MappingFragment StoreEntitySet="UKG_TE_3E_CONFIGURATION">
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Key" ColumnName="Key" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UKG_TE_3E_PO">
+      <EntityTypeMapping TypeName="UKGTE3E_PROD01.UKG_TE_3E_PO">
+        <MappingFragment StoreEntitySet="UKG_TE_3E_PO">
+          <ScalarProperty Name="ProcessedDate" ColumnName="ProcessedDate" />
+          <ScalarProperty Name="IsProcessed" ColumnName="IsProcessed" />
+          <ScalarProperty Name="LogInfo" ColumnName="LogInfo" />
+          <ScalarProperty Name="NumOfAttempt" ColumnName="NumOfAttempt" />
+          <ScalarProperty Name="SvcOperation" ColumnName="SvcOperation" />
+          <ScalarProperty Name="ImportedDate" ColumnName="ImportedDate" />
+          <ScalarProperty Name="ListItemId" ColumnName="ListItemId" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="OptionalEquipmentCodes" ColumnName="OptionalEquipmentCodes" />
+          <ScalarProperty Name="OptionalEquipments" ColumnName="OptionalEquipments" />
+          <ScalarProperty Name="BundleName" ColumnName="BundleName" />
+          <ScalarProperty Name="ProductBundle_CCC" ColumnName="ProductBundle_CCC" />
+          <ScalarProperty Name="EmployeeType" ColumnName="EmployeeType" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="ReqDate" ColumnName="ReqDate" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="NxUser" ColumnName="NxUser" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="ShipInstructions" ColumnName="ShipInstructions" />
+          <ScalarProperty Name="ShipSite" ColumnName="ShipSite" />
+          <ScalarProperty Name="Supplier" ColumnName="Supplier" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UKG_TE_3E_PO_AUDIT">
+      <EntityTypeMapping TypeName="UKGTE3E_PROD01.UKG_TE_3E_PO_AUDIT">
+        <MappingFragment StoreEntitySet="UKG_TE_3E_PO_AUDIT">
+          <ScalarProperty Name="Operation" ColumnName="Operation" />
+          <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+          <ScalarProperty Name="ProcessedDate" ColumnName="ProcessedDate" />
+          <ScalarProperty Name="IsProcessed" ColumnName="IsProcessed" />
+          <ScalarProperty Name="LogInfo" ColumnName="LogInfo" />
+          <ScalarProperty Name="NumOfAttempt" ColumnName="NumOfAttempt" />
+          <ScalarProperty Name="SvcOperation" ColumnName="SvcOperation" />
+          <ScalarProperty Name="ImportedDate" ColumnName="ImportedDate" />
+          <ScalarProperty Name="ListItemId" ColumnName="ListItemId" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="OptionalEquipmentCodes" ColumnName="OptionalEquipmentCodes" />
+          <ScalarProperty Name="OptionalEquipments" ColumnName="OptionalEquipments" />
+          <ScalarProperty Name="BundleName" ColumnName="BundleName" />
+          <ScalarProperty Name="ProductBundle_CCC" ColumnName="ProductBundle_CCC" />
+          <ScalarProperty Name="EmployeeType" ColumnName="EmployeeType" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="ReqDate" ColumnName="ReqDate" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="NxUser" ColumnName="NxUser" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="ShipInstructions" ColumnName="ShipInstructions" />
+          <ScalarProperty Name="ShipSite" ColumnName="ShipSite" />
+          <ScalarProperty Name="Supplier" ColumnName="Supplier" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UKG_TE_3E_PO_TRANSACTION_LOGS">
+      <EntityTypeMapping TypeName="UKGTE3E_PROD01.UKG_TE_3E_PO_TRANSACTION_LOGS">
+        <MappingFragment StoreEntitySet="UKG_TE_3E_PO_TRANSACTION_LOGS">
+          <ScalarProperty Name="ProcessedDate" ColumnName="ProcessedDate" />
+          <ScalarProperty Name="ResultXml" ColumnName="ResultXml" />
+          <ScalarProperty Name="PayloadXml" ColumnName="PayloadXml" />
+          <ScalarProperty Name="Logs" ColumnName="Logs" />
+          <ScalarProperty Name="TkprNumber" ColumnName="TkprNumber" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UKG_TE_3E_BILLING_TITLE_DASHBOARD">
+      <EntityTypeMapping TypeName="UKGTE3E_PROD01.UKG_TE_3E_BILLING_TITLE_DASHBOARD">
+        <MappingFragment StoreEntitySet="UKG_TE_3E_BILLING_TITLE_DASHBOARD">
+          <ScalarProperty Name="DashboardName" ColumnName="DashboardName" />
+          <ScalarProperty Name="DashboardID" ColumnName="DashboardID" />
+          <ScalarProperty Name="C3E_Title_Description" ColumnName="3E_Title_Description" />
+          <ScalarProperty Name="C3E_Title_Code" ColumnName="3E_Title_Code" />
+          <ScalarProperty Name="UKG_Billing_Title" ColumnName="UKG_Billing_Title" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UKG_TE_3E_DASHBOARD_ROLE">
+      <EntityTypeMapping TypeName="UKGTE3E_PROD01.UKG_TE_3E_DASHBOARD_ROLE">
+        <MappingFragment StoreEntitySet="UKG_TE_3E_DASHBOARD_ROLE">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="RoleDesciption" ColumnName="RoleDesciption" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="DashboardID" ColumnName="DashboardID" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REQUISITION_TE_3E_PO_REF">
+      <EntityTypeMapping TypeName="UKGTE3E_PROD01.REQUISITION_TE_3E_PO_REF">
+        <MappingFragment StoreEntitySet="REQUISITION_TE_3E_PO_REF">
+          <ScalarProperty Name="ExcludeProducts" ColumnName="ExcludeProducts" />
+          <ScalarProperty Name="Submitter" ColumnName="Submitter" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="WorkLocationOfficeDescription" ColumnName="WorkLocationOfficeDescription" />
+          <ScalarProperty Name="WorkLocationOfficeCode" ColumnName="WorkLocationOfficeCode" />
+          <ScalarProperty Name="OtherJobTitle" ColumnName="OtherJobTitle" />
+          <ScalarProperty Name="BackfillPositionFor" ColumnName="BackfillPositionFor" />
+          <ScalarProperty Name="NumOfPositions" ColumnName="NumOfPositions" />
+          <ScalarProperty Name="WorkLocation" ColumnName="WorkLocation" />
+          <ScalarProperty Name="IsBackFillPosition" ColumnName="IsBackFillPosition" />
+          <ScalarProperty Name="PositionPostingType" ColumnName="PositionPostingType" />
+          <ScalarProperty Name="ErrorMsg" ColumnName="ErrorMsg" />
+          <ScalarProperty Name="NumOfAttempt" ColumnName="NumOfAttempt" />
+          <ScalarProperty Name="ProcessedDate" ColumnName="ProcessedDate" />
+          <ScalarProperty Name="ImportedDate" ColumnName="ImportedDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="BundleName" ColumnName="BundleName" />
+          <ScalarProperty Name="ProductBundle_CCC" ColumnName="ProductBundle_CCC" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="ReqDate" ColumnName="ReqDate" />
+          <ScalarProperty Name="HiringManagerEmail" ColumnName="HiringManagerEmail" />
+          <ScalarProperty Name="HiringManager" ColumnName="HiringManager" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="AdditionalComments" ColumnName="AdditionalComments" />
+          <ScalarProperty Name="TravelRequirements" ColumnName="TravelRequirements" />
+          <ScalarProperty Name="TargetCompaniesAndSchools" ColumnName="TargetCompaniesAndSchools" />
+          <ScalarProperty Name="YearsOfExperience" ColumnName="YearsOfExperience" />
+          <ScalarProperty Name="DegreeRequirements" ColumnName="DegreeRequirements" />
+          <ScalarProperty Name="KeywordRequirements" ColumnName="KeywordRequirements" />
+          <ScalarProperty Name="NewRoleDetails" ColumnName="NewRoleDetails" />
+          <ScalarProperty Name="ReportingManager" ColumnName="ReportingManager" />
+          <ScalarProperty Name="SalaryRange" ColumnName="SalaryRange" />
+          <ScalarProperty Name="CandidateLocationPreference" ColumnName="CandidateLocationPreference" />
+          <ScalarProperty Name="PositionType" ColumnName="PositionType" />
+          <ScalarProperty Name="IsConfidentialPosition" ColumnName="IsConfidentialPosition" />
+          <ScalarProperty Name="BundlesCode" ColumnName="BundlesCode" />
+          <ScalarProperty Name="JobTitleDescription" ColumnName="JobTitleDescription" />
+          <ScalarProperty Name="JobTitleCode" ColumnName="JobTitleCode" />
+          <ScalarProperty Name="PriorityLevel" ColumnName="PriorityLevel" />
+          <ScalarProperty Name="JobLocationDescription" ColumnName="JobLocationDescription" />
+          <ScalarProperty Name="JobLocationCode" ColumnName="JobLocationCode" />
+          <ScalarProperty Name="JobGroupDescription" ColumnName="JobGroupDescription" />
+          <ScalarProperty Name="JobGroupCode" ColumnName="JobGroupCode" />
+          <ScalarProperty Name="IsBudgetedPosition" ColumnName="IsBudgetedPosition" />
+          <ScalarProperty Name="SubmissionID" ColumnName="SubmissionID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

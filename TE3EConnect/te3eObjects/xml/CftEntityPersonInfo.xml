@@ -1,0 +1,13 @@
+<CftEntityPersonInfo>
+                                                               
+	<CftEntityInfoID>NewValue</CftEntityInfoID>
+	<ParentID>NewValue</ParentID>
+	<EntIndex>1</EntIndex>
+	<DisplayName>NewValue</DisplayName>
+	<EntityID>NewValue</EntityID>
+	<IsOverThreshold>1</IsOverThreshold>
+	<IsForceRetrieveDetails>1</IsForceRetrieveDetails>
+	<CftEntityPersonInfoID />
+	<ConflictsContact>NewValue</ConflictsContact>
+	<IsMerged>1</IsMerged>
+ </CftEntityPersonInfo>                                                             

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ca8ae3e0f8a24362b470064cd4fc3e02" Name="Diagram1">
+        <EntityTypeShape EntityType="RCGAMZN_DEV01Model.ClientMasterCM" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RCGAMZN_DEV01Model.DynamicsOnlineCMSConfiguration" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RCGAMZN_DEV01Model.InAdditionalPartiesCM" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RCGAMZN_DEV01Model.InAssignmentsCM" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RCGAMZN_DEV01Model.InCoConsultantsCM" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RCGAMZN_DEV01Model.InCustomerProfileCM" Width="1.5" PointX="6.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RCGAMZN_DEV01Model.InIncidentLocationsCM" Width="1.5" PointX="2.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RCGAMZN_DEV01Model.InOrderingClientsCM" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RCGAMZN_DEV01Model.InPayorDetailsCM" Width="1.5" PointX="8.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RCGAMZN_DEV01Model.KenticoAssignmentRelCM" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RCGAMZN_DEV01Model.KenticoCustomerRelCM" Width="1.5" PointX="10.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RCGAMZN_DEV01Model.OutAdditionalPartiesCM" Width="1.5" PointX="10.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RCGAMZN_DEV01Model.OutAssignmentsCM" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RCGAMZN_DEV01Model.OutCoConsultantsCM" Width="1.5" PointX="4.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RCGAMZN_DEV01Model.OutCustomerProfileCM" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RCGAMZN_DEV01Model.OutIncidentLocationsCM" Width="1.5" PointX="14.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RCGAMZN_DEV01Model.OutOrderingClientsCM" Width="1.5" PointX="14.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RCGAMZN_DEV01Model.OutPayorDetailsCM" Width="1.5" PointX="16.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RCGAMZN_DEV01Model.InAdditionalPartiesCMSAudit" Width="1.5" PointX="16.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RCGAMZN_DEV01Model.InAssignmentsCMSAudit" Width="1.5" PointX="2.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RCGAMZN_DEV01Model.InCoConsultantsCMSAudit" Width="1.5" PointX="4.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RCGAMZN_DEV01Model.InCustomerProfileCMSAudit" Width="1.5" PointX="16.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RCGAMZN_DEV01Model.InIncidentLocationsCMSAudit" Width="1.5" PointX="18.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RCGAMZN_DEV01Model.InOrderingClientsCMSAudit" Width="1.5" PointX="18.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RCGAMZN_DEV01Model.InPayorDetailsCMSAudit" Width="1.5" PointX="18.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RCGAMZN_DEV01Model.KenticoAssignmentRelCMSAudit" Width="1.5" PointX="6.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RCGAMZN_DEV01Model.KenticoCMSConfiguration" Width="1.5" PointX="8.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RCGAMZN_DEV01Model.KenticoCMSConfigurationAudit" Width="1.5" PointX="10.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RCGAMZN_DEV01Model.KenticoCustomerRelCMSAudit" Width="1.5" PointX="20.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RCGAMZN_DEV01Model.OutAdditionalPartiesCMSAudit" Width="1.5" PointX="20.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RCGAMZN_DEV01Model.OutAssignmentsCMSAudit" Width="1.5" PointX="20.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RCGAMZN_DEV01Model.OutCoConsultantsCMSAudit" Width="1.5" PointX="22.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RCGAMZN_DEV01Model.OutCustomerProfileCMSAudit" Width="1.5" PointX="22.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RCGAMZN_DEV01Model.OutIncidentLocationsCMSAudit" Width="1.5" PointX="22.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RCGAMZN_DEV01Model.OutOrderingClientsCMSAudit" Width="1.5" PointX="12.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RCGAMZN_DEV01Model.OutPayorDetailsCMSAudit" Width="1.5" PointX="22.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RCGAMZN_DEV01Model.TeamsDMSConfiguration" Width="1.5" PointX="4.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RCGAMZN_DEV01Model.TeamsDMSConfigurationAudit" Width="1.5" PointX="24.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RCGAMZN_DEV01Model.TeamsDMSOfficeFilter" Width="1.5" PointX="24.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RCGAMZN_DEV01Model.TeamsDMSQueue" Width="1.5" PointX="24.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RCGAMZN_DEV01Model.TeamsDMSQueueAudit" Width="1.5" PointX="14.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RCGAMZN_DEV01Model.TeamsDMSQueueLog" Width="1.5" PointX="16.75" PointY="24.75" IsExpanded="true" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

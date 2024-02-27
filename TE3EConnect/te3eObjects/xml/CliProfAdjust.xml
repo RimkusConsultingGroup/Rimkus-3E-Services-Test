@@ -1,0 +1,21 @@
+<CliProfAdjust>
+                              
+                                    <Percentage>1</Percentage>
+                                    <Amount>1</Amount>
+                                    <Currency />
+                                    <StartDate>0001-01-02T00:00:00</StartDate>
+                                    <EndDate>0001-01-02T00:00:00</EndDate>
+                                    <Description>NewValue</Description>
+                                    <Timekeeper />
+                                    <ProfAdjustMethodList />
+                                    <ProfAdjustType />
+                                    <IsIncludeOtherAdjustments>1</IsIncludeOtherAdjustments>
+                                    <BillAmount>1</BillAmount>
+                                    <ProfEnd>0001-01-02T00:00:00</ProfEnd>
+                                    <ProfStart>0001-01-02T00:00:00</ProfStart>
+                                    <ChrgCardFilter>NewValue</ChrgCardFilter>
+                                    <CostCardFilter>NewValue</CostCardFilter>
+                                    <TimeCardFilter>NewValue</TimeCardFilter>
+                                    <IsAdjustWithFilters>1</IsAdjustWithFilters>
+                               
+                            </CliProfAdjust>

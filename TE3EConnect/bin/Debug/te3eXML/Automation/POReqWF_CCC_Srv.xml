@@ -1,0 +1,6 @@
+<POReqWF_CCC xmlns="http://elite.com/schemas/transaction/process/write/POReqWF_CCC">
+  <Initialize xmlns="http://elite.com/schemas/transaction/object/write/POReq">
+    @AddPOReqWFCCC
+  </Initialize>
+</POReqWF_CCC>
+

@@ -1,0 +1,186 @@
+<Matter>
+    <MatterID>593c529b-b2e3-49b0-bf6e-3c5d5c485189</MatterID>
+    <MattIndex>18</MattIndex>
+    <Number>000073796</Number>
+    <AltNumber>00073796</AltNumber>
+    <DisplayName>VAR: FOLKS/ANDERPONT</DisplayName>
+    <Description>VAR: FOLKS/ANDERPONT</Description>
+    <Client>8854</Client>
+    <Number>0050777</Number>
+    <MattInfo />
+    <RelMattIndex />
+    <Number />
+    <MattStatus>10</MattStatus>
+    <Description>Closed</Description>
+    <MattStatusDate>4/14/2019 12:00:00 AM</MattStatusDate>
+    <MattType>045</MattType>
+    <Description>Vehicle Accident</Description>
+    <OpenDate>2/21/2000 12:00:00 AM</OpenDate>
+    <ConflictStatus />
+    <Description />
+    <Narrative />
+    <Narrative_FormattedText />
+    <BillingInstruc />
+    <Language>1033</Language>
+    <Description>English</Description>
+    <ContactInfo>PHILLIP D. DUNCAN JR.</ContactInfo>
+    <ReferralInfo>GPG</ReferralInfo>
+    <MattCloseType>100</MattCloseType>
+    <Description>Complete</Description>
+    <CloseDate>3/31/2019 12:00:00 AM</CloseDate>
+    <IsMaster>0</IsMaster>
+    <NonBillType />
+    <Description />
+    <IsProBono>0</IsProBono>
+    <ProBonoEntity />
+    <DisplayName />
+    <ProBonoInfo />
+    <IsAdmin>0</IsAdmin>
+    <AdminAccount />
+    <AdminInfo />
+    <ElecBillingType />
+    <Description />
+    <ElecNumber />
+    <ElecInfo />
+    <IsNonBillable>0</IsNonBillable>
+    <BillAsMatter />
+    <Number />
+    <BillSite>8087</BillSite>
+    <Description>P.O. BOX 95005</Description>
+    <StatementSite>8087</StatementSite>
+    <Description>P.O. BOX 95005</Description>
+    <OpenTkpr>958</OpenTkpr>
+    <Number>00098</Number>
+    <CloseTkpr />
+    <Number />
+    <Comments />
+    <IsDefault>0</IsDefault>
+    <BillingFrequency>100</BillingFrequency>
+    <Description>Monthly</Description>
+    <IsNoProforma>0</IsNoProforma>
+    <IsNoBill>0</IsNoBill>
+    <Markup />
+    <Description />
+    <TimeTaxCode>0</TimeTaxCode>
+    <Description>NO TAX AR</Description>
+    <CostTaxCode>0</CostTaxCode>
+    <Description>NO TAX AR</Description>
+    <ChrgTaxCode />
+    <Description />
+    <DueDays />
+    <Currency>USD</Currency>
+    <CurrencyDateList>Work</CurrencyDateList>
+    <Description>Work</Description>
+    <ElecCostTypeMap />
+    <TimeIncrement />
+    <Description />
+    <IsEngageLetterReq>0</IsEngageLetterReq>
+    <EngageLetterSubDate />
+    <EngageLetterRecDate />
+    <EngageLetterComment />
+    <IsWaiverLetterReq>0</IsWaiverLetterReq>
+    <WaiverLetterSubDate />
+    <WaiverLetterRecDate />
+    <WaiverLetterComment />
+    <IsConflictsConfidential>0</IsConflictsConfidential>
+    <BillDCSTemplate />
+    <Name />
+    <ProfDCSTemplate />
+    <Name />
+    <StmtDCSTemplate />
+    <Name />
+    <ApproveTkpr />
+    <Number />
+    <MattAttribute />
+    <Description />
+    <MattCategory />
+    <Description />
+    <EntryDate />
+    <VATRegistration />
+    <MattMinType />
+    <Description />
+    <GLProject />
+    <Description />
+    <IsForeign />
+    <WithholdingTax />
+    <Description />
+    <VolumeDiscountGroup />
+    <Description />
+    <MattInterest />
+    <Description />
+    <IsEBill>0</IsEBill>
+    <ElecTitleMap />
+    <ElecDCSTemplate />
+    <Name />
+    <PaymentTermsInfo />
+    <IsFeeEstimate>0</IsFeeEstimate>
+    <FeeEstimateAmount />
+    <EstimatedCompletionDate />
+    <ApproveDate />
+    <InvoiceOverride />
+    <Description />
+    <ProformaEmail />
+    <BillEmail />
+    <IsICBAcctRec>0</IsICBAcctRec>
+    <IsICBPayable>0</IsICBPayable>
+    <ICBUnitDueTo />
+    <Description />
+    <ICBUnitDueFrom />
+    <Description />
+    <GLRespTkpr />
+    <Number />
+    <IsAllowTrustOverdraw>0</IsAllowTrustOverdraw>
+    <BillingOffice />
+    <Description />
+    <BankAcctAp />
+    <Name />
+    <TaxReportID1 />
+    <TaxReportID2 />
+    <ToTaxArea />
+    <Description />
+    <IsLeadVolumeDiscountMatter>0</IsLeadVolumeDiscountMatter>
+    <IsBillStatementIncludeDoubtful>0</IsBillStatementIncludeDoubtful>
+    <Field1 />
+    <Field2 />
+    <Field3 />
+    <LoadSource />
+    <LoadGroup />
+    <LoadNumber />
+    <EbillValidationList />
+    <WPType />
+    <Description />
+    <GLActivity />
+    <GLValue />
+    <CreditNoteDCSTemplate />
+    <Name />
+    <BillGroupDCSTemplate />
+    <Name />
+    <CreditNoteGroupDCSTemplate />
+    <Name />
+    <ElecTaxCodeMap />
+    <DateOfOccurence_CCC>11/5/1999 12:00:00 AM</DateOfOccurence_CCC>
+    <DateOfOccurenceTxt_CCC>1999-11-05</DateOfOccurenceTxt_CCC>
+    <IsProspective_CCC>0</IsProspective_CCC>
+    <isConflictsRoleApproved_CCC>0</isConflictsRoleApproved_CCC>
+    <Originator_CCC />
+    <BaseUserName />
+    <IsWeb_CCC />
+    <DateReceived_CCC />
+    <RetainerAmount_CCC>0.00</RetainerAmount_CCC>
+    <ScopeOfWork_CCC />
+    <ValidationMsg_CCC />
+    <ReportingOffice_CCC>020</ReportingOffice_CCC>
+    <Description>Old New Orleans - 020</Description>
+    <IsFixedPrice_CCC>0</IsFixedPrice_CCC>
+    <DNENotes_CCC />
+    <IsConfLetterStd_CCC>1</IsConfLetterStd_CCC>
+    <IsConfLetterLegal_CCC>0</IsConfLetterLegal_CCC>
+    <IsConfLetterNatAgmt_CCC>0</IsConfLetterNatAgmt_CCC>
+    <IsConfLetterEngSvcs_CCC>0</IsConfLetterEngSvcs_CCC>
+    <IsConfLetterCAT_CCC>0</IsConfLetterCAT_CCC>
+    <IsConfLetterRtnr_CCC>0</IsConfLetterRtnr_CCC>
+    <IsConfLetterSign_CCC>0</IsConfLetterSign_CCC>
+    <ReportOfFindings_CCC />
+    <Description />
+  </Matter>
+

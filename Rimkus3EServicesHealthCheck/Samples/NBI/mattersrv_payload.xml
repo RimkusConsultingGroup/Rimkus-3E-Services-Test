@@ -1,0 +1,252 @@
+<Matter_Srv_RC
+	xmlns="http://elite.com/schemas/transaction/process/write/Matter_Srv_RC">
+	<Initialize
+		xmlns="http://elite.com/schemas/transaction/object/write/Matter">
+		<Add>
+			<Matter>
+				<Attributes>
+					<DisplayName>Rimkus Test SA - 2308 - 5618</DisplayName>
+					<Client>2</Client>
+					<OriginalClient>U00113</OriginalClient>
+					<MattStatus>60</MattStatus>
+					<MattStatusDate>2023-08-10T00:00:00</MattStatusDate>
+					<OpenDate>2023-08-10T00:00:00</OpenDate>
+					<Narrative>INCIDENT DESCRIPTION *</Narrative>
+					<Language>1033</Language>
+					<TimeTaxCode>0</TimeTaxCode>
+					<Currency>USD</Currency>
+					<LoadSource>9070412b-a905-4e59-ad65-4999a4f23303</LoadSource>
+					<OpenTkpr>46</OpenTkpr>
+					<CurrencyDateList>Work</CurrencyDateList>
+					<DateOfOccurence_CCC>2023-08-09T00:00:00</DateOfOccurence_CCC>
+					<IsProspective_CCC>1</IsProspective_CCC>
+					<RetainerAmount_CCC></RetainerAmount_CCC>
+					<ScopeOfWork_CCC>SERVICES REQUESTED *</ScopeOfWork_CCC>
+					<ReportingOffice_CCC>019</ReportingOffice_CCC>
+					<IsFixedPrice_CCC>0</IsFixedPrice_CCC>
+					<DNENotes_CCC></DNENotes_CCC>
+					<IsWeb_CCC>0</IsWeb_CCC>
+					<EntryDate>2023-08-10T00:00:00</EntryDate>
+					<IsEBill>0</IsEBill>
+					<ElecBillingType></ElecBillingType>
+					<ElecNumber></ElecNumber>
+					<IsConfLetterCAT_CCC>0</IsConfLetterCAT_CCC>
+					<IsConfLetterEngSvcs_CCC>0</IsConfLetterEngSvcs_CCC>
+					<IsConfLetterLegal_CCC>0</IsConfLetterLegal_CCC>
+					<IsConfLetterNatAgmt_CCC>0</IsConfLetterNatAgmt_CCC>
+					<IsConfLetterRtnr_CCC>0</IsConfLetterRtnr_CCC>
+					<IsConfLetterSign_CCC>0</IsConfLetterSign_CCC>
+					<IsConfLetterStd_CCC>1</IsConfLetterStd_CCC>
+					<ReportOfFindings_CCC>002</ReportOfFindings_CCC>
+				</Attributes>
+				<Children>
+					<MattDate>
+						
+        <Add>
+			<MattDate>
+				<Attributes>
+					<EffStart>2023-08-09T00:00:00</EffStart>
+					<!-- <PracticeGroup>Undefined</PracticeGroup> -->
+					<PracticeGroup>000</PracticeGroup>
+					<!-- <Department>000</Department> -->
+					<Department>000</Department>
+					<!-- <Section>000</Section> -->
+					<Section>Default</Section>
+					<SubSection_CCC>DF01</SubSection_CCC>
+					<!-- <Arrangement>100</Arrangement> -->
+					<Arrangement>100</Arrangement>
+					<!-- <PTAGroup>Default</PTAGroup> -->
+					<PTAGroup>Default</PTAGroup>
+					<NxStartDate>2023-08-09T00:00:00</NxStartDate>
+					<BillTkpr>46</BillTkpr>
+					<RspTkpr>46</RspTkpr>
+					<SpvTkpr>46</SpvTkpr>
+					<Office>003</Office> <!--San Antonio-->
+				</Attributes>
+			</MattDate>
+		</Add>
+
+
+					</MattDate>
+					<!--<MattSite>
+						<Add>
+							<MattSite>
+								<Attributes>
+									<Site>8</Site>
+									--><!-- Default --><!--
+									<MattSiteType>300</MattSiteType>
+									--><!-- Default --><!--
+								</Attributes>
+							</MattSite>
+						</Add>
+					</MattSite>-->
+					<MattRate>
+						<Add>
+							<MattRate>
+								<Attributes>
+									<Rate>DNU</Rate>
+									<!--DNU-->
+									<IsActive>1</IsActive>
+								</Attributes>
+							</MattRate>
+						</Add>
+					</MattRate>
+					<MatterRateExc>
+						<Add>
+							<MatterRateExc>
+								<Attributes>
+									<RateExc>561ad9fc-78b8-432b-9816-ee3f864bfd20</RateExc>
+									<!-- 561AD9FC-78B8-432B-9816-EE3F864BFD20-->
+								</Attributes>
+							</MatterRateExc>
+						</Add>
+					</MatterRateExc>
+					
+					
+					<MattPayor>
+						<!-- Payor should be related to the matter client -->
+						<Add>
+							<MattPayor>
+								<Attributes>
+									<StartDate>2023-08-10T00:00:00</StartDate>
+									<CauseNum_CCC></CauseNum_CCC>
+									<Court_CCC></Court_CCC>
+									<Representing_CCC></Representing_CCC>
+									<Style_CCC></Style_CCC>
+								</Attributes>
+								<Children>
+									<MattPayorDetail>
+										
+        <Add>
+			<MattPayorDetail>
+				<Attributes>
+					<IsDefault>1</IsDefault>
+					<!-- only one payor can have default specification -->
+					<PctFee>100.00</PctFee>
+					<!-- total of all payors must be 1 for percent fields -->
+					<PctHCo>100.00</PctHCo>
+					<PctSCo>100.00</PctSCo>
+					<PctTax>100.00</PctTax>
+					<PctInt>100.00</PctInt>
+					<PctBOA>100.00</PctBOA>
+					<PctOth>100.00</PctOth>
+					<CftRole_CCC>100</CftRole_CCC>
+					<CftRelationship_CCC>01</CftRelationship_CCC>
+					<Payor>2</Payor>
+					<Email_CCC>rimkus_test@test.com</Email_CCC>
+					<Contact_CCC>Irma Tester</Contact_CCC>
+					<PhoneNum_CCC>9696969696</PhoneNum_CCC>
+					<RefNumber></RefNumber>
+					<ClaimNum_CCC></ClaimNum_CCC>
+					<CorpType_CCC>016</CorpType_CCC>
+					<GovernmentType_CCC></GovernmentType_CCC>
+					<Title_CCC></Title_CCC>
+					<AddtlContactInfo_CCC></AddtlContactInfo_CCC>
+					<PONumber_CCC></PONumber_CCC>
+					<!--<Policy_CCC></Policy_CCC>
+					<UMR_CCC></UMR_CCC>
+					<File_CCC></File_CCC>
+					<Tracking_CCC></Tracking_CCC> -->
+					<Site>8</Site>
+					<!-- Site must be related to payor (client) entity -->
+					<StmtSite>8</StmtSite>
+				</Attributes>
+			</MattPayorDetail>
+		</Add>
+
+
+									</MattPayorDetail>
+								</Children>
+							</MattPayor>
+						</Add>
+					</MattPayor>
+					<RelatedParties_CCC>
+						
+        <Add>
+			<RelatedParties_CCC>
+				<Attributes>
+					<CftRole>300</CftRole> <!--Insured-->
+					<Entity>843936</Entity> <!--Dennis Mooney -->
+                    <!--<WorkPhone>@WorkPhone</WorkPhone> -->
+                    <HomePhone></HomePhone>
+				</Attributes>
+			</RelatedParties_CCC>
+		</Add>
+
+
+        <Add>
+			<RelatedParties_CCC>
+				<Attributes>
+					<CftRole>100</CftRole> <!--Corporation-->
+					<Entity>852039</Entity> <!--Artistry Restaurants -->
+                    <!--<WorkPhone>@WorkPhone</WorkPhone> -->
+                    <HomePhone></HomePhone>
+				</Attributes>
+			</RelatedParties_CCC>
+		</Add>
+
+
+					</RelatedParties_CCC>
+					<MatterSpecialInstructions_CCC>
+						<Add>
+							<MatterSpecialInstructions_CCC>
+								<Attributes>
+									<Client>2</Client>
+
+									<!--temporary suppressed until issue with mapping is addressed-->
+									<!--<ClientInstr>@ClientInstruction</ClientInstr>-->
+
+									<StartDate>2023-08-10T00:00:00</StartDate>
+									<EndDate>9999-12-31T00:00:00</EndDate>
+									<EffDate>2023-08-10T00:00:00</EffDate>
+									<ReportsTo>rimkus_test@test.com</ReportsTo>
+									<AdditionalInstr></AdditionalInstr>
+								</Attributes>
+								<Children>
+									<MatterSpecialInvoiceTo_CCC>
+
+		<Add>
+				<MatterSpecialInvoiceTo_CCC>
+					<Attributes>
+						<InvoiceTo>rimkus_test@test.com</InvoiceTo>
+					</Attributes>
+				</MatterSpecialInvoiceTo_CCC>
+			</Add>
+
+</MatterSpecialInvoiceTo_CCC>
+
+								</Children>
+							</MatterSpecialInstructions_CCC>
+						</Add>
+					</MatterSpecialInstructions_CCC>
+					<TechRevEngRec_CCC>
+						<Add>
+							<TechRevEngRec_CCC>
+								<Attributes>
+									<EngineerOfRecord></EngineerOfRecord>
+									<Marketer></Marketer>
+									<TechincalReviewer></TechincalReviewer>
+								</Attributes>
+								<Children>
+									
+								</Children>
+							</TechRevEngRec_CCC>
+						</Add>
+					</TechRevEngRec_CCC>
+					<IndustryGroupMatter_CCC>
+						<Add>
+							<IndustryGroupMatter_CCC>
+								<Attributes>
+									<IndustryGroup>15</IndustryGroup>
+								</Attributes>
+							</IndustryGroupMatter_CCC>
+						</Add>
+					</IndustryGroupMatter_CCC>
+					
+						
+					
+				</Children>
+			</Matter>
+		</Add>
+	</Initialize>
+</Matter_Srv_RC>

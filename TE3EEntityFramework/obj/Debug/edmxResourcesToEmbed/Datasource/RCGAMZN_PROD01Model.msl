@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RCGAMZN_PROD01ModelStoreContainer" CdmEntityContainer="RCGAMZN_PROD01Entities">
+    <EntitySetMapping Name="TeamsDMSConfigurations">
+      <EntityTypeMapping TypeName="RCGAMZN_PROD01Model.TeamsDMSConfiguration">
+        <MappingFragment StoreEntitySet="TeamsDMSConfiguration">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NumOfDays" ColumnName="NumOfDays" />
+          <ScalarProperty Name="AzureFunc_BaseUrl_Dev" ColumnName="AzureFunc_BaseUrl_Dev" />
+          <ScalarProperty Name="AzureFunc_CaseOpened_Dev" ColumnName="AzureFunc_CaseOpened_Dev" />
+          <ScalarProperty Name="AzureFunc_CaseAssignment_Dev" ColumnName="AzureFunc_CaseAssignment_Dev" />
+          <ScalarProperty Name="AzureFunc_CaseClosed_Dev" ColumnName="AzureFunc_CaseClosed_Dev" />
+          <ScalarProperty Name="AzureFunc_TeamAction_Dev" ColumnName="AzureFunc_TeamAction_Dev" />
+          <ScalarProperty Name="AzureFunc_BaseUrl_Prod" ColumnName="AzureFunc_BaseUrl_Prod" />
+          <ScalarProperty Name="AzureFunc_CaseOpened_Prod" ColumnName="AzureFunc_CaseOpened_Prod" />
+          <ScalarProperty Name="AzureFunc_CaseAssignment_Prod" ColumnName="AzureFunc_CaseAssignment_Prod" />
+          <ScalarProperty Name="AzureFunc_CaseClosed_Prod" ColumnName="AzureFunc_CaseClosed_Prod" />
+          <ScalarProperty Name="AzureFunc_TeamAction_Prod" ColumnName="AzureFunc_TeamAction_Prod" />
+          <ScalarProperty Name="TrackerSafe_OrgId" ColumnName="TrackerSafe_OrgId" />
+          <ScalarProperty Name="TrackerSafe_OfficeId" ColumnName="TrackerSafe_OfficeId" />
+          <ScalarProperty Name="Enotify_From" ColumnName="Enotify_From" />
+          <ScalarProperty Name="Enotify_To" ColumnName="Enotify_To" />
+          <ScalarProperty Name="Enotify_Cc" ColumnName="Enotify_Cc" />
+          <ScalarProperty Name="Test_Owners" ColumnName="Test_Owners" />
+          <ScalarProperty Name="Test_Members" ColumnName="Test_Members" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TeamsDMSOfficeFilters">
+      <EntityTypeMapping TypeName="RCGAMZN_PROD01Model.TeamsDMSOfficeFilter">
+        <MappingFragment StoreEntitySet="TeamsDMSOfficeFilter">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IsExcluded" ColumnName="IsExcluded" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TeamsDMSQueues">
+      <EntityTypeMapping TypeName="RCGAMZN_PROD01Model.TeamsDMSQueue">
+        <MappingFragment StoreEntitySet="TeamsDMSQueue">
+          <ScalarProperty Name="MatterID" ColumnName="MatterID" />
+          <ScalarProperty Name="MattIndex" ColumnName="MattIndex" />
+          <ScalarProperty Name="MattNumber" ColumnName="MattNumber" />
+          <ScalarProperty Name="MattName" ColumnName="MattName" />
+          <ScalarProperty Name="MattDescription" ColumnName="MattDescription" />
+          <ScalarProperty Name="Narrative" ColumnName="Narrative" />
+          <ScalarProperty Name="ScopeOfWork" ColumnName="ScopeOfWork" />
+          <ScalarProperty Name="MattStatus" ColumnName="MattStatus" />
+          <ScalarProperty Name="MattStatusDescription" ColumnName="MattStatusDescription" />
+          <ScalarProperty Name="OpenDate" ColumnName="OpenDate" />
+          <ScalarProperty Name="CloseDate" ColumnName="CloseDate" />
+          <ScalarProperty Name="ClientIndex" ColumnName="ClientIndex" />
+          <ScalarProperty Name="ClientNumber" ColumnName="ClientNumber" />
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="DateOfLoss" ColumnName="DateOfLoss" />
+          <ScalarProperty Name="OfficeCode" ColumnName="OfficeCode" />
+          <ScalarProperty Name="OfficeName" ColumnName="OfficeName" />
+          <ScalarProperty Name="OwnerUsers" ColumnName="OwnerUsers" />
+          <ScalarProperty Name="MemberUsers" ColumnName="MemberUsers" />
+          <ScalarProperty Name="OpenTkprId" ColumnName="OpenTkprId" />
+          <ScalarProperty Name="OpenTkprEmail" ColumnName="OpenTkprEmail" />
+          <ScalarProperty Name="OpenTkprName" ColumnName="OpenTkprName" />
+          <ScalarProperty Name="CloseTkprId" ColumnName="CloseTkprId" />
+          <ScalarProperty Name="CloseTkprEmail" ColumnName="CloseTkprEmail" />
+          <ScalarProperty Name="BillTkprId" ColumnName="BillTkprId" />
+          <ScalarProperty Name="BillTkprName" ColumnName="BillTkprName" />
+          <ScalarProperty Name="BillTkprEmail" ColumnName="BillTkprEmail" />
+          <ScalarProperty Name="RspTkprId" ColumnName="RspTkprId" />
+          <ScalarProperty Name="RspTkprName" ColumnName="RspTkprName" />
+          <ScalarProperty Name="RspTkprEmail" ColumnName="RspTkprEmail" />
+          <ScalarProperty Name="SpvTkprId" ColumnName="SpvTkprId" />
+          <ScalarProperty Name="SpvTkprName" ColumnName="SpvTkprName" />
+          <ScalarProperty Name="SpvTkprEmail" ColumnName="SpvTkprEmail" />
+          <ScalarProperty Name="SectionCode" ColumnName="SectionCode" />
+          <ScalarProperty Name="SectionDescription" ColumnName="SectionDescription" />
+          <ScalarProperty Name="DepartmentCode" ColumnName="DepartmentCode" />
+          <ScalarProperty Name="DepartmentDescription" ColumnName="DepartmentDescription" />
+          <ScalarProperty Name="PracticeGroupCode" ColumnName="PracticeGroupCode" />
+          <ScalarProperty Name="PracticeGroupDescription" ColumnName="PracticeGroupDescription" />
+          <ScalarProperty Name="IndustryGroupCode" ColumnName="IndustryGroupCode" />
+          <ScalarProperty Name="IndustryGroupDescription" ColumnName="IndustryGroupDescription" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="IsTeamsChanged" ColumnName="IsTeamsChanged" />
+          <ScalarProperty Name="IsTeamRehydrated" ColumnName="IsTeamRehydrated" />
+          <ScalarProperty Name="IsExported" ColumnName="IsExported" />
+          <ScalarProperty Name="ErrorMsg" ColumnName="ErrorMsg" />
+          <ScalarProperty Name="ExportedDate" ColumnName="ExportedDate" />
+          <ScalarProperty Name="NumOfAttempt" ColumnName="NumOfAttempt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TeamsDMSQueueLogs">
+      <EntityTypeMapping TypeName="RCGAMZN_PROD01Model.TeamsDMSQueueLog">
+        <MappingFragment StoreEntitySet="TeamsDMSQueueLogs">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MatterNumber" ColumnName="MatterNumber" />
+          <ScalarProperty Name="MatterName" ColumnName="MatterName" />
+          <ScalarProperty Name="MatterStatus" ColumnName="MatterStatus" />
+          <ScalarProperty Name="TeamsOwners" ColumnName="TeamsOwners" />
+          <ScalarProperty Name="TeamsMembers" ColumnName="TeamsMembers" />
+          <ScalarProperty Name="ExportedDate" ColumnName="ExportedDate" />
+          <ScalarProperty Name="ErrorMessage" ColumnName="ErrorMessage" />
+          <ScalarProperty Name="WebResponse" ColumnName="WebResponse" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="DMS_RetrieveMattersForTeams" FunctionName="RCGAMZN_PROD01Model.Store.DMS_RetrieveMattersForTeams" />
+    <FunctionImportMapping FunctionImportName="DMS_RetrieveMattersForTeamsByOffice" FunctionName="RCGAMZN_PROD01Model.Store.DMS_RetrieveMattersForTeamsByOffice" />
+    <FunctionImportMapping FunctionImportName="DMS_RetrieveMatterForTeamsByNumber" FunctionName="RCGAMZN_PROD01Model.Store.DMS_RetrieveMatterForTeamsByNumber" />
+  </EntityContainerMapping>
+</Mapping>

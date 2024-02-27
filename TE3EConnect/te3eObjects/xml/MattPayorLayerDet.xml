@@ -1,0 +1,18 @@
+<MattPayorLayerDet>
+                                                              
+                                                                    <ForAttentionOf>NewValue</ForAttentionOf>
+                                                                    <IsDefault>1</IsDefault>
+                                                                    <Payor />
+                                                                    <PctBOA>1</PctBOA>
+                                                                    <PctFee>1</PctFee>
+                                                                    <PctHCo>1</PctHCo>
+                                                                    <PctInt>1</PctInt>
+                                                                    <PctOth>1</PctOth>
+                                                                    <PctSCo>1</PctSCo>
+                                                                    <PctTax>1</PctTax>
+                                                                    <RefNumber>NewValue</RefNumber>
+                                                                    <Site />
+                                                                    <StmtSite />
+                                                                    <FeeRate />
+                                                              
+                                                            </MattPayorLayerDet>

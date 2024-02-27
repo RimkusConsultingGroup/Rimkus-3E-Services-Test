@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="CliProfAdjust">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Percentage" type="xs:string" minOccurs="0" />
+        <xs:element name="Amount" type="xs:string" minOccurs="0" />
+        <xs:element name="Currency" type="xs:string" minOccurs="0" />
+        <xs:element name="StartDate" type="xs:string" minOccurs="0" />
+        <xs:element name="EndDate" type="xs:string" minOccurs="0" />
+        <xs:element name="Description" type="xs:string" minOccurs="0" />
+        <xs:element name="Timekeeper" type="xs:string" minOccurs="0" />
+        <xs:element name="ProfAdjustMethodList" type="xs:string" minOccurs="0" />
+        <xs:element name="ProfAdjustType" type="xs:string" minOccurs="0" />
+        <xs:element name="IsIncludeOtherAdjustments" type="xs:string" minOccurs="0" />
+        <xs:element name="BillAmount" type="xs:string" minOccurs="0" />
+        <xs:element name="ProfEnd" type="xs:string" minOccurs="0" />
+        <xs:element name="ProfStart" type="xs:string" minOccurs="0" />
+        <xs:element name="ChrgCardFilter" type="xs:string" minOccurs="0" />
+        <xs:element name="CostCardFilter" type="xs:string" minOccurs="0" />
+        <xs:element name="TimeCardFilter" type="xs:string" minOccurs="0" />
+        <xs:element name="IsAdjustWithFilters" type="xs:string" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="CliProfAdjust" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

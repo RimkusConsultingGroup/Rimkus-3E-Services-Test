@@ -1,0 +1,1512 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="..\TE3EConnect\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\TE3EConnect\packages\EntityFramework.6.4.4\build\EntityFramework.props')" / -->
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B0C368F1-1816-4C66-9684-03ABB906E2D2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TE3EEntityFramework</RootNamespace>
+    <AssemblyName>TE3EEntityFramework</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Words">
+      <HintPath>..\lib\Aspose.Words_18.3\net4.0\Aspose.Words.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.Activities.Presentation" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Workflow.Activities" />
+    <Reference Include="System.Workflow.ComponentModel" />
+    <Reference Include="System.Workflow.Runtime" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Client\DynamicsOnlineClient.cs" />
+    <Compile Include="Client\KenticoWebClient.cs" />
+    <Compile Include="Client\RCGKENTCMS\EnumValues.cs" />
+    <Compile Include="Client\UKGTE3E\UKGTE3ESQLClient.cs" />
+    <Compile Include="Client\LibertyMutualDbClient.cs" />
+    <Compile Include="Client\LibertyMutualWebClient.cs" />
+    <Compile Include="Client\RCGKENTCMS\CMSSmartyStreetWebClient.cs" />
+    <Compile Include="Client\RCGKENTCMS\CMSDynamicsClient.cs" />
+    <Compile Include="Client\RCGKENTCMS\CMSSQLClientV2.cs" />
+    <Compile Include="Client\Te3eDbClient.cs" />
+    <Compile Include="Client\Te3eWebClient.cs" />
+    <Compile Include="Client\TeamsDmsWebClient.cs" />
+    <Compile Include="Client\TrackerSafeWebClient.cs" />
+    <Compile Include="Datasource\ClientMaster.cs">
+      <DependentUpon>TE3ERCGSyncModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\ClientMasterCM.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\CMS_GetAllClients_Result.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\CMS_GetClientMattersByRelSiteEmail_Result.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\CMS_GetClientMatters_Result.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\CMS_GetClientsByType_Result.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\CMS_GetCliTypeFromCftRole_Result.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\CMS_GetFullMatterAdditionalPartiesDetails_Result.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\CMS_GetFullMatterCoConsultantDetails_Result.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\CMS_GetFullMatterDetails_Result.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\CMS_GetFullMatterIncidentLocationsDetails_Result.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\CMS_GetFullMatterOrderingClientDetails_Result.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\CMS_GetFullMatterPayorDetails_Result.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\CMS_GetLookupCodes_Result.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\CMS_GetLookupTypes_Result.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\CMS_GetMatterByNum_Result.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\CMS_GetMatterDetails_Result.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\CMS_GetMatterNotes_Result.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\CMS_RetrieveMattersForKentico_Result.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\CMS_ScanMattAdditionalPartiesChanges_Result.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\CMS_ScanMattBudgetChanges_Result.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\CMS_ScanMattEffectiveDateChanges_Result.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\CMS_ScanMatterChanges_Result.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\CMS_ScanMattFlatFeeChanges_Result.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\CMS_ScanMattIncidentLocationChanges_Result.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\CMS_ScanMattIndustryGroupChanges_Result.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\CMS_ScanMattPayorDetailChanges_Result.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\CMS_ScanMattRateChanges_Result.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\CMS_ScanMattRateExcChanges_Result.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\CMS_ScanOrderingClientChanges_Result.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\CMS_ScanSpecialInstructionChanges_Result.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\CMS_ScanTechnicalEngineerChanges_Result.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\CMS_SearchClients_Result.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\CMS_SearchEntity_Result.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\CMS_SearchRelMatters_Result.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\CMS_SearchTimekeepers_Result.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\CustomSubjectLine.cs">
+      <DependentUpon>TE3ERCGSyncModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\DynamicsOnlineCMSConfiguration.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\ExcludedClientCollectionWF.cs">
+      <DependentUpon>TE3ERCGSyncModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\GetBillingTkpr_Result.cs">
+      <DependentUpon>TE3ERCGSyncModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\InAdditionalPartiesCM.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\InAdditionalPartiesCMSAudit.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\InAssignmentsCM.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\InAssignmentsCMSAudit.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\InCoConsultantsCM.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\InCoConsultantsCMSAudit.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\InCustomerProfileCM.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\InCustomerProfileCMSAudit.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\InIncidentLocationsCM.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\InIncidentLocationsCMSAudit.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\InOrderingClientsCM.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\InOrderingClientsCMSAudit.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\InPayorDetailsCM.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\InPayorDetailsCMSAudit.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\KenticoAssignmentRelCM.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\KenticoAssignmentRelCMSAudit.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\KenticoCMSConfiguration.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\KenticoCMSConfigurationAudit.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\KenticoCustomerRelCM.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\KenticoCustomerRelCMSAudit.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\OutAdditionalPartiesCM.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\OutAdditionalPartiesCMSAudit.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\OutAssignmentsCM.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\OutAssignmentsCMSAudit.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\OutCoConsultantsCM.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\OutCoConsultantsCMSAudit.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\OutCustomerProfileCM.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\OutCustomerProfileCMSAudit.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\OutIncidentLocationsCM.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\OutIncidentLocationsCMSAudit.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\OutOrderingClientsCM.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\OutOrderingClientsCMSAudit.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\OutPayorDetailsCM.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\OutPayorDetailsCMSAudit.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGAMZN_DEV01Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RCGAMZN_DEV01Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGAMZN_DEV01Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGAMZN_DEV01Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RCGAMZN_DEV01Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGAMZN_PROD01Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RCGAMZN_PROD01Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGAMZN_PROD01Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RCGAMZN_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGAMZN_PROD01Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RCGAMZN_PROD01Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGCLAIMS\AppConfig.cs">
+      <DependentUpon>RCGCLAIMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGCLAIMS\KeyVault.cs">
+      <DependentUpon>RCGCLAIMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGCLAIMS\LMAssignment.cs">
+      <DependentUpon>RCGCLAIMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGCLAIMS\LMAssignmentAudit.cs">
+      <DependentUpon>RCGCLAIMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGCLAIMS\LMAssignmentServiceLog.cs">
+      <DependentUpon>RCGCLAIMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGCLAIMS\LMClaimNotification.cs">
+      <DependentUpon>RCGCLAIMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGCLAIMS\LMClaimNotificationsAudit.cs">
+      <DependentUpon>RCGCLAIMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGCLAIMS\RCGCLAIMS_DEV01Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RCGCLAIMS_DEV01Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGCLAIMS\RCGCLAIMS_DEV01Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RCGCLAIMS_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGCLAIMS\RCGCLAIMS_DEV01Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RCGCLAIMS_DEV01Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGCLAIMS\RCGCLAIMS_PROD01Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RCGCLAIMS_PROD01Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGCLAIMS\RCGCLAIMS_PROD01Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RCGCLAIMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGCLAIMS\RCGCLAIMS_PROD01Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RCGCLAIMS_PROD01Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGCLAIMS\RCGDB_DEV01Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RCGDB_DEV01Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGCLAIMS\RCGDB_DEV01Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RCGDB_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGCLAIMS\RCGDB_DEV01Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RCGDB_DEV01Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGCLAIMS\RCGDB_PROD01Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RCGDB_PROD01Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGCLAIMS\RCGDB_PROD01Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RCGDB_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGCLAIMS\RCGDB_PROD01Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RCGDB_PROD01Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGCLAIMS\rcg_rl_ClientJob.cs">
+      <DependentUpon>RCGDB_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSAdditionalPartiesAudit.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSAdditionalParty.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSAssignment.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSAssignmentJob.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSAssignmentsAudit.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSCoConsultant.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSCoConsultantsAudit.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSConvertToCliTypeByCode_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSCustomerProfile.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSCustomerProfileAudit.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSDynamics365Configuration.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSGetAllClientMatters_Optimized_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSGetAllClientMatters_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSGetAllClientMatters_V2_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSGetAllClientMatters_V3_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSGetAllClients_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSGetClientMattersByRelSiteEmail_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSGetClientMatters_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSGetClientsByType_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSGetCliTypeFromCftRole_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSGetDefaultValue_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSGetFullMatterAdditionalPartiesDetails_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSGetFullMatterCoConsultantDetails_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSGetFullMatterDetails_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSGetFullMatterIncidentLocationsDetails_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSGetFullMatterOrderingClientDetails_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSGetFullMatterPayorDetails_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSGetLookupCodes_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSGetLookupTypes_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSGetMatterByNum_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSGetMatterCode_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSGetMatterDetails_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSGetMatterNotes_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSGetOfficeAndTpkByCity_Result.cs">
+      <DependentUpon>RCGKENTCMS_STAGING01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSGetOfficeAndTpkByCounty_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSGetOfficeAndTpkByKeywords_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSGetOfficeAndTpkByZip_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSGetOfficeAndTpk_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSIncidentLocation.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSIncidentLocationsAudit.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSKenticoAssignmentCopy.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSKenticoAssignmentRel.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSKenticoAssignmentRelAudit.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSKenticoConfiguration.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSKenticoConfigurationAudit.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSKenticoCustomerCopy.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSKenticoCustomerRel.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSKenticoCustomerRelAudit.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSKenticoSubEntityRel.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSKenticoSubEntityRelAudit.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSKeyVault.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSOfficeEmailLookup.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSOrderingClient.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSOrderingClientsAudit.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSPayorDetail.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSPayorDetailsAudit.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSRefLookup.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSRetrieveMattersForKentico_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSScanMattAdditionalPartiesChangesDateTime_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSScanMattAdditionalPartiesChanges_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSScanMattBudgetChangesDateTime_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSScanMattBudgetChanges_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSScanMattEffectiveDateChangesDateTime_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSScanMattEffectiveDateChanges_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSScanMatterChangesDateTime_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSScanMatterChanges_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSScanMattFlatFeeChangesDateTime_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSScanMattFlatFeeChanges_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSScanMattIncidentLocationChanges_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSScanMattIndustryGroupChangesDateTime_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSScanMattIndustryGroupChanges_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSScanMattPayorDetailChanges_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSScanMattRateChangesDateTime_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSScanMattRateChanges_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSScanMattRateExcChangesDateTime_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSScanMattRateExcChanges_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSScanOrderingClientChanges_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSScanSpecialInstructionChangesDateTime_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSScanSpecialInstructionChanges_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSScanTechnicalEngineerChanges_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSSearchClients_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSSearchEntity_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSSearchRelMatters_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\CMSSearchTimekeepers_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\ConflictCheckAuditByDateRange_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\ConflictCheckAuditByMattNumber_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\ConflictCheckAuditDrillDown_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\RCGKENTCMS_DEV01Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RCGKENTCMS_DEV01Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\RCGKENTCMS_DEV01Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RCGKENTCMS_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\RCGKENTCMS_DEV01Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RCGKENTCMS_DEV01Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\RCGKENTCMS_PROD01Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RCGKENTCMS_PROD01Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\RCGKENTCMS_PROD01Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\RCGKENTCMS_PROD01Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RCGKENTCMS_PROD01Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\RCGKENTCMS_STAGING01Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RCGKENTCMS_STAGING01Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\RCGKENTCMS_STAGING01Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RCGKENTCMS_STAGING01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\RCGKENTCMS_STAGING01Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RCGKENTCMS_STAGING01Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\RCGKENTCMS_UAT01Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RCGKENTCMS_UAT01Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\RCGKENTCMS_UAT01Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RCGKENTCMS_UAT01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\RCGKENTCMS_UAT01Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RCGKENTCMS_UAT01Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RCGKENTCMS\DataModel\SplitFullName_Result.cs">
+      <DependentUpon>RCGKENTCMS_PROD01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RetrieveCollectionItemsByNum_Result.cs">
+      <DependentUpon>TE3ERCGSyncModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RetrieveCollectionItemsByPastDueDaysNoFilter_Result.cs">
+      <DependentUpon>TE3ERCGSYNCPRODModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RetrieveCollectionItemsByPastDueDays_Result.cs">
+      <DependentUpon>TE3ERCGSyncModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RetrieveItemizedInvCollection_Result.cs">
+      <DependentUpon>TE3ERCGSyncModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RetrieveLetterHeaderAddress_Result.cs">
+      <DependentUpon>TE3ERCGSyncModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RetrieveMatteCPC_Result.cs">
+      <DependentUpon>TE3ERCGSyncModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\RetrieveMatterByNum_Result.cs">
+      <DependentUpon>TE3ERCGSyncModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\SplitStrings_Result.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\TE3ERCGSyncModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TE3ERCGSyncModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\TE3ERCGSyncModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TE3ERCGSyncModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\TE3ERCGSyncModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TE3ERCGSyncModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\TE3ERCGSYNCPRODModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TE3ERCGSYNCPRODModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\TE3ERCGSYNCPRODModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TE3ERCGSYNCPRODModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\TE3ERCGSYNCPRODModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TE3ERCGSYNCPRODModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\TeamsDMSConfiguration.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\TeamsDMSConfigurationAudit.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\TeamsDMSOfficeFilter.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\TeamsDMSQueue.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\TeamsDMSQueueAudit.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\TeamsDMSQueueLog.cs">
+      <DependentUpon>RCGAMZN_DEV01Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\TrackerSafeDecisionLetter.cs">
+      <DependentUpon>TE3ERCGSyncModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\TrackerSafeEMSImport.cs">
+      <DependentUpon>TE3ERCGSyncModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\UKGTE3E\DataModel\onelogin3e_get_user_by_email_sp_Result.cs">
+      <DependentUpon>UKGTE3E_PROD01.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\UKGTE3E\DataModel\onelogin3e_get_user_by_networkid_sp_Result.cs">
+      <DependentUpon>UKGTE3E_PROD01.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\UKGTE3E\DataModel\onelogin3e_get_user_sp_Result.cs">
+      <DependentUpon>UKGTE3E_PROD01.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\UKGTE3E\DataModel\ONELOGIN_TE_3E_TRANSACTION_LOGS.cs">
+      <DependentUpon>UKGTE3E_PROD01.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\UKGTE3E\DataModel\ONELOGIN_TE_3E_USER.cs">
+      <DependentUpon>UKGTE3E_PROD01.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\UKGTE3E\DataModel\ONELOGIN_TE_3E_USER_AUDIT.cs">
+      <DependentUpon>UKGTE3E_PROD01.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\UKGTE3E\DataModel\ukg3e_get_dashboard_roles_by_billingtitle_sp_Result.cs">
+      <DependentUpon>UKGTE3E_PROD01.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\UKGTE3E\DataModel\REQUISITION_TE_3E_PO_FORM_DATA.cs">
+      <DependentUpon>UKGTE3E_DEV01.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\UKGTE3E\DataModel\REQUISITION_TE_3E_PO_REF.cs">
+      <DependentUpon>UKGTE3E_PROD01.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\UKGTE3E\DataModel\ukg3e_get_entityperson_by_first_middle_last_name_sp_Result.cs">
+      <DependentUpon>UKGTE3E_PROD01.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\UKGTE3E\DataModel\ukg3e_get_entityperson_sp_Result.cs">
+      <DependentUpon>UKGTE3E_PROD01.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\UKGTE3E\DataModel\ukg3e_get_timekeeper_sp_Result.cs">
+      <DependentUpon>UKGTE3E_PROD01.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\UKGTE3E\DataModel\ukg3e_get_tkpr_accreditation_sp_Result.cs">
+      <DependentUpon>UKGTE3E_PROD01.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\UKGTE3E\DataModel\ukg3e_get_tkpr_by_displayname_sp_Result.cs">
+      <DependentUpon>UKGTE3E_PROD01.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\UKGTE3E\DataModel\ukg3e_get_tkpr_by_num_sp_Result.cs">
+      <DependentUpon>UKGTE3E_PROD01.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\UKGTE3E\DataModel\ukg3e_get_tkpr_date_all_sp_Result.cs">
+      <DependentUpon>UKGTE3E_UAT01.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\UKGTE3E\DataModel\ukg3e_get_tkpr_date_sp_Result.cs">
+      <DependentUpon>UKGTE3E_PROD01.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\UKGTE3E\DataModel\ukg3e_lookup_code_sp_Result.cs">
+      <DependentUpon>UKGTE3E_PROD01.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\UKGTE3E\DataModel\UKGTE3E_DEV01.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UKGTE3E_DEV01.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\UKGTE3E\DataModel\UKGTE3E_DEV01.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UKGTE3E_DEV01.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\UKGTE3E\DataModel\UKGTE3E_DEV01.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UKGTE3E_DEV01.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\UKGTE3E\DataModel\UKGTE3E_PROD01.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UKGTE3E_PROD01.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\UKGTE3E\DataModel\UKGTE3E_PROD01.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UKGTE3E_PROD01.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\UKGTE3E\DataModel\UKGTE3E_PROD01.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UKGTE3E_PROD01.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\UKGTE3E\DataModel\UKGTE3E_UAT01.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UKGTE3E_UAT01.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\UKGTE3E\DataModel\UKGTE3E_UAT01.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UKGTE3E_UAT01.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\UKGTE3E\DataModel\UKGTE3E_UAT01.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UKGTE3E_UAT01.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\UKGTE3E\DataModel\UKG_TE_3E_BILLING_TITLE_DASHBOARD.cs">
+      <DependentUpon>UKGTE3E_PROD01.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\UKGTE3E\DataModel\UKG_TE_3E_CONFIGURATION.cs">
+      <DependentUpon>UKGTE3E_PROD01.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\UKGTE3E\DataModel\UKG_TE_3E_DASHBOARD_ROLE.cs">
+      <DependentUpon>UKGTE3E_PROD01.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\UKGTE3E\DataModel\UKG_TE_3E_PO.cs">
+      <DependentUpon>UKGTE3E_PROD01.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\UKGTE3E\DataModel\UKG_TE_3E_PO_AUDIT.cs">
+      <DependentUpon>UKGTE3E_PROD01.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\UKGTE3E\DataModel\UKG_TE_3E_PO_TRANSACTION_LOGS.cs">
+      <DependentUpon>UKGTE3E_PROD01.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\UKGTE3E\DataModel\UKG_TE_3E_TIMEKEEPER.cs">
+      <DependentUpon>UKGTE3E_PROD01.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\UKGTE3E\DataModel\UKG_TE_3E_TIMEKEEPER_AUDIT.cs">
+      <DependentUpon>UKGTE3E_PROD01.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\UKGTE3E\DataModel\UKG_TE_3E_TRANSACTION_LOGS.cs">
+      <DependentUpon>UKGTE3E_PROD01.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\KenticoCMS\3EProcessItem\ClientProcessItem.cs" />
+    <Compile Include="Data\KenticoCMS\3EProcessItem\EntityProcessItem.cs" />
+    <Compile Include="Data\KenticoCMS\3EProcessItem\MattRateGrpExc.cs" />
+    <Compile Include="Data\KenticoCMS\3EProcessItem\ExistingMatter.cs" />
+    <Compile Include="Data\KenticoCMS\3EProcessItem\TE3ERoles.cs" />
+    <Compile Include="Data\KenticoCMS\3EProcessItem\ExistingClient.cs" />
+    <Compile Include="Data\KenticoCMS\3EProcessItem\ExistingEntity.cs" />
+    <Compile Include="Data\KenticoCMS\3EProcessItem\ExistingMatterClient.cs" />
+    <Compile Include="Data\KenticoCMS\3EProcessItem\MatterProcessItem.cs" />
+    <Compile Include="Data\KenticoCMS\3EProcessItem\NBIProcessItem.cs" />
+    <Compile Include="Data\KenticoCMS\RCGKENTCMS\CMSEnums.cs" />
+    <Compile Include="Data\KenticoCMS\RCGKENTCMS\CMSJob.cs" />
+    <Compile Include="Data\KenticoCMS\Assignment.cs" />
+    <Compile Include="Data\KenticoCMS\PatchDocument.cs" />
+    <Compile Include="Data\KenticoCMS\RCGKENTCMS\CMSMapper.cs" />
+    <Compile Include="Data\LibertyMutual\ClaimResponseModels.cs" />
+    <Compile Include="Data\LibertyMutual\ErrorResponseModel.cs" />
+    <Compile Include="Data\LibertyMutual\LMAuthTokenResponseModel.cs" />
+    <Compile Include="Data\LibertyMutual\LMNotificationResponseModels.cs" />
+    <Compile Include="Data\Te3e\Cft\CftNBRStatus.cs" />
+    <Compile Include="Data\Te3e\Cft\CftPartyType.cs" />
+    <Compile Include="Data\Te3e\Cft\CftSearchAuthorityList.cs" />
+    <Compile Include="Data\Te3e\Cft\CftSearchReason.cs" />
+    <Compile Include="Data\Te3e\Cft\CftSearchResultsViewList.cs" />
+    <Compile Include="Data\Te3e\Cft\CftSearchTypeList.cs" />
+    <Compile Include="Data\Te3e\Cft\CurrentWorkflowStep.cs" />
+    <Compile Include="Data\Te3e\Cft\FinalDecision.cs" />
+    <Compile Include="Data\Te3e\Cft\FinalizeResult.cs" />
+    <Compile Include="Data\Te3e\Cft\OrgProc.cs" />
+    <Compile Include="Data\Te3e\Client\Client.cs" />
+    <Compile Include="Data\Te3e\CMS\Definition\Assignment.cs" />
+    <Compile Include="Data\Te3e\CMS\Definition\CoConsultant.cs" />
+    <Compile Include="Data\Te3e\CMS\Definition\CustomerProfile.cs" />
+    <Compile Include="Data\Te3e\CMS\CustomException\AssignmentNotFoundException.cs" />
+    <Compile Include="Data\Te3e\CMS\CustomException\CustomerNotMatchException.cs" />
+    <Compile Include="Data\Te3e\CMS\CustomException\CustomerNotFoundException.cs" />
+    <Compile Include="Data\Te3e\CMS\Definition\IncidentLocation.cs" />
+    <Compile Include="Data\Te3e\CMS\Definition\OpposingParty.cs" />
+    <Compile Include="Data\Te3e\CMS\Definition\Party.cs" />
+    <Compile Include="Data\Te3e\CMS\Definition\Payor.cs" />
+    <Compile Include="Data\Te3e\CMS\Definition\ReferenceNumber.cs" />
+    <Compile Include="Data\Te3e\Entity\ArchetypeCode.cs" />
+    <Compile Include="Data\Te3e\Entity\EntityType.cs" />
+    <Compile Include="Data\Te3e\Entity\RelType.cs" />
+    <Compile Include="Data\Te3e\Matter\Matter.cs" />
+    <Compile Include="Data\Te3e\Matter\MatterCPC.cs" />
+    <Compile Include="Data\TeamsDMS\TeamsDMSLogin.cs" />
+    <Compile Include="Data\TeamsDMS\TeamsDMSUrlVerbs.cs" />
+    <Compile Include="Data\TeamsDMS\TeamsMatter.cs" />
+    <Compile Include="Data\TrackerSafe\ClientTS3EInfo.cs" />
+    <Compile Include="Data\TrackerSafe\DecisionLetterTemplate.cs" />
+    <Compile Include="Data\TrackerSafe\ItemHistory.cs" />
+    <Compile Include="Data\TrackerSafe\TSCase.cs" />
+    <Compile Include="Data\TrackerSafe\TSCaseResponse.cs" />
+    <Compile Include="Data\TrackerSafe\TSItem.cs" />
+    <Compile Include="Data\TrackerSafe\TSLogin.cs" />
+    <Compile Include="Data\TrackerSafe\TSOffices.cs" />
+    <Compile Include="Data\TrackerSafe\TSUrlVerbs.cs" />
+    <Compile Include="Data\TrackerSafe\User.cs" />
+    <Compile Include="Data\UKGTE3E\UKGTE3ELookupTypes.cs" />
+    <Compile Include="Data\UKGTE3E\UKGTE3EPOProductsBundleInfo.cs" />
+    <Compile Include="Data\UKGTE3E\UKGTE3ETimekprInfo.cs" />
+    <Compile Include="Extension\DateTimeExtensions.cs" />
+    <Compile Include="Extension\JsonPatchHelper.cs" />
+    <Compile Include="Extension\StringExtrentions.cs" />
+    <Compile Include="imageUtil\AsposeUtil.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Setting\UKGTE3EAppSetting.cs" />
+    <Compile Include="Setting\CMSAzureSBAppSetting.cs" />
+    <Compile Include="Setting\CollectionItemAppSettings.cs" />
+    <Compile Include="Setting\AzureServiceBusAppSetting.cs" />
+    <Compile Include="Setting\LibertyMutualAppSetting.cs" />
+    <Compile Include="Setting\TeamsDMSAppSetting.cs" />
+    <Compile Include="Setting\TrackerSafeAppSetting.cs" />
+    <Compile Include="Extension\TE3EEntityExt.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="Datasource\TE3ERCGSYNCPRODModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TE3ERCGSYNCPRODModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="Datasource\TE3ERCGSyncModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TE3ERCGSyncModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="Datasource\RCGAMZN_PROD01Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>RCGAMZN_PROD01Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="Datasource\RCGAMZN_DEV01Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>RCGAMZN_DEV01Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Datasource\RCGAMZN_DEV01Model.edmx.diagram">
+      <DependentUpon>RCGAMZN_DEV01Model.edmx</DependentUpon>
+    </None>
+    <None Include="Datasource\RCGAMZN_PROD01Model.edmx.diagram">
+      <DependentUpon>RCGAMZN_PROD01Model.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="Datasource\RCGCLAIMS\RCGCLAIMS_DEV01Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>RCGCLAIMS_DEV01Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Datasource\RCGCLAIMS\RCGCLAIMS_DEV01Model.edmx.diagram">
+      <DependentUpon>RCGCLAIMS_DEV01Model.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="Datasource\RCGCLAIMS\RCGDB_DEV01Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>RCGDB_DEV01Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="Datasource\RCGCLAIMS\RCGCLAIMS_PROD01Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>RCGCLAIMS_PROD01Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Datasource\RCGCLAIMS\RCGCLAIMS_PROD01Model.edmx.diagram">
+      <DependentUpon>RCGCLAIMS_PROD01Model.edmx</DependentUpon>
+    </None>
+    <None Include="Datasource\RCGCLAIMS\RCGDB_DEV01Model.edmx.diagram">
+      <DependentUpon>RCGDB_DEV01Model.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="Datasource\RCGCLAIMS\RCGDB_PROD01Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>RCGDB_PROD01Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Datasource\RCGCLAIMS\RCGDB_PROD01Model.edmx.diagram">
+      <DependentUpon>RCGDB_PROD01Model.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="Datasource\RCGKENTCMS\DataModel\RCGKENTCMS_DEV01Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>RCGKENTCMS_DEV01Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Datasource\RCGKENTCMS\DataModel\RCGKENTCMS_DEV01Model.edmx.diagram">
+      <DependentUpon>RCGKENTCMS_DEV01Model.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="Datasource\RCGKENTCMS\DataModel\RCGKENTCMS_UAT01Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>RCGKENTCMS_UAT01Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="Datasource\RCGKENTCMS\DataModel\RCGKENTCMS_PROD01Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>RCGKENTCMS_PROD01Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Datasource\RCGKENTCMS\DataModel\RCGKENTCMS_PROD01Model.edmx.diagram">
+      <DependentUpon>RCGKENTCMS_PROD01Model.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="Datasource\RCGKENTCMS\DataModel\RCGKENTCMS_STAGING01Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>RCGKENTCMS_STAGING01Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Datasource\RCGKENTCMS\DataModel\RCGKENTCMS_STAGING01Model.edmx.diagram">
+      <DependentUpon>RCGKENTCMS_STAGING01Model.edmx</DependentUpon>
+    </None>
+    <None Include="Datasource\RCGKENTCMS\DataModel\RCGKENTCMS_UAT01Model.edmx.diagram">
+      <DependentUpon>RCGKENTCMS_UAT01Model.edmx</DependentUpon>
+    </None>
+    <None Include="Datasource\TE3ERCGSyncModel.edmx.diagram">
+      <DependentUpon>TE3ERCGSyncModel.edmx</DependentUpon>
+    </None>
+    <None Include="Datasource\TE3ERCGSYNCPRODModel.edmx.diagram">
+      <DependentUpon>TE3ERCGSYNCPRODModel.edmx</DependentUpon>
+    </None>
+    <EmbeddedResource Include="imageUtil\lic\Aspose.Total.lic" />
+    <EntityDeploy Include="Datasource\UKGTE3E\DataModel\UKGTE3E_DEV01.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>UKGTE3E_DEV01.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Datasource\UKGTE3E\DataModel\UKGTE3E_DEV01.edmx.diagram">
+      <DependentUpon>UKGTE3E_DEV01.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="Datasource\UKGTE3E\DataModel\UKGTE3E_UAT01.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>UKGTE3E_UAT01.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="Datasource\UKGTE3E\DataModel\UKGTE3E_PROD01.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>UKGTE3E_PROD01.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Datasource\UKGTE3E\DataModel\UKGTE3E_PROD01.edmx.diagram">
+      <DependentUpon>UKGTE3E_PROD01.edmx</DependentUpon>
+    </None>
+    <None Include="Datasource\UKGTE3E\DataModel\UKGTE3E_UAT01.edmx.diagram">
+      <DependentUpon>UKGTE3E_UAT01.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Datasource\RCGAMZN_DEV01Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RCGAMZN_DEV01Model.edmx</DependentUpon>
+      <LastGenOutput>RCGAMZN_DEV01Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Datasource\RCGAMZN_DEV01Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RCGAMZN_DEV01Model.edmx</DependentUpon>
+      <LastGenOutput>RCGAMZN_DEV01Model.cs</LastGenOutput>
+    </Content>
+    <Content Include="Datasource\RCGAMZN_PROD01Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RCGAMZN_PROD01Model.edmx</DependentUpon>
+      <LastGenOutput>RCGAMZN_PROD01Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Datasource\RCGAMZN_PROD01Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RCGAMZN_PROD01Model.edmx</DependentUpon>
+      <LastGenOutput>RCGAMZN_PROD01Model.cs</LastGenOutput>
+    </Content>
+    <Content Include="Datasource\RCGCLAIMS\RCGCLAIMS_DEV01Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RCGCLAIMS_DEV01Model.edmx</DependentUpon>
+      <LastGenOutput>RCGCLAIMS_DEV01Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Datasource\RCGCLAIMS\RCGCLAIMS_DEV01Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RCGCLAIMS_DEV01Model.edmx</DependentUpon>
+      <LastGenOutput>RCGCLAIMS_DEV01Model.cs</LastGenOutput>
+    </Content>
+    <Content Include="Datasource\RCGCLAIMS\RCGCLAIMS_PROD01Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RCGCLAIMS_PROD01Model.edmx</DependentUpon>
+      <LastGenOutput>RCGCLAIMS_PROD01Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Datasource\RCGCLAIMS\RCGCLAIMS_PROD01Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RCGCLAIMS_PROD01Model.edmx</DependentUpon>
+      <LastGenOutput>RCGCLAIMS_PROD01Model.cs</LastGenOutput>
+    </Content>
+    <Content Include="Datasource\RCGCLAIMS\RCGDB_DEV01Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RCGDB_DEV01Model.edmx</DependentUpon>
+      <LastGenOutput>RCGDB_DEV01Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Datasource\RCGCLAIMS\RCGDB_DEV01Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RCGDB_DEV01Model.edmx</DependentUpon>
+      <LastGenOutput>RCGDB_DEV01Model.cs</LastGenOutput>
+    </Content>
+    <Content Include="Datasource\RCGCLAIMS\RCGDB_PROD01Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RCGDB_PROD01Model.edmx</DependentUpon>
+      <LastGenOutput>RCGDB_PROD01Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Datasource\RCGCLAIMS\RCGDB_PROD01Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RCGDB_PROD01Model.edmx</DependentUpon>
+      <LastGenOutput>RCGDB_PROD01Model.cs</LastGenOutput>
+    </Content>
+    <Content Include="Datasource\RCGKENTCMS\DataModel\RCGKENTCMS_DEV01Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RCGKENTCMS_DEV01Model.edmx</DependentUpon>
+      <LastGenOutput>RCGKENTCMS_DEV01Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Datasource\RCGKENTCMS\DataModel\RCGKENTCMS_DEV01Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RCGKENTCMS_DEV01Model.edmx</DependentUpon>
+      <LastGenOutput>RCGKENTCMS_DEV01Model.cs</LastGenOutput>
+    </Content>
+    <Content Include="Datasource\RCGKENTCMS\DataModel\RCGKENTCMS_PROD01Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RCGKENTCMS_PROD01Model.edmx</DependentUpon>
+      <LastGenOutput>RCGKENTCMS_PROD01Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Datasource\RCGKENTCMS\DataModel\RCGKENTCMS_PROD01Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RCGKENTCMS_PROD01Model.edmx</DependentUpon>
+      <LastGenOutput>RCGKENTCMS_PROD01Model.cs</LastGenOutput>
+    </Content>
+    <Content Include="Datasource\RCGKENTCMS\DataModel\RCGKENTCMS_STAGING01Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RCGKENTCMS_STAGING01Model.edmx</DependentUpon>
+      <LastGenOutput>RCGKENTCMS_STAGING01Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Datasource\RCGKENTCMS\DataModel\RCGKENTCMS_STAGING01Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RCGKENTCMS_STAGING01Model.edmx</DependentUpon>
+      <LastGenOutput>RCGKENTCMS_STAGING01Model.cs</LastGenOutput>
+    </Content>
+    <Content Include="Datasource\RCGKENTCMS\DataModel\RCGKENTCMS_UAT01Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RCGKENTCMS_UAT01Model.edmx</DependentUpon>
+      <LastGenOutput>RCGKENTCMS_UAT01Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Datasource\RCGKENTCMS\DataModel\RCGKENTCMS_UAT01Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RCGKENTCMS_UAT01Model.edmx</DependentUpon>
+      <LastGenOutput>RCGKENTCMS_UAT01Model.cs</LastGenOutput>
+    </Content>
+    <Content Include="Datasource\RCGKENTCMS\DataScripts\GetCftSearchTransaction.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\RCGKENTCMS\DataScripts\GetCoConsultantEditKeyValue.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\RCGKENTCMS\DataScripts\GetCftWorkflowHistory.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\RCGKENTCMS\DataScripts\GetAddtnlPartiesEditKeyValue.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\RCGKENTCMS\DataScripts\GetExistingPayorContactNameAndEmail.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\RCGKENTCMS\DataScripts\GetInvoiceToID.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\RCGKENTCMS\DataScripts\GetClientInstrID.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\RCGKENTCMS\DataScripts\GetEditKeyValue.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\RCGKENTCMS\DataScripts\RemoveAssgnMessage.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\RCGKENTCMS\DataScripts\RemoveCustMessage.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\RCGKENTCMS\DataScripts\UpdateAssgnMessage.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\RCGKENTCMS\DataScripts\UpdateAssgnMessageErr.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\RCGKENTCMS\DataScripts\UpdateCustMessageErr.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\SQLScripts\Audit\CheckInPayorDetailsCMSAudit.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\SQLScripts\Audit\CheckInCoConsultantsCMSAudit.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\SQLScripts\Audit\CheckInCustomerProfileCMSAudit.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\SQLScripts\Audit\CheckInOrderingClientsCMSAudit.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\SQLScripts\Audit\CheckInIncidentLocationsCMSAudit.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\SQLScripts\Audit\CheckInAdditionalPartiesCMSAudit.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\SQLScripts\Audit\CheckInAssignmentCMSAudit.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\SQLScripts\GetDefaultSubSection.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\SQLScripts\GetEntityAddressesByEntIndex.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\SQLScripts\GetExistingEntityOrgByNameAndEmail.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\SQLScripts\GetExistingEntityPersonByNameAndEmail.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\SQLScripts\GetExistingPayorClient.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\SQLScripts\GetExistingClientByNameAndEmail.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\SQLScripts\GetExistingEntityByEntIndex.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\SQLScripts\GetExistingEntityByNameAndEmail.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\SQLScripts\GetMattRateGroupExc.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\SQLScripts\GetExistingMatter.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\SQLScripts\GetMatterPayorDetailRoles.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\SQLScripts\GetAdditionalPartiesRoles.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\SQLScripts\GetExistingClient.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\SQLScripts\GetExistingEntity.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\SQLScripts\GetEntityByName.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\SQLScripts\RemoveOutCustMessage.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\SQLScripts\RemoveInCustMessage.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\SQLScripts\UpdateOutCustMessageErr.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\SQLScripts\UpdateInCustMessageErr.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\SQLScripts\UpdateOutAssgnMessageErr.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\SQLScripts\UpdateInAssgnMessageErr.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\SQLScripts\RemoveOutAssgnMessage.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\SQLScripts\RemoveInAssgnMessage.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\SQLScripts\GetExistingMatterClient.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\SQLScripts\GetProcessItemClient.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\SQLScripts\GetProcessItemMatter.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\SQLScripts\GetProcessItemNBI.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\SQLScripts\GetProcessItemEntity.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datasource\TE3ERCGSyncModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TE3ERCGSyncModel.edmx</DependentUpon>
+      <LastGenOutput>TE3ERCGSyncModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Datasource\TE3ERCGSyncModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TE3ERCGSyncModel.edmx</DependentUpon>
+      <LastGenOutput>TE3ERCGSyncModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Datasource\TE3ERCGSYNCPRODModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TE3ERCGSYNCPRODModel.edmx</DependentUpon>
+      <LastGenOutput>TE3ERCGSYNCPRODModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Datasource\TE3ERCGSYNCPRODModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TE3ERCGSYNCPRODModel.edmx</DependentUpon>
+      <LastGenOutput>TE3ERCGSYNCPRODModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Datasource\UKGTE3E\DataModel\UKGTE3E_DEV01.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>UKGTE3E_DEV01.edmx</DependentUpon>
+      <LastGenOutput>UKGTE3E_DEV01.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Datasource\UKGTE3E\DataModel\UKGTE3E_DEV01.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>UKGTE3E_DEV01.edmx</DependentUpon>
+      <LastGenOutput>UKGTE3E_DEV01.cs</LastGenOutput>
+    </Content>
+    <Content Include="Datasource\UKGTE3E\DataModel\UKGTE3E_PROD01.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>UKGTE3E_PROD01.edmx</DependentUpon>
+      <LastGenOutput>UKGTE3E_PROD01.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Datasource\UKGTE3E\DataModel\UKGTE3E_PROD01.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>UKGTE3E_PROD01.edmx</DependentUpon>
+      <LastGenOutput>UKGTE3E_PROD01.cs</LastGenOutput>
+    </Content>
+    <Content Include="Datasource\UKGTE3E\DataModel\UKGTE3E_UAT01.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>UKGTE3E_UAT01.edmx</DependentUpon>
+      <LastGenOutput>UKGTE3E_UAT01.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Datasource\UKGTE3E\DataModel\UKGTE3E_UAT01.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>UKGTE3E_UAT01.edmx</DependentUpon>
+      <LastGenOutput>UKGTE3E_UAT01.cs</LastGenOutput>
+    </Content>
+    <Content Include="Datasource\UKGTE3E\SQLScripts\GetPersonEntityProcessItem.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\TrackerSafe\Templates\EvidenceDecisionLetter.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\TrackerSafe\Templates\NC\EvidenceDecisionLetter.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\TrackerSafe\Templates\NY\EvidenceDecisionLetter.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\TrackerSafe\Templates\SignInLetter.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\InsertMissingCases.uat.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\InsertMissingCases.prod.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="EntityFramework">
+      <Version>6.4.4</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.JsonPatch">
+      <Version>6.0.8</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CrmSdk.Deployment">
+      <Version>9.0.2.34</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CrmSdk.Workflow">
+      <Version>9.0.2.45</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CrmSdk.XrmTooling.CoreAssembly">
+      <Version>9.1.0.110</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.IdentityModel.Clients.ActiveDirectory">
+      <Version>5.2.9</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Rest.ClientRuntime">
+      <Version>2.3.24</Version>
+    </PackageReference>
+    <PackageReference Include="Palit.AspNetCore.JsonPatch.Extensions.Generate">
+      <Version>1.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="smartystreets-dotnet-sdk">
+      <Version>8.13.7</Version>
+    </PackageReference>
+    <PackageReference Include="System.Memory">
+      <Version>4.5.5</Version>
+    </PackageReference>
+    <PackageReference Include="System.Runtime">
+      <Version>4.3.1</Version>
+    </PackageReference>
+    <PackageReference Include="System.Security.Cryptography.Algorithms">
+      <Version>4.3.1</Version>
+    </PackageReference>
+    <PackageReference Include="System.Security.Cryptography.X509Certificates">
+      <Version>4.3.2</Version>
+    </PackageReference>
+    <PackageReference Include="System.Text.Json">
+      <Version>6.0.5</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\TE3EConnect\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\TE3EConnect\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\TE3EConnect\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\TE3EConnect\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target -->
+  <!-- Import Project="..\TE3EConnect\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\TE3EConnect\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" / -->
+</Project>

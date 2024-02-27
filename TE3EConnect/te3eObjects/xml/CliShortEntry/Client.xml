@@ -1,0 +1,75 @@
+<Client>
+                    <Entity />
+                    <Number>NewValue</Number>
+                    <AltNumber>NewValue</AltNumber>
+                    <DisplayName>NewValue</DisplayName>
+                    <SortString>NewValue</SortString>
+                    <RelatedClient />
+                    <CliType />
+                    <CliStatusType />
+                    <CliStatusDate>0001-01-02T00:00:00</CliStatusDate>
+                    <CreditLimit>1</CreditLimit>
+                    <Currency />
+                    <CurrencyDate>0001-01-02T00:00:00</CurrencyDate>
+                    <OpenDate>0001-01-02T00:00:00</OpenDate>
+                    <InvoiceSite />
+                    <StatementSite />
+                    <ContactInfo>NewValue</ContactInfo>
+                    <Industry />
+                    <Narrative>NewValue</Narrative>
+                    <Language />
+                    <IsPayor>1</IsPayor>
+                    <PayorIndex>1</PayorIndex>
+                    <BillingInstruc>NewValue</BillingInstruc>
+                    <Description>NewValue</Description>
+                    <OpenTkpr />
+                    <CloseTkpr />
+                    <CloseDate>0001-01-02T00:00:00</CloseDate>
+                    <IsAutoNumbering>1</IsAutoNumbering>
+                    <BillDCSTemplate />
+                    <StmtDCSTemplate />
+                    <Country />
+                    <CliAttribute />
+                    <CliCategory />
+                    <EntryDate>0001-01-02T00:00:00</EntryDate>
+                    <VATRegistration>NewValue</VATRegistration>
+                    <IsEngageLetterReq>1</IsEngageLetterReq>
+                    <EngageLetterSubDate>0001-01-02T00:00:00</EngageLetterSubDate>
+                    <EngageLetterRecDate>0001-01-02T00:00:00</EngageLetterRecDate>
+                    <EngageLetterComment>NewValue</EngageLetterComment>
+                    <IsWaiverLetterReq>1</IsWaiverLetterReq>
+                    <WaiverLetterSubDate>0001-01-02T00:00:00</WaiverLetterSubDate>
+                    <WaiverLetterRecDate>0001-01-02T00:00:00</WaiverLetterRecDate>
+                    <WaiverLetterComment>NewValue</WaiverLetterComment>
+                    <IsConflictsConfidential>1</IsConflictsConfidential>
+                    <ApproveTkpr />
+                    <ConflictStatus />
+                    <ProfDCSTemplate />
+                    <IsIdentified>1</IsIdentified>
+                    <IdentificationDate>0001-01-02T00:00:00</IdentificationDate>
+                    <VolumeDiscountGroup />
+                    <IsEBill>1</IsEBill>
+                    <DueDays>1</DueDays>
+                    <ApproveDate>0001-01-02T00:00:00</ApproveDate>
+                    <IsOrigClosedStatus>1</IsOrigClosedStatus>
+                    <IsNumberEnabled>1</IsNumberEnabled>
+                    <IsCreateTaxInvOnRcpt>1</IsCreateTaxInvOnRcpt>
+                    <IsICB>1</IsICB>
+                    <ICBUnit />
+                    <StmtSitePrimPhone>NewValue</StmtSitePrimPhone>
+                    <InvSitePrimPhone>NewValue</InvSitePrimPhone>
+                    <PayorTaxArea />
+                    <PayorTaxNum>NewValue</PayorTaxNum>
+                    <IsNewEntity>1</IsNewEntity>
+                    <NewEntityIndex>1</NewEntityIndex>
+                    <LoadGroup>NewValue</LoadGroup>
+                    <LoadNumber>NewValue</LoadNumber>
+                    <LoadSource>NewValue</LoadSource>
+                    <RSSFeed>NewValue</RSSFeed>
+                    <TickerSymbol>NewValue</TickerSymbol>
+                    <URL>NewValue</URL>
+                    <CreditNoteDCSTemplate />
+                    <BillGroupDCSTemplate />
+                    <CreditNoteGroupDCSTemplate />
+                    <IsNoTC_CCC>1</IsNoTC_CCC>
+                </Client>

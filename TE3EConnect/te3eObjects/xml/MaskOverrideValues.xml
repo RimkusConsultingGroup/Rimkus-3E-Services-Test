@@ -1,0 +1,33 @@
+<MaskOverrideValues>
+                               
+                                    <CostType />
+                                    <ChrgType />
+                                    <TimeType />
+                                    <Matter />
+                                    <Timekeeper />
+                                    <GLNatural />
+                                    <GLUnit />
+                                    <GLOffice />
+                                    <GLTimekeeper />
+                                    <GLDepartment />
+                                    <GLSection />
+                                    <GLArrangement />
+                                    <GLTitle />
+                                    <GLPracticeGroup />
+                                    <GLWorkType />
+                                    <MaskOverrideType />
+                                    <ChrgTypePredicate>NewValue</ChrgTypePredicate>
+                                    <ClientPredicate>NewValue</ClientPredicate>
+                                    <CostTypePredicate>NewValue</CostTypePredicate>
+                                    <MatterPredicate>NewValue</MatterPredicate>
+                                    <TimekeeperPredicate>NewValue</TimekeeperPredicate>
+                                    <TimeTypePredicate>NewValue</TimeTypePredicate>
+                                    <UsingChrgType>1</UsingChrgType>
+                                    <UsingClient>1</UsingClient>
+                                    <UsingCostType>1</UsingCostType>
+                                    <UsingMatter>1</UsingMatter>
+                                    <UsingTimekeeper>1</UsingTimekeeper>
+                                    <UsingTimeType>1</UsingTimeType>
+                                    <GLActivity />
+                              
+                            </MaskOverrideValues>

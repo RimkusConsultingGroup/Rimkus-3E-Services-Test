@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="Client">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Entity" type="xs:string" minOccurs="0" />
+        <xs:element name="Number" type="xs:string" minOccurs="0" />
+        <xs:element name="AltNumber" type="xs:string" minOccurs="0" />
+        <xs:element name="DisplayName" type="xs:string" minOccurs="0" />
+        <xs:element name="SortString" type="xs:string" minOccurs="0" />
+        <xs:element name="RelatedClient" type="xs:string" minOccurs="0" />
+        <xs:element name="CliType" type="xs:string" minOccurs="0" />
+        <xs:element name="CliStatusType" type="xs:string" minOccurs="0" />
+        <xs:element name="CliStatusDate" type="xs:string" minOccurs="0" />
+        <xs:element name="CreditLimit" type="xs:string" minOccurs="0" />
+        <xs:element name="Currency" type="xs:string" minOccurs="0" />
+        <xs:element name="CurrencyDate" type="xs:string" minOccurs="0" />
+        <xs:element name="OpenDate" type="xs:string" minOccurs="0" />
+        <xs:element name="InvoiceSite" type="xs:string" minOccurs="0" />
+        <xs:element name="StatementSite" type="xs:string" minOccurs="0" />
+        <xs:element name="ContactInfo" type="xs:string" minOccurs="0" />
+        <xs:element name="Industry" type="xs:string" minOccurs="0" />
+        <xs:element name="Narrative" type="xs:string" minOccurs="0" />
+        <xs:element name="Language" type="xs:string" minOccurs="0" />
+        <xs:element name="IsPayor" type="xs:string" minOccurs="0" />
+        <xs:element name="PayorIndex" type="xs:string" minOccurs="0" />
+        <xs:element name="BillingInstruc" type="xs:string" minOccurs="0" />
+        <xs:element name="Description" type="xs:string" minOccurs="0" />
+        <xs:element name="OpenTkpr" type="xs:string" minOccurs="0" />
+        <xs:element name="CloseTkpr" type="xs:string" minOccurs="0" />
+        <xs:element name="CloseDate" type="xs:string" minOccurs="0" />
+        <xs:element name="IsAutoNumbering" type="xs:string" minOccurs="0" />
+        <xs:element name="BillDCSTemplate" type="xs:string" minOccurs="0" />
+        <xs:element name="StmtDCSTemplate" type="xs:string" minOccurs="0" />
+        <xs:element name="Country" type="xs:string" minOccurs="0" />
+        <xs:element name="CliAttribute" type="xs:string" minOccurs="0" />
+        <xs:element name="CliCategory" type="xs:string" minOccurs="0" />
+        <xs:element name="EntryDate" type="xs:string" minOccurs="0" />
+        <xs:element name="VATRegistration" type="xs:string" minOccurs="0" />
+        <xs:element name="IsEngageLetterReq" type="xs:string" minOccurs="0" />
+        <xs:element name="EngageLetterSubDate" type="xs:string" minOccurs="0" />
+        <xs:element name="EngageLetterRecDate" type="xs:string" minOccurs="0" />
+        <xs:element name="EngageLetterComment" type="xs:string" minOccurs="0" />
+        <xs:element name="IsWaiverLetterReq" type="xs:string" minOccurs="0" />
+        <xs:element name="WaiverLetterSubDate" type="xs:string" minOccurs="0" />
+        <xs:element name="WaiverLetterRecDate" type="xs:string" minOccurs="0" />
+        <xs:element name="WaiverLetterComment" type="xs:string" minOccurs="0" />
+        <xs:element name="IsConflictsConfidential" type="xs:string" minOccurs="0" />
+        <xs:element name="ApproveTkpr" type="xs:string" minOccurs="0" />
+        <xs:element name="ConflictStatus" type="xs:string" minOccurs="0" />
+        <xs:element name="ProfDCSTemplate" type="xs:string" minOccurs="0" />
+        <xs:element name="IsIdentified" type="xs:string" minOccurs="0" />
+        <xs:element name="IdentificationDate" type="xs:string" minOccurs="0" />
+        <xs:element name="VolumeDiscountGroup" type="xs:string" minOccurs="0" />
+        <xs:element name="IsEBill" type="xs:string" minOccurs="0" />
+        <xs:element name="DueDays" type="xs:string" minOccurs="0" />
+        <xs:element name="ApproveDate" type="xs:string" minOccurs="0" />
+        <xs:element name="IsOrigClosedStatus" type="xs:string" minOccurs="0" />
+        <xs:element name="IsNumberEnabled" type="xs:string" minOccurs="0" />
+        <xs:element name="IsCreateTaxInvOnRcpt" type="xs:string" minOccurs="0" />
+        <xs:element name="IsICB" type="xs:string" minOccurs="0" />
+        <xs:element name="ICBUnit" type="xs:string" minOccurs="0" />
+        <xs:element name="StmtSitePrimPhone" type="xs:string" minOccurs="0" />
+        <xs:element name="InvSitePrimPhone" type="xs:string" minOccurs="0" />
+        <xs:element name="PayorTaxArea" type="xs:string" minOccurs="0" />
+        <xs:element name="PayorTaxNum" type="xs:string" minOccurs="0" />
+        <xs:element name="IsNewEntity" type="xs:string" minOccurs="0" />
+        <xs:element name="NewEntityIndex" type="xs:string" minOccurs="0" />
+        <xs:element name="LoadGroup" type="xs:string" minOccurs="0" />
+        <xs:element name="LoadNumber" type="xs:string" minOccurs="0" />
+        <xs:element name="LoadSource" type="xs:string" minOccurs="0" />
+        <xs:element name="RSSFeed" type="xs:string" minOccurs="0" />
+        <xs:element name="TickerSymbol" type="xs:string" minOccurs="0" />
+        <xs:element name="URL" type="xs:string" minOccurs="0" />
+        <xs:element name="CreditNoteDCSTemplate" type="xs:string" minOccurs="0" />
+        <xs:element name="BillGroupDCSTemplate" type="xs:string" minOccurs="0" />
+        <xs:element name="CreditNoteGroupDCSTemplate" type="xs:string" minOccurs="0" />
+        <xs:element name="IsNoTC_CCC" type="xs:string" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="Client" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

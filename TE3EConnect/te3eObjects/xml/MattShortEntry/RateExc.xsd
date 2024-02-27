@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="RateExc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Description" type="xs:string" minOccurs="0" />
+        <xs:element name="Client" type="xs:string" minOccurs="0" />
+        <xs:element name="StartDate" type="xs:string" minOccurs="0" />
+        <xs:element name="FinishDate" type="xs:string" minOccurs="0" />
+        <xs:element name="RateExcList" type="xs:string" minOccurs="0" />
+        <xs:element name="IsMaximum" type="xs:string" minOccurs="0" />
+        <xs:element name="IsValidate" type="xs:string" minOccurs="0" />
+        <xs:element name="IsMatchCurr" type="xs:string" minOccurs="0" />
+        <xs:element name="OverrideDate" type="xs:string" minOccurs="0" />
+        <xs:element name="IsSkipClientExc" type="xs:string" minOccurs="0" />
+        <xs:element name="CostType" type="xs:string" minOccurs="0" />
+        <xs:element name="MultiDimensionOrdinal" type="xs:string" minOccurs="0" />
+        <xs:element name="IsStdRateExc" type="xs:string" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="RateExc" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

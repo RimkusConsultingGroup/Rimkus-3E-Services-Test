@@ -1,0 +1,6 @@
+<POEntry xmlns="http://elite.com/schemas/transaction/process/write/POEntry">
+  <Initialize xmlns="http://elite.com/schemas/transaction/object/write/PO">
+    @AddPOEntry
+  </Initialize>
+</POEntry>
+

@@ -1,0 +1,34 @@
+ <CftNewBizSearchName>
+                          
+                                    <CftPartyType>EntityOrg</CftPartyType>
+                                    <CftRelationshipCode />
+                                    <SearchString>NewValue</SearchString>
+                                    <EntityDisplayName>S&amp;S Lines &amp; Drains</EntityDisplayName>
+                                    <UserModifiedSearchString>1</UserModifiedSearchString>
+                                    <FirstName>NewValue</FirstName>
+                                    <MiddleName>NewValue</MiddleName>
+                                    <LastName>NewValue</LastName>
+                                    <CompanyName>S&amp;S Lines &amp; Drains</CompanyName>
+                                    <DebugInfo>NewValue</DebugInfo>
+                                    <Entity />
+                                    <CftRole />
+                                    <IsCreatedEntity>1</IsCreatedEntity>
+                                    <AddedRelatedParty>1</AddedRelatedParty>
+                                    <NumDuplicates>2</NumDuplicates>
+                                    <RiskFlag />
+                                    <DebugData>NewValue</DebugData>
+                                    <Resolved>1</Resolved>
+                                    <CurEntityIndex>1</CurEntityIndex>
+                                    <LinkType />
+                                    <Notes>NewValue</Notes>
+                                    <IsPhoneticSearch>1</IsPhoneticSearch>
+                                    <SortOrder>4</SortOrder>
+                                    <IsClientAsSearchName>1</IsClientAsSearchName>
+                                    <IsNotSearch>1</IsNotSearch>
+                                    <IsNotCreateLink>0</IsNotCreateLink>
+                                    <SearchTerm>(S&amp;S &amp; Drains) OR (2019-04-10) OR (Hollis &amp; Heights &amp; Newnan)</SearchTerm>
+                                    <CftEntityType />
+                                    <CftRelatedParty />
+                                    <FullTextSearchResultCount>2</FullTextSearchResultCount>
+                       
+                            </CftNewBizSearchName>

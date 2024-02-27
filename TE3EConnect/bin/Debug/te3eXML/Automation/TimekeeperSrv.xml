@@ -1,0 +1,7 @@
+﻿<Timekeeper_Srv xmlns="http://elite.com/schemas/transaction/process/write/Timekeeper_Srv">
+    <Initialize xmlns="http://elite.com/schemas/transaction/object/write/Timekeeper">
+
+		@AddTimekeeper
+		
+    </Initialize>
+</Timekeeper_Srv>

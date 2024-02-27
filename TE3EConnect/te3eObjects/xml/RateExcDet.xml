@@ -1,0 +1,37 @@
+<RateExcDet>
+    <RateExcDetID>d716674c-0b0a-4063-88b2-00308352f36a</RateExcDetID>
+    <RateExc>e6cedf14-bffe-429b-a65c-c9c287589768</RateExc>
+    <Description>Berkley One Insurance - Legal</Description>
+    <RateOverride>300.00</RateOverride>
+    <Rate />
+    <Description />
+    <MaxRate />
+    <Currency>USD</Currency>
+    <CurrencyDate>1/1/2018 12:00:00 AM</CurrencyDate>
+    <Timekeeper />
+    <Number />
+    <Title>190</Title>
+    <Description>Senior Consultant</Description>
+    <Office />
+    <Description />
+    <Department />
+    <Description />
+    <Section />
+    <Description />
+    <RateClass />
+    <Description />
+    <CostType />
+    <Description />
+    <Description />
+    <Startdate />
+    <FinishDate />
+    <OverridePercent />
+    <RoundingMethod />
+    <Description />
+    <RateYearRangeMin />
+    <RateYearRangeMax />
+    <MatterRateMin />
+    <MatterRateMax />
+    <MultiDimensionOrdinal />
+    <DeviationAmount />
+  </RateExcDet>

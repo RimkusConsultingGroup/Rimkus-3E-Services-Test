@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RCGCLAIMS_DEV01ModelStoreContainer" CdmEntityContainer="RCGCLAIMS_DEV01Entities">
+    <EntitySetMapping Name="KeyVaults">
+      <EntityTypeMapping TypeName="RCGCLAIMS_DEV01Model.KeyVault">
+        <MappingFragment StoreEntitySet="KeyVaults">
+          <ScalarProperty Name="ClientKeyId" ColumnName="ClientKeyId" />
+          <ScalarProperty Name="ApiKey" ColumnName="ApiKey" />
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMClaimNotifications">
+      <EntityTypeMapping TypeName="RCGCLAIMS_DEV01Model.LMClaimNotification">
+        <MappingFragment StoreEntitySet="LMClaimNotifications">
+          <ScalarProperty Name="NumOfAttempts" ColumnName="NumOfAttempts" />
+          <ScalarProperty Name="ImportedAt" ColumnName="ImportedAt" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="NotificationJson" ColumnName="NotificationJson" />
+          <ScalarProperty Name="OriginatorCompanyName" ColumnName="OriginatorCompanyName" />
+          <ScalarProperty Name="OriginatorCompanyID" ColumnName="OriginatorCompanyID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="FileNumber" ColumnName="FileNumber" />
+          <ScalarProperty Name="PolicyNumber" ColumnName="PolicyNumber" />
+          <ScalarProperty Name="ExternalReference" ColumnName="ExternalReference" />
+          <ScalarProperty Name="ClaimUniqueId" ColumnName="ClaimUniqueId" />
+          <ScalarProperty Name="ClaimNumber" ColumnName="ClaimNumber" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMAssignments">
+      <EntityTypeMapping TypeName="RCGCLAIMS_DEV01Model.LMAssignment">
+        <MappingFragment StoreEntitySet="LMAssignment">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="AdditionalData" ColumnName="AdditionalData" />
+          <ScalarProperty Name="InvoiceState" ColumnName="InvoiceState" />
+          <ScalarProperty Name="InvoiceCity" ColumnName="InvoiceCity" />
+          <ScalarProperty Name="InvoiceAddress" ColumnName="InvoiceAddress" />
+          <ScalarProperty Name="InvoicePhone" ColumnName="InvoicePhone" />
+          <ScalarProperty Name="InvoiceCompany" ColumnName="InvoiceCompany" />
+          <ScalarProperty Name="InvoiceTo" ColumnName="InvoiceTo" />
+          <ScalarProperty Name="AdjustorEmail" ColumnName="AdjustorEmail" />
+          <ScalarProperty Name="AdjustorName" ColumnName="AdjustorName" />
+          <ScalarProperty Name="AdjustmentPhone" ColumnName="AdjustmentPhone" />
+          <ScalarProperty Name="AdjustmentCompany" ColumnName="AdjustmentCompany" />
+          <ScalarProperty Name="InsuredCell" ColumnName="InsuredCell" />
+          <ScalarProperty Name="InsuredPhone" ColumnName="InsuredPhone" />
+          <ScalarProperty Name="InsuredName" ColumnName="InsuredName" />
+          <ScalarProperty Name="InsuranceCompany" ColumnName="InsuranceCompany" />
+          <ScalarProperty Name="OccurrenceZip" ColumnName="OccurrenceZip" />
+          <ScalarProperty Name="OccurrenceState" ColumnName="OccurrenceState" />
+          <ScalarProperty Name="OccurrenceCity" ColumnName="OccurrenceCity" />
+          <ScalarProperty Name="OccurrenceLocation" ColumnName="OccurrenceLocation" />
+          <ScalarProperty Name="OccurrenceDate" ColumnName="OccurrenceDate" />
+          <ScalarProperty Name="UnlistedService" ColumnName="UnlistedService" />
+          <ScalarProperty Name="ClaimDescription" ColumnName="ClaimDescription" />
+          <ScalarProperty Name="TPAFileNumber" ColumnName="TPAFileNumber" />
+          <ScalarProperty Name="ClaimNumber" ColumnName="ClaimNumber" />
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="BillingFax" ColumnName="BillingFax" />
+          <ScalarProperty Name="BillingCell" ColumnName="BillingCell" />
+          <ScalarProperty Name="BillingPhone" ColumnName="BillingPhone" />
+          <ScalarProperty Name="BillingEmail" ColumnName="BillingEmail" />
+          <ScalarProperty Name="BillingZip" ColumnName="BillingZip" />
+          <ScalarProperty Name="BillingState" ColumnName="BillingState" />
+          <ScalarProperty Name="BillingCity" ColumnName="BillingCity" />
+          <ScalarProperty Name="BillingAddress" ColumnName="BillingAddress" />
+          <ScalarProperty Name="BillingCompany" ColumnName="BillingCompany" />
+          <ScalarProperty Name="BillingTitle" ColumnName="BillingTitle" />
+          <ScalarProperty Name="BillingName" ColumnName="BillingName" />
+          <ScalarProperty Name="AssignmentSentDate" ColumnName="AssignmentSentDate" />
+          <ScalarProperty Name="ClaimUniqueId" ColumnName="ClaimUniqueId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMAssignmentServiceLogs">
+      <EntityTypeMapping TypeName="RCGCLAIMS_DEV01Model.LMAssignmentServiceLog">
+        <MappingFragment StoreEntitySet="LMAssignmentServiceLogs">
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="SubmissionId" ColumnName="SubmissionId" />
+          <ScalarProperty Name="ClaimUniqueId" ColumnName="ClaimUniqueId" />
+          <ScalarProperty Name="ClaimNumber" ColumnName="ClaimNumber" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AppConfigs">
+      <EntityTypeMapping TypeName="RCGCLAIMS_DEV01Model.AppConfig">
+        <MappingFragment StoreEntitySet="AppConfig">
+          <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ProdValue" ColumnName="ProdValue" />
+          <ScalarProperty Name="DevValue" ColumnName="DevValue" />
+          <ScalarProperty Name="KeyName" ColumnName="KeyName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

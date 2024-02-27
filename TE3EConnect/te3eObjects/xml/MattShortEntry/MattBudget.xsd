@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="MattBudget">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="SortString" type="xs:string" minOccurs="0" />
+        <xs:element name="IsActive" type="xs:string" minOccurs="0" />
+        <xs:element name="StartDate" type="xs:string" minOccurs="0" />
+        <xs:element name="EndDate" type="xs:string" minOccurs="0" />
+        <xs:element name="IsFee" type="xs:string" minOccurs="0" />
+        <xs:element name="IsCost" type="xs:string" minOccurs="0" />
+        <xs:element name="BudHours" type="xs:string" minOccurs="0" />
+        <xs:element name="Currency" type="xs:string" minOccurs="0" />
+        <xs:element name="BudAmount" type="xs:string" minOccurs="0" />
+        <xs:element name="Timekeeper" type="xs:string" minOccurs="0" />
+        <xs:element name="CostType" type="xs:string" minOccurs="0" />
+        <xs:element name="PTAGroup" type="xs:string" minOccurs="0" />
+        <xs:element name="Phase" type="xs:string" minOccurs="0" />
+        <xs:element name="Task" type="xs:string" minOccurs="0" />
+        <xs:element name="Activity" type="xs:string" minOccurs="0" />
+        <xs:element name="BillAmount" type="xs:string" minOccurs="0" />
+        <xs:element name="BillHours" type="xs:string" minOccurs="0" />
+        <xs:element name="CollAmount" type="xs:string" minOccurs="0" />
+        <xs:element name="CollHours" type="xs:string" minOccurs="0" />
+        <xs:element name="NBAmount" type="xs:string" minOccurs="0" />
+        <xs:element name="NBHours" type="xs:string" minOccurs="0" />
+        <xs:element name="WOffAmount" type="xs:string" minOccurs="0" />
+        <xs:element name="WOffHours" type="xs:string" minOccurs="0" />
+        <xs:element name="Activity2" type="xs:string" minOccurs="0" />
+        <xs:element name="Phase2" type="xs:string" minOccurs="0" />
+        <xs:element name="PTAGroup2" type="xs:string" minOccurs="0" />
+        <xs:element name="Task2" type="xs:string" minOccurs="0" />
+        <xs:element name="Narrative_CCC" type="xs:string" minOccurs="0" />
+        <xs:element name="IsBaseBudget_CCC" type="xs:string" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="MattBudget" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

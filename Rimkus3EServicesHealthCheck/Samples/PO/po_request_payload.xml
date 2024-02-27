@@ -1,0 +1,294 @@
+<POReqWF_CCC xmlns="http://elite.com/schemas/transaction/process/write/POReqWF_CCC">
+  <Initialize xmlns="http://elite.com/schemas/transaction/object/write/POReq">
+    
+
+    <Add>
+      <POReq>
+        <Attributes>
+          <Supplier>CDW</Supplier>
+          <ShipSite>600444</ShipSite>
+          <ShipInstructions>Deliver to Rimkus IT Department, Hiring Manager: Duong Tuan, bmckinnon@rimkus.com</ShipInstructions>
+          <Comments>ReqNumber: CIVIL003232, Bundle: 53:NH1002 (Administrative Bundle)
+Excluded product(s): Single Monitor w/ Cables Acer 23.6" - V246HQL | Ring Central - New User Line | 
+</Comments>
+          <IsClosed>0</IsClosed>
+          <NxUser>B7A0D7C6-5057-4D2D-A576-D378D9CBB0FA</NxUser>
+          <ReqDate>2023-09-18T00:00:00</ReqDate>
+          <!--<Amount>@Amount</Amount> -->
+          <Currency>USD</Currency>
+          <!--<RouteTo_CCC>@RouteTo_CCC</RouteTo_CCC>
+          <RejectionReason>@RejectionReason</RejectionReason>
+          <Approver>@Approver</Approver>
+          <PreviousOwner>@PreviousOwner</PreviousOwner>
+          <HasBeenApprovedByFinalApprover_CCC>@HasBeenApprovedByFinalApprover_CCC</HasBeenApprovedByFinalApprover_CCC>-->
+          <ProductBundle_CCC></ProductBundle_CCC>
+        </Attributes>
+        <Children>
+            <POReqDetail>
+
+
+            <Add>
+              <POReqDetail>
+                <Attributes>
+                  <LineNum>1</LineNum>
+                  <DateRequired>2023-09-19T00:00:00</DateRequired>
+                  <Quantity>1</Quantity>
+                  <ProductCode>NH0002</ProductCode>
+                  <Description>HP Thunderbolt Dock 120W G2 - docking station - VGA, DP, 2 x DP</Description>
+                  <UOM>UNIT</UOM>
+                  <!--<Matter>@Matter</Matter>
+                  <Office>@Office</Office>
+                  <Timekeeper>@Timekeeper</Timekeeper> -->
+                  <ExpenseGLAcct>11918</ExpenseGLAcct>
+                  <Comments></Comments>
+                  <IsRush>0</IsRush>
+                  <DeliverNxUser>B7A0D7C6-5057-4D2D-A576-D378D9CBB0FA</DeliverNxUser>
+                  <IsClosed>0</IsClosed>
+                  <!--<GLProject>@GLProject</GLProject> -->
+                  <Category>300</Category>
+                  <Currency>USD</Currency>
+                  <UnitCost>420.00</UnitCost>
+                  <!--<Amount>@Amount</Amount>
+                  <FACategory>@FACategory</FACategory>
+                  <IsProdCodeDoesNotExist_CCC>1</IsProdCodeDoesNotExist_CCC>
+                  <ShippingCost_CCC>1</ShippingCost_CCC>
+                  <Tax_CCC>1</Tax_CCC>-->
+                </Attributes>
+              </POReqDetail>
+            </Add>
+
+
+
+            <Add>
+              <POReqDetail>
+                <Attributes>
+                  <LineNum>2</LineNum>
+                  <DateRequired>2023-09-19T00:00:00</DateRequired>
+                  <Quantity>1</Quantity>
+                  <ProductCode>NH0104</ProductCode>
+                  <Description>HP ZBook Firefly G9 Mobile Workstation - 15.6" - Core i7 16GB</Description>
+                  <UOM>UNIT</UOM>
+                  <!--<Matter>@Matter</Matter>
+                  <Office>@Office</Office>
+                  <Timekeeper>@Timekeeper</Timekeeper> -->
+                  <ExpenseGLAcct>11918</ExpenseGLAcct>
+                  <Comments></Comments>
+                  <IsRush>0</IsRush>
+                  <DeliverNxUser>B7A0D7C6-5057-4D2D-A576-D378D9CBB0FA</DeliverNxUser>
+                  <IsClosed>0</IsClosed>
+                  <!--<GLProject>@GLProject</GLProject> -->
+                  <Category>300</Category>
+                  <Currency>USD</Currency>
+                  <UnitCost>1498.00</UnitCost>
+                  <!--<Amount>@Amount</Amount>
+                  <FACategory>@FACategory</FACategory>
+                  <IsProdCodeDoesNotExist_CCC>1</IsProdCodeDoesNotExist_CCC>
+                  <ShippingCost_CCC>1</ShippingCost_CCC>
+                  <Tax_CCC>1</Tax_CCC>-->
+                </Attributes>
+              </POReqDetail>
+            </Add>
+
+
+
+            <Add>
+              <POReqDetail>
+                <Attributes>
+                  <LineNum>3</LineNum>
+                  <DateRequired>2023-09-19T00:00:00</DateRequired>
+                  <Quantity>1</Quantity>
+                  <ProductCode>NH0013</ProductCode>
+                  <Description>Jabra Engage 75 Mono - headset</Description>
+                  <UOM>UNIT</UOM>
+                  <!--<Matter>@Matter</Matter>
+                  <Office>@Office</Office>
+                  <Timekeeper>@Timekeeper</Timekeeper> -->
+                  <ExpenseGLAcct>11918</ExpenseGLAcct>
+                  <Comments></Comments>
+                  <IsRush>0</IsRush>
+                  <DeliverNxUser>B7A0D7C6-5057-4D2D-A576-D378D9CBB0FA</DeliverNxUser>
+                  <IsClosed>0</IsClosed>
+                  <!--<GLProject>@GLProject</GLProject> -->
+                  <Category>300</Category>
+                  <Currency>USD</Currency>
+                  <UnitCost>292.14</UnitCost>
+                  <!--<Amount>@Amount</Amount>
+                  <FACategory>@FACategory</FACategory>
+                  <IsProdCodeDoesNotExist_CCC>1</IsProdCodeDoesNotExist_CCC>
+                  <ShippingCost_CCC>1</ShippingCost_CCC>
+                  <Tax_CCC>1</Tax_CCC>-->
+                </Attributes>
+              </POReqDetail>
+            </Add>
+
+
+
+            <Add>
+              <POReqDetail>
+                <Attributes>
+                  <LineNum>4</LineNum>
+                  <DateRequired>2023-09-19T00:00:00</DateRequired>
+                  <Quantity>1</Quantity>
+                  <ProductCode>NH0018</ProductCode>
+                  <Description>Logitech MK320 Wireless Keyboard & Mouse Set</Description>
+                  <UOM>UNIT</UOM>
+                  <!--<Matter>@Matter</Matter>
+                  <Office>@Office</Office>
+                  <Timekeeper>@Timekeeper</Timekeeper> -->
+                  <ExpenseGLAcct>11918</ExpenseGLAcct>
+                  <Comments></Comments>
+                  <IsRush>0</IsRush>
+                  <DeliverNxUser>B7A0D7C6-5057-4D2D-A576-D378D9CBB0FA</DeliverNxUser>
+                  <IsClosed>0</IsClosed>
+                  <!--<GLProject>@GLProject</GLProject> -->
+                  <Category>300</Category>
+                  <Currency>USD</Currency>
+                  <UnitCost>25.73</UnitCost>
+                  <!--<Amount>@Amount</Amount>
+                  <FACategory>@FACategory</FACategory>
+                  <IsProdCodeDoesNotExist_CCC>1</IsProdCodeDoesNotExist_CCC>
+                  <ShippingCost_CCC>1</ShippingCost_CCC>
+                  <Tax_CCC>1</Tax_CCC>-->
+                </Attributes>
+              </POReqDetail>
+            </Add>
+
+
+
+            <Add>
+              <POReqDetail>
+                <Attributes>
+                  <LineNum>5</LineNum>
+                  <DateRequired>2023-09-19T00:00:00</DateRequired>
+                  <Quantity>1</Quantity>
+                  <ProductCode>NH0004</ProductCode>
+                  <Description>Logitech S150 USB PC Speakers</Description>
+                  <UOM>UNIT</UOM>
+                  <!--<Matter>@Matter</Matter>
+                  <Office>@Office</Office>
+                  <Timekeeper>@Timekeeper</Timekeeper> -->
+                  <ExpenseGLAcct>11918</ExpenseGLAcct>
+                  <Comments></Comments>
+                  <IsRush>0</IsRush>
+                  <DeliverNxUser>B7A0D7C6-5057-4D2D-A576-D378D9CBB0FA</DeliverNxUser>
+                  <IsClosed>0</IsClosed>
+                  <!--<GLProject>@GLProject</GLProject> -->
+                  <Category>300</Category>
+                  <Currency>USD</Currency>
+                  <UnitCost>9.87</UnitCost>
+                  <!--<Amount>@Amount</Amount>
+                  <FACategory>@FACategory</FACategory>
+                  <IsProdCodeDoesNotExist_CCC>1</IsProdCodeDoesNotExist_CCC>
+                  <ShippingCost_CCC>1</ShippingCost_CCC>
+                  <Tax_CCC>1</Tax_CCC>-->
+                </Attributes>
+              </POReqDetail>
+            </Add>
+
+
+
+            <Add>
+              <POReqDetail>
+                <Attributes>
+                  <LineNum>6</LineNum>
+                  <DateRequired>2023-09-19T00:00:00</DateRequired>
+                  <Quantity>1</Quantity>
+                  <ProductCode>NH0029</ProductCode>
+                  <Description>Ring Central - New User Line</Description>
+                  <UOM>UNIT</UOM>
+                  <!--<Matter>@Matter</Matter>
+                  <Office>@Office</Office>
+                  <Timekeeper>@Timekeeper</Timekeeper> -->
+                  <ExpenseGLAcct>11918</ExpenseGLAcct>
+                  <Comments></Comments>
+                  <IsRush>0</IsRush>
+                  <DeliverNxUser>B7A0D7C6-5057-4D2D-A576-D378D9CBB0FA</DeliverNxUser>
+                  <IsClosed>0</IsClosed>
+                  <!--<GLProject>@GLProject</GLProject> -->
+                  <Category>300</Category>
+                  <Currency>USD</Currency>
+                  <UnitCost>23.50</UnitCost>
+                  <!--<Amount>@Amount</Amount>
+                  <FACategory>@FACategory</FACategory>
+                  <IsProdCodeDoesNotExist_CCC>1</IsProdCodeDoesNotExist_CCC>
+                  <ShippingCost_CCC>1</ShippingCost_CCC>
+                  <Tax_CCC>1</Tax_CCC>-->
+                </Attributes>
+              </POReqDetail>
+            </Add>
+
+
+
+            <Add>
+              <POReqDetail>
+                <Attributes>
+                  <LineNum>7</LineNum>
+                  <DateRequired>2023-09-19T00:00:00</DateRequired>
+                  <Quantity>1</Quantity>
+                  <ProductCode>NH0118</ProductCode>
+                  <Description>Single Monitor w/ Cables Acer 23.6" - V246HQL</Description>
+                  <UOM>UNIT</UOM>
+                  <!--<Matter>@Matter</Matter>
+                  <Office>@Office</Office>
+                  <Timekeeper>@Timekeeper</Timekeeper> -->
+                  <ExpenseGLAcct>11918</ExpenseGLAcct>
+                  <Comments></Comments>
+                  <IsRush>0</IsRush>
+                  <DeliverNxUser>B7A0D7C6-5057-4D2D-A576-D378D9CBB0FA</DeliverNxUser>
+                  <IsClosed>0</IsClosed>
+                  <!--<GLProject>@GLProject</GLProject> -->
+                  <Category>300</Category>
+                  <Currency>USD</Currency>
+                  <UnitCost>137.75</UnitCost>
+                  <!--<Amount>@Amount</Amount>
+                  <FACategory>@FACategory</FACategory>
+                  <IsProdCodeDoesNotExist_CCC>1</IsProdCodeDoesNotExist_CCC>
+                  <ShippingCost_CCC>1</ShippingCost_CCC>
+                  <Tax_CCC>1</Tax_CCC>-->
+                </Attributes>
+              </POReqDetail>
+            </Add>
+
+
+
+            <Add>
+              <POReqDetail>
+                <Attributes>
+                  <LineNum>8</LineNum>
+                  <DateRequired>2023-09-19T00:00:00</DateRequired>
+                  <Quantity>1</Quantity>
+                  <ProductCode>NH0118</ProductCode>
+                  <Description>Single Monitor w/ Cables Acer 23.6" - V246HQL</Description>
+                  <UOM>UNIT</UOM>
+                  <!--<Matter>@Matter</Matter>
+                  <Office>@Office</Office>
+                  <Timekeeper>@Timekeeper</Timekeeper> -->
+                  <ExpenseGLAcct>11918</ExpenseGLAcct>
+                  <Comments></Comments>
+                  <IsRush>0</IsRush>
+                  <DeliverNxUser>B7A0D7C6-5057-4D2D-A576-D378D9CBB0FA</DeliverNxUser>
+                  <IsClosed>0</IsClosed>
+                  <!--<GLProject>@GLProject</GLProject> -->
+                  <Category>300</Category>
+                  <Currency>USD</Currency>
+                  <UnitCost>137.75</UnitCost>
+                  <!--<Amount>@Amount</Amount>
+                  <FACategory>@FACategory</FACategory>
+                  <IsProdCodeDoesNotExist_CCC>1</IsProdCodeDoesNotExist_CCC>
+                  <ShippingCost_CCC>1</ShippingCost_CCC>
+                  <Tax_CCC>1</Tax_CCC>-->
+                </Attributes>
+              </POReqDetail>
+            </Add>
+
+
+</POReqDetail>
+
+        </Children>
+      </POReq>
+    </Add>
+
+
+  </Initialize>
+</POReqWF_CCC>
+

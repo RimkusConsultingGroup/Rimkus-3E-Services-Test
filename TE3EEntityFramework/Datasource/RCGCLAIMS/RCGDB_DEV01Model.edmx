@@ -1,0 +1,635 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="RCGDB_Dev01Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'rcg_db.dbo.rcg_rl_ClientJob' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="rcg_rl_ClientJob">
+          <Key>
+            <PropertyRef Name="submission_id" />
+            <PropertyRef Name="request_design_permit_drawings" />
+            <PropertyRef Name="request_business_interruption" />
+            <PropertyRef Name="request_accident_reconstruction" />
+            <PropertyRef Name="request_full_mechanical_inspection" />
+            <PropertyRef Name="request_limited_mechanical_inspection" />
+            <PropertyRef Name="request_biomechanical_evaluation" />
+            <PropertyRef Name="request_fire_cause_and_origin" />
+            <PropertyRef Name="request_repair_cost_estimate" />
+            <PropertyRef Name="request_environmental" />
+            <PropertyRef Name="request_request_other" />
+            <PropertyRef Name="request_site_visit" />
+            <PropertyRef Name="request_mechanical_inspection" />
+            <PropertyRef Name="request_structural_analysis" />
+            <PropertyRef Name="property_damage" />
+            <PropertyRef Name="cost_estimate" />
+            <PropertyRef Name="evidence_return" />
+            <PropertyRef Name="insurance_same_as_billing" />
+            <PropertyRef Name="upload_count" />
+            <PropertyRef Name="XMLDate" />
+            <PropertyRef Name="XMLDateTime" />
+            <PropertyRef Name="IsSent" />
+          </Key>
+          <Property Name="submission_id" Type="int" Nullable="false" />
+          <Property Name="submission_type" Type="nvarchar" MaxLength="100" />
+          <Property Name="title" Type="nvarchar" MaxLength="100" />
+          <Property Name="created_date" Type="date" />
+          <Property Name="created_date_time" Type="time" Precision="7" />
+          <Property Name="billing_name" Type="nvarchar" MaxLength="100" />
+          <Property Name="billing_title" Type="nvarchar" MaxLength="100" />
+          <Property Name="billing_company" Type="nvarchar" MaxLength="100" />
+          <Property Name="billing_address" Type="nvarchar" MaxLength="150" />
+          <Property Name="billing_city" Type="nvarchar" MaxLength="50" />
+          <Property Name="billing_state" Type="nvarchar" MaxLength="50" />
+          <Property Name="billing_zip" Type="nvarchar" MaxLength="20" />
+          <Property Name="billing_email" Type="nvarchar" MaxLength="200" />
+          <Property Name="billing_phone" Type="nvarchar" MaxLength="25" />
+          <Property Name="billing_cell" Type="nvarchar" MaxLength="25" />
+          <Property Name="billing_fax" Type="nvarchar" MaxLength="25" />
+          <Property Name="client_name" Type="nvarchar" MaxLength="100" />
+          <Property Name="adverse_party" Type="nvarchar" MaxLength="150" />
+          <Property Name="claim_number" Type="varchar" MaxLength="250" />
+          <Property Name="tpa_file_number" Type="nvarchar" MaxLength="50" />
+          <Property Name="exact_engineer_request" Type="nvarchar(max)" />
+          <Property Name="claim_description" Type="nvarchar(max)" />
+          <Property Name="unlisted_service" Type="nvarchar(max)" />
+          <Property Name="occurrence_date" Type="date" />
+          <Property Name="loss_date" Type="date" />
+          <Property Name="occurrence_location" Type="nvarchar" MaxLength="150" />
+          <Property Name="occurrence_city" Type="nvarchar" MaxLength="50" />
+          <Property Name="occurrence_state" Type="nvarchar" MaxLength="50" />
+          <Property Name="occurrence_zip" Type="nvarchar" MaxLength="20" />
+          <Property Name="inspection_contact_name" Type="nvarchar" MaxLength="100" />
+          <Property Name="inspection_contact_phone" Type="nvarchar" MaxLength="25" />
+          <Property Name="inspection_contact_number" Type="nvarchar" MaxLength="25" />
+          <Property Name="request_design_permit_drawings" Type="bit" Nullable="false" />
+          <Property Name="request_business_interruption" Type="bit" Nullable="false" />
+          <Property Name="request_accident_reconstruction" Type="bit" Nullable="false" />
+          <Property Name="request_full_mechanical_inspection" Type="bit" Nullable="false" />
+          <Property Name="request_limited_mechanical_inspection" Type="bit" Nullable="false" />
+          <Property Name="request_biomechanical_evaluation" Type="bit" Nullable="false" />
+          <Property Name="request_fire_cause_and_origin" Type="bit" Nullable="false" />
+          <Property Name="request_repair_cost_estimate" Type="bit" Nullable="false" />
+          <Property Name="request_environmental" Type="bit" Nullable="false" />
+          <Property Name="request_request_other" Type="bit" Nullable="false" />
+          <Property Name="request_site_visit" Type="bit" Nullable="false" />
+          <Property Name="request_mechanical_inspection" Type="bit" Nullable="false" />
+          <Property Name="request_structural_analysis" Type="bit" Nullable="false" />
+          <Property Name="property_damage" Type="bit" Nullable="false" />
+          <Property Name="cost_estimate" Type="bit" Nullable="false" />
+          <Property Name="evidence_return" Type="bit" Nullable="false" />
+          <Property Name="insurance_company" Type="nvarchar" MaxLength="150" />
+          <Property Name="insured_name" Type="nvarchar" MaxLength="150" />
+          <Property Name="insured_phone" Type="nvarchar" MaxLength="25" />
+          <Property Name="insured_cell" Type="nvarchar" MaxLength="25" />
+          <Property Name="adjustment_company" Type="nvarchar" MaxLength="100" />
+          <Property Name="adjustment_address" Type="nvarchar" MaxLength="150" />
+          <Property Name="adjustment_city" Type="nvarchar" MaxLength="50" />
+          <Property Name="adjustment_state" Type="nvarchar" MaxLength="50" />
+          <Property Name="adjustment_zip" Type="nvarchar" MaxLength="20" />
+          <Property Name="adjustment_phone" Type="nvarchar" MaxLength="25" />
+          <Property Name="adjustor_name" Type="nvarchar" MaxLength="100" />
+          <Property Name="adjustor_cell" Type="nvarchar" MaxLength="25" />
+          <Property Name="adjustor_email" Type="nvarchar" MaxLength="200" />
+          <Property Name="adjustor_file_number" Type="nvarchar" MaxLength="50" />
+          <Property Name="adjustor_fax" Type="nvarchar" MaxLength="25" />
+          <Property Name="insurance_same_as_billing" Type="bit" Nullable="false" />
+          <Property Name="invoice_to" Type="nvarchar" MaxLength="100" />
+          <Property Name="invoice_company" Type="nvarchar" MaxLength="100" />
+          <Property Name="invoice_phone" Type="nvarchar" MaxLength="25" />
+          <Property Name="invoice_address" Type="nvarchar" MaxLength="150" />
+          <Property Name="invoice_city" Type="nvarchar" MaxLength="50" />
+          <Property Name="invoice_state" Type="nvarchar" MaxLength="50" />
+          <Property Name="upload_count" Type="tinyint" Nullable="false" />
+          <Property Name="assignment_file_1" Type="nvarchar" MaxLength="250" />
+          <Property Name="assignment_file_2" Type="nvarchar" MaxLength="250" />
+          <Property Name="user_agent" Type="nvarchar" MaxLength="500" />
+          <Property Name="ip_address" Type="nvarchar" MaxLength="50" />
+          <Property Name="XMLDate" Type="date" Nullable="false" />
+          <Property Name="XMLDateTime" Type="time" Precision="7" Nullable="false" />
+          <Property Name="IsSent" Type="bit" Nullable="false" />
+          <Property Name="IsSentDate" Type="datetime" />
+          <Property Name="AssignmentID" Type="int" />
+          <Property Name="AssignmentIDDate" Type="date" />
+          <Property Name="AssignmentIDDateTime" Type="time" Precision="7" />
+          <Property Name="AdditionalData" Type="nvarchar(max)" />
+        </EntityType>
+        <Function Name="rcg_rl_ClientJob_Min_Save" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="submission_id" Type="int" Mode="In" />
+          <Parameter Name="client_id" Type="varchar" Mode="In" />
+          <Parameter Name="submission_type" Type="nvarchar" Mode="In" />
+          <Parameter Name="title" Type="nvarchar" Mode="In" />
+          <Parameter Name="created_date" Type="datetime" Mode="In" />
+          <Parameter Name="insurance_company" Type="nvarchar" Mode="In" />
+          <Parameter Name="billing_company" Type="nvarchar" Mode="In" />
+          <Parameter Name="billing_city" Type="nvarchar" Mode="In" />
+          <Parameter Name="billing_state" Type="nvarchar" Mode="In" />
+          <Parameter Name="billing_zip" Type="nvarchar" Mode="In" />
+          <Parameter Name="occurrence_city" Type="nvarchar" Mode="In" />
+          <Parameter Name="occurrence_state" Type="nvarchar" Mode="In" />
+          <Parameter Name="occurrence_zip" Type="nvarchar" Mode="In" />
+          <Parameter Name="user_agent" Type="nvarchar" Mode="In" />
+          <Parameter Name="ip_address" Type="nvarchar" Mode="In" />
+          <Parameter Name="AdditionalData" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="rcg_rl_ClientJob_Save" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="submission_id" Type="int" Mode="In" />
+          <Parameter Name="submission_type" Type="nvarchar" Mode="In" />
+          <Parameter Name="title" Type="nvarchar" Mode="In" />
+          <Parameter Name="created_date" Type="datetime" Mode="In" />
+          <Parameter Name="billing_name" Type="nvarchar" Mode="In" />
+          <Parameter Name="billing_title" Type="nvarchar" Mode="In" />
+          <Parameter Name="billing_company" Type="nvarchar" Mode="In" />
+          <Parameter Name="billing_address" Type="nvarchar" Mode="In" />
+          <Parameter Name="billing_city" Type="nvarchar" Mode="In" />
+          <Parameter Name="billing_state" Type="nvarchar" Mode="In" />
+          <Parameter Name="billing_zip" Type="nvarchar" Mode="In" />
+          <Parameter Name="billing_email" Type="nvarchar" Mode="In" />
+          <Parameter Name="billing_phone" Type="nvarchar" Mode="In" />
+          <Parameter Name="billing_cell" Type="nvarchar" Mode="In" />
+          <Parameter Name="billing_fax" Type="nvarchar" Mode="In" />
+          <Parameter Name="client_name" Type="nvarchar" Mode="In" />
+          <Parameter Name="adverse_party" Type="nvarchar" Mode="In" />
+          <Parameter Name="claim_number" Type="nvarchar" Mode="In" />
+          <Parameter Name="tpa_file_number" Type="nvarchar" Mode="In" />
+          <Parameter Name="exact_engineer_request" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="claim_description" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="unlisted_service" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="occurrence_date" Type="date" Mode="In" />
+          <Parameter Name="loss_date" Type="date" Mode="In" />
+          <Parameter Name="occurrence_location" Type="nvarchar" Mode="In" />
+          <Parameter Name="occurrence_city" Type="nvarchar" Mode="In" />
+          <Parameter Name="occurrence_state" Type="nvarchar" Mode="In" />
+          <Parameter Name="occurrence_zip" Type="nvarchar" Mode="In" />
+          <Parameter Name="inspection_contact_name" Type="nvarchar" Mode="In" />
+          <Parameter Name="inspection_contact_phone" Type="nvarchar" Mode="In" />
+          <Parameter Name="inspection_contact_number" Type="nvarchar" Mode="In" />
+          <Parameter Name="request_design_permit_drawings" Type="bit" Mode="In" />
+          <Parameter Name="request_business_interruption" Type="bit" Mode="In" />
+          <Parameter Name="request_accident_reconstruction" Type="bit" Mode="In" />
+          <Parameter Name="request_full_mechanical_inspection" Type="bit" Mode="In" />
+          <Parameter Name="request_limited_mechanical_inspection" Type="bit" Mode="In" />
+          <Parameter Name="request_biomechanical_evaluation" Type="bit" Mode="In" />
+          <Parameter Name="request_fire_cause_and_origin" Type="bit" Mode="In" />
+          <Parameter Name="request_repair_cost_estimate" Type="bit" Mode="In" />
+          <Parameter Name="request_environmental" Type="bit" Mode="In" />
+          <Parameter Name="request_request_other" Type="bit" Mode="In" />
+          <Parameter Name="request_site_visit" Type="bit" Mode="In" />
+          <Parameter Name="request_mechanical_inspection" Type="bit" Mode="In" />
+          <Parameter Name="request_structural_analysis" Type="bit" Mode="In" />
+          <Parameter Name="property_damage" Type="bit" Mode="In" />
+          <Parameter Name="cost_estimate" Type="bit" Mode="In" />
+          <Parameter Name="evidence_return" Type="bit" Mode="In" />
+          <Parameter Name="insurance_company" Type="nvarchar" Mode="In" />
+          <Parameter Name="insured_name" Type="nvarchar" Mode="In" />
+          <Parameter Name="insured_phone" Type="nvarchar" Mode="In" />
+          <Parameter Name="insured_cell" Type="nvarchar" Mode="In" />
+          <Parameter Name="adjustment_company" Type="nvarchar" Mode="In" />
+          <Parameter Name="adjustment_address" Type="nvarchar" Mode="In" />
+          <Parameter Name="adjustment_city" Type="nvarchar" Mode="In" />
+          <Parameter Name="adjustment_state" Type="nvarchar" Mode="In" />
+          <Parameter Name="adjustment_zip" Type="nvarchar" Mode="In" />
+          <Parameter Name="adjustment_phone" Type="nvarchar" Mode="In" />
+          <Parameter Name="adjustor_name" Type="nvarchar" Mode="In" />
+          <Parameter Name="adjustor_cell" Type="nvarchar" Mode="In" />
+          <Parameter Name="adjustor_email" Type="nvarchar" Mode="In" />
+          <Parameter Name="adjustor_file_number" Type="nvarchar" Mode="In" />
+          <Parameter Name="adjustor_fax" Type="nvarchar" Mode="In" />
+          <Parameter Name="insurance_same_as_billing" Type="bit" Mode="In" />
+          <Parameter Name="invoice_to" Type="nvarchar" Mode="In" />
+          <Parameter Name="invoice_company" Type="nvarchar" Mode="In" />
+          <Parameter Name="invoice_phone" Type="nvarchar" Mode="In" />
+          <Parameter Name="invoice_address" Type="nvarchar" Mode="In" />
+          <Parameter Name="invoice_city" Type="nvarchar" Mode="In" />
+          <Parameter Name="invoice_state" Type="nvarchar" Mode="In" />
+          <Parameter Name="upload_count" Type="tinyint" Mode="In" />
+          <Parameter Name="assignment_file_1" Type="nvarchar" Mode="In" />
+          <Parameter Name="assignment_file_2" Type="nvarchar" Mode="In" />
+          <Parameter Name="user_agent" Type="nvarchar" Mode="In" />
+          <Parameter Name="ip_address" Type="nvarchar" Mode="In" />
+          <Parameter Name="AdditionalData" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <EntityContainer Name="RCGDB_Dev01ModelStoreContainer">
+          <EntitySet Name="rcg_rl_ClientJob" EntityType="Self.rcg_rl_ClientJob" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [rcg_rl_ClientJob].[submission_id] AS [submission_id], 
+    [rcg_rl_ClientJob].[submission_type] AS [submission_type], 
+    [rcg_rl_ClientJob].[title] AS [title], 
+    [rcg_rl_ClientJob].[created_date] AS [created_date], 
+    [rcg_rl_ClientJob].[created_date_time] AS [created_date_time], 
+    [rcg_rl_ClientJob].[billing_name] AS [billing_name], 
+    [rcg_rl_ClientJob].[billing_title] AS [billing_title], 
+    [rcg_rl_ClientJob].[billing_company] AS [billing_company], 
+    [rcg_rl_ClientJob].[billing_address] AS [billing_address], 
+    [rcg_rl_ClientJob].[billing_city] AS [billing_city], 
+    [rcg_rl_ClientJob].[billing_state] AS [billing_state], 
+    [rcg_rl_ClientJob].[billing_zip] AS [billing_zip], 
+    [rcg_rl_ClientJob].[billing_email] AS [billing_email], 
+    [rcg_rl_ClientJob].[billing_phone] AS [billing_phone], 
+    [rcg_rl_ClientJob].[billing_cell] AS [billing_cell], 
+    [rcg_rl_ClientJob].[billing_fax] AS [billing_fax], 
+    [rcg_rl_ClientJob].[client_name] AS [client_name], 
+    [rcg_rl_ClientJob].[adverse_party] AS [adverse_party], 
+    [rcg_rl_ClientJob].[claim_number] AS [claim_number], 
+    [rcg_rl_ClientJob].[tpa_file_number] AS [tpa_file_number], 
+    [rcg_rl_ClientJob].[exact_engineer_request] AS [exact_engineer_request], 
+    [rcg_rl_ClientJob].[claim_description] AS [claim_description], 
+    [rcg_rl_ClientJob].[unlisted_service] AS [unlisted_service], 
+    [rcg_rl_ClientJob].[occurrence_date] AS [occurrence_date], 
+    [rcg_rl_ClientJob].[loss_date] AS [loss_date], 
+    [rcg_rl_ClientJob].[occurrence_location] AS [occurrence_location], 
+    [rcg_rl_ClientJob].[occurrence_city] AS [occurrence_city], 
+    [rcg_rl_ClientJob].[occurrence_state] AS [occurrence_state], 
+    [rcg_rl_ClientJob].[occurrence_zip] AS [occurrence_zip], 
+    [rcg_rl_ClientJob].[inspection_contact_name] AS [inspection_contact_name], 
+    [rcg_rl_ClientJob].[inspection_contact_phone] AS [inspection_contact_phone], 
+    [rcg_rl_ClientJob].[inspection_contact_number] AS [inspection_contact_number], 
+    [rcg_rl_ClientJob].[request_design_permit_drawings] AS [request_design_permit_drawings], 
+    [rcg_rl_ClientJob].[request_business_interruption] AS [request_business_interruption], 
+    [rcg_rl_ClientJob].[request_accident_reconstruction] AS [request_accident_reconstruction], 
+    [rcg_rl_ClientJob].[request_full_mechanical_inspection] AS [request_full_mechanical_inspection], 
+    [rcg_rl_ClientJob].[request_limited_mechanical_inspection] AS [request_limited_mechanical_inspection], 
+    [rcg_rl_ClientJob].[request_biomechanical_evaluation] AS [request_biomechanical_evaluation], 
+    [rcg_rl_ClientJob].[request_fire_cause_and_origin] AS [request_fire_cause_and_origin], 
+    [rcg_rl_ClientJob].[request_repair_cost_estimate] AS [request_repair_cost_estimate], 
+    [rcg_rl_ClientJob].[request_environmental] AS [request_environmental], 
+    [rcg_rl_ClientJob].[request_request_other] AS [request_request_other], 
+    [rcg_rl_ClientJob].[request_site_visit] AS [request_site_visit], 
+    [rcg_rl_ClientJob].[request_mechanical_inspection] AS [request_mechanical_inspection], 
+    [rcg_rl_ClientJob].[request_structural_analysis] AS [request_structural_analysis], 
+    [rcg_rl_ClientJob].[property_damage] AS [property_damage], 
+    [rcg_rl_ClientJob].[cost_estimate] AS [cost_estimate], 
+    [rcg_rl_ClientJob].[evidence_return] AS [evidence_return], 
+    [rcg_rl_ClientJob].[insurance_company] AS [insurance_company], 
+    [rcg_rl_ClientJob].[insured_name] AS [insured_name], 
+    [rcg_rl_ClientJob].[insured_phone] AS [insured_phone], 
+    [rcg_rl_ClientJob].[insured_cell] AS [insured_cell], 
+    [rcg_rl_ClientJob].[adjustment_company] AS [adjustment_company], 
+    [rcg_rl_ClientJob].[adjustment_address] AS [adjustment_address], 
+    [rcg_rl_ClientJob].[adjustment_city] AS [adjustment_city], 
+    [rcg_rl_ClientJob].[adjustment_state] AS [adjustment_state], 
+    [rcg_rl_ClientJob].[adjustment_zip] AS [adjustment_zip], 
+    [rcg_rl_ClientJob].[adjustment_phone] AS [adjustment_phone], 
+    [rcg_rl_ClientJob].[adjustor_name] AS [adjustor_name], 
+    [rcg_rl_ClientJob].[adjustor_cell] AS [adjustor_cell], 
+    [rcg_rl_ClientJob].[adjustor_email] AS [adjustor_email], 
+    [rcg_rl_ClientJob].[adjustor_file_number] AS [adjustor_file_number], 
+    [rcg_rl_ClientJob].[adjustor_fax] AS [adjustor_fax], 
+    [rcg_rl_ClientJob].[insurance_same_as_billing] AS [insurance_same_as_billing], 
+    [rcg_rl_ClientJob].[invoice_to] AS [invoice_to], 
+    [rcg_rl_ClientJob].[invoice_company] AS [invoice_company], 
+    [rcg_rl_ClientJob].[invoice_phone] AS [invoice_phone], 
+    [rcg_rl_ClientJob].[invoice_address] AS [invoice_address], 
+    [rcg_rl_ClientJob].[invoice_city] AS [invoice_city], 
+    [rcg_rl_ClientJob].[invoice_state] AS [invoice_state], 
+    [rcg_rl_ClientJob].[upload_count] AS [upload_count], 
+    [rcg_rl_ClientJob].[assignment_file_1] AS [assignment_file_1], 
+    [rcg_rl_ClientJob].[assignment_file_2] AS [assignment_file_2], 
+    [rcg_rl_ClientJob].[user_agent] AS [user_agent], 
+    [rcg_rl_ClientJob].[ip_address] AS [ip_address], 
+    [rcg_rl_ClientJob].[XMLDate] AS [XMLDate], 
+    [rcg_rl_ClientJob].[XMLDateTime] AS [XMLDateTime], 
+    [rcg_rl_ClientJob].[IsSent] AS [IsSent], 
+    [rcg_rl_ClientJob].[IsSentDate] AS [IsSentDate], 
+    [rcg_rl_ClientJob].[AssignmentID] AS [AssignmentID], 
+    [rcg_rl_ClientJob].[AssignmentIDDate] AS [AssignmentIDDate], 
+    [rcg_rl_ClientJob].[AssignmentIDDateTime] AS [AssignmentIDDateTime], 
+    [rcg_rl_ClientJob].[AdditionalData] AS [AdditionalData]
+    FROM [dbo].[rcg_rl_ClientJob] AS [rcg_rl_ClientJob]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RCGDB_Dev01Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="rcg_rl_ClientJob">
+          <Key>
+            <PropertyRef Name="submission_id" />
+            <PropertyRef Name="request_design_permit_drawings" />
+            <PropertyRef Name="request_business_interruption" />
+            <PropertyRef Name="request_accident_reconstruction" />
+            <PropertyRef Name="request_full_mechanical_inspection" />
+            <PropertyRef Name="request_limited_mechanical_inspection" />
+            <PropertyRef Name="request_biomechanical_evaluation" />
+            <PropertyRef Name="request_fire_cause_and_origin" />
+            <PropertyRef Name="request_repair_cost_estimate" />
+            <PropertyRef Name="request_environmental" />
+            <PropertyRef Name="request_request_other" />
+            <PropertyRef Name="request_site_visit" />
+            <PropertyRef Name="request_mechanical_inspection" />
+            <PropertyRef Name="request_structural_analysis" />
+            <PropertyRef Name="property_damage" />
+            <PropertyRef Name="cost_estimate" />
+            <PropertyRef Name="evidence_return" />
+            <PropertyRef Name="insurance_same_as_billing" />
+            <PropertyRef Name="upload_count" />
+            <PropertyRef Name="XMLDate" />
+            <PropertyRef Name="XMLDateTime" />
+            <PropertyRef Name="IsSent" />
+          </Key>
+          <Property Name="submission_id" Type="Int32" Nullable="false" />
+          <Property Name="submission_type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="created_date" Type="DateTime" Precision="0" />
+          <Property Name="created_date_time" Type="Time" Precision="7" />
+          <Property Name="billing_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="billing_title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="billing_company" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="billing_address" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="billing_city" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="billing_state" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="billing_zip" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="billing_email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="billing_phone" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="billing_cell" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="billing_fax" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="client_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="adverse_party" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="claim_number" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="tpa_file_number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="exact_engineer_request" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="claim_description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="unlisted_service" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="occurrence_date" Type="DateTime" Precision="0" />
+          <Property Name="loss_date" Type="DateTime" Precision="0" />
+          <Property Name="occurrence_location" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="occurrence_city" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="occurrence_state" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="occurrence_zip" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="inspection_contact_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="inspection_contact_phone" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="inspection_contact_number" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="request_design_permit_drawings" Type="Boolean" Nullable="false" />
+          <Property Name="request_business_interruption" Type="Boolean" Nullable="false" />
+          <Property Name="request_accident_reconstruction" Type="Boolean" Nullable="false" />
+          <Property Name="request_full_mechanical_inspection" Type="Boolean" Nullable="false" />
+          <Property Name="request_limited_mechanical_inspection" Type="Boolean" Nullable="false" />
+          <Property Name="request_biomechanical_evaluation" Type="Boolean" Nullable="false" />
+          <Property Name="request_fire_cause_and_origin" Type="Boolean" Nullable="false" />
+          <Property Name="request_repair_cost_estimate" Type="Boolean" Nullable="false" />
+          <Property Name="request_environmental" Type="Boolean" Nullable="false" />
+          <Property Name="request_request_other" Type="Boolean" Nullable="false" />
+          <Property Name="request_site_visit" Type="Boolean" Nullable="false" />
+          <Property Name="request_mechanical_inspection" Type="Boolean" Nullable="false" />
+          <Property Name="request_structural_analysis" Type="Boolean" Nullable="false" />
+          <Property Name="property_damage" Type="Boolean" Nullable="false" />
+          <Property Name="cost_estimate" Type="Boolean" Nullable="false" />
+          <Property Name="evidence_return" Type="Boolean" Nullable="false" />
+          <Property Name="insurance_company" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="insured_name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="insured_phone" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="insured_cell" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="adjustment_company" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="adjustment_address" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="adjustment_city" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="adjustment_state" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="adjustment_zip" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="adjustment_phone" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="adjustor_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="adjustor_cell" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="adjustor_email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="adjustor_file_number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="adjustor_fax" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="insurance_same_as_billing" Type="Boolean" Nullable="false" />
+          <Property Name="invoice_to" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="invoice_company" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="invoice_phone" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="invoice_address" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="invoice_city" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="invoice_state" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="upload_count" Type="Byte" Nullable="false" />
+          <Property Name="assignment_file_1" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="assignment_file_2" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="user_agent" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ip_address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="XMLDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="XMLDateTime" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="IsSent" Type="Boolean" Nullable="false" />
+          <Property Name="IsSentDate" Type="DateTime" Precision="3" />
+          <Property Name="AssignmentID" Type="Int32" />
+          <Property Name="AssignmentIDDate" Type="DateTime" Precision="0" />
+          <Property Name="AssignmentIDDateTime" Type="Time" Precision="7" />
+          <Property Name="AdditionalData" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="RCGDB_DEV01Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="rcg_rl_ClientJob" EntityType="Self.rcg_rl_ClientJob" />
+          <FunctionImport Name="rcg_rl_ClientJob_Min_Save" ReturnType="Collection(Int32)">
+            <Parameter Name="submission_id" Mode="In" Type="Int32" />
+            <Parameter Name="client_id" Mode="In" Type="String" />
+            <Parameter Name="submission_type" Mode="In" Type="String" />
+            <Parameter Name="title" Mode="In" Type="String" />
+            <Parameter Name="created_date" Mode="In" Type="DateTime" />
+            <Parameter Name="insurance_company" Mode="In" Type="String" />
+            <Parameter Name="billing_company" Mode="In" Type="String" />
+            <Parameter Name="billing_city" Mode="In" Type="String" />
+            <Parameter Name="billing_state" Mode="In" Type="String" />
+            <Parameter Name="billing_zip" Mode="In" Type="String" />
+            <Parameter Name="occurrence_city" Mode="In" Type="String" />
+            <Parameter Name="occurrence_state" Mode="In" Type="String" />
+            <Parameter Name="occurrence_zip" Mode="In" Type="String" />
+            <Parameter Name="user_agent" Mode="In" Type="String" />
+            <Parameter Name="ip_address" Mode="In" Type="String" />
+            <Parameter Name="AdditionalData" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="rcg_rl_ClientJob_Save">
+            <Parameter Name="submission_id" Mode="In" Type="Int32" />
+            <Parameter Name="submission_type" Mode="In" Type="String" />
+            <Parameter Name="title" Mode="In" Type="String" />
+            <Parameter Name="created_date" Mode="In" Type="DateTime" />
+            <Parameter Name="billing_name" Mode="In" Type="String" />
+            <Parameter Name="billing_title" Mode="In" Type="String" />
+            <Parameter Name="billing_company" Mode="In" Type="String" />
+            <Parameter Name="billing_address" Mode="In" Type="String" />
+            <Parameter Name="billing_city" Mode="In" Type="String" />
+            <Parameter Name="billing_state" Mode="In" Type="String" />
+            <Parameter Name="billing_zip" Mode="In" Type="String" />
+            <Parameter Name="billing_email" Mode="In" Type="String" />
+            <Parameter Name="billing_phone" Mode="In" Type="String" />
+            <Parameter Name="billing_cell" Mode="In" Type="String" />
+            <Parameter Name="billing_fax" Mode="In" Type="String" />
+            <Parameter Name="client_name" Mode="In" Type="String" />
+            <Parameter Name="adverse_party" Mode="In" Type="String" />
+            <Parameter Name="claim_number" Mode="In" Type="String" />
+            <Parameter Name="tpa_file_number" Mode="In" Type="String" />
+            <Parameter Name="exact_engineer_request" Mode="In" Type="String" />
+            <Parameter Name="claim_description" Mode="In" Type="String" />
+            <Parameter Name="unlisted_service" Mode="In" Type="String" />
+            <Parameter Name="occurrence_date" Mode="In" Type="DateTime" />
+            <Parameter Name="loss_date" Mode="In" Type="DateTime" />
+            <Parameter Name="occurrence_location" Mode="In" Type="String" />
+            <Parameter Name="occurrence_city" Mode="In" Type="String" />
+            <Parameter Name="occurrence_state" Mode="In" Type="String" />
+            <Parameter Name="occurrence_zip" Mode="In" Type="String" />
+            <Parameter Name="inspection_contact_name" Mode="In" Type="String" />
+            <Parameter Name="inspection_contact_phone" Mode="In" Type="String" />
+            <Parameter Name="inspection_contact_number" Mode="In" Type="String" />
+            <Parameter Name="request_design_permit_drawings" Mode="In" Type="Boolean" />
+            <Parameter Name="request_business_interruption" Mode="In" Type="Boolean" />
+            <Parameter Name="request_accident_reconstruction" Mode="In" Type="Boolean" />
+            <Parameter Name="request_full_mechanical_inspection" Mode="In" Type="Boolean" />
+            <Parameter Name="request_limited_mechanical_inspection" Mode="In" Type="Boolean" />
+            <Parameter Name="request_biomechanical_evaluation" Mode="In" Type="Boolean" />
+            <Parameter Name="request_fire_cause_and_origin" Mode="In" Type="Boolean" />
+            <Parameter Name="request_repair_cost_estimate" Mode="In" Type="Boolean" />
+            <Parameter Name="request_environmental" Mode="In" Type="Boolean" />
+            <Parameter Name="request_request_other" Mode="In" Type="Boolean" />
+            <Parameter Name="request_site_visit" Mode="In" Type="Boolean" />
+            <Parameter Name="request_mechanical_inspection" Mode="In" Type="Boolean" />
+            <Parameter Name="request_structural_analysis" Mode="In" Type="Boolean" />
+            <Parameter Name="property_damage" Mode="In" Type="Boolean" />
+            <Parameter Name="cost_estimate" Mode="In" Type="Boolean" />
+            <Parameter Name="evidence_return" Mode="In" Type="Boolean" />
+            <Parameter Name="insurance_company" Mode="In" Type="String" />
+            <Parameter Name="insured_name" Mode="In" Type="String" />
+            <Parameter Name="insured_phone" Mode="In" Type="String" />
+            <Parameter Name="insured_cell" Mode="In" Type="String" />
+            <Parameter Name="adjustment_company" Mode="In" Type="String" />
+            <Parameter Name="adjustment_address" Mode="In" Type="String" />
+            <Parameter Name="adjustment_city" Mode="In" Type="String" />
+            <Parameter Name="adjustment_state" Mode="In" Type="String" />
+            <Parameter Name="adjustment_zip" Mode="In" Type="String" />
+            <Parameter Name="adjustment_phone" Mode="In" Type="String" />
+            <Parameter Name="adjustor_name" Mode="In" Type="String" />
+            <Parameter Name="adjustor_cell" Mode="In" Type="String" />
+            <Parameter Name="adjustor_email" Mode="In" Type="String" />
+            <Parameter Name="adjustor_file_number" Mode="In" Type="String" />
+            <Parameter Name="adjustor_fax" Mode="In" Type="String" />
+            <Parameter Name="insurance_same_as_billing" Mode="In" Type="Boolean" />
+            <Parameter Name="invoice_to" Mode="In" Type="String" />
+            <Parameter Name="invoice_company" Mode="In" Type="String" />
+            <Parameter Name="invoice_phone" Mode="In" Type="String" />
+            <Parameter Name="invoice_address" Mode="In" Type="String" />
+            <Parameter Name="invoice_city" Mode="In" Type="String" />
+            <Parameter Name="invoice_state" Mode="In" Type="String" />
+            <Parameter Name="upload_count" Mode="In" Type="Byte" />
+            <Parameter Name="assignment_file_1" Mode="In" Type="String" />
+            <Parameter Name="assignment_file_2" Mode="In" Type="String" />
+            <Parameter Name="user_agent" Mode="In" Type="String" />
+            <Parameter Name="ip_address" Mode="In" Type="String" />
+            <Parameter Name="AdditionalData" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="RCGDB_Dev01ModelStoreContainer" CdmEntityContainer="RCGDB_DEV01Entities">
+          <EntitySetMapping Name="rcg_rl_ClientJob">
+            <EntityTypeMapping TypeName="RCGDB_Dev01Model.rcg_rl_ClientJob">
+              <MappingFragment StoreEntitySet="rcg_rl_ClientJob">
+                <ScalarProperty Name="submission_id" ColumnName="submission_id" />
+                <ScalarProperty Name="submission_type" ColumnName="submission_type" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="created_date" ColumnName="created_date" />
+                <ScalarProperty Name="created_date_time" ColumnName="created_date_time" />
+                <ScalarProperty Name="billing_name" ColumnName="billing_name" />
+                <ScalarProperty Name="billing_title" ColumnName="billing_title" />
+                <ScalarProperty Name="billing_company" ColumnName="billing_company" />
+                <ScalarProperty Name="billing_address" ColumnName="billing_address" />
+                <ScalarProperty Name="billing_city" ColumnName="billing_city" />
+                <ScalarProperty Name="billing_state" ColumnName="billing_state" />
+                <ScalarProperty Name="billing_zip" ColumnName="billing_zip" />
+                <ScalarProperty Name="billing_email" ColumnName="billing_email" />
+                <ScalarProperty Name="billing_phone" ColumnName="billing_phone" />
+                <ScalarProperty Name="billing_cell" ColumnName="billing_cell" />
+                <ScalarProperty Name="billing_fax" ColumnName="billing_fax" />
+                <ScalarProperty Name="client_name" ColumnName="client_name" />
+                <ScalarProperty Name="adverse_party" ColumnName="adverse_party" />
+                <ScalarProperty Name="claim_number" ColumnName="claim_number" />
+                <ScalarProperty Name="tpa_file_number" ColumnName="tpa_file_number" />
+                <ScalarProperty Name="exact_engineer_request" ColumnName="exact_engineer_request" />
+                <ScalarProperty Name="claim_description" ColumnName="claim_description" />
+                <ScalarProperty Name="unlisted_service" ColumnName="unlisted_service" />
+                <ScalarProperty Name="occurrence_date" ColumnName="occurrence_date" />
+                <ScalarProperty Name="loss_date" ColumnName="loss_date" />
+                <ScalarProperty Name="occurrence_location" ColumnName="occurrence_location" />
+                <ScalarProperty Name="occurrence_city" ColumnName="occurrence_city" />
+                <ScalarProperty Name="occurrence_state" ColumnName="occurrence_state" />
+                <ScalarProperty Name="occurrence_zip" ColumnName="occurrence_zip" />
+                <ScalarProperty Name="inspection_contact_name" ColumnName="inspection_contact_name" />
+                <ScalarProperty Name="inspection_contact_phone" ColumnName="inspection_contact_phone" />
+                <ScalarProperty Name="inspection_contact_number" ColumnName="inspection_contact_number" />
+                <ScalarProperty Name="request_design_permit_drawings" ColumnName="request_design_permit_drawings" />
+                <ScalarProperty Name="request_business_interruption" ColumnName="request_business_interruption" />
+                <ScalarProperty Name="request_accident_reconstruction" ColumnName="request_accident_reconstruction" />
+                <ScalarProperty Name="request_full_mechanical_inspection" ColumnName="request_full_mechanical_inspection" />
+                <ScalarProperty Name="request_limited_mechanical_inspection" ColumnName="request_limited_mechanical_inspection" />
+                <ScalarProperty Name="request_biomechanical_evaluation" ColumnName="request_biomechanical_evaluation" />
+                <ScalarProperty Name="request_fire_cause_and_origin" ColumnName="request_fire_cause_and_origin" />
+                <ScalarProperty Name="request_repair_cost_estimate" ColumnName="request_repair_cost_estimate" />
+                <ScalarProperty Name="request_environmental" ColumnName="request_environmental" />
+                <ScalarProperty Name="request_request_other" ColumnName="request_request_other" />
+                <ScalarProperty Name="request_site_visit" ColumnName="request_site_visit" />
+                <ScalarProperty Name="request_mechanical_inspection" ColumnName="request_mechanical_inspection" />
+                <ScalarProperty Name="request_structural_analysis" ColumnName="request_structural_analysis" />
+                <ScalarProperty Name="property_damage" ColumnName="property_damage" />
+                <ScalarProperty Name="cost_estimate" ColumnName="cost_estimate" />
+                <ScalarProperty Name="evidence_return" ColumnName="evidence_return" />
+                <ScalarProperty Name="insurance_company" ColumnName="insurance_company" />
+                <ScalarProperty Name="insured_name" ColumnName="insured_name" />
+                <ScalarProperty Name="insured_phone" ColumnName="insured_phone" />
+                <ScalarProperty Name="insured_cell" ColumnName="insured_cell" />
+                <ScalarProperty Name="adjustment_company" ColumnName="adjustment_company" />
+                <ScalarProperty Name="adjustment_address" ColumnName="adjustment_address" />
+                <ScalarProperty Name="adjustment_city" ColumnName="adjustment_city" />
+                <ScalarProperty Name="adjustment_state" ColumnName="adjustment_state" />
+                <ScalarProperty Name="adjustment_zip" ColumnName="adjustment_zip" />
+                <ScalarProperty Name="adjustment_phone" ColumnName="adjustment_phone" />
+                <ScalarProperty Name="adjustor_name" ColumnName="adjustor_name" />
+                <ScalarProperty Name="adjustor_cell" ColumnName="adjustor_cell" />
+                <ScalarProperty Name="adjustor_email" ColumnName="adjustor_email" />
+                <ScalarProperty Name="adjustor_file_number" ColumnName="adjustor_file_number" />
+                <ScalarProperty Name="adjustor_fax" ColumnName="adjustor_fax" />
+                <ScalarProperty Name="insurance_same_as_billing" ColumnName="insurance_same_as_billing" />
+                <ScalarProperty Name="invoice_to" ColumnName="invoice_to" />
+                <ScalarProperty Name="invoice_company" ColumnName="invoice_company" />
+                <ScalarProperty Name="invoice_phone" ColumnName="invoice_phone" />
+                <ScalarProperty Name="invoice_address" ColumnName="invoice_address" />
+                <ScalarProperty Name="invoice_city" ColumnName="invoice_city" />
+                <ScalarProperty Name="invoice_state" ColumnName="invoice_state" />
+                <ScalarProperty Name="upload_count" ColumnName="upload_count" />
+                <ScalarProperty Name="assignment_file_1" ColumnName="assignment_file_1" />
+                <ScalarProperty Name="assignment_file_2" ColumnName="assignment_file_2" />
+                <ScalarProperty Name="user_agent" ColumnName="user_agent" />
+                <ScalarProperty Name="ip_address" ColumnName="ip_address" />
+                <ScalarProperty Name="XMLDate" ColumnName="XMLDate" />
+                <ScalarProperty Name="XMLDateTime" ColumnName="XMLDateTime" />
+                <ScalarProperty Name="IsSent" ColumnName="IsSent" />
+                <ScalarProperty Name="IsSentDate" ColumnName="IsSentDate" />
+                <ScalarProperty Name="AssignmentID" ColumnName="AssignmentID" />
+                <ScalarProperty Name="AssignmentIDDate" ColumnName="AssignmentIDDate" />
+                <ScalarProperty Name="AssignmentIDDateTime" ColumnName="AssignmentIDDateTime" />
+                <ScalarProperty Name="AdditionalData" ColumnName="AdditionalData" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="rcg_rl_ClientJob_Min_Save" FunctionName="RCGDB_Dev01Model.Store.rcg_rl_ClientJob_Min_Save" />
+          <FunctionImportMapping FunctionImportName="rcg_rl_ClientJob_Save" FunctionName="RCGDB_Dev01Model.Store.rcg_rl_ClientJob_Save" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

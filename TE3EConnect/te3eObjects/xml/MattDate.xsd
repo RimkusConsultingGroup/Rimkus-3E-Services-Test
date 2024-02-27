@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="MattDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="EffStart" type="xs:string" minOccurs="0" />
+        <xs:element name="PracticeGroup" type="xs:string" minOccurs="0" />
+        <xs:element name="Department" type="xs:string" minOccurs="0" />
+        <xs:element name="Section" type="xs:string" minOccurs="0" />
+        <xs:element name="Arrangement" type="xs:string" minOccurs="0" />
+        <xs:element name="TkprTeam" type="xs:string" minOccurs="0" />
+        <xs:element name="ReservesGroup" type="xs:string" minOccurs="0" />
+        <xs:element name="PTAGroup" type="xs:string" minOccurs="0" />
+        <xs:element name="Office" type="xs:string" minOccurs="0" />
+        <xs:element name="MattSplitType" type="xs:string" minOccurs="0" />
+        <xs:element name="BillTkpr" type="xs:string" minOccurs="0" />
+        <xs:element name="RspTkpr" type="xs:string" minOccurs="0" />
+        <xs:element name="SpvTkpr" type="xs:string" minOccurs="0" />
+        <xs:element name="PTAGroupCost" type="xs:string" minOccurs="0" />
+        <xs:element name="PTAGroupChrg" type="xs:string" minOccurs="0" />
+        <xs:element name="IsFireValidation" type="xs:string" minOccurs="0" />
+        <xs:element name="PTAGroup2" type="xs:string" minOccurs="0" />
+        <xs:element name="PTAGroupChrg2" type="xs:string" minOccurs="0" />
+        <xs:element name="PTAGroupCost2" type="xs:string" minOccurs="0" />
+        <xs:element name="NxStartDate" type="xs:string" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="MattDate" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

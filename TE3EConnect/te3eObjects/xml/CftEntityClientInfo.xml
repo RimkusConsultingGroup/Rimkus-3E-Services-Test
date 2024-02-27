@@ -1,0 +1,23 @@
+<CftEntityClientInfo>
+                                                                                
+                                                                                    <CftEntityClientInfoID />
+                                                                                    <ClientNumber>NewValue</ClientNumber>
+                                                                                    <ClientDisplayName>NewValue</ClientDisplayName>
+                                                                                    <ClientOpenDate>0001-01-02T00:00:00</ClientOpenDate>
+                                                                                    <ClientStatus>NewValue</ClientStatus>
+                                                                                    <Role>NewValue</Role>
+                                                                                    <Relationship>NewValue</Relationship>
+                                                                                    <ClientBillTkpr>NewValue</ClientBillTkpr>
+                                                                                    <ConflictsContact>NewValue</ConflictsContact>
+                                                                                    <StatusDate>0001-01-02T00:00:00</StatusDate>
+                                                                                    <ClientIndex>1</ClientIndex>
+                                                                                    <CftEntityId>NewValue</CftEntityId>
+                                                                                    <RMImages />
+                                                                                    <CftRelatedPartyID>NewValue</CftRelatedPartyID>
+                                                                                    <DisplayClientName>NewValue</DisplayClientName>
+                                                                                    <ClientStatusCode>NewValue</ClientStatusCode>
+                                                                                    <TimekeeperContact />
+                                                                                    <NxUserContact />
+                                                                                    <ParentID>NewValue</ParentID>
+                                                                              
+                                                                            </CftEntityClientInfo>

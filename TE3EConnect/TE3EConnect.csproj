@@ -1,0 +1,580 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--<Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />-->
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CE567D5B-806E-4B29-9618-FAD833334F5C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TE3EConnect</RootNamespace>
+    <AssemblyName>TE3EConnect</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Words">
+      <HintPath>..\lib\Aspose.Words_18.3\net4.0\Aspose.Words.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CMSWebClient.cs" />
+    <Compile Include="extension\e3eArchetype.cs" />
+    <Compile Include="extension\e3eExtension.cs" />
+    <Compile Include="imageUtil\AsposeUtil.cs" />
+    <Compile Include="logs\Automation\EntityOrgSrvReport.cs" />
+    <Compile Include="logs\Automation\ClientSrvReport.cs" />
+    <Compile Include="logs\Automation\POEntryReport.cs" />
+    <Compile Include="logs\Automation\POUserApproveWFCCCReport.cs" />
+    <Compile Include="logs\Automation\POReqWFCCCReport.cs" />
+    <Compile Include="logs\Automation\NxUserReport.cs" />
+    <Compile Include="logs\Automation\TimekeeperSrvReport.cs" />
+    <Compile Include="logs\Automation\NBISrvReport.cs" />
+    <Compile Include="logs\Automation\MatterSrvReport.cs" />
+    <Compile Include="logs\Automation\EntityPersonSrvReport.cs" />
+    <Compile Include="logs\CftNewBizIntakeReport.cs" />
+    <Compile Include="logs\CollectionItemReport.cs" />
+    <Compile Include="logs\GJReport.cs" />
+    <Compile Include="logs\Logger.cs" />
+    <Compile Include="logs\NBIReport.cs" />
+    <Compile Include="logs\RateExcReport.cs" />
+    <Compile Include="logs\RejectedGJ.cs" />
+    <Compile Include="logs\RejectedNBI.cs" />
+    <Compile Include="logs\RejectedRateExc.cs" />
+    <Compile Include="logs\RejectedVoucher.cs" />
+    <Compile Include="logs\VoucherReport.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="te3eARCollectionItem\ARCollectionItem.cs" />
+    <Compile Include="te3eARCollectionItem\ARStatementBody.cs" />
+    <Compile Include="te3eARCollectionItem\AREmailBody.cs" />
+    <Compile Include="te3eARCollectionItem\AREmailTemplate.cs" />
+    <Compile Include="te3eCodeLookup\Common\te3eData.cs" />
+    <Compile Include="te3eMappers\Automation\ClientSrvMapper.cs" />
+    <Compile Include="te3eMappers\Automation\EntityOrgSrvMapper.cs" />
+    <Compile Include="te3eMappers\Automation\NxUserSrvMapper.cs" />
+    <Compile Include="te3eMappers\Automation\POEntrySrvMapper.cs" />
+    <Compile Include="te3eMappers\Automation\POUserApproveWFSrvMapper.cs" />
+    <Compile Include="te3eMappers\Automation\POReqWFSrvMapper.cs" />
+    <Compile Include="te3eMappers\Automation\UKGEntityPersonSrvMapper.cs" />
+    <Compile Include="te3eMappers\Automation\TimekeeperSrvMapper.cs" />
+    <Compile Include="te3eMappers\Automation\EntityPersonSrvMapper.cs" />
+    <Compile Include="te3eMappers\Automation\MatterSrvMapper.cs" />
+    <Compile Include="te3eMappers\Automation\NBISrvMapper.cs" />
+    <Compile Include="te3eMappers\NewBizIntake\CftNewBizIntakeMapper.cs" />
+    <Compile Include="te3eMappers\NewBizIntake\e3eCftNewBizIntake.cs" />
+    <Compile Include="te3eMappers\ExpenseParser.cs" />
+    <Compile Include="te3eMappers\CreditCardParser.cs" />
+    <Compile Include="te3eMappers\e3eGJ.cs" />
+    <Compile Include="te3eMappers\e3eMatterSrv.cs" />
+    <Compile Include="te3eMappers\e3eRateExc.cs" />
+    <Compile Include="te3eMappers\e3eVoucher.cs" />
+    <Compile Include="te3eMappers\CollectionItemMapper.cs" />
+    <Compile Include="te3eMappers\GJMapper.cs" />
+    <Compile Include="te3eMappers\GJParser.cs" />
+    <Compile Include="te3eMappers\ClientSE\CliShortEntryMapper.cs" />
+    <Compile Include="te3eMappers\MatterSE\MattShortEntryMapper.cs" />
+    <Compile Include="te3eMappers\ClientSE\CliShortEntryParser.cs" />
+    <Compile Include="te3eMappers\NBIMapper.cs" />
+    <Compile Include="te3eMappers\MatterSE\MattShortEntryParser.cs" />
+    <Compile Include="te3eMappers\NBIParser.cs" />
+    <Compile Include="te3eMappers\RateExcMapper.cs" />
+    <Compile Include="te3eMappers\RateExcParser.cs" />
+    <Compile Include="te3eMappers\VoucherMapper.cs" />
+    <Compile Include="te3eObjects\ActionsList.cs" />
+    <Compile Include="te3eObjects\AssociatedTkprs_CCC.cs" />
+    <Compile Include="te3eObjects\Automation\ClientSrv.cs" />
+    <Compile Include="te3eObjects\Automation\POReqWF_CCCSrv.cs" />
+    <Compile Include="te3eObjects\Automation\NxUserSrv.cs" />
+    <Compile Include="te3eObjects\Automation\TimekeeperSrv.cs" />
+    <Compile Include="te3eObjects\Automation\MatterSrv.cs" />
+    <Compile Include="te3eObjects\Automation\NBISrv.cs" />
+    <Compile Include="te3eObjects\Automation\EntityOrgSrv.cs" />
+    <Compile Include="te3eObjects\Automation\EntityPersonSrv.cs" />
+    <Compile Include="te3eObjects\BillingTitle_CCC.cs" />
+    <Compile Include="te3eObjects\ClientSE\CliBillingContact.cs" />
+    <Compile Include="te3eObjects\ClientSE\CliDate.cs" />
+    <Compile Include="te3eObjects\ClientSE\CliEBillValList.cs" />
+    <Compile Include="te3eObjects\ClientSE\Client.cs" />
+    <Compile Include="te3eObjects\ClientSE\ClientPTAGroup_CCC.cs" />
+    <Compile Include="te3eObjects\ClientSE\ClientRateExc.cs" />
+    <Compile Include="te3eObjects\ClientSE\ClientSpecialInstructions_CCC.cs" />
+    <Compile Include="te3eObjects\ClientSE\CliOrgTkpr.cs" />
+    <Compile Include="te3eObjects\ClientSE\CliPlfrTkpr.cs" />
+    <Compile Include="te3eObjects\ClientSE\CliProfAdjust.cs" />
+    <Compile Include="te3eObjects\ClientSE\CliTemplateOption.cs" />
+    <Compile Include="te3eObjects\ClientSE\MaskOverrideValues.cs" />
+    <Compile Include="te3eObjects\ClientSE\MattFlatFee.cs" />
+    <Compile Include="te3eObjects\ClientSE\RateExc.cs" />
+    <Compile Include="te3eObjects\ClientSE\RateExcClientList.cs" />
+    <Compile Include="te3eObjects\ClientSE\RateExcDet.cs" />
+    <Compile Include="te3eObjects\ClientSE\RateExcMatterList.cs" />
+    <Compile Include="te3eObjects\MatterSE\BillingGroupMatter1.cs" />
+    <Compile Include="te3eObjects\MatterSE\CmBankruptcy.cs" />
+    <Compile Include="te3eObjects\MatterSE\CmCase.cs" />
+    <Compile Include="te3eObjects\MatterSE\CmCaseTeam.cs" />
+    <Compile Include="te3eObjects\MatterSE\CmCaseTeamStatus.cs" />
+    <Compile Include="te3eObjects\MatterSE\CmChildCustody.cs" />
+    <Compile Include="te3eObjects\MatterSE\CmChildSupport.cs" />
+    <Compile Include="te3eObjects\MatterSE\CmClaimNos.cs" />
+    <Compile Include="te3eObjects\MatterSE\CmCriminalLaw.cs" />
+    <Compile Include="te3eObjects\MatterSE\CmDivorce.cs" />
+    <Compile Include="te3eObjects\MatterSE\CmHealthLaw.cs" />
+    <Compile Include="te3eObjects\MatterSE\CmInsExperts.cs" />
+    <Compile Include="te3eObjects\MatterSE\CmInsurance.cs" />
+    <Compile Include="te3eObjects\MatterSE\CmLaborEmploy.cs" />
+    <Compile Include="te3eObjects\MatterSE\CmLitigation.cs" />
+    <Compile Include="te3eObjects\MatterSE\CmLossDates.cs" />
+    <Compile Include="te3eObjects\MatterSE\CmMedMal.cs" />
+    <Compile Include="te3eObjects\MatterSE\CmPatent.cs" />
+    <Compile Include="te3eObjects\MatterSE\CmPatentAppNum.cs" />
+    <Compile Include="te3eObjects\MatterSE\CmProductsLiability.cs" />
+    <Compile Include="te3eObjects\MatterSE\CmRealEstate.cs" />
+    <Compile Include="te3eObjects\MatterSE\CmTax.cs" />
+    <Compile Include="te3eObjects\MatterSE\CmTrademark.cs" />
+    <Compile Include="te3eObjects\MatterSE\CoConsultants_CCC.cs" />
+    <Compile Include="te3eObjects\MatterSE\IndustryGroupMatter_CCC.cs" />
+    <Compile Include="te3eObjects\MatterSE\LibertyMutual_CCC.cs" />
+    <Compile Include="te3eObjects\MatterSE\MaskOverrideValues.cs" />
+    <Compile Include="te3eObjects\MatterSE\MattBillingContact.cs" />
+    <Compile Include="te3eObjects\MatterSE\MattBudget.cs" />
+    <Compile Include="te3eObjects\MatterSE\MattCostTypeSummarize.cs" />
+    <Compile Include="te3eObjects\MatterSE\MattDate.cs" />
+    <Compile Include="te3eObjects\MatterSE\MattEBillValList.cs" />
+    <Compile Include="te3eObjects\MatterSE\Matter.cs" />
+    <Compile Include="te3eObjects\MatterSE\MatterRateExc.cs" />
+    <Compile Include="te3eObjects\MatterSE\MatterSpecialInstructions_CCC.cs" />
+    <Compile Include="te3eObjects\MatterSE\MattFlatFee.cs" />
+    <Compile Include="te3eObjects\MatterSE\MattIndustryGroup.cs" />
+    <Compile Include="te3eObjects\MatterSE\MattIndustryGroupCode_CCC.cs" />
+    <Compile Include="te3eObjects\MatterSE\MattNote.cs" />
+    <Compile Include="te3eObjects\MatterSE\MattOrgTkpr.cs" />
+    <Compile Include="te3eObjects\MatterSE\MattPayor.cs" />
+    <Compile Include="te3eObjects\MatterSE\MattPayorDetail.cs" />
+    <Compile Include="te3eObjects\MatterSE\MattPayorLayer.cs" />
+    <Compile Include="te3eObjects\MatterSE\MattPayorLayerDet.cs" />
+    <Compile Include="te3eObjects\MatterSE\MattPhaseException.cs" />
+    <Compile Include="te3eObjects\MatterSE\MattPracticeTeam.cs" />
+    <Compile Include="te3eObjects\MatterSE\MattPrlfTkpr.cs" />
+    <Compile Include="te3eObjects\MatterSE\MattProfAdjust.cs" />
+    <Compile Include="te3eObjects\MatterSE\MattRate.cs" />
+    <Compile Include="te3eObjects\MatterSE\MattSite.cs" />
+    <Compile Include="te3eObjects\MatterSE\MattTaxArticle.cs" />
+    <Compile Include="te3eObjects\MatterSE\MattTaxonomy.cs" />
+    <Compile Include="te3eObjects\MatterSE\MattTemplateOption.cs" />
+    <Compile Include="te3eObjects\MatterSE\MattTrust.cs" />
+    <Compile Include="te3eObjects\MatterSE\RateExc.cs" />
+    <Compile Include="te3eObjects\MatterSE\RateExcClientList.cs" />
+    <Compile Include="te3eObjects\MatterSE\RateExcDet.cs" />
+    <Compile Include="te3eObjects\MatterSE\RelatedParties_CCC.cs" />
+    <Compile Include="te3eObjects\MatterSE\TechRevEngRec_CCC.cs" />
+    <Compile Include="te3eObjects\NewBizIntake\CftComments.cs" />
+    <Compile Include="te3eObjects\NewBizIntake\CftNBIComments.cs" />
+    <Compile Include="te3eObjects\NewBizIntake\CftNewBizAddress_CCC.cs" />
+    <Compile Include="te3eObjects\NewBizIntake\CftNewBizDateRange_CCC.cs" />
+    <Compile Include="te3eObjects\NewBizIntake\CftNewBizRequest.cs" />
+    <Compile Include="te3eObjects\Client.cs" />
+    <Compile Include="te3eObjects\CodeLookup.cs" />
+    <Compile Include="te3eObjects\CollectionStep.cs" />
+    <Compile Include="te3eObjects\ContactRoles_CCC.cs" />
+    <Compile Include="te3eObjects\CostCard.cs" />
+    <Compile Include="te3eObjects\CPADetails_CCC.cs" />
+    <Compile Include="te3eObjects\Edit\Entity.cs" />
+    <Compile Include="te3eObjects\Edit\Matter.cs" />
+    <Compile Include="te3eObjects\Edit\PGDetChild_CCC.cs" />
+    <Compile Include="te3eObjects\Entity.cs" />
+    <Compile Include="te3eObjects\GJ.cs" />
+    <Compile Include="te3eObjects\GJDetail.cs" />
+    <Compile Include="te3eObjects\GLAcct.cs" />
+    <Compile Include="te3eObjects\MattDate.cs" />
+    <Compile Include="te3eObjects\MatterCPC.cs" />
+    <Compile Include="te3eObjects\Matter.cs" />
+    <Compile Include="te3eObjects\MatterRateExc.cs" />
+    <Compile Include="te3eObjects\MatterSrv.cs" />
+    <Compile Include="te3eObjects\MattOrgTkpr.cs" />
+    <Compile Include="te3eObjects\MattPrlfTkpr.cs" />
+    <Compile Include="te3eObjects\MattRate.cs" />
+    <Compile Include="te3eObjects\MattSite.cs" />
+    <Compile Include="te3eObjects\NewBizIntake\CftNewBizSearchName.cs" />
+    <Compile Include="te3eObjects\NewBizIntake\CftSearch.cs" />
+    <Compile Include="te3eObjects\NewBizIntake\CftSearchAddress_CCC.cs" />
+    <Compile Include="te3eObjects\NewBizIntake\CftSearchFields.cs" />
+    <Compile Include="te3eObjects\NewBizIntake\CftSearchResultRPOrg.cs" />
+    <Compile Include="te3eObjects\NewBizIntake\CftSearchResultRPPerson.cs" />
+    <Compile Include="te3eObjects\NewBizIntake\CftSearchTerm.cs" />
+    <Compile Include="te3eObjects\NewBizIntake\CftWorkflowHistory.cs" />
+    <Compile Include="te3eObjects\oMattShortEntry.cs" />
+    <Compile Include="te3eObjects\Payee.cs" />
+    <Compile Include="te3eObjects\PGDetChild_CCC.cs" />
+    <Compile Include="te3eObjects\PGDetHdr_CCC.cs" />
+    <Compile Include="te3eObjects\RateExc.cs" />
+    <Compile Include="te3eObjects\RateExcDet.cs" />
+    <Compile Include="te3eObjects\RateExcMatterList.cs" />
+    <Compile Include="te3eObjects\ReferralSource_CCC.cs" />
+    <Compile Include="te3eObjects\SalesForceInfo_CCC.cs" />
+    <Compile Include="te3eObjects\TimeKeeper.cs" />
+    <Compile Include="te3eObjects\Vchr1099.cs" />
+    <Compile Include="te3eObjects\VchrDirectGL.cs" />
+    <Compile Include="te3eObjects\Voucher.cs" />
+    <Compile Include="TE3ETranSvc.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="te3eXML\CliShortEntry\e3eAddCliShortEntryXML.cs" />
+    <Compile Include="te3eXML\CliShortEntry\e3eCliShortEntryXML.cs" />
+    <Compile Include="te3eXML\CliShortEntry\e3eEditCliShortEntryXML.cs" />
+    <Compile Include="te3eXML\MattShortEntry\e3eAddMattShortEntryXML.cs" />
+    <Compile Include="te3eXML\MattShortEntry\e3eEditMattShortEntryXML.cs" />
+    <Compile Include="te3eXML\MattShortEntry\e3eMattShortEntryXML.cs" />
+    <Compile Include="te3eXML\NewBizIntake\e3eAddCftWFNewBizIntakeXML.cs" />
+    <Compile Include="te3eXML\NewBizIntake\e3eCftWFNewBizIntakeXML.cs" />
+    <Compile Include="te3eXML\e3eClientXML.cs" />
+    <Compile Include="te3eXML\e3eCollectionItemXML.cs" />
+    <Compile Include="te3eXML\e3eEntityXML.cs" />
+    <Compile Include="te3eXML\e3eGJXML.cs" />
+    <Compile Include="te3eXML\e3eGLAcctXML.cs" />
+    <Compile Include="te3eXML\e3eMatterSrvXML.cs" />
+    <Compile Include="te3eXML\e3eMatterXML.cs" />
+    <Compile Include="te3eXML\e3ePayeeXML.cs" />
+    <Compile Include="te3eXML\e3ePGDetHdrXML.cs" />
+    <Compile Include="te3eXML\e3eRateExcXML.cs" />
+    <Compile Include="te3eXML\e3eTimeKeeperXML.cs" />
+    <Compile Include="te3eXML\e3eVoucherXML.cs" />
+    <Compile Include="te3eXML\NewBizIntake\e3eEditCftWFNewBizIntakeXML.cs" />
+    <Compile Include="te3eXML\org.e3eVoucherXML.cs" />
+    <Compile Include="Web References\e3ewapidev2\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\e3ewapiprodupgrade\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\e3ewapiprod\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\e3ewapiuat2\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\elite3edev3\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\elite3edev_staging\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\elite3edev_uat\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <EmbeddedResource Include="imageUtil\lic\Aspose.Total.lic" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\e3ewapidev2\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\e3ewapidev2\ReturnInfoType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\e3ewapidev2\transactionservice.wsdl" />
+    <None Include="Web References\e3ewapiprodupgrade\ITransactionService.wsdl" />
+    <None Include="Web References\e3ewapiprodupgrade\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\e3ewapiprodupgrade\ReturnInfoType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\e3ewapiprod\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\e3ewapiprod\ReturnInfoType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\e3ewapiprod\transactionservice.wsdl" />
+    <None Include="Web References\e3ewapiuat2\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\e3ewapiuat2\ReturnInfoType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\e3ewapiuat2\transactionservice.wsdl" />
+    <None Include="Web References\elite3edev3\ITransactionService.wsdl" />
+    <None Include="Web References\elite3edev3\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\elite3edev3\ReturnInfoType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\elite3edev_staging\ITransactionService.wsdl" />
+    <None Include="Web References\elite3edev_staging\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\elite3edev_staging\ReturnInfoType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\elite3edev_uat\ITransactionService.wsdl" />
+    <None Include="Web References\elite3edev_uat\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\elite3edev_uat\ReturnInfoType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://rcg3edev.rimkus.net/TE_3E_dev/Webui/transactionservice.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\e3ewapidev2\</RelPath>
+      <UpdateFromURL>http://rcg3edev.rimkus.net/TE_3E_dev/Webui/transactionservice.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>TE3EConnect_e3ewapidev2_TransactionService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://rcg3edev.rimkus.net/TE_3E_uat/Webui/transactionservice.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\e3ewapiuat2\</RelPath>
+      <UpdateFromURL>http://rcg3edev.rimkus.net/TE_3E_uat/Webui/transactionservice.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>TE3EConnect_e3ewapiuat2_TransactionService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://rcg3ewap02.rimkus.net/TE_3E_PROD/Webui/transactionservice.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\e3ewapiprod\</RelPath>
+      <UpdateFromURL>http://rcg3ewap02.rimkus.net/TE_3E_PROD/Webui/transactionservice.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>TE3EConnect_e3ewapiprod_TransactionService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://elite3e.rimkus.com/TE_3E_PROD/web/transactionservice.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\e3ewapiprodupgrade\</RelPath>
+      <UpdateFromURL>https://elite3e.rimkus.com/TE_3E_PROD/web/transactionservice.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>TE3EConnect_e3ewapiprodupgrade_ITransactionService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://elite3edev.rimkus.com/TE_3E_DEV/Webui/transactionservice.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\elite3edev3\</RelPath>
+      <UpdateFromURL>https://elite3edev.rimkus.com/TE_3E_DEV/Webui/transactionservice.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>TE3EConnect_elite3edev3_ITransactionService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://elite3edev.rimkus.com/TE_3E_STAGING/Webui/transactionservice.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\elite3edev_staging\</RelPath>
+      <UpdateFromURL>https://elite3edev.rimkus.com/TE_3E_STAGING/Webui/transactionservice.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>TE3EConnect_elite3edev_staging_ITransactionService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://elite3edev.rimkus.com/TE_3E_UAT/Webui/transactionservice.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\elite3edev_uat\</RelPath>
+      <UpdateFromURL>https://elite3edev.rimkus.com/TE_3E_UAT/Webui/transactionservice.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>TE3EConnect_elite3edev_uat_ITransactionService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\e3ewapiprod\transactionservice.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="te3eObjects\ClientSE\AddClient.xml" />
+    <Content Include="te3eObjects\ClientSE\EditClient.xml" />
+    <Content Include="te3eObjects\MatterSE\AddMatter.xml" />
+    <Content Include="te3eObjects\MatterSE\EditMatter.xml" />
+    <Content Include="te3eXML\Automation\AddMatterSrvTemplate.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="te3eXML\Automation\POEntry_Srv.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="te3eXML\Automation\POUserApproveWF_CCC_Srv.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="te3eXML\Automation\POReqWF_CCC_Srv.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="te3eXML\Automation\NxUser_CCC_Srv.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="te3eXML\Automation\NxUser_CCC_Srv_Full.xml" />
+    <Content Include="te3eXML\Automation\TimekeeperSrv.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="te3eXML\Automation\EditMatterSrv.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="te3eXML\Automation\ClientSrv.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="te3eXML\Automation\EntityOrgSrv.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="te3eXML\Automation\EntityPersonSrv.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="te3eXML\Automation\AddMatterSrv.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="te3eXML\Automation\NBISrv.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Web References\e3ewapidev2\transactionservice.disco" />
+    <None Include="Web References\e3ewapiuat2\transactionservice.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="te3eMappers\Entity\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TE3EEntityFramework\TE3EEntityFramework.csproj">
+      <Project>{b0c368f1-1816-4c66-9684-03abb906e2d2}</Project>
+      <Name>TE3EEntityFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="EntityFramework">
+      <Version>6.4.4</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NETCore.Platforms">
+      <Version>1.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="NETStandard.Library">
+      <Version>1.6.1</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="System.Diagnostics.DiagnosticSource">
+      <Version>6.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Drawing.Common">
+      <Version>4.7.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Memory">
+      <Version>4.5.5</Version>
+    </PackageReference>
+    <PackageReference Include="System.Net.Http">
+      <Version>4.3.4</Version>
+    </PackageReference>
+    <PackageReference Include="System.Runtime">
+      <Version>4.3.1</Version>
+    </PackageReference>
+    <PackageReference Include="System.Security.Cryptography.Algorithms">
+      <Version>4.3.1</Version>
+    </PackageReference>
+    <PackageReference Include="System.Security.Cryptography.X509Certificates">
+      <Version>4.3.2</Version>
+    </PackageReference>
+    <PackageReference Include="System.Text.Encoding.CodePages">
+      <Version>4.5.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!--<Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\TE3EARCollectionClient\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\TE3EARCollectionClient\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\TE3EARCollectionClient\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\TE3EARCollectionClient\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\TE3EARCollectionClient\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\TE3EARCollectionClient\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />-->
+</Project>

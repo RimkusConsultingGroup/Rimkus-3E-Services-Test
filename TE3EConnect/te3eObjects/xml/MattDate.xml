@@ -1,0 +1,24 @@
+<MattDate>
+                             
+		<EffStart>0001-01-02T00:00:00</EffStart>
+		<PracticeGroup />
+		<Department />
+		<Section />
+		<Arrangement />
+		<TkprTeam />
+		<ReservesGroup />
+		<PTAGroup />
+		<Office />
+		<MattSplitType />
+		<BillTkpr />
+		<RspTkpr />
+		<SpvTkpr />
+		<PTAGroupCost />
+		<PTAGroupChrg />
+		<IsFireValidation>1</IsFireValidation>
+		<PTAGroup2 />
+		<PTAGroupChrg2 />
+		<PTAGroupCost2 />
+		<NxStartDate>0001-01-02T00:00:00</NxStartDate>
+
+</MattDate>

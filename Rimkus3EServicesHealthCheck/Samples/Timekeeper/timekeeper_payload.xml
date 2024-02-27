@@ -1,0 +1,250 @@
+<Timekeeper_Srv xmlns="http://elite.com/schemas/transaction/process/write/Timekeeper_Srv">
+  <Initialize xmlns="http://elite.com/schemas/transaction/object/write/Timekeeper">
+
+
+
+    <Add>
+      <Timekeeper>
+        <Attributes>
+          <Number>@TkprNum</Number>
+          <AltNumber>ITESTER</AltNumber>
+          <DisplayName>Irma_@DisplayName Tester</DisplayName>
+          <BillName>Tester, Irma_@BillName</BillName>
+          <BillInitial>ITESTER</BillInitial>
+          <TkprStatus>150</TkprStatus>
+          <SortName>TESTER, IRMA_@SortName</SortName>
+          <GLTimekeeper />
+          <Entity>922315</Entity>
+          <PayrollNumber></PayrollNumber>
+          <HRNumber></HRNumber>
+          <HRTitle></HRTitle>
+          <PhysicalLocation></PhysicalLocation>
+          <Narrative></Narrative>
+          <Language />
+          <JDDate></JDDate>
+          <CompDate></CompDate>
+          <IsAutoNumbering>0</IsAutoNumbering>
+          <TkprType>047</TkprType>
+          <!--Discipline-->
+          <TkprAttribute />
+          <TkprCategory />
+          <ProfDCSTemplate />
+          <BillDCSTemplate />
+          <StmtDCSTemplate />
+          <IsNumberEnabled>0</IsNumberEnabled>
+          <RateYear></RateYear>
+          <CreditNoteDCSTemplate />
+          <BillGroupDCSTemplate />
+          <CreditNoteGroupDCSTemplate />
+          <WF_User />
+        </Attributes>
+        <Children>
+          <TkprDate>
+            <Add>
+              <TkprDate>
+                <Attributes>
+                  <EffStart>2023-10-09T00:00:00</EffStart>
+                  <Office>082</Office>
+                  <Department>000</Department>
+                  <Section>Undefined</Section>
+                  <HireDate>2023-10-09T00:00:00</HireDate>
+                  <TermDate></TermDate>
+                  <Title>170</Title>
+                  <RateClass>000</RateClass>
+                  <WorkCalendar>100</WorkCalendar>
+                  <SupTkpr></SupTkpr>
+                  <NxUnit>01</NxUnit>
+                  <WorkType></WorkType>
+                  <IsFireValidation>1</IsFireValidation>
+                  <BillingCoordinator />
+                  <NxStartDate>2023-10-09T00:00:00</NxStartDate>
+                </Attributes>
+              </TkprDate>
+            </Add>
+          </TkprDate>
+          <!--<TkprSchool>
+                        <Add>
+                            <TkprSchool>
+                                <Attributes>
+                                    <School>NewValue</School>
+                                    <IsGraduated>1</IsGraduated>
+                                    <GradDate>0001-01-02T00:00:00</GradDate>
+                                    <Degree>NewValue</Degree>
+                                    <Specialty>NewValue</Specialty>
+                                </Attributes>
+                            </TkprSchool>
+                        </Add>
+                    </TkprSchool>-->
+          <TkprAccreditation>
+
+            <Add>
+              <TkprAccreditation>
+                <Attributes>
+
+                  <AccrDate>2024-12-31T00:00:00</AccrDate>
+                  <CertificateNumber>123456</CertificateNumber>
+                  <Country>US</Country>
+                  <LicenseType_CCC>100</LicenseType_CCC>
+                  <State></State>
+                  <IsActive_CCC>1</IsActive_CCC>
+                </Attributes>
+              </TkprAccreditation>
+            </Add>
+
+          </TkprAccreditation>
+
+          <!--<TkprPracticeGroup>
+                        <Add>
+                            <TkprPracticeGroup>
+                                <Attributes>
+                                    <PracticeGroup />
+                                    <Percentage>1</Percentage>
+                                </Attributes>
+                            </TkprPracticeGroup>
+                        </Add>
+                    </TkprPracticeGroup>
+                    <TimekeepTeams>
+                        <Add>
+                            <TimekeepTeams>
+                                <Attributes>
+                                    <TkprTeam />
+                                    <Percentage>1</Percentage>
+                                </Attributes>
+                            </TimekeepTeams>
+                        </Add>
+                    </TimekeepTeams>
+                    <TkprGLNatural>
+                        <Add>
+                            <TkprGLNatural>
+                                <Attributes>
+                                    <GLNatural1 />
+                                    <GLNatural2 />
+                                    <GLNatural3 />
+                                </Attributes>
+                            </TkprGLNatural>
+                        </Add>
+                    </TkprGLNatural>
+                    <TkprDateFTE>
+                        <Add>
+                            <TkprDateFTE>
+                                <Attributes>
+                                    <EffStart>0001-01-02T00:00:00</EffStart>
+                                    <FTEStatus />
+                                    <FTEPercent>1</FTEPercent>
+                                    <ActualHeadCountFactor>1</ActualHeadCountFactor>
+                                    <ProdHeadCountFactor>1</ProdHeadCountFactor>
+                                    <NxStartDate>0001-01-02T00:00:00</NxStartDate>
+                                </Attributes>
+                            </TkprDateFTE>
+                        </Add>
+                    </TkprDateFTE>
+                    <TkprDateHR>
+                        <Add>
+                            <TkprDateHR>
+                                <Attributes>
+                                    <EffStart>0001-01-02T00:00:00</EffStart>
+                                    <Currency />
+                                    <Salary>1</Salary>
+                                    <Benefits>1</Benefits>
+                                    <DirectCost>1</DirectCost>
+                                    <InDirectCost>1</InDirectCost>
+                                    <OverheadAlloc>1</OverheadAlloc>
+                                    <NxStartDate>0001-01-02T00:00:00</NxStartDate>
+                                </Attributes>
+                            </TkprDateHR>
+                        </Add>
+                    </TkprDateHR>-->
+          <TkprRate>
+            <Add>
+              <TkprRate>
+                <Attributes>
+                  <RateType>DNU</RateType>
+                </Attributes>
+                <Children>
+                  <TkprRateDate>
+                    <Add>
+                      <TkprRateDate>
+                        <Attributes>
+                          <Currency>USD</Currency>
+                          <DefaultRate>1.00</DefaultRate>
+                          <!--1-->
+                          <EffStart>2023-10-09T00:00:00</EffStart>
+                          <CurrencyLookBackDate></CurrencyLookBackDate>
+                          <NxStartDate>2023-10-09T00:00:00</NxStartDate>
+                        </Attributes>
+                        <!--<Children>
+                                                    <TkprRateDateDet_1>
+                                                        <Add>
+                                                            <TkprRateDateDet_1>
+                                                                <Attributes>
+                                                                    <Currency />
+                                                                    <Office />
+                                                                    <Rate>1</Rate>
+                                                                    <CurrDate>0001-01-02T00:00:00</CurrDate>
+                                                                </Attributes>
+                                                            </TkprRateDateDet_1>
+                                                        </Add>
+                                                    </TkprRateDateDet_1>
+                                                </Children>-->
+                      </TkprRateDate>
+                    </Add>
+                  </TkprRateDate>
+                </Children>
+              </TkprRate>
+            </Add>
+          </TkprRate>
+          <!--<MaskOverrideValues>
+                        <Add>
+                            <MaskOverrideValues>
+                                <Attributes>
+                                    <CostType />
+                                    <ChrgType />
+                                    <TimeType />
+                                    <Client />
+                                    <Matter />
+                                    <GLNatural />
+                                    <GLUnit />
+                                    <GLOffice />
+                                    <GLTimekeeper />
+                                    <GLDepartment />
+                                    <GLSection />
+                                    <GLArrangement />
+                                    <GLTitle />
+                                    <GLPracticeGroup />
+                                    <GLWorkType />
+                                    <MaskOverrideType />
+                                    <ChrgTypePredicate>NewValue</ChrgTypePredicate>
+                                    <ClientPredicate>NewValue</ClientPredicate>
+                                    <CostTypePredicate>NewValue</CostTypePredicate>
+                                    <MatterPredicate>NewValue</MatterPredicate>
+                                    <TimekeeperPredicate>NewValue</TimekeeperPredicate>
+                                    <TimeTypePredicate>NewValue</TimeTypePredicate>
+                                    <UsingChrgType>1</UsingChrgType>
+                                    <UsingClient>1</UsingClient>
+                                    <UsingCostType>1</UsingCostType>
+                                    <UsingMatter>1</UsingMatter>
+                                    <UsingTimekeeper>1</UsingTimekeeper>
+                                    <UsingTimeType>1</UsingTimeType>
+                                    <GLActivity />
+                                </Attributes>
+                            </MaskOverrideValues>
+                        </Add>
+                    </MaskOverrideValues>-->
+          <!--<TkprObjective>
+                        <Add>
+                            <TkprObjective>
+                                <Attributes>
+                                    <IsDefault>1</IsDefault>
+                                    <MxObjective />
+                                </Attributes>
+                            </TkprObjective>
+                        </Add>
+                    </TkprObjective>-->
+        </Children>
+      </Timekeeper>
+    </Add>
+
+
+
+  </Initialize>
+</Timekeeper_Srv>

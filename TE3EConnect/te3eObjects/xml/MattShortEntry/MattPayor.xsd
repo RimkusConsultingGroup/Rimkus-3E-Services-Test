@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="MattPayor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Description" type="xs:string" minOccurs="0" />
+        <xs:element name="Currency" type="xs:string" minOccurs="0" />
+        <xs:element name="IsLayer" type="xs:string" minOccurs="0" />
+        <xs:element name="IsLayerAmount" type="xs:string" minOccurs="0" />
+        <xs:element name="IsTaxbyMultipayor" type="xs:string" minOccurs="0" />
+        <xs:element name="IsMultipayorByRate" type="xs:string" minOccurs="0" />
+        <xs:element name="EffDate" type="xs:string" minOccurs="0" />
+        <xs:element name="EndDate" type="xs:string" minOccurs="0" />
+        <xs:element name="StartDate" type="xs:string" minOccurs="0" />
+        <xs:element name="CauseNum_CCC" type="xs:string" minOccurs="0" />
+        <xs:element name="Court_CCC" type="xs:string" minOccurs="0" />
+        <xs:element name="Representing_CCC" type="xs:string" minOccurs="0" />
+        <xs:element name="Style_CCC" type="xs:string" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="MattPayor" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,240 @@
+<NxUser xmlns=http://elite.com/schemas/transaction/process/write/NxUser>
+    <Initialize xmlns=http://elite.com/schemas/transaction/object/write/NxUser>
+        <Add>
+            <NxUser>
+                <Attributes>
+                    <BaseUserName>NewValue</BaseUserName>
+                    <IsActive>1</IsActive>
+                    <ActiveDirectoryID>NewValue</ActiveDirectoryID>
+                    <TimeZone />
+                    <Language />
+                    <Dashboard />
+                    <EmailAddr>NewValue</EmailAddr>
+                    <NetworkAlias>NewValue</NetworkAlias>
+                    <OptionsRole />
+                    <DefaultUnit />
+                    <Entity />
+                    <Office />
+                    <IsDeveloper>1</IsDeveloper>
+                    <CanSwitchOperatingUnit>1</CanSwitchOperatingUnit>
+                    <DataRole />
+                    <IsAllowTimeEntry>1</IsAllowTimeEntry>
+                    <CanProxy>1</CanProxy>
+                   <CanEditDashboard>1</CanEditDashboard>
+                    <UnitFilter />
+                    <WinTimeZone />
+                    <CanEditGlobalModel>1</CanEditGlobalModel>
+                    <CanEditCompanyHeader>1</CanEditCompanyHeader>
+                    <GridCustomization />
+                </Attributes>
+                <Children>
+                    <NxSecurityNodeRight>
+                        <Add>
+                            <NxSecurityNodeRight>
+                                <Attributes>
+                                    <SecurityNode />
+                                    <SecurityRight />
+                                </Attributes>
+                            </NxSecurityNodeRight>
+                        </Add>
+                    </NxSecurityNodeRight>
+                    <NxSecurityObjectActionRight>
+                        <Add>
+                            <NxSecurityObjectActionRight>
+                                <Attributes>
+                                    <SecurityRight />
+                                    <AppObject>NewValue</AppObject>
+                                    <Action>NewValue</Action>
+                                </Attributes>
+                            </NxSecurityObjectActionRight>
+                        </Add>
+                    </NxSecurityObjectActionRight>
+                    <NxSecurityObjectAttrRight>
+                        <Add>
+                            <NxSecurityObjectAttrRight>
+                                <Attributes>
+                                    <SecurityRight />
+                                    <Attribute>NewValue</Attribute>
+                                    <AppObject>NewValue</AppObject>
+                                </Attributes>
+                            </NxSecurityObjectAttrRight>
+                        </Add>
+                    </NxSecurityObjectAttrRight>
+                    <NxSecurityObjectRight>
+                        <Add>
+                            <NxSecurityObjectRight>
+                                <Attributes>
+                                    <SecurityRight />
+                                    <AppObject>NewValue</AppObject>
+                                </Attributes>
+                            </NxSecurityObjectRight>
+                        </Add>
+                    </NxSecurityObjectRight>
+                    <NxSecurityReportActionRight>
+                        <Add>
+                            <NxSecurityReportActionRight>
+                                <Attributes>
+                                    <SecurityRight />
+                                    <ReportObject>NewValue</ReportObject>
+                                    <Action>NewValue</Action>
+                                    <Report>NewValue</Report>
+                                </Attributes>
+                            </NxSecurityReportActionRight>
+                        </Add>
+                    </NxSecurityReportActionRight>
+                    <NxSecurityReportAttrRight>
+                        <Add>
+                            <NxSecurityReportAttrRight>
+                                <Attributes>
+                                    <SecurityRight />
+                                    <ReportObject>NewValue</ReportObject>
+                                    <Attribute>NewValue</Attribute>
+                                </Attributes>
+                            </NxSecurityReportAttrRight>
+                        </Add>
+                    </NxSecurityReportAttrRight>
+                    <NxSecurityReportLayoutRight>
+                        <Add>
+                            <NxSecurityReportLayoutRight>
+                                <Attributes>
+                                    <SecurityRight />
+                                    <ReportLayout>NewValue</ReportLayout>
+                                    <AllowEdit>1</AllowEdit>
+                                    <AllowDelete>1</AllowDelete>
+                                    <AllowAccessRights>1</AllowAccessRights>
+                                </Attributes>
+                            </NxSecurityReportLayoutRight>
+                        </Add>
+                    </NxSecurityReportLayoutRight>
+                    <NxSecurityReportObjRight>
+                        <Add>
+                            <NxSecurityReportObjRight>
+                                <Attributes>
+                                    <SecurityRight />
+                                    <ReportObject>NewValue</ReportObject>
+                                </Attributes>
+                            </NxSecurityReportObjRight>
+                        </Add>
+                    </NxSecurityReportObjRight>
+                    <NxSecurityReportRight>
+                        <Add>
+                            <NxSecurityReportRight>
+                                <Attributes>
+                                    <Report>NewValue</Report>
+                                    <SecurityRight />
+                                </Attributes>
+                            </NxSecurityReportRight>
+                        </Add>
+                    </NxSecurityReportRight>
+                    <NxSecurityResourceRight>
+                        <Add>
+                            <NxSecurityResourceRight>
+                                <Attributes>
+                                    <SecurityRight />
+                                    <SecurityResource />
+                                </Attributes>
+                            </NxSecurityResourceRight>
+                        </Add>
+                    </NxSecurityResourceRight>
+                    <NxUser_RoleChild>
+                        <Add>
+                            <NxUser_RoleChild>
+                                <Attributes>
+                                    <RoleID />
+                                    <RolePrecedence>1</RolePrecedence>
+                                </Attributes>
+                            </NxUser_RoleChild>
+                        </Add>
+                    </NxUser_RoleChild>
+                    <NxLog>
+                        <Add>
+                            <NxLogEvent>
+                                <Attributes>
+                                    <NxLogListener />
+                                    <NxLogFormat />
+                                    <DataExecutionTime>1</DataExecutionTime>
+                                    <IsDisabled>1</IsDisabled>
+                                    <MachineName>NewValue</MachineName>
+                                    <EventLogName>NewValue</EventLogName>
+                                </Attributes>
+                                <Children>
+                                    <NxLogFilters>
+                                        <Add>
+                                            <NxLogFilters>
+                                                <Attributes>
+                                                    <TypeFilter />
+                                                </Attributes>
+                                            </NxLogFilters>
+                                        </Add>
+                                    </NxLogFilters>
+                                    <NxLogLevels>
+                                        <Add>
+                                            <NxLogLevels>
+                                                <Attributes>
+                                                    <Level />
+                                                </Attributes>
+                                            </NxLogLevels>
+                                        </Add>
+                                    </NxLogLevels>
+                                </Children>
+                            </NxLogEvent>
+                        </Add>
+                        <Add>
+                            <NxLogText>
+                                <Attributes>
+                                    <NxLogListener />
+                                    <NxLogFormat />
+                                    <DataExecutionTime>1</DataExecutionTime>
+                                    <IsDisabled>1</IsDisabled>
+                                    <Filename>NewValue</Filename>
+                                    <immediateClose>1</immediateClose>
+                                    <appendToFile>1</appendToFile>
+                                    <immediateFlush>1</immediateFlush>
+                                </Attributes>
+                                <Children>
+                                    <NxLogFilters>
+                                        <Add>
+                                            <NxLogFilters>
+                                                <Attributes>
+                                                    <TypeFilter />
+                                                </Attributes>
+                                            </NxLogFilters>
+                                        </Add>
+                                    </NxLogFilters>
+                                    <NxLogLevels>
+                                        <Add>
+                                            <NxLogLevels>
+                                               <Attributes>
+                                                    <Level />
+                                                </Attributes>
+                                            </NxLogLevels>
+                                        </Add>
+                                    </NxLogLevels>
+                                </Children>
+                            </NxLogText>
+                        </Add>
+                    </NxLog>
+                    <NxUserTimekeeper>
+                        <Add>
+                            <NxUserTimekeeper>
+                                <Attributes>
+                                    <Timekeeper />
+                                    <IsDefault>1</IsDefault>
+                                </Attributes>
+                            </NxUserTimekeeper>
+                        </Add>
+                    </NxUserTimekeeper>
+                    <NxUserSpellDictionary>
+                        <Add>
+                            <NxUserSpellDictionary>
+                                <Attributes>
+                                    <Word>NewValue</Word>
+                                </Attributes>
+                            </NxUserSpellDictionary>
+                        </Add>
+                    </NxUserSpellDictionary>
+                </Children>
+            </NxUser>
+        </Add>
+    </Initialize>
+</NxUser>

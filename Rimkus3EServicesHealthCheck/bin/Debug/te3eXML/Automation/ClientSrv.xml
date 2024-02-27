@@ -1,0 +1,7 @@
+<Client_Srv_RC
+	xmlns="http://elite.com/schemas/transaction/process/write/Client_Srv_RC">
+  <Initialize
+		xmlns="http://elite.com/schemas/transaction/object/write/Client">
+    @AddClientShortEntry
+  </Initialize>
+</Client_Srv_RC>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="CollectionStep">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="StepNumber" type="xs:string" minOccurs="0" />
+        <xs:element name="Action" type="xs:string" minOccurs="0" />
+        <xs:element name="Collector" type="xs:string" minOccurs="0" />
+        <xs:element name="ActionPriority" type="xs:string" minOccurs="0" />
+        <xs:element name="IsDoneIfInvIsPaid" type="xs:string" minOccurs="0" />
+        <xs:element name="IsDoneImmediately" type="xs:string" minOccurs="0" />
+        <xs:element name="DaysAfter" type="xs:string" minOccurs="0" />
+        <xs:element name="DateSourceTypeList" type="xs:string" minOccurs="0" />
+        <xs:element name="ActionByTypeList" type="xs:string" minOccurs="0" />
+        <xs:element name="Comments" type="xs:string" minOccurs="0" />
+        <xs:element name="IsCompleted" type="xs:string" minOccurs="0" />
+        <xs:element name="CompletedBy" type="xs:string" minOccurs="0" />
+        <xs:element name="CollectionActorList" type="xs:string" minOccurs="0" />
+        <xs:element name="ScheduledDate" type="xs:string" minOccurs="0" />
+        <xs:element name="ActionByUnbound" type="xs:string" minOccurs="0" />
+        <xs:element name="CollectionActorListUnbound" type="xs:string" minOccurs="0" />
+        <xs:element name="CollectorUnbound" type="xs:string" minOccurs="0" />
+        <xs:element name="ScheduledDateUnbound" type="xs:string" minOccurs="0" />
+        <xs:element name="PrinterTemplate" type="xs:string" minOccurs="0" />
+        <xs:element name="EmailAddr" type="xs:string" minOccurs="0" />
+        <xs:element name="EmailSubject" type="xs:string" minOccurs="0" />
+        <xs:element name="IsStepRepeated" type="xs:string" minOccurs="0" />
+        <xs:element name="EmailFromAddress" type="xs:string" minOccurs="0" />
+        <xs:element name="EmailCCAddress" type="xs:string" minOccurs="0" />
+        <xs:element name="EmailBCCAddress" type="xs:string" minOccurs="0" />
+        <xs:element name="BillingOffice" type="xs:string" minOccurs="0" />
+        <xs:element name="MatterLanguage" type="xs:string" minOccurs="0" />
+        <xs:element name="CollectionOffice" type="xs:string" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="CollectionStep" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="MattRate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Rate" type="xs:string" minOccurs="0" />
+        <xs:element name="MaxHours" type="xs:string" minOccurs="0" />
+        <xs:element name="MaxBillAmt" type="xs:string" minOccurs="0" />
+        <xs:element name="Currency" type="xs:string" minOccurs="0" />
+        <xs:element name="CurrDate" type="xs:string" minOccurs="0" />
+        <xs:element name="IsActive" type="xs:string" minOccurs="0" />
+        <xs:element name="RefRate" type="xs:string" minOccurs="0" />
+        <xs:element name="RateGroup" type="xs:string" minOccurs="0" />
+        <xs:element name="MaxFees" type="xs:string" minOccurs="0" />
+        <xs:element name="MaxHCo" type="xs:string" minOccurs="0" />
+        <xs:element name="MaxSCo" type="xs:string" minOccurs="0" />
+        <xs:element name="MaxInt" type="xs:string" minOccurs="0" />
+        <xs:element name="MaxBOA" type="xs:string" minOccurs="0" />
+        <xs:element name="MaxTax" type="xs:string" minOccurs="0" />
+        <xs:element name="MaxOth" type="xs:string" minOccurs="0" />
+        <xs:element name="IsEnforceMaximums" type="xs:string" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="MattRate" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

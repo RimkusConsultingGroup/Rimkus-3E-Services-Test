@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RCGAMZN_PROD01Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TeamsDMSConfiguration">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NumOfDays" Type="Int32" />
+    <Property Name="AzureFunc_BaseUrl_Dev" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AzureFunc_CaseOpened_Dev" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AzureFunc_CaseAssignment_Dev" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AzureFunc_CaseClosed_Dev" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AzureFunc_TeamAction_Dev" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AzureFunc_BaseUrl_Prod" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AzureFunc_CaseOpened_Prod" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AzureFunc_CaseAssignment_Prod" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AzureFunc_CaseClosed_Prod" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AzureFunc_TeamAction_Prod" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TrackerSafe_OrgId" Type="Int32" />
+    <Property Name="TrackerSafe_OfficeId" Type="Int32" />
+    <Property Name="Enotify_From" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Enotify_To" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Enotify_Cc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Test_Owners" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Test_Members" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TeamsDMSOfficeFilter">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsExcluded" Type="Boolean" />
+    <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="TeamsDMSQueue">
+    <Key>
+      <PropertyRef Name="MatterID" />
+      <PropertyRef Name="MattIndex" />
+      <PropertyRef Name="MattNumber" />
+      <PropertyRef Name="MattName" />
+    </Key>
+    <Property Name="MatterID" Type="Guid" Nullable="false" />
+    <Property Name="MattIndex" Type="Int32" Nullable="false" />
+    <Property Name="MattNumber" Type="String" MaxLength="64" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MattName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MattDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Narrative" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ScopeOfWork" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MattStatus" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="MattStatusDescription" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Name="OpenDate" Type="DateTime" Precision="3" />
+    <Property Name="CloseDate" Type="DateTime" Precision="3" />
+    <Property Name="ClientIndex" Type="Int32" />
+    <Property Name="ClientNumber" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Name="ClientName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DateOfLoss" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Name="OfficeCode" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="OfficeName" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Name="OwnerUsers" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MemberUsers" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OpenTkprId" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="OpenTkprEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OpenTkprName" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Name="CloseTkprId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CloseTkprEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BillTkprId" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="BillTkprName" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Name="BillTkprEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RspTkprId" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="RspTkprName" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Name="RspTkprEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SpvTkprId" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="SpvTkprName" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Name="SpvTkprEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SectionCode" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="SectionDescription" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Name="DepartmentCode" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="DepartmentDescription" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Name="PracticeGroupCode" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="PracticeGroupDescription" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Name="IndustryGroupCode" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="IndustryGroupDescription" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+    <Property Name="IsTeamsChanged" Type="Int32" />
+    <Property Name="IsTeamRehydrated" Type="Int32" />
+    <Property Name="IsExported" Type="Int32" />
+    <Property Name="ErrorMsg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ExportedDate" Type="DateTime" Precision="3" />
+    <Property Name="NumOfAttempt" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TeamsDMSQueueLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MatterNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MatterName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MatterStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TeamsOwners" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TeamsMembers" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ExportedDate" Type="DateTime" Precision="3" />
+    <Property Name="ErrorMessage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="WebResponse" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="RCGAMZN_PROD01Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TeamsDMSConfigurations" EntityType="Self.TeamsDMSConfiguration" />
+    <EntitySet Name="TeamsDMSOfficeFilters" EntityType="Self.TeamsDMSOfficeFilter" />
+    <EntitySet Name="TeamsDMSQueues" EntityType="Self.TeamsDMSQueue" />
+    <EntitySet Name="TeamsDMSQueueLogs" EntityType="Self.TeamsDMSQueueLog" />
+    <FunctionImport Name="DMS_RetrieveMattersForTeams">
+      <Parameter Name="numOfDays" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DMS_RetrieveMattersForTeamsByOffice">
+      <Parameter Name="numOfDays" Mode="In" Type="Int32" />
+      <Parameter Name="office" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="DMS_RetrieveMatterForTeamsByNumber">
+      <Parameter Name="mattNum" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+</Schema>

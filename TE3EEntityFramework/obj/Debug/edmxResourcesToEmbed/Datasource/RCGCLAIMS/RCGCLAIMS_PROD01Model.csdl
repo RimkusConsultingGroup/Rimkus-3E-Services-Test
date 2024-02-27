@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RCGCLAIMS_PROD01Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="LMAssignment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ClaimUniqueId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AssignmentSentDate" Type="DateTime" Precision="0" />
+    <Property Name="BillingName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BillingTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BillingCompany" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BillingAddress" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="BillingCity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BillingState" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BillingZip" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="BillingEmail" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="BillingPhone" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="BillingCell" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="BillingFax" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="ClientName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ClaimNumber" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="TPAFileNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ClaimDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UnlistedService" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OccurrenceDate" Type="DateTime" Precision="0" />
+    <Property Name="OccurrenceLocation" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="OccurrenceCity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OccurrenceState" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OccurrenceZip" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="InsuranceCompany" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="InsuredName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="InsuredPhone" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="InsuredCell" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="AdjustmentCompany" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AdjustmentPhone" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="AdjustorName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AdjustorEmail" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceTo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceCompany" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="InvoicePhone" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceAddress" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceCity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceState" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AdditionalData" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+    <Property Name="Title" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="LMAssignmentAudit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ClaimUniqueId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AssignmentSentDate" Type="DateTime" Precision="0" />
+    <Property Name="BillingName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BillingTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BillingCompany" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BillingAddress" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="BillingCity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BillingState" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BillingZip" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="BillingEmail" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="BillingPhone" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="BillingCell" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="BillingFax" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="ClientName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ClaimNumber" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="TPAFileNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ClaimDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UnlistedService" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OccurrenceDate" Type="DateTime" Precision="0" />
+    <Property Name="OccurrenceLocation" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="OccurrenceCity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OccurrenceState" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OccurrenceZip" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="InsuranceCompany" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="InsuredName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="InsuredPhone" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="InsuredCell" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="AdjustmentCompany" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AdjustmentPhone" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="AdjustorName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AdjustorEmail" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceTo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceCompany" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="InvoicePhone" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceAddress" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceCity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceState" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AdditionalData" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+    <Property Name="Title" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="Operation" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="LMAssignmentServiceLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ClaimNumber" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="ClaimUniqueId" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="SubmissionId" Type="Int32" />
+    <Property Name="Status" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TimeStamp" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="LMClaimNotification">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ClaimNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClaimUniqueId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ExternalReference" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PolicyNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FileNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OriginatorCompanyID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OriginatorCompanyName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NotificationJson" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+    <Property Name="ImportedAt" Type="DateTime" Precision="3" />
+    <Property Name="NumOfAttempts" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LMClaimNotificationsAudit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ClaimNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClaimUniqueId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ExternalReference" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PolicyNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FileNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OriginatorCompanyID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OriginatorCompanyName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NotificationJson" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="Operation" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="ImportedAt" Type="DateTime" Precision="3" />
+    <Property Name="NumOfAttempts" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KeyVault">
+    <Key>
+      <PropertyRef Name="ClientKeyId" />
+    </Key>
+    <Property Name="ClientKeyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ApiKey" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ClientName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="RCGCLAIMS_PROD01Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="LMAssignments" EntityType="Self.LMAssignment" />
+    <EntitySet Name="LMAssignmentAudits" EntityType="Self.LMAssignmentAudit" />
+    <EntitySet Name="LMAssignmentServiceLogs" EntityType="Self.LMAssignmentServiceLog" />
+    <EntitySet Name="LMClaimNotifications" EntityType="Self.LMClaimNotification" />
+    <EntitySet Name="LMClaimNotificationsAudits" EntityType="Self.LMClaimNotificationsAudit" />
+    <EntitySet Name="KeyVaults" EntityType="Self.KeyVault" />
+    <EntitySet Name="AppConfigs" EntityType="RCGCLAIMS_PROD01Model.AppConfig" />
+  </EntityContainer>
+  <EntityType Name="AppConfig">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KeyName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DevValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProdValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Timestamp" Type="DateTime" Precision="3" />
+  </EntityType>
+</Schema>

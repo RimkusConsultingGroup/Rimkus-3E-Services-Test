@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TE3ERCGSYNCPRODModelStoreContainer" CdmEntityContainer="TE3ERCGSYNCPRODEntities">
+    <EntitySetMapping Name="ClientMasters">
+      <EntityTypeMapping TypeName="TE3ERCGSYNCPRODModel.ClientMaster">
+        <MappingFragment StoreEntitySet="ClientMaster">
+          <ScalarProperty Name="ClientKeyId" ColumnName="ClientKeyId" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="AppKey" ColumnName="AppKey" />
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomSubjectLines">
+      <EntityTypeMapping TypeName="TE3ERCGSYNCPRODModel.CustomSubjectLine">
+        <MappingFragment StoreEntitySet="CustomSubjectLine">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ClientIndex" ColumnName="ClientIndex" />
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="SpecialSubjectLine" ColumnName="SpecialSubjectLine" />
+          <ScalarProperty Name="SpecificEmail" ColumnName="SpecificEmail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExcludedClientCollectionWFs">
+      <EntityTypeMapping TypeName="TE3ERCGSYNCPRODModel.ExcludedClientCollectionWF">
+        <MappingFragment StoreEntitySet="ExcludedClientCollectionWF">
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="ClientIndex" ColumnName="ClientIndex" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="SortString" ColumnName="SortString" />
+          <ScalarProperty Name="RelatedClient" ColumnName="RelatedClient" />
+          <ScalarProperty Name="IsExcluded" ColumnName="IsExcluded" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="RetrieveCollectionItemsByPastDueDays" FunctionName="TE3ERCGSYNCPRODModel.Store.RetrieveCollectionItemsByPastDueDays">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TE3ERCGSYNCPRODModel.RetrieveCollectionItemsByPastDueDays_Result">
+          <ScalarProperty Name="MatterNumber" ColumnName="MatterNumber" />
+          <ScalarProperty Name="MatterName" ColumnName="MatterName" />
+          <ScalarProperty Name="ClientIndex" ColumnName="ClientIndex" />
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="PrimaryRelatedClient" ColumnName="PrimaryRelatedClient" />
+          <ScalarProperty Name="PayorRelatedClient" ColumnName="PayorRelatedClient" />
+          <ScalarProperty Name="MattSpecialInstrRelatedClient" ColumnName="MattSpecialInstrRelatedClient" />
+          <ScalarProperty Name="Office" ColumnName="Office" />
+          <ScalarProperty Name="DateOfLoss" ColumnName="DateOfLoss" />
+          <ScalarProperty Name="Insured_Name" ColumnName="Insured Name" />
+          <ScalarProperty Name="Claimant" ColumnName="Claimant" />
+          <ScalarProperty Name="Style" ColumnName="Style" />
+          <ScalarProperty Name="Cause_Number" ColumnName="Cause Number" />
+          <ScalarProperty Name="InvMaster" ColumnName="InvMaster" />
+          <ScalarProperty Name="InvDate" ColumnName="InvDate" />
+          <ScalarProperty Name="InvPayor" ColumnName="InvPayor" />
+          <ScalarProperty Name="Payor" ColumnName="Payor" />
+          <ScalarProperty Name="PayorName" ColumnName="PayorName" />
+          <ScalarProperty Name="CollectionItem" ColumnName="CollectionItem" />
+          <ScalarProperty Name="CollectionStep" ColumnName="CollectionStep" />
+          <ScalarProperty Name="Collector" ColumnName="Collector" />
+          <ScalarProperty Name="CollectorName" ColumnName="CollectorName" />
+          <ScalarProperty Name="OpenAmt" ColumnName="OpenAmt" />
+          <ScalarProperty Name="OrigAmt" ColumnName="OrigAmt" />
+          <ScalarProperty Name="OrigCollAmt" ColumnName="OrigCollAmt" />
+          <ScalarProperty Name="DaysOverdue" ColumnName="DaysOverdue" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="RetrieveCollectionItemsByPastDueDaysNoFilter" FunctionName="TE3ERCGSYNCPRODModel.Store.RetrieveCollectionItemsByPastDueDaysNoFilter">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TE3ERCGSYNCPRODModel.RetrieveCollectionItemsByPastDueDaysNoFilter_Result">
+          <ScalarProperty Name="MatterNumber" ColumnName="MatterNumber" />
+          <ScalarProperty Name="MatterName" ColumnName="MatterName" />
+          <ScalarProperty Name="ClientIndex" ColumnName="ClientIndex" />
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="PrimaryRelatedClient" ColumnName="PrimaryRelatedClient" />
+          <ScalarProperty Name="PayorRelatedClient" ColumnName="PayorRelatedClient" />
+          <ScalarProperty Name="MattSpecialInstrRelatedClient" ColumnName="MattSpecialInstrRelatedClient" />
+          <ScalarProperty Name="Office" ColumnName="Office" />
+          <ScalarProperty Name="DateOfLoss" ColumnName="DateOfLoss" />
+          <ScalarProperty Name="Insured_Name" ColumnName="Insured Name" />
+          <ScalarProperty Name="Claimant" ColumnName="Claimant" />
+          <ScalarProperty Name="Style" ColumnName="Style" />
+          <ScalarProperty Name="Cause_Number" ColumnName="Cause Number" />
+          <ScalarProperty Name="InvMaster" ColumnName="InvMaster" />
+          <ScalarProperty Name="InvDate" ColumnName="InvDate" />
+          <ScalarProperty Name="InvPayor" ColumnName="InvPayor" />
+          <ScalarProperty Name="Payor" ColumnName="Payor" />
+          <ScalarProperty Name="PayorName" ColumnName="PayorName" />
+          <ScalarProperty Name="CollectionItem" ColumnName="CollectionItem" />
+          <ScalarProperty Name="CollectionStep" ColumnName="CollectionStep" />
+          <ScalarProperty Name="Collector" ColumnName="Collector" />
+          <ScalarProperty Name="CollectorName" ColumnName="CollectorName" />
+          <ScalarProperty Name="OpenAmt" ColumnName="OpenAmt" />
+          <ScalarProperty Name="OrigAmt" ColumnName="OrigAmt" />
+          <ScalarProperty Name="OrigCollAmt" ColumnName="OrigCollAmt" />
+          <ScalarProperty Name="DaysOverdue" ColumnName="DaysOverdue" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="RetrieveItemizedInvCollection" FunctionName="TE3ERCGSYNCPRODModel.Store.RetrieveItemizedInvCollection">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TE3ERCGSYNCPRODModel.RetrieveItemizedInvCollection_Result">
+          <ScalarProperty Name="MatterCollectionInvoiceID" ColumnName="MatterCollectionInvoiceID" />
+          <ScalarProperty Name="MatterCollectionItem" ColumnName="MatterCollectionItem" />
+          <ScalarProperty Name="CollectionInvoice_TimeStamp" ColumnName="CollectionInvoice_TimeStamp" />
+          <ScalarProperty Name="CollectionInvoice_InvPayor" ColumnName="CollectionInvoice_InvPayor" />
+          <ScalarProperty Name="CollectionInvoice_BillingGroup" ColumnName="CollectionInvoice_BillingGroup" />
+          <ScalarProperty Name="CollectionInvoice_CollectionItem" ColumnName="CollectionInvoice_CollectionItem" />
+          <ScalarProperty Name="CollectionInvoice_OrigColAmt" ColumnName="CollectionInvoice_OrigColAmt" />
+          <ScalarProperty Name="CollectionInvoice_DisputedAmount" ColumnName="CollectionInvoice_DisputedAmount" />
+          <ScalarProperty Name="CollectionInvoice_DisputeResolutionResp" ColumnName="CollectionInvoice_DisputeResolutionResp" />
+          <ScalarProperty Name="CollectionInvoice_InvoiceDisputeReason" ColumnName="CollectionInvoice_InvoiceDisputeReason" />
+          <ScalarProperty Name="CollectionInvoice_Comments" ColumnName="CollectionInvoice_Comments" />
+          <ScalarProperty Name="CollectionInvoice_ProformaSite" ColumnName="CollectionInvoice_ProformaSite" />
+          <ScalarProperty Name="InvPayor_InvMaster" ColumnName="InvPayor_InvMaster" />
+          <ScalarProperty Name="InvPayor_InvNumber" ColumnName="InvPayor_InvNumber" />
+          <ScalarProperty Name="InvPayor_Payor" ColumnName="InvPayor_Payor" />
+          <ScalarProperty Name="InvPayor_Currency" ColumnName="InvPayor_Currency" />
+          <ScalarProperty Name="InvPayor_CurrDate" ColumnName="InvPayor_CurrDate" />
+          <ScalarProperty Name="InvPayor_OrgAmt" ColumnName="InvPayor_OrgAmt" />
+          <ScalarProperty Name="InvPayor_AdjAmt" ColumnName="InvPayor_AdjAmt" />
+          <ScalarProperty Name="InvPayor_BalAmt" ColumnName="InvPayor_BalAmt" />
+          <ScalarProperty Name="InvPayor_Site" ColumnName="InvPayor_Site" />
+          <ScalarProperty Name="InvPayor_IsPaid" ColumnName="InvPayor_IsPaid" />
+          <ScalarProperty Name="InvPayor_PaidDate" ColumnName="InvPayor_PaidDate" />
+          <ScalarProperty Name="InvPayor_DoubtfulAmt" ColumnName="InvPayor_DoubtfulAmt" />
+          <ScalarProperty Name="InvPayor_ForAttentionOf" ColumnName="InvPayor_ForAttentionOf" />
+          <ScalarProperty Name="InvPayor_Layer" ColumnName="InvPayor_Layer" />
+          <ScalarProperty Name="InvPayor_RefNumber" ColumnName="InvPayor_RefNumber" />
+          <ScalarProperty Name="InvMaster_InvNumber" ColumnName="InvMaster_InvNumber" />
+          <ScalarProperty Name="InvMaster_InvDate" ColumnName="InvMaster_InvDate" />
+          <ScalarProperty Name="InvMaster_DueDate" ColumnName="InvMaster_DueDate" />
+          <ScalarProperty Name="InvMaster_LeadMatter" ColumnName="InvMaster_LeadMatter" />
+          <ScalarProperty Name="InvMaster_InvIndex" ColumnName="InvMaster_InvIndex" />
+          <ScalarProperty Name="InvMaster_IsReversed" ColumnName="InvMaster_IsReversed" />
+          <ScalarProperty Name="Matter_Number" ColumnName="Matter_Number" />
+          <ScalarProperty Name="Client_Index" ColumnName="Client_Index" />
+          <ScalarProperty Name="Matter_Description" ColumnName="Matter_Description" />
+          <ScalarProperty Name="Matter_Language" ColumnName="Matter_Language" />
+          <ScalarProperty Name="Client_Name" ColumnName="Client_Name" />
+          <ScalarProperty Name="Client_Number" ColumnName="Client_Number" />
+          <ScalarProperty Name="Language_Locale" ColumnName="Language_Locale" />
+          <ScalarProperty Name="Language_Description" ColumnName="Language_Description" />
+          <ScalarProperty Name="Payor_Description" ColumnName="Payor_Description" />
+          <ScalarProperty Name="NxCurrencyCode_CurrCode" ColumnName="NxCurrencyCode_CurrCode" />
+          <ScalarProperty Name="Site_Address" ColumnName="Site_Address" />
+          <ScalarProperty Name="Site_Description" ColumnName="Site_Description" />
+          <ScalarProperty Name="Address_City" ColumnName="Address_City" />
+          <ScalarProperty Name="Address_Country" ColumnName="Address_Country" />
+          <ScalarProperty Name="Address_Street" ColumnName="Address_Street" />
+          <ScalarProperty Name="Address_ZipCode" ColumnName="Address_ZipCode" />
+          <ScalarProperty Name="Address_FormattedString" ColumnName="Address_FormattedString" />
+          <ScalarProperty Name="Address_State" ColumnName="Address_State" />
+          <ScalarProperty Name="Country_Code" ColumnName="Country_Code" />
+          <ScalarProperty Name="Country_Description" ColumnName="Country_Description" />
+          <ScalarProperty Name="State_Code" ColumnName="State_Code" />
+          <ScalarProperty Name="State_Description" ColumnName="State_Description" />
+          <ScalarProperty Name="BillingGroup_Description" ColumnName="BillingGroup_Description" />
+          <ScalarProperty Name="CollectionItem_Collector" ColumnName="CollectionItem_Collector" />
+          <ScalarProperty Name="CollectionItem_Workflow" ColumnName="CollectionItem_Workflow" />
+          <ScalarProperty Name="CollectionItem_Number" ColumnName="CollectionItem_Number" />
+          <ScalarProperty Name="CollectionItem_Description" ColumnName="CollectionItem_Description" />
+          <ScalarProperty Name="Collector_Name" ColumnName="Collector_Name" />
+          <ScalarProperty Name="CollectionWorkflow_Description" ColumnName="CollectionWorkflow_Description" />
+          <ScalarProperty Name="Timekeeper_Entity" ColumnName="Timekeeper_Entity" />
+          <ScalarProperty Name="Timekeeper_Number" ColumnName="Timekeeper_Number" />
+          <ScalarProperty Name="Entity_Description" ColumnName="Entity_Description" />
+          <ScalarProperty Name="InvoiceDisputeReason_Description" ColumnName="InvoiceDisputeReason_Description" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="RetrieveLetterHeaderAddress" FunctionName="TE3ERCGSYNCPRODModel.Store.RetrieveLetterHeaderAddress">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TE3ERCGSYNCPRODModel.RetrieveLetterHeaderAddress_Result">
+          <ScalarProperty Name="ClientFormattedString" ColumnName="ClientFormattedString" />
+          <ScalarProperty Name="ClientOrgName" ColumnName="ClientOrgName" />
+          <ScalarProperty Name="ClientStreet" ColumnName="ClientStreet" />
+          <ScalarProperty Name="ClientCity" ColumnName="ClientCity" />
+          <ScalarProperty Name="ClientState" ColumnName="ClientState" />
+          <ScalarProperty Name="ClientZipCode" ColumnName="ClientZipCode" />
+          <ScalarProperty Name="ClientEmail" ColumnName="ClientEmail" />
+          <ScalarProperty Name="ClaimNumber" ColumnName="ClaimNumber" />
+          <ScalarProperty Name="ReferenceNumber" ColumnName="ReferenceNumber" />
+          <ScalarProperty Name="ClientContact" ColumnName="ClientContact" />
+          <ScalarProperty Name="ClientPhone" ColumnName="ClientPhone" />
+          <ScalarProperty Name="BillingFormattedString" ColumnName="BillingFormattedString" />
+          <ScalarProperty Name="BillingOrgName" ColumnName="BillingOrgName" />
+          <ScalarProperty Name="BillingStreet" ColumnName="BillingStreet" />
+          <ScalarProperty Name="BillingCity" ColumnName="BillingCity" />
+          <ScalarProperty Name="BillingState" ColumnName="BillingState" />
+          <ScalarProperty Name="BillingZipCode" ColumnName="BillingZipCode" />
+          <ScalarProperty Name="InvoiceTo" ColumnName="InvoiceTo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="RetrieveMatteCPC" FunctionName="TE3ERCGSYNCPRODModel.Store.RetrieveMatteCPC">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TE3ERCGSYNCPRODModel.RetrieveMatteCPC_Result">
+          <ScalarProperty Name="MattNumber" ColumnName="MattNumber" />
+          <ScalarProperty Name="MattName" ColumnName="MattName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="BillingTkprName" ColumnName="BillingTkprName" />
+          <ScalarProperty Name="RspTkprName" ColumnName="RspTkprName" />
+          <ScalarProperty Name="RspTkprEmail" ColumnName="RspTkprEmail" />
+          <ScalarProperty Name="RspTkprNetworkAlias" ColumnName="RspTkprNetworkAlias" />
+          <ScalarProperty Name="ReportingOffice" ColumnName="ReportingOffice" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="RetrieveMatterByNum" FunctionName="TE3ERCGSYNCPRODModel.Store.RetrieveMatterByNum">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TE3ERCGSYNCPRODModel.RetrieveMatterByNum_Result">
+          <ScalarProperty Name="MatterID" ColumnName="MatterID" />
+          <ScalarProperty Name="MattIndex" ColumnName="MattIndex" />
+          <ScalarProperty Name="MattNumber" ColumnName="MattNumber" />
+          <ScalarProperty Name="MattName" ColumnName="MattName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="MattStatus" ColumnName="MattStatus" />
+          <ScalarProperty Name="MattStatusDate" ColumnName="MattStatusDate" />
+          <ScalarProperty Name="MattType" ColumnName="MattType" />
+          <ScalarProperty Name="OpenDate" ColumnName="OpenDate" />
+          <ScalarProperty Name="ClientIndex" ColumnName="ClientIndex" />
+          <ScalarProperty Name="ClientNumber" ColumnName="ClientNumber" />
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="ClientFormattedString" ColumnName="ClientFormattedString" />
+          <ScalarProperty Name="ClientStreet" ColumnName="ClientStreet" />
+          <ScalarProperty Name="ClientCity" ColumnName="ClientCity" />
+          <ScalarProperty Name="ClientState" ColumnName="ClientState" />
+          <ScalarProperty Name="ClientZipCode" ColumnName="ClientZipCode" />
+          <ScalarProperty Name="Contact_Email" ColumnName="Contact Email" />
+          <ScalarProperty Name="ClaimNo" ColumnName="ClaimNo" />
+          <ScalarProperty Name="ReferenceNumber" ColumnName="ReferenceNumber" />
+          <ScalarProperty Name="Contact_Name" ColumnName="Contact Name" />
+          <ScalarProperty Name="Contact_Phone" ColumnName="Contact Phone" />
+          <ScalarProperty Name="Insured_Name" ColumnName="Insured Name" />
+          <ScalarProperty Name="Claimant" ColumnName="Claimant" />
+          <ScalarProperty Name="Style" ColumnName="Style" />
+          <ScalarProperty Name="Cause_Number" ColumnName="Cause Number" />
+          <ScalarProperty Name="Date_of_Loss" ColumnName="Date of Loss" />
+          <ScalarProperty Name="OfficeFormattedString" ColumnName="OfficeFormattedString" />
+          <ScalarProperty Name="OfficeName" ColumnName="OfficeName" />
+          <ScalarProperty Name="OfficeStreet" ColumnName="OfficeStreet" />
+          <ScalarProperty Name="OfficeCity" ColumnName="OfficeCity" />
+          <ScalarProperty Name="OfficeState" ColumnName="OfficeState" />
+          <ScalarProperty Name="OfficeZipCode" ColumnName="OfficeZipCode" />
+          <ScalarProperty Name="OfficePhone" ColumnName="OfficePhone" />
+          <ScalarProperty Name="OfficeFax" ColumnName="OfficeFax" />
+          <ScalarProperty Name="CertAuthNo" ColumnName="CertAuthNo" />
+          <ScalarProperty Name="Exported" ColumnName="Exported" />
+          <ScalarProperty Name="ErrorMsg" ColumnName="ErrorMsg" />
+          <ScalarProperty Name="TransDate" ColumnName="TransDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="RetrieveMatters" FunctionName="TE3ERCGSYNCPRODModel.Store.RetrieveMatters" />
+    <FunctionImportMapping FunctionImportName="GetBillingRate" FunctionName="TE3ERCGSYNCPRODModel.Store.GetBillingRate" />
+    <EntitySetMapping Name="TrackerSafeDecisionLetters">
+      <EntityTypeMapping TypeName="TE3ERCGSYNCPRODModel.TrackerSafeDecisionLetter">
+        <MappingFragment StoreEntitySet="TrackerSafeDecisionLetter">
+          <ScalarProperty Name="PDFFilePath" ColumnName="PDFFilePath" />
+          <ScalarProperty Name="NumOfTries" ColumnName="NumOfTries" />
+          <ScalarProperty Name="AuthorizedRepresentative" ColumnName="AuthorizedRepresentative" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="Expiration" ColumnName="Expiration" />
+          <ScalarProperty Name="InsuranceAmount" ColumnName="InsuranceAmount" />
+          <ScalarProperty Name="RecipientCarrierName" ColumnName="RecipientCarrierName" />
+          <ScalarProperty Name="RecipientPhone" ColumnName="RecipientPhone" />
+          <ScalarProperty Name="RecipientZipCode" ColumnName="RecipientZipCode" />
+          <ScalarProperty Name="RecipientState" ColumnName="RecipientState" />
+          <ScalarProperty Name="RecipientCity" ColumnName="RecipientCity" />
+          <ScalarProperty Name="RecipientAddress" ColumnName="RecipientAddress" />
+          <ScalarProperty Name="RecipientCompany" ColumnName="RecipientCompany" />
+          <ScalarProperty Name="RecipientName" ColumnName="RecipientName" />
+          <ScalarProperty Name="SentAt" ColumnName="SentAt" />
+          <ScalarProperty Name="ReceivedAt" ColumnName="ReceivedAt" />
+          <ScalarProperty Name="DecisionOption" ColumnName="DecisionOption" />
+          <ScalarProperty Name="ClientEmail" ColumnName="ClientEmail" />
+          <ScalarProperty Name="ClientZipCode" ColumnName="ClientZipCode" />
+          <ScalarProperty Name="ClientState" ColumnName="ClientState" />
+          <ScalarProperty Name="ClientCity" ColumnName="ClientCity" />
+          <ScalarProperty Name="ClientAddress" ColumnName="ClientAddress" />
+          <ScalarProperty Name="ClientCompanyName" ColumnName="ClientCompanyName" />
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="DateOfLoss" ColumnName="DateOfLoss" />
+          <ScalarProperty Name="ClaimNo" ColumnName="ClaimNo" />
+          <ScalarProperty Name="IsInsured" ColumnName="IsInsured" />
+          <ScalarProperty Name="InsuredName" ColumnName="InsuredName" />
+          <ScalarProperty Name="MattNum" ColumnName="MattNum" />
+          <ScalarProperty Name="EvidenceId" ColumnName="EvidenceId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TrackerSafeEMSImports">
+      <EntityTypeMapping TypeName="TE3ERCGSYNCPRODModel.TrackerSafeEMSImport">
+        <MappingFragment StoreEntitySet="TrackerSafeEMSImport">
+          <ScalarProperty Name="OfficeDescription" ColumnName="OfficeDescription" />
+          <ScalarProperty Name="Engineer1" ColumnName="Engineer1" />
+          <ScalarProperty Name="TransDate" ColumnName="TransDate" />
+          <ScalarProperty Name="ErrorMsg" ColumnName="ErrorMsg" />
+          <ScalarProperty Name="Exported" ColumnName="Exported" />
+          <ScalarProperty Name="CertAuthNo" ColumnName="CertAuthNo" />
+          <ScalarProperty Name="OfficeFax" ColumnName="OfficeFax" />
+          <ScalarProperty Name="OfficePhone" ColumnName="OfficePhone" />
+          <ScalarProperty Name="OfficeZipCode" ColumnName="OfficeZipCode" />
+          <ScalarProperty Name="OfficeState" ColumnName="OfficeState" />
+          <ScalarProperty Name="OfficeCity" ColumnName="OfficeCity" />
+          <ScalarProperty Name="OfficeStreet" ColumnName="OfficeStreet" />
+          <ScalarProperty Name="OfficeName" ColumnName="OfficeName" />
+          <ScalarProperty Name="OfficeFormattedString" ColumnName="OfficeFormattedString" />
+          <ScalarProperty Name="Date_of_Loss" ColumnName="Date of Loss" />
+          <ScalarProperty Name="Cause_Number" ColumnName="Cause Number" />
+          <ScalarProperty Name="Style" ColumnName="Style" />
+          <ScalarProperty Name="Claimant" ColumnName="Claimant" />
+          <ScalarProperty Name="Insured_Name" ColumnName="Insured Name" />
+          <ScalarProperty Name="Contact_Phone" ColumnName="Contact Phone" />
+          <ScalarProperty Name="Contact_Name" ColumnName="Contact Name" />
+          <ScalarProperty Name="ReferenceNumber" ColumnName="ReferenceNumber" />
+          <ScalarProperty Name="ClaimNo" ColumnName="ClaimNo" />
+          <ScalarProperty Name="Contact_Email" ColumnName="Contact Email" />
+          <ScalarProperty Name="ClientZipCode" ColumnName="ClientZipCode" />
+          <ScalarProperty Name="ClientState" ColumnName="ClientState" />
+          <ScalarProperty Name="ClientCity" ColumnName="ClientCity" />
+          <ScalarProperty Name="ClientStreet" ColumnName="ClientStreet" />
+          <ScalarProperty Name="ClientFormattedString" ColumnName="ClientFormattedString" />
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="ClientNumber" ColumnName="ClientNumber" />
+          <ScalarProperty Name="ClientIndex" ColumnName="ClientIndex" />
+          <ScalarProperty Name="OpenDate" ColumnName="OpenDate" />
+          <ScalarProperty Name="MattType" ColumnName="MattType" />
+          <ScalarProperty Name="MattStatusDate" ColumnName="MattStatusDate" />
+          <ScalarProperty Name="MattStatus" ColumnName="MattStatus" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="MattName" ColumnName="MattName" />
+          <ScalarProperty Name="MattNumber" ColumnName="MattNumber" />
+          <ScalarProperty Name="MattIndex" ColumnName="MattIndex" />
+          <ScalarProperty Name="MatterID" ColumnName="MatterID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

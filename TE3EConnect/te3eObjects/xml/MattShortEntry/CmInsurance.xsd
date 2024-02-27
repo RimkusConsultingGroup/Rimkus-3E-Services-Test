@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="CmInsurance">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="LossAmt" type="xs:string" minOccurs="0" />
+        <xs:element name="IsSubrogationAllowed" type="xs:string" minOccurs="0" />
+        <xs:element name="CmSettleRelList" type="xs:string" minOccurs="0" />
+        <xs:element name="PolicyNumber" type="xs:string" minOccurs="0" />
+        <xs:element name="AccidentLocation" type="xs:string" minOccurs="0" />
+        <xs:element name="AdjusterName" type="xs:string" minOccurs="0" />
+        <xs:element name="Currency" type="xs:string" minOccurs="0" />
+        <xs:element name="ConvDate" type="xs:string" minOccurs="0" />
+        <xs:element name="InsuredEntity" type="xs:string" minOccurs="0" />
+        <xs:element name="AdjusterEntity" type="xs:string" minOccurs="0" />
+        <xs:element name="JudgeEntity" type="xs:string" minOccurs="0" />
+        <xs:element name="SettledAmt" type="xs:string" minOccurs="0" />
+        <xs:element name="AuthorizedAmt" type="xs:string" minOccurs="0" />
+        <xs:element name="FinalAmt" type="xs:string" minOccurs="0" />
+        <xs:element name="IsJuryTrialRequired" type="xs:string" minOccurs="0" />
+        <xs:element name="CmDisposition" type="xs:string" minOccurs="0" />
+        <xs:element name="ClosingNotes" type="xs:string" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="CmInsurance" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

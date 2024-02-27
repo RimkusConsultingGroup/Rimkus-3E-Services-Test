@@ -1,0 +1,31 @@
+<CftEntityMatterInfo>
+                                                                                
+		<CftEntityMatterInfoID />
+		<CftEntityID>NewValue</CftEntityID>
+		<Number>NewValue</Number>
+		<DisplayName>NewValue</DisplayName>
+		<OpenDate>0001-01-02T00:00:00</OpenDate>
+		<CloseDate>0001-01-02T00:00:00</CloseDate>
+		<Narrative>NewValue</Narrative>
+		<RoleCode>NewValue</RoleCode>
+		<OrigTimekeeper>NewValue</OrigTimekeeper>
+		<RelationshipCode>NewValue</RelationshipCode>
+		<MattIndex>1</MattIndex>
+		<MatterID>NewValue</MatterID>
+		<Role>NewValue</Role>
+		<Relationship>NewValue</Relationship>
+		<MattStatus>NewValue</MattStatus>
+		<ConflictsContact>NewValue</ConflictsContact>
+		<RMImages />
+		<CftRelatedPartyID>NewValue</CftRelatedPartyID>
+		<DisplayMatterName>NewValue</DisplayMatterName>
+		<MatterStatusCode>NewValue</MatterStatusCode>
+		<IsMatterClosed>1</IsMatterClosed>
+		<IsMatterOpen>1</IsMatterOpen>
+		<ClientIndex>1</ClientIndex>
+		<TimekeeperContact />
+		<NxUserContact />
+		<IsFiltered>1</IsFiltered>
+		<ParentID>NewValue</ParentID>
+	
+</CftEntityMatterInfo>

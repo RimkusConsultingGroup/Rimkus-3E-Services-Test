@@ -1,0 +1,103 @@
+<CftSearchResultRPOrg>
+                                              
+                                                    <SearchTermGroupingLabel>000002 - S&amp;S Lines &amp; Drains - Searched without Role</SearchTermGroupingLabel>
+                                                    <Name>NewValue</Name>
+                                                    <Text>[H]S[/H]&amp;[H]S[/H] Lines &amp; [H]Drains[/H]</Text>
+                                                    <ProviderCode>FrameworkDataProvider</ProviderCode>
+                                                    <FullTextDocumentID>5038f6e2-db84-4734-be2a-7d746fb135c2</FullTextDocumentID>
+                                                    <HitCount>1</HitCount>
+                                                    <TextLanguage>1</TextLanguage>
+                                                    <DataItemID>ed3a4ff3-b1ae-4bac-b882-382c82537ba7</DataItemID>
+                                                    <ArchCode>CftRelatedParty</ArchCode>
+                                                    <AttrCode>DisplayName</AttrCode>
+                                                    <IsExcluded>1</IsExcluded>
+                                                    <PartialText>[H]S[/H]&amp;[H]S[/H] Lines &amp; [H]Drains[/H]</PartialText>
+                                                    <WhereFoundSortOrder>4</WhereFoundSortOrder>
+                                                    <StatusSortString>NewValue</StatusSortString>
+                                                    <WhereFoundArchCode>CftRelatedParty</WhereFoundArchCode>
+                                                    <WhereFoundAttrCode>DisplayName</WhereFoundAttrCode>
+                                                    <WhereFoundArchCaption>RelatedParty</WhereFoundArchCaption>
+                                                    <WhereFoundAttrCaption>Entity Name</WhereFoundAttrCaption>
+                                                    <WhereFound>RelatedParty.Entity Name</WhereFound>
+                                                    <WhereFoundItemID>8685055e-0070-47c1-a756-0ff8a2315445</WhereFoundItemID>
+                                                    <CftSearchTerm>9a809490-abbe-4e9e-b7c9-8d9793f988a7</CftSearchTerm>
+                                                    <RiskImage>3</RiskImage>
+                                                    <SearchTermSortOrder>2</SearchTermSortOrder>
+                                                    <DebugInfo>NewValue</DebugInfo>
+                                                    <DetailItemID>8685055e-0070-47c1-a756-0ff8a2315445</DetailItemID>
+                                                    <DetailArchCode>CftRelatedParty</DetailArchCode>
+                                                    <OpenMatters>1</OpenMatters>
+                                                    <ClosedMatters>1</ClosedMatters>
+                                                    <OpCLMatters>NewValue</OpCLMatters>
+                                                    <WhereFoundFrameworkItemID>8685055e-0070-47c1-a756-0ff8a2315445</WhereFoundFrameworkItemID>
+                                                    <RiskflagText>NewValue</RiskflagText>
+                                                    <IsSelected>1</IsSelected>
+                                                    <Assessment>NewValue</Assessment>
+                                                    <Routed>NewValue</Routed>
+                                                    <IsFiltered>1</IsFiltered>
+                                                    <CorporateTreeImage />
+                                                    <SearchNo>2</SearchNo>
+                                                    <ClientName>NewValue</ClientName>
+                                                    <MatterName>NewValue</MatterName>
+                                                    <Role>Insured</Role>
+                                                    <Relationship>NewValue</Relationship>
+                                                    <ConflictsContact>NewValue</ConflictsContact>
+                                                    <CftEntityOrMatterIndex>1</CftEntityOrMatterIndex>
+                                                    <EthicalWallImage />
+                                                    <CftClientIndex>63528</CftClientIndex>
+                                                    <EntitySanctionLoad />
+                                                    <IsMattercentricHit>1</IsMattercentricHit>
+                                                    <DisplayNumber>NewValue</DisplayNumber>
+                                                    <IsRouteSelected>1</IsRouteSelected>
+                                                    <EntityIndex>578937</EntityIndex>
+                                                    <MatterIndex>417523</MatterIndex>
+                                                    <DisplayText>NewValue</DisplayText>
+                                                    <DisplayPartialText>NewValue</DisplayPartialText>
+                                                    <DisplayClientName>NewValue</DisplayClientName>
+                                                    <DisplayMatterName>NewValue</DisplayMatterName>
+                                                    <DisplayNum>NewValue</DisplayNum>
+                                                    <IsFilterAppliedToDetail>1</IsFilterAppliedToDetail>
+                                                    <TimekeeperContact />
+                                                    <NxUserContact />
+                                                    <DisplayOpenMattersCount>2</DisplayOpenMattersCount>
+                                                    <DisplayClosedMattersCount>2</DisplayClosedMattersCount>
+                                                    <DisplayEthicalWallImage />
+                                                    <DisplayCorporateTreeImage />
+                                                    <DisplayConflictsContact>NewValue</DisplayConflictsContact>
+                                                    <IsResultSelected>1</IsResultSelected>
+                                                    <CftRoleCode />
+                                                    <ThresholdIndicator> </ThresholdIndicator>
+                                                    <IsSearchHasFilter>1</IsSearchHasFilter>
+                                                    <IsForceRetrieveDetails>1</IsForceRetrieveDetails>
+                                                    <ResultsDifferenceImage />
+                                                    <CftSearchCompareStatus />
+                                                    <IsResultModified>0</IsResultModified>
+                                                    <SourceCollection>3E</SourceCollection>
+                                                    <IsExternalHit>1</IsExternalHit>
+                                                    <FTXSourceType>3EDatabase</FTXSourceType>
+                                                    <PageNumber>0</PageNumber>
+                                                    <IsViewDifference>1</IsViewDifference>
+                                                    <CftFullTextResults>e99ca9ad-e471-4116-aaa4-60ead13fd7f3</CftFullTextResults>
+                                                    <LocationOfOccurenceTxt_CCC>NewValue</LocationOfOccurenceTxt_CCC>
+                                                    <DateOfOccurenceTxt_CCC>NewValue</DateOfOccurenceTxt_CCC>
+                                                    <RelatedPartyID>8685055e-0070-47c1-a756-0ff8a2315445</RelatedPartyID>
+                                                    <EntIndex>2</EntIndex>
+                                                    <MattIndex>2</MattIndex>
+                                                    <Notes>NewValue</Notes>
+                                                    <EntityID>NewValue</EntityID>
+                                                    <MatterID>NewValue</MatterID>
+                                                    <LinkType>NewValue</LinkType>
+                                                    <LinkStatus>NewValue</LinkStatus>
+                                                    <ClientNumber>NewValue</ClientNumber>
+                                                    <MatterNumber>NewValue</MatterNumber>
+                                                    <RPClientName>NewValue</RPClientName>
+                                                    <RPMatterName>NewValue</RPMatterName>
+                                                    <ClientStatus>NewValue</ClientStatus>
+                                                    <MatterStatus>NewValue</MatterStatus>
+                                                    <CftRelatedParty />
+                                                    <IsProspectiveRPItem>1</IsProspectiveRPItem>
+                                                    <ClientOpenDate>1900-01-02T00:00:00</ClientOpenDate>
+                                                    <ClientCloseDate>1900-01-02T00:00:00</ClientCloseDate>
+                                                    <IsCreatedParty>1</IsCreatedParty>
+                                           
+                                            </CftSearchResultRPOrg>

@@ -1,0 +1,513 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="RCGAMZN_PROD01Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'RCGAMZN_PROD01.dbo.TeamsDMSConfiguration' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="TeamsDMSConfiguration">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NumOfDays" Type="int" />
+          <Property Name="AzureFunc_BaseUrl_Dev" Type="nvarchar(max)" />
+          <Property Name="AzureFunc_CaseOpened_Dev" Type="nvarchar(max)" />
+          <Property Name="AzureFunc_CaseAssignment_Dev" Type="nvarchar(max)" />
+          <Property Name="AzureFunc_CaseClosed_Dev" Type="nvarchar(max)" />
+          <Property Name="AzureFunc_TeamAction_Dev" Type="nvarchar(max)" />
+          <Property Name="AzureFunc_BaseUrl_Prod" Type="nvarchar(max)" />
+          <Property Name="AzureFunc_CaseOpened_Prod" Type="nvarchar(max)" />
+          <Property Name="AzureFunc_CaseAssignment_Prod" Type="nvarchar(max)" />
+          <Property Name="AzureFunc_CaseClosed_Prod" Type="nvarchar(max)" />
+          <Property Name="AzureFunc_TeamAction_Prod" Type="nvarchar(max)" />
+          <Property Name="TrackerSafe_OrgId" Type="int" />
+          <Property Name="TrackerSafe_OfficeId" Type="int" />
+          <Property Name="Enotify_From" Type="nvarchar(max)" />
+          <Property Name="Enotify_To" Type="nvarchar(max)" />
+          <Property Name="Enotify_Cc" Type="nvarchar(max)" />
+          <Property Name="Test_Owners" Type="nvarchar(max)" />
+          <Property Name="Test_Members" Type="nvarchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'RCGAMZN_PROD01.dbo.TeamsDMSOfficeFilter' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="TeamsDMSOfficeFilter">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="16" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="IsExcluded" Type="bit" />
+          <Property Name="TimeStamp" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'RCGAMZN_PROD01.dbo.TeamsDMSQueue' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="TeamsDMSQueue">
+          <Key>
+            <PropertyRef Name="MatterID" />
+            <PropertyRef Name="MattIndex" />
+            <PropertyRef Name="MattNumber" />
+            <PropertyRef Name="MattName" />
+          </Key>
+          <Property Name="MatterID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="MattIndex" Type="int" Nullable="false" />
+          <Property Name="MattNumber" Type="nvarchar" MaxLength="64" Nullable="false" />
+          <Property Name="MattName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="MattDescription" Type="nvarchar(max)" />
+          <Property Name="Narrative" Type="nvarchar(max)" />
+          <Property Name="ScopeOfWork" Type="nvarchar(max)" />
+          <Property Name="MattStatus" Type="nvarchar" MaxLength="16" />
+          <Property Name="MattStatusDescription" Type="nvarchar" MaxLength="1024" />
+          <Property Name="OpenDate" Type="datetime" />
+          <Property Name="CloseDate" Type="datetime" />
+          <Property Name="ClientIndex" Type="int" />
+          <Property Name="ClientNumber" Type="nvarchar" MaxLength="64" />
+          <Property Name="ClientName" Type="nvarchar" MaxLength="255" />
+          <Property Name="DateOfLoss" Type="nvarchar" MaxLength="64" />
+          <Property Name="OfficeCode" Type="nvarchar" MaxLength="16" />
+          <Property Name="OfficeName" Type="nvarchar" MaxLength="1024" />
+          <Property Name="OwnerUsers" Type="nvarchar(max)" />
+          <Property Name="MemberUsers" Type="nvarchar(max)" />
+          <Property Name="OpenTkprId" Type="nvarchar" MaxLength="16" />
+          <Property Name="OpenTkprEmail" Type="nvarchar(max)" />
+          <Property Name="OpenTkprName" Type="nvarchar" MaxLength="1024" />
+          <Property Name="CloseTkprId" Type="nvarchar(max)" />
+          <Property Name="CloseTkprEmail" Type="nvarchar(max)" />
+          <Property Name="BillTkprId" Type="nvarchar" MaxLength="16" />
+          <Property Name="BillTkprName" Type="nvarchar" MaxLength="1024" />
+          <Property Name="BillTkprEmail" Type="nvarchar(max)" />
+          <Property Name="RspTkprId" Type="nvarchar" MaxLength="16" />
+          <Property Name="RspTkprName" Type="nvarchar" MaxLength="1024" />
+          <Property Name="RspTkprEmail" Type="nvarchar(max)" />
+          <Property Name="SpvTkprId" Type="nvarchar" MaxLength="16" />
+          <Property Name="SpvTkprName" Type="nvarchar" MaxLength="1024" />
+          <Property Name="SpvTkprEmail" Type="nvarchar(max)" />
+          <Property Name="SectionCode" Type="nvarchar" MaxLength="16" />
+          <Property Name="SectionDescription" Type="nvarchar" MaxLength="1024" />
+          <Property Name="DepartmentCode" Type="nvarchar" MaxLength="16" />
+          <Property Name="DepartmentDescription" Type="nvarchar" MaxLength="1024" />
+          <Property Name="PracticeGroupCode" Type="nvarchar" MaxLength="16" />
+          <Property Name="PracticeGroupDescription" Type="nvarchar" MaxLength="1024" />
+          <Property Name="IndustryGroupCode" Type="nvarchar" MaxLength="16" />
+          <Property Name="IndustryGroupDescription" Type="nvarchar" MaxLength="1024" />
+          <Property Name="TimeStamp" Type="datetime" />
+          <Property Name="IsTeamsChanged" Type="int" />
+          <Property Name="IsTeamRehydrated" Type="int" />
+          <Property Name="IsExported" Type="int" />
+          <Property Name="ErrorMsg" Type="nvarchar(max)" />
+          <Property Name="ExportedDate" Type="datetime" />
+          <Property Name="NumOfAttempt" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'RCGAMZN_PROD01.dbo.TeamsDMSQueueLogs' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="TeamsDMSQueueLogs">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MatterNumber" Type="nvarchar(max)" />
+          <Property Name="MatterName" Type="nvarchar(max)" />
+          <Property Name="MatterStatus" Type="nvarchar(max)" />
+          <Property Name="TeamsOwners" Type="nvarchar(max)" />
+          <Property Name="TeamsMembers" Type="nvarchar(max)" />
+          <Property Name="ExportedDate" Type="datetime" />
+          <Property Name="ErrorMessage" Type="nvarchar(max)" />
+          <Property Name="WebResponse" Type="nvarchar(max)" />
+        </EntityType>
+        <Function Name="DMS_RetrieveMatterForTeamsByNumber" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="mattNum" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="DMS_RetrieveMattersForTeams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="numOfDays" Type="int" Mode="In" />
+        </Function>
+        <Function Name="DMS_RetrieveMattersForTeamsByOffice" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="numOfDays" Type="int" Mode="In" />
+          <Parameter Name="office" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="GetClaimantOrInsuredName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar(max)">
+          <Parameter Name="matterNo" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="isInsured" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetMemberUsers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar(max)">
+          <Parameter Name="mattNo" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="GetPhoneOrFax" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar(max)">
+          <Parameter Name="matterNo" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="phoneType" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="GetUserEmail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar(max)">
+          <Parameter Name="tkprIdx" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="IsTeamsChanged" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+          <Parameter Name="matterNo" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="ownerUsers" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="memberUsers" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="IsTeamsRehydrated" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+          <Parameter Name="matterNo" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="mattStatusCode" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <EntityContainer Name="RCGAMZN_PROD01ModelStoreContainer">
+          <EntitySet Name="TeamsDMSConfiguration" EntityType="Self.TeamsDMSConfiguration" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [TeamsDMSConfiguration].[Id] AS [Id], 
+    [TeamsDMSConfiguration].[NumOfDays] AS [NumOfDays], 
+    [TeamsDMSConfiguration].[AzureFunc_BaseUrl_Dev] AS [AzureFunc_BaseUrl_Dev], 
+    [TeamsDMSConfiguration].[AzureFunc_CaseOpened_Dev] AS [AzureFunc_CaseOpened_Dev], 
+    [TeamsDMSConfiguration].[AzureFunc_CaseAssignment_Dev] AS [AzureFunc_CaseAssignment_Dev], 
+    [TeamsDMSConfiguration].[AzureFunc_CaseClosed_Dev] AS [AzureFunc_CaseClosed_Dev], 
+    [TeamsDMSConfiguration].[AzureFunc_TeamAction_Dev] AS [AzureFunc_TeamAction_Dev], 
+    [TeamsDMSConfiguration].[AzureFunc_BaseUrl_Prod] AS [AzureFunc_BaseUrl_Prod], 
+    [TeamsDMSConfiguration].[AzureFunc_CaseOpened_Prod] AS [AzureFunc_CaseOpened_Prod], 
+    [TeamsDMSConfiguration].[AzureFunc_CaseAssignment_Prod] AS [AzureFunc_CaseAssignment_Prod], 
+    [TeamsDMSConfiguration].[AzureFunc_CaseClosed_Prod] AS [AzureFunc_CaseClosed_Prod], 
+    [TeamsDMSConfiguration].[AzureFunc_TeamAction_Prod] AS [AzureFunc_TeamAction_Prod], 
+    [TeamsDMSConfiguration].[TrackerSafe_OrgId] AS [TrackerSafe_OrgId], 
+    [TeamsDMSConfiguration].[TrackerSafe_OfficeId] AS [TrackerSafe_OfficeId], 
+    [TeamsDMSConfiguration].[Enotify_From] AS [Enotify_From], 
+    [TeamsDMSConfiguration].[Enotify_To] AS [Enotify_To], 
+    [TeamsDMSConfiguration].[Enotify_Cc] AS [Enotify_Cc], 
+    [TeamsDMSConfiguration].[Test_Owners] AS [Test_Owners], 
+    [TeamsDMSConfiguration].[Test_Members] AS [Test_Members]
+    FROM [dbo].[TeamsDMSConfiguration] AS [TeamsDMSConfiguration]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="TeamsDMSOfficeFilter" EntityType="Self.TeamsDMSOfficeFilter" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [TeamsDMSOfficeFilter].[Id] AS [Id], 
+    [TeamsDMSOfficeFilter].[Code] AS [Code], 
+    [TeamsDMSOfficeFilter].[Description] AS [Description], 
+    [TeamsDMSOfficeFilter].[IsExcluded] AS [IsExcluded], 
+    [TeamsDMSOfficeFilter].[TimeStamp] AS [TimeStamp]
+    FROM [dbo].[TeamsDMSOfficeFilter] AS [TeamsDMSOfficeFilter]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="TeamsDMSQueue" EntityType="Self.TeamsDMSQueue" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [TeamsDMSQueue].[MatterID] AS [MatterID], 
+    [TeamsDMSQueue].[MattIndex] AS [MattIndex], 
+    [TeamsDMSQueue].[MattNumber] AS [MattNumber], 
+    [TeamsDMSQueue].[MattName] AS [MattName], 
+    [TeamsDMSQueue].[MattDescription] AS [MattDescription], 
+    [TeamsDMSQueue].[Narrative] AS [Narrative], 
+    [TeamsDMSQueue].[ScopeOfWork] AS [ScopeOfWork], 
+    [TeamsDMSQueue].[MattStatus] AS [MattStatus], 
+    [TeamsDMSQueue].[MattStatusDescription] AS [MattStatusDescription], 
+    [TeamsDMSQueue].[OpenDate] AS [OpenDate], 
+    [TeamsDMSQueue].[CloseDate] AS [CloseDate], 
+    [TeamsDMSQueue].[ClientIndex] AS [ClientIndex], 
+    [TeamsDMSQueue].[ClientNumber] AS [ClientNumber], 
+    [TeamsDMSQueue].[ClientName] AS [ClientName], 
+    [TeamsDMSQueue].[DateOfLoss] AS [DateOfLoss], 
+    [TeamsDMSQueue].[OfficeCode] AS [OfficeCode], 
+    [TeamsDMSQueue].[OfficeName] AS [OfficeName], 
+    [TeamsDMSQueue].[OwnerUsers] AS [OwnerUsers], 
+    [TeamsDMSQueue].[MemberUsers] AS [MemberUsers], 
+    [TeamsDMSQueue].[OpenTkprId] AS [OpenTkprId], 
+    [TeamsDMSQueue].[OpenTkprEmail] AS [OpenTkprEmail], 
+    [TeamsDMSQueue].[OpenTkprName] AS [OpenTkprName], 
+    [TeamsDMSQueue].[CloseTkprId] AS [CloseTkprId], 
+    [TeamsDMSQueue].[CloseTkprEmail] AS [CloseTkprEmail], 
+    [TeamsDMSQueue].[BillTkprId] AS [BillTkprId], 
+    [TeamsDMSQueue].[BillTkprName] AS [BillTkprName], 
+    [TeamsDMSQueue].[BillTkprEmail] AS [BillTkprEmail], 
+    [TeamsDMSQueue].[RspTkprId] AS [RspTkprId], 
+    [TeamsDMSQueue].[RspTkprName] AS [RspTkprName], 
+    [TeamsDMSQueue].[RspTkprEmail] AS [RspTkprEmail], 
+    [TeamsDMSQueue].[SpvTkprId] AS [SpvTkprId], 
+    [TeamsDMSQueue].[SpvTkprName] AS [SpvTkprName], 
+    [TeamsDMSQueue].[SpvTkprEmail] AS [SpvTkprEmail], 
+    [TeamsDMSQueue].[SectionCode] AS [SectionCode], 
+    [TeamsDMSQueue].[SectionDescription] AS [SectionDescription], 
+    [TeamsDMSQueue].[DepartmentCode] AS [DepartmentCode], 
+    [TeamsDMSQueue].[DepartmentDescription] AS [DepartmentDescription], 
+    [TeamsDMSQueue].[PracticeGroupCode] AS [PracticeGroupCode], 
+    [TeamsDMSQueue].[PracticeGroupDescription] AS [PracticeGroupDescription], 
+    [TeamsDMSQueue].[IndustryGroupCode] AS [IndustryGroupCode], 
+    [TeamsDMSQueue].[IndustryGroupDescription] AS [IndustryGroupDescription], 
+    [TeamsDMSQueue].[TimeStamp] AS [TimeStamp], 
+    [TeamsDMSQueue].[IsTeamsChanged] AS [IsTeamsChanged], 
+    [TeamsDMSQueue].[IsTeamRehydrated] AS [IsTeamRehydrated], 
+    [TeamsDMSQueue].[IsExported] AS [IsExported], 
+    [TeamsDMSQueue].[ErrorMsg] AS [ErrorMsg], 
+    [TeamsDMSQueue].[ExportedDate] AS [ExportedDate], 
+    [TeamsDMSQueue].[NumOfAttempt] AS [NumOfAttempt]
+    FROM [dbo].[TeamsDMSQueue] AS [TeamsDMSQueue]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="TeamsDMSQueueLogs" EntityType="Self.TeamsDMSQueueLogs" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [TeamsDMSQueueLogs].[Id] AS [Id], 
+    [TeamsDMSQueueLogs].[MatterNumber] AS [MatterNumber], 
+    [TeamsDMSQueueLogs].[MatterName] AS [MatterName], 
+    [TeamsDMSQueueLogs].[MatterStatus] AS [MatterStatus], 
+    [TeamsDMSQueueLogs].[TeamsOwners] AS [TeamsOwners], 
+    [TeamsDMSQueueLogs].[TeamsMembers] AS [TeamsMembers], 
+    [TeamsDMSQueueLogs].[ExportedDate] AS [ExportedDate], 
+    [TeamsDMSQueueLogs].[ErrorMessage] AS [ErrorMessage], 
+    [TeamsDMSQueueLogs].[WebResponse] AS [WebResponse]
+    FROM [dbo].[TeamsDMSQueueLogs] AS [TeamsDMSQueueLogs]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RCGAMZN_PROD01Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TeamsDMSConfiguration">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NumOfDays" Type="Int32" />
+          <Property Name="AzureFunc_BaseUrl_Dev" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AzureFunc_CaseOpened_Dev" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AzureFunc_CaseAssignment_Dev" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AzureFunc_CaseClosed_Dev" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AzureFunc_TeamAction_Dev" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AzureFunc_BaseUrl_Prod" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AzureFunc_CaseOpened_Prod" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AzureFunc_CaseAssignment_Prod" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AzureFunc_CaseClosed_Prod" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AzureFunc_TeamAction_Prod" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TrackerSafe_OrgId" Type="Int32" />
+          <Property Name="TrackerSafe_OfficeId" Type="Int32" />
+          <Property Name="Enotify_From" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Enotify_To" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Enotify_Cc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Test_Owners" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Test_Members" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TeamsDMSOfficeFilter">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsExcluded" Type="Boolean" />
+          <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="TeamsDMSQueue">
+          <Key>
+            <PropertyRef Name="MatterID" />
+            <PropertyRef Name="MattIndex" />
+            <PropertyRef Name="MattNumber" />
+            <PropertyRef Name="MattName" />
+          </Key>
+          <Property Name="MatterID" Type="Guid" Nullable="false" />
+          <Property Name="MattIndex" Type="Int32" Nullable="false" />
+          <Property Name="MattNumber" Type="String" MaxLength="64" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MattName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MattDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Narrative" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ScopeOfWork" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MattStatus" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="MattStatusDescription" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Name="OpenDate" Type="DateTime" Precision="3" />
+          <Property Name="CloseDate" Type="DateTime" Precision="3" />
+          <Property Name="ClientIndex" Type="Int32" />
+          <Property Name="ClientNumber" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="ClientName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DateOfLoss" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="OfficeCode" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="OfficeName" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Name="OwnerUsers" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MemberUsers" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OpenTkprId" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="OpenTkprEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OpenTkprName" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Name="CloseTkprId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CloseTkprEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BillTkprId" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="BillTkprName" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Name="BillTkprEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RspTkprId" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="RspTkprName" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Name="RspTkprEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SpvTkprId" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="SpvTkprName" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Name="SpvTkprEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SectionCode" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="SectionDescription" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Name="DepartmentCode" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="DepartmentDescription" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Name="PracticeGroupCode" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="PracticeGroupDescription" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Name="IndustryGroupCode" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="IndustryGroupDescription" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+          <Property Name="IsTeamsChanged" Type="Int32" />
+          <Property Name="IsTeamRehydrated" Type="Int32" />
+          <Property Name="IsExported" Type="Int32" />
+          <Property Name="ErrorMsg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ExportedDate" Type="DateTime" Precision="3" />
+          <Property Name="NumOfAttempt" Type="Int32" />
+        </EntityType>
+        <EntityType Name="TeamsDMSQueueLog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MatterNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MatterName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MatterStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TeamsOwners" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TeamsMembers" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ExportedDate" Type="DateTime" Precision="3" />
+          <Property Name="ErrorMessage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WebResponse" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="RCGAMZN_PROD01Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TeamsDMSConfigurations" EntityType="Self.TeamsDMSConfiguration" />
+          <EntitySet Name="TeamsDMSOfficeFilters" EntityType="Self.TeamsDMSOfficeFilter" />
+          <EntitySet Name="TeamsDMSQueues" EntityType="Self.TeamsDMSQueue" />
+          <EntitySet Name="TeamsDMSQueueLogs" EntityType="Self.TeamsDMSQueueLog" />
+          <FunctionImport Name="DMS_RetrieveMattersForTeams">
+          <Parameter Name="numOfDays" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="DMS_RetrieveMattersForTeamsByOffice">
+            <Parameter Name="numOfDays" Mode="In" Type="Int32" />
+            <Parameter Name="office" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="DMS_RetrieveMatterForTeamsByNumber">
+            <Parameter Name="mattNum" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="RCGAMZN_PROD01ModelStoreContainer" CdmEntityContainer="RCGAMZN_PROD01Entities">
+          <EntitySetMapping Name="TeamsDMSConfigurations">
+            <EntityTypeMapping TypeName="RCGAMZN_PROD01Model.TeamsDMSConfiguration">
+              <MappingFragment StoreEntitySet="TeamsDMSConfiguration">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="NumOfDays" ColumnName="NumOfDays" />
+                <ScalarProperty Name="AzureFunc_BaseUrl_Dev" ColumnName="AzureFunc_BaseUrl_Dev" />
+                <ScalarProperty Name="AzureFunc_CaseOpened_Dev" ColumnName="AzureFunc_CaseOpened_Dev" />
+                <ScalarProperty Name="AzureFunc_CaseAssignment_Dev" ColumnName="AzureFunc_CaseAssignment_Dev" />
+                <ScalarProperty Name="AzureFunc_CaseClosed_Dev" ColumnName="AzureFunc_CaseClosed_Dev" />
+                <ScalarProperty Name="AzureFunc_TeamAction_Dev" ColumnName="AzureFunc_TeamAction_Dev" />
+                <ScalarProperty Name="AzureFunc_BaseUrl_Prod" ColumnName="AzureFunc_BaseUrl_Prod" />
+                <ScalarProperty Name="AzureFunc_CaseOpened_Prod" ColumnName="AzureFunc_CaseOpened_Prod" />
+                <ScalarProperty Name="AzureFunc_CaseAssignment_Prod" ColumnName="AzureFunc_CaseAssignment_Prod" />
+                <ScalarProperty Name="AzureFunc_CaseClosed_Prod" ColumnName="AzureFunc_CaseClosed_Prod" />
+                <ScalarProperty Name="AzureFunc_TeamAction_Prod" ColumnName="AzureFunc_TeamAction_Prod" />
+                <ScalarProperty Name="TrackerSafe_OrgId" ColumnName="TrackerSafe_OrgId" />
+                <ScalarProperty Name="TrackerSafe_OfficeId" ColumnName="TrackerSafe_OfficeId" />
+                <ScalarProperty Name="Enotify_From" ColumnName="Enotify_From" />
+                <ScalarProperty Name="Enotify_To" ColumnName="Enotify_To" />
+                <ScalarProperty Name="Enotify_Cc" ColumnName="Enotify_Cc" />
+                <ScalarProperty Name="Test_Owners" ColumnName="Test_Owners" />
+                <ScalarProperty Name="Test_Members" ColumnName="Test_Members" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TeamsDMSOfficeFilters">
+            <EntityTypeMapping TypeName="RCGAMZN_PROD01Model.TeamsDMSOfficeFilter">
+              <MappingFragment StoreEntitySet="TeamsDMSOfficeFilter">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="IsExcluded" ColumnName="IsExcluded" />
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TeamsDMSQueues">
+            <EntityTypeMapping TypeName="RCGAMZN_PROD01Model.TeamsDMSQueue">
+              <MappingFragment StoreEntitySet="TeamsDMSQueue">
+                <ScalarProperty Name="MatterID" ColumnName="MatterID" />
+                <ScalarProperty Name="MattIndex" ColumnName="MattIndex" />
+                <ScalarProperty Name="MattNumber" ColumnName="MattNumber" />
+                <ScalarProperty Name="MattName" ColumnName="MattName" />
+                <ScalarProperty Name="MattDescription" ColumnName="MattDescription" />
+                <ScalarProperty Name="Narrative" ColumnName="Narrative" />
+                <ScalarProperty Name="ScopeOfWork" ColumnName="ScopeOfWork" />
+                <ScalarProperty Name="MattStatus" ColumnName="MattStatus" />
+                <ScalarProperty Name="MattStatusDescription" ColumnName="MattStatusDescription" />
+                <ScalarProperty Name="OpenDate" ColumnName="OpenDate" />
+                <ScalarProperty Name="CloseDate" ColumnName="CloseDate" />
+                <ScalarProperty Name="ClientIndex" ColumnName="ClientIndex" />
+                <ScalarProperty Name="ClientNumber" ColumnName="ClientNumber" />
+                <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+                <ScalarProperty Name="DateOfLoss" ColumnName="DateOfLoss" />
+                <ScalarProperty Name="OfficeCode" ColumnName="OfficeCode" />
+                <ScalarProperty Name="OfficeName" ColumnName="OfficeName" />
+                <ScalarProperty Name="OwnerUsers" ColumnName="OwnerUsers" />
+                <ScalarProperty Name="MemberUsers" ColumnName="MemberUsers" />
+                <ScalarProperty Name="OpenTkprId" ColumnName="OpenTkprId" />
+                <ScalarProperty Name="OpenTkprEmail" ColumnName="OpenTkprEmail" />
+                <ScalarProperty Name="OpenTkprName" ColumnName="OpenTkprName" />
+                <ScalarProperty Name="CloseTkprId" ColumnName="CloseTkprId" />
+                <ScalarProperty Name="CloseTkprEmail" ColumnName="CloseTkprEmail" />
+                <ScalarProperty Name="BillTkprId" ColumnName="BillTkprId" />
+                <ScalarProperty Name="BillTkprName" ColumnName="BillTkprName" />
+                <ScalarProperty Name="BillTkprEmail" ColumnName="BillTkprEmail" />
+                <ScalarProperty Name="RspTkprId" ColumnName="RspTkprId" />
+                <ScalarProperty Name="RspTkprName" ColumnName="RspTkprName" />
+                <ScalarProperty Name="RspTkprEmail" ColumnName="RspTkprEmail" />
+                <ScalarProperty Name="SpvTkprId" ColumnName="SpvTkprId" />
+                <ScalarProperty Name="SpvTkprName" ColumnName="SpvTkprName" />
+                <ScalarProperty Name="SpvTkprEmail" ColumnName="SpvTkprEmail" />
+                <ScalarProperty Name="SectionCode" ColumnName="SectionCode" />
+                <ScalarProperty Name="SectionDescription" ColumnName="SectionDescription" />
+                <ScalarProperty Name="DepartmentCode" ColumnName="DepartmentCode" />
+                <ScalarProperty Name="DepartmentDescription" ColumnName="DepartmentDescription" />
+                <ScalarProperty Name="PracticeGroupCode" ColumnName="PracticeGroupCode" />
+                <ScalarProperty Name="PracticeGroupDescription" ColumnName="PracticeGroupDescription" />
+                <ScalarProperty Name="IndustryGroupCode" ColumnName="IndustryGroupCode" />
+                <ScalarProperty Name="IndustryGroupDescription" ColumnName="IndustryGroupDescription" />
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+                <ScalarProperty Name="IsTeamsChanged" ColumnName="IsTeamsChanged" />
+                <ScalarProperty Name="IsTeamRehydrated" ColumnName="IsTeamRehydrated" />
+                <ScalarProperty Name="IsExported" ColumnName="IsExported" />
+                <ScalarProperty Name="ErrorMsg" ColumnName="ErrorMsg" />
+                <ScalarProperty Name="ExportedDate" ColumnName="ExportedDate" />
+                <ScalarProperty Name="NumOfAttempt" ColumnName="NumOfAttempt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TeamsDMSQueueLogs">
+            <EntityTypeMapping TypeName="RCGAMZN_PROD01Model.TeamsDMSQueueLog">
+              <MappingFragment StoreEntitySet="TeamsDMSQueueLogs">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="MatterNumber" ColumnName="MatterNumber" />
+                <ScalarProperty Name="MatterName" ColumnName="MatterName" />
+                <ScalarProperty Name="MatterStatus" ColumnName="MatterStatus" />
+                <ScalarProperty Name="TeamsOwners" ColumnName="TeamsOwners" />
+                <ScalarProperty Name="TeamsMembers" ColumnName="TeamsMembers" />
+                <ScalarProperty Name="ExportedDate" ColumnName="ExportedDate" />
+                <ScalarProperty Name="ErrorMessage" ColumnName="ErrorMessage" />
+                <ScalarProperty Name="WebResponse" ColumnName="WebResponse" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="DMS_RetrieveMattersForTeams" FunctionName="RCGAMZN_PROD01Model.Store.DMS_RetrieveMattersForTeams" />
+          <FunctionImportMapping FunctionImportName="DMS_RetrieveMattersForTeamsByOffice" FunctionName="RCGAMZN_PROD01Model.Store.DMS_RetrieveMattersForTeamsByOffice" />
+          <FunctionImportMapping FunctionImportName="DMS_RetrieveMatterForTeamsByNumber" FunctionName="RCGAMZN_PROD01Model.Store.DMS_RetrieveMatterForTeamsByNumber" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

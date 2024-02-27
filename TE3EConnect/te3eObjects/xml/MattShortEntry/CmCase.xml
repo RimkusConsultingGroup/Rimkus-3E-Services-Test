@@ -1,0 +1,15 @@
+<CmCase>
+                                    <CmCaseNumber>NewValue</CmCaseNumber>
+                                    <Description>NewValue</Description>
+                                    <DocketID>NewValue</DocketID>
+                                    <Language />
+                                    <CmTimeZone />
+                                    <CmRuleset />
+                                    <CmJurisdiction />
+                                    <CmCaseCategory />
+                                    <Alert>NewValue</Alert>
+                                    <RMSubmatter />
+                                    <IsViewcase>1</IsViewcase>
+                                    <TkprsAffectClosedEvents>1</TkprsAffectClosedEvents>
+                                    <TkprsAffectPastEvents>1</TkprsAffectPastEvents>
+                                </CmCase>

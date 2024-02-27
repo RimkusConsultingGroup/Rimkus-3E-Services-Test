@@ -1,0 +1,16 @@
+<MattPayor>
+                               
+                                    <Description>NewValue</Description>
+                                    <Currency />
+                                    <IsLayer>1</IsLayer>
+                                    <IsLayerAmount>1</IsLayerAmount>
+                                    <IsTaxbyMultipayor>1</IsTaxbyMultipayor>
+                                    <IsMultipayorByRate>1</IsMultipayorByRate>
+                                    <EffDate>0001-01-02T00:00:00</EffDate>
+                                    <EndDate>0001-01-02T00:00:00</EndDate>
+                                    <StartDate>0001-01-02T00:00:00</StartDate>
+                                    <CauseNum_CCC>NewValue</CauseNum_CCC>
+                                    <Court_CCC>NewValue</Court_CCC>
+                                    <Representing_CCC />
+                                    <Style_CCC>NewValue</Style_CCC>
+                                </MattPayor>

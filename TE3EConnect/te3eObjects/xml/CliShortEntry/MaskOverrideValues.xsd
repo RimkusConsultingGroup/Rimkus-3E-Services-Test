@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="MaskOverrideValues">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="CostType" type="xs:string" minOccurs="0" />
+        <xs:element name="ChrgType" type="xs:string" minOccurs="0" />
+        <xs:element name="TimeType" type="xs:string" minOccurs="0" />
+        <xs:element name="Matter" type="xs:string" minOccurs="0" />
+        <xs:element name="Timekeeper" type="xs:string" minOccurs="0" />
+        <xs:element name="GLNatural" type="xs:string" minOccurs="0" />
+        <xs:element name="GLUnit" type="xs:string" minOccurs="0" />
+        <xs:element name="GLOffice" type="xs:string" minOccurs="0" />
+        <xs:element name="GLTimekeeper" type="xs:string" minOccurs="0" />
+        <xs:element name="GLDepartment" type="xs:string" minOccurs="0" />
+        <xs:element name="GLSection" type="xs:string" minOccurs="0" />
+        <xs:element name="GLArrangement" type="xs:string" minOccurs="0" />
+        <xs:element name="GLTitle" type="xs:string" minOccurs="0" />
+        <xs:element name="GLPracticeGroup" type="xs:string" minOccurs="0" />
+        <xs:element name="GLWorkType" type="xs:string" minOccurs="0" />
+        <xs:element name="MaskOverrideType" type="xs:string" minOccurs="0" />
+        <xs:element name="ChrgTypePredicate" type="xs:string" minOccurs="0" />
+        <xs:element name="ClientPredicate" type="xs:string" minOccurs="0" />
+        <xs:element name="CostTypePredicate" type="xs:string" minOccurs="0" />
+        <xs:element name="MatterPredicate" type="xs:string" minOccurs="0" />
+        <xs:element name="TimekeeperPredicate" type="xs:string" minOccurs="0" />
+        <xs:element name="TimeTypePredicate" type="xs:string" minOccurs="0" />
+        <xs:element name="UsingChrgType" type="xs:string" minOccurs="0" />
+        <xs:element name="UsingClient" type="xs:string" minOccurs="0" />
+        <xs:element name="UsingCostType" type="xs:string" minOccurs="0" />
+        <xs:element name="UsingMatter" type="xs:string" minOccurs="0" />
+        <xs:element name="UsingTimekeeper" type="xs:string" minOccurs="0" />
+        <xs:element name="UsingTimeType" type="xs:string" minOccurs="0" />
+        <xs:element name="GLActivity" type="xs:string" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="MaskOverrideValues" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

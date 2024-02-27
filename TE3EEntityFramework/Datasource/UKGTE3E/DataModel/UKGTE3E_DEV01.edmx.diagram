@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0ee9163db5c54b739984885f9d7e5c2d" Name="Diagram1" ZoomLevel="47">
+        <EntityTypeShape EntityType="UKGTE3E_DEV01.UKG_TE_3E_TIMEKEEPER" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UKGTE3E_DEV01.UKG_TE_3E_TIMEKEEPER_AUDIT" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UKGTE3E_DEV01.UKG_TE_3E_TRANSACTION_LOGS" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UKGTE3E_DEV01.ONELOGIN_TE_3E_TRANSACTION_LOGS" Width="1.5" PointX="5.375" PointY="3.75" />
+        <EntityTypeShape EntityType="UKGTE3E_DEV01.ONELOGIN_TE_3E_USER" Width="1.5" PointX="5.375" PointY="6.75" />
+        <EntityTypeShape EntityType="UKGTE3E_DEV01.ONELOGIN_TE_3E_USER_AUDIT" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="UKGTE3E_DEV01.UKG_TE_3E_PO_AUDIT" Width="1.5" PointX="9.375" PointY="5.75" />
+        <EntityTypeShape EntityType="UKGTE3E_DEV01.UKG_TE_3E_PO_TRANSACTION_LOGS" Width="1.5" PointX="9.375" PointY="10.75" />
+        <EntityTypeShape EntityType="UKGTE3E_DEV01.UKG_TE_3E_PO" Width="1.5" PointX="11.375" PointY="0.75" />
+        <EntityTypeShape EntityType="UKGTE3E_DEV01.REQUISITION_TE_3E_PO_FORM_DATA" Width="1.5" PointX="9.375" PointY="0.75" />
+        <EntityTypeShape EntityType="UKGTE3E_DEV01.REQUISITION_TE_3E_PO_REF" Width="1.5" PointX="9.375" PointY="3.75" />
+        <EntityTypeShape EntityType="UKGTE3E_DEV01.UKG_TE_3E_BILLING_TITLE_DASHBOARD" Width="1.5" PointX="11.375" PointY="7.75" />
+        <EntityTypeShape EntityType="UKGTE3E_DEV01.UKG_TE_3E_DASHBOARD_ROLE" Width="1.5" PointX="11.375" PointY="10.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

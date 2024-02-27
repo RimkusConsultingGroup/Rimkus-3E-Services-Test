@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="GLAcct">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="GLAcctID" type="xs:string" minOccurs="0" />
+        <xs:element name="AcctIndex" type="xs:string" minOccurs="0" />
+        <xs:element name="Timekeeper" type="xs:string" minOccurs="0" />
+        <xs:element name="Number" type="xs:string" minOccurs="0" />
+        <xs:element name="ExportGLNum" type="xs:string" minOccurs="0" />
+        <xs:element name="IsControl" type="xs:string" minOccurs="0" />
+        <xs:element name="IsActive" type="xs:string" minOccurs="0" />
+        <xs:element name="IsRollup" type="xs:string" minOccurs="0" />
+        <xs:element name="IsParent" type="xs:string" minOccurs="0" />
+        <xs:element name="IsAggregate" type="xs:string" minOccurs="0" />
+        <xs:element name="GLNatural" type="xs:string" minOccurs="0" />
+        <xs:element name="GLNat" type="xs:string" minOccurs="0" />
+        <xs:element name="NxUnit" type="xs:string" minOccurs="0" />
+        <xs:element name="RestrictCurr" type="xs:string" minOccurs="0" />
+        <xs:element name="GLArrangement" type="xs:string" minOccurs="0" />
+        <xs:element name="GLUnit" type="xs:string" minOccurs="0" />
+        <xs:element name="GLOffice" type="xs:string" minOccurs="0" />
+        <xs:element name="GLDepartment" type="xs:string" minOccurs="0" />
+        <xs:element name="GLPracticeGroup" type="xs:string" minOccurs="0" />
+        <xs:element name="GLSection" type="xs:string" minOccurs="0" />
+        <xs:element name="GLTimekeeper" type="xs:string" minOccurs="0" />
+        <xs:element name="GLTitle" type="xs:string" minOccurs="0" />
+        <xs:element name="GLUnitLocal" type="xs:string" minOccurs="0" />
+        <xs:element name="GLWorkType" type="xs:string" minOccurs="0" />
+        <xs:element name="IsPostable" type="xs:string" minOccurs="0" />
+        <xs:element name="MaskedAlias" type="xs:string" minOccurs="0" />
+        <xs:element name="UnMaskedAlias" type="xs:string" minOccurs="0" />
+        <xs:element name="IsCreateZeroGJE" type="xs:string" minOccurs="0" />
+        <xs:element name="GLType" type="xs:string" minOccurs="0" />
+        <xs:element name="GLActivity" type="xs:string" minOccurs="0" />
+        <xs:element name="Description" nillable="true" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:simpleContent msdata:ColumnName="Description_Text" msdata:Ordinal="0">
+              <xs:extension base="xs:string">
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GLLocal" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GLValue" nillable="true" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:simpleContent msdata:ColumnName="GLValue_Text" msdata:Ordinal="0">
+              <xs:extension base="xs:string">
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="GLAcct" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

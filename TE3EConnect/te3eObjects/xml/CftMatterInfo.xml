@@ -1,0 +1,23 @@
+<CftMatterInfo>
+                                                                
+                                                                    <CftMatterInfoID />
+                                                                    <ParentID>NewValue</ParentID>
+                                                                    <MattStatus>NewValue</MattStatus>
+                                                                    <Number>NewValue</Number>
+                                                                    <AltNumber>NewValue</AltNumber>
+                                                                    <DisplayName>NewValue</DisplayName>
+                                                                    <Description>NewValue</Description>
+                                                                    <ContactInfo>NewValue</ContactInfo>
+                                                                    <ClientEntIndex>1</ClientEntIndex>
+                                                                    <MatterID>NewValue</MatterID>
+                                                                    <ClientDisplayName>NewValue</ClientDisplayName>
+                                                                    <Narrative>NewValue</Narrative>
+                                                                    <ConflictsContact>NewValue</ConflictsContact>
+                                                                    <ClientNumber>NewValue</ClientNumber>
+                                                                    <MatterStatusCode>NewValue</MatterStatusCode>
+                                                                    <TimekeeperContact />
+                                                                    <NxUserContact />
+                                                                    <IsOverThreshold>1</IsOverThreshold>
+                                                                    <IsForceRetrieveDetails>1</IsForceRetrieveDetails>
+                                                                    <ClientIndex>1</ClientIndex>
+</CftMatterInfo>

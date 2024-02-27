@@ -1,0 +1,2084 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <ComplexType Name="CMSScanMattAdditionalPartiesChanges_Result">
+    <Property Name="MattIndex" Type="Int32" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="CMSScanMattAdditionalPartiesChangesDateTime_Result">
+    <Property Name="MattIndex" Type="Int32" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="CMSScanMattBudgetChanges_Result">
+    <Property Name="MattIndex" Type="Int32" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="CMSScanMattBudgetChangesDateTime_Result">
+    <Property Name="MattIndex" Type="Int32" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="CMSScanMattEffectiveDateChanges_Result">
+    <Property Name="MattIndex" Type="Int32" />
+  </ComplexType>
+  <ComplexType Name="CMSScanMattEffectiveDateChangesDateTime_Result">
+    <Property Name="MattIndex" Type="Int32" />
+  </ComplexType>
+  <ComplexType Name="CMSScanMatterChanges_Result">
+    <Property Name="MattIndex" Type="Int32" />
+  </ComplexType>
+  <ComplexType Name="CMSScanMatterChangesDateTime_Result">
+    <Property Name="MattIndex" Type="Int32" />
+  </ComplexType>
+  <ComplexType Name="CMSScanMattFlatFeeChanges_Result">
+    <Property Name="MattIndex" Type="Int32" />
+  </ComplexType>
+  <ComplexType Name="CMSScanMattFlatFeeChangesDateTime_Result">
+    <Property Name="MattIndex" Type="Int32" />
+  </ComplexType>
+  <ComplexType Name="CMSScanMattIncidentLocationChanges_Result">
+    <Property Name="MattIndex" Type="Int32" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="CMSScanMattIndustryGroupChanges_Result">
+    <Property Name="MattIndex" Type="Int32" />
+  </ComplexType>
+  <ComplexType Name="CMSScanMattIndustryGroupChangesDateTime_Result">
+    <Property Name="MattIndex" Type="Int32" />
+  </ComplexType>
+  <ComplexType Name="CMSScanMattPayorDetailChanges_Result">
+    <Property Name="MattIndex" Type="Int32" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="CMSScanMattRateChanges_Result">
+    <Property Name="MattIndex" Type="Int32" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="CMSScanMattRateChangesDateTime_Result">
+    <Property Name="MattIndex" Type="Int32" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="CMSScanMattRateExcChanges_Result">
+    <Property Name="MattIndex" Type="Int32" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="CMSScanMattRateExcChangesDateTime_Result">
+    <Property Name="MattIndex" Type="Int32" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="CMSScanOrderingClientChanges_Result">
+    <Property Name="MattIndex" Type="Int32" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="CMSScanSpecialInstructionChanges_Result">
+    <Property Name="MattIndex" Type="Int32" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="CMSScanSpecialInstructionChangesDateTime_Result">
+    <Property Name="MattIndex" Type="Int32" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="CMSScanTechnicalEngineerChanges_Result">
+    <Property Name="MattIndex" Type="Int32" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SplitFullName_Result">
+    <Property Name="Firstname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Lastname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </ComplexType>
+  <ComplexType Name="SplitStrings_Result">
+    <Property Name="Item" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+  </ComplexType>
+  <EntityType Name="CMSAdditionalParty">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="E3EID" Type="Int32" />
+    <Property Name="KenticoID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SubItemKenticoID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MatterIndex" Type="Int32" />
+    <Property Name="MatterNumber" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Name="PartyName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PartyType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EntIndex" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EntityType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EntityTypeDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Role" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RoleDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="HomePhone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="WorkPhone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MobilePhone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RelatedPartiesID" Type="Guid" />
+    <Property Name="ArchetypeCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SvcOp" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+    <Property Name="QueueType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="IsProcessed" Type="Boolean" />
+    <Property Name="ErrorMsg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProcessedDate" Type="DateTime" Precision="3" />
+    <Property Name="NumOfAttempts" Type="Int32" />
+  </EntityType>
+  <EntityType Name="CMSAssignmentJob">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="E3EID" Type="Int32" />
+    <Property Name="KenticoID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MatterIndex" Type="Int32" />
+    <Property Name="MatterNumber" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Name="PayLoad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClientIndex" Type="Int32" />
+    <Property Name="ClientNumber" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Name="ClientName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+    <Property Name="QueueType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="IsProcessed" Type="Boolean" />
+    <Property Name="ErrorMsg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProcessedDate" Type="DateTime" Precision="3" />
+    <Property Name="NumOfAttempts" Type="Int32" />
+  </EntityType>
+  <EntityType Name="CMSAssignment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="E3EID" Type="Int32" />
+    <Property Name="KenticoID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MatterIndex" Type="Int32" />
+    <Property Name="MatterNumber" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Name="MatterName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClientIndex" Type="Int32" />
+    <Property Name="ClientNumber" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Name="ClientName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RelatedMatter" Type="Int32" />
+    <Property Name="MattStatus" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="MattStatusDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MattStatusDate" Type="DateTime" Precision="3" />
+    <Property Name="OpenDate" Type="DateTime" Precision="3" />
+    <Property Name="Narrative" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Narrative_UnformattedText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CloseDate" Type="DateTime" Precision="3" />
+    <Property Name="ElecBillingType" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="ElecBillingTypeDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ElectronicNumber" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Name="OpenTimekeeper" Type="Int32" />
+    <Property Name="OpenTimekeeperName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CloseTimekeeper" Type="Int32" />
+    <Property Name="CloseTimekeeperName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FeesTaxCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FeeTaxCodeDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Currency" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CurrencyDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EntryDate" Type="DateTime" Precision="3" />
+    <Property Name="EBilling" Type="Byte" />
+    <Property Name="DateOccurence" Type="DateTime" Precision="3" />
+    <Property Name="DateOfOccurenceTxt" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Name="IsProspective_CCC" Type="Byte" />
+    <Property Name="IsCheckWritingAuthority" Type="Byte" />
+    <Property Name="WebOriginated" Type="Byte" />
+    <Property Name="RetainerAmount" Type="Decimal" Precision="16" Scale="2" />
+    <Property Name="ScopeOfWork" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FixedPrice" Type="Byte" />
+    <Property Name="DNENotes" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="IsConfLetterStd" Type="Byte" />
+    <Property Name="IsConfLetterLegal" Type="Byte" />
+    <Property Name="IsConfLetterNatAgmt" Type="Byte" />
+    <Property Name="IsConfLetterEngSvcs" Type="Byte" />
+    <Property Name="IsConfLetterCAT" Type="Byte" />
+    <Property Name="IsConfLetterRtnr" Type="Byte" />
+    <Property Name="IsConfLetterSign" Type="Byte" />
+    <Property Name="ROFTemplate" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Name="ROFTemplateDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="StartDate1" Type="DateTime" Precision="3" />
+    <Property Name="BillingTimekeeper" Type="Int32" />
+    <Property Name="BillingTimekeeperName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ResponsibleTimekeeper" Type="Int32" />
+    <Property Name="ResponsibleTimekeeperName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SupervisingTimekeeper" Type="Int32" />
+    <Property Name="SupervisingTimekeeperName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Office" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="OfficeName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Arrangement" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="ArrangementDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Section" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="SectionDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Department" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="DepartmentDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PracticeGroup" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="PracticeGroupDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PTAGroup" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="PTAGroupDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IndustryGroup" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="IndustryGroupDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TechnicalReviewerNumber" Type="Int32" />
+    <Property Name="TechincalReviewerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EngineerOfRecordNo" Type="Int32" />
+    <Property Name="EngineerOfRecordName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BDManagerNo" Type="Int32" />
+    <Property Name="BDManagerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="StartDate2" Type="DateTime" Precision="3" />
+    <Property Name="SpecialClientInstruction" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SpecialClientInstructionDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SpecialInstructions" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceTo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Rate" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="RateDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RateExceptGroup" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RateExceptGroupDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TimeType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TimeTypeDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FlatFeeAmount" Type="Decimal" Precision="16" Scale="2" />
+    <Property Name="Budget" Type="Decimal" Precision="16" Scale="2" />
+    <Property Name="InsuranceType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InsuranceTypeDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClaimTypeDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReportTo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+    <Property Name="QueueType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="IsProcessed" Type="Boolean" />
+    <Property Name="ErrorMsg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProcessedDate" Type="DateTime" Precision="3" />
+    <Property Name="NumOfAttempts" Type="Int32" />
+    <Property Name="SubmissionID" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CMSCoConsultant">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="E3EID" Type="Int32" />
+    <Property Name="KenticoID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SubItemKenticoID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MatterIndex" Type="Int32" />
+    <Property Name="MatterNumber" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Name="CoConsultantIndex" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="CoConsultantNumber" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="CoConsultantName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+    <Property Name="SvcOp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="QueueType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="IsProcessed" Type="Boolean" />
+    <Property Name="ErrorMsg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProcessedDate" Type="DateTime" Precision="3" />
+    <Property Name="NumOfAttempts" Type="Int32" />
+  </EntityType>
+  <EntityType Name="CMSCustomerProfile">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KenticoID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClientNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ContactID" Type="Int32" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Salutation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyAddress1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyAddress2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyAddressCity" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyAddressState" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyAddressZip" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyAddressCountry" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyAddressLon" Type="Decimal" Precision="16" Scale="6" />
+    <Property Name="CompanyAddressLat" Type="Decimal" Precision="16" Scale="6" />
+    <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+    <Property Name="QueueType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="IsProcessed" Type="Boolean" />
+    <Property Name="ErrorMsg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProcessedDate" Type="DateTime" Precision="3" />
+    <Property Name="NumOfAttempts" Type="Int32" />
+  </EntityType>
+  <EntityType Name="CMSIncidentLocation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="E3EID" Type="Int32" />
+    <Property Name="KenticoID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SubItemKenticoID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MatterIndex" Type="Int32" />
+    <Property Name="MatterNumber" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Name="StreetOccurrence" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CityOccurrence" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CountyOccurrence" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="StateOccurrence" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ZipCodeOccurrence" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CountryOccurrence" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LatOccurrence" Type="Decimal" Precision="16" Scale="6" />
+    <Property Name="LonOccurrence" Type="Decimal" Precision="16" Scale="6" />
+    <Property Name="MattSiteID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SiteIndex" Type="Int32" />
+    <Property Name="AddrIndex" Type="Int32" />
+    <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+    <Property Name="SvcOp" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="QueueType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="IsProcessed" Type="Boolean" />
+    <Property Name="ErrorMsg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProcessedDate" Type="DateTime" Precision="3" />
+    <Property Name="NumOfAttempts" Type="Int32" />
+  </EntityType>
+  <EntityType Name="CMSKenticoAssignmentCopy">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="E3EID" Type="Int32" />
+    <Property Name="KenticoId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MatterIndex" Type="Int32" />
+    <Property Name="AssignmentImageJson" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Timestamp" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="CMSKenticoAssignmentRel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="E3EID" Type="Int32" Nullable="false" />
+    <Property Name="KenticoID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MatterIndex" Type="Int32" Nullable="false" />
+    <Property Name="MatterNumber" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Name="ClientIndex" Type="Int32" />
+    <Property Name="ClientNumber" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="CMSKenticoCustomerCopy">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="E3EID" Type="Int32" />
+    <Property Name="KenticoId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClientNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerImageJson" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Timestamp" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="CMSKenticoCustomerRel">
+    <Key>
+      <PropertyRef Name="ClientNumber" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KenticoID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClientNumber" Type="String" MaxLength="64" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ClientName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClientType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ContactID" Type="Int32" />
+    <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="CMSKenticoSubEntityRel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="E3EID" Type="Int32" />
+    <Property Name="KenticoId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MatterIndex" Type="Int32" />
+    <Property Name="SubKenticoId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EntityKey" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EntityType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="CMSKenticoSubEntityRelAudit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="E3EID" Type="Int32" />
+    <Property Name="KenticoId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MatterIndex" Type="Int32" />
+    <Property Name="SubKenticoId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EntityKey" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EntityType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedAt" Type="DateTime" Precision="3" />
+    <Property Name="Operation" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CMSKeyVault">
+    <Key>
+      <PropertyRef Name="ClientKeyId" />
+    </Key>
+    <Property Name="ClientKeyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AppId" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="AppKey" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ClientName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="CMSOrderingClient">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="E3EID" Type="Int32" />
+    <Property Name="KenticoID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MatterIndex" Type="Int32" />
+    <Property Name="MatterNumber" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Name="ClientIndex" Type="Int32" />
+    <Property Name="ClientNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ContactSalutation" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="ContactFirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ContactLastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ContactEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ContactPhoneNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyAddress1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyAddress2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyAddressCity" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyAddressState" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyAddressZip" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyAddressCountry" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyTypeDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AdditionalInstr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyLatAddress" Type="Decimal" Precision="16" Scale="6" />
+    <Property Name="CompanyLonAddress" Type="Decimal" Precision="16" Scale="6" />
+    <Property Name="Style" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Representing" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RepresentingDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Court" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CauseNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+    <Property Name="QueueType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="IsProcessed" Type="Boolean" />
+    <Property Name="ErrorMsg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProcessedDate" Type="DateTime" Precision="3" />
+    <Property Name="NumOfAttempts" Type="Int32" />
+  </EntityType>
+  <EntityType Name="CMSPayorDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="E3EID" Type="Int32" />
+    <Property Name="KenticoID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SubItemKenticoID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MatterIndex" Type="Int32" />
+    <Property Name="MatterNumber" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Name="ClientNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClientName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PayorIndex" Type="Int32" />
+    <Property Name="PayorName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Role" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="RoleDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Relationship" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RelationshipDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PercentFee" Type="Decimal" Precision="16" Scale="5" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClaimNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReferenceNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CorpType_CCC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Title_CCC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AddtlContactInfo_CCC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PONumber_CCC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Policy_CCC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UMR_CCC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="File_CCC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Tracking_CCC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Street" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="County" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="State" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ZipCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Country" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LatAddress" Type="Decimal" Precision="16" Scale="6" />
+    <Property Name="LonAddress" Type="Decimal" Precision="16" Scale="6" />
+    <Property Name="MattPayorID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MattPayorDetID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PayorID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PayorSiteIndex" Type="Int32" />
+    <Property Name="PayorAddrIndex" Type="Int32" />
+    <Property Name="PaymentAuthority" Type="Boolean" />
+    <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+    <Property Name="SvcOp" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="QueueType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="IsProcessed" Type="Boolean" />
+    <Property Name="ErrorMsg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProcessedDate" Type="DateTime" Precision="3" />
+    <Property Name="NumOfAttempts" Type="Int32" />
+  </EntityType>
+  <EntityType Name="CMSAdditionalPartiesAudit">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="E3EID" />
+      <PropertyRef Name="MatterIndex" />
+      <PropertyRef Name="UpdatedAt" />
+      <PropertyRef Name="Operation" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="E3EID" Type="Int32" Nullable="false" />
+    <Property Name="KenticoID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SubItemKenticoID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MatterIndex" Type="Int32" Nullable="false" />
+    <Property Name="MatterNumber" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Name="PartyName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PartyType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EntIndex" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EntityType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EntityTypeDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Role" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RoleDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="HomePhone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="WorkPhone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MobilePhone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+    <Property Name="SvcOp" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="QueueType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="IsProcessed" Type="Boolean" />
+    <Property Name="ErrorMsg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProcessedDate" Type="DateTime" Precision="3" />
+    <Property Name="NumOfAttempts" Type="Int32" />
+    <Property Name="UpdatedAt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Operation" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CMSAssignmentsAudit">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="UpdatedAt" />
+      <PropertyRef Name="Operation" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="E3EID" Type="Int32" />
+    <Property Name="KenticoID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MatterIndex" Type="Int32" />
+    <Property Name="MatterNumber" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Name="MatterName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClientIndex" Type="Int32" />
+    <Property Name="ClientNumber" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Name="ClientName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RelatedMatter" Type="Int32" />
+    <Property Name="MattStatus" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="MattStatusDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MattStatusDate" Type="DateTime" Precision="3" />
+    <Property Name="OpenDate" Type="DateTime" Precision="3" />
+    <Property Name="Narrative" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Narrative_UnformattedText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CloseDate" Type="DateTime" Precision="3" />
+    <Property Name="ElecBillingType" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="ElecBillingTypeDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ElectronicNumber" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Name="OpenTimekeeper" Type="Int32" />
+    <Property Name="OpenTimekeeperName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CloseTimekeeper" Type="Int32" />
+    <Property Name="CloseTimekeeperName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FeesTaxCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FeeTaxCodeDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Currency" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CurrencyDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EntryDate" Type="DateTime" Precision="3" />
+    <Property Name="EBilling" Type="Byte" />
+    <Property Name="DateOccurence" Type="DateTime" Precision="3" />
+    <Property Name="DateOfOccurenceTxt" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Name="IsProspective_CCC" Type="Byte" />
+    <Property Name="IsCheckWritingAuthority" Type="Byte" />
+    <Property Name="WebOriginated" Type="Byte" />
+    <Property Name="RetainerAmount" Type="Decimal" Precision="16" Scale="2" />
+    <Property Name="ScopeOfWork" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FixedPrice" Type="Byte" />
+    <Property Name="DNENotes" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="IsConfLetterStd" Type="Byte" />
+    <Property Name="IsConfLetterLegal" Type="Byte" />
+    <Property Name="IsConfLetterNatAgmt" Type="Byte" />
+    <Property Name="IsConfLetterEngSvcs" Type="Byte" />
+    <Property Name="IsConfLetterCAT" Type="Byte" />
+    <Property Name="IsConfLetterRtnr" Type="Byte" />
+    <Property Name="IsConfLetterSign" Type="Byte" />
+    <Property Name="ROFTemplate" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Name="ROFTemplateDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="StartDate1" Type="DateTime" Precision="3" />
+    <Property Name="BillingTimekeeper" Type="Int32" />
+    <Property Name="BillingTimekeeperName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ResponsibleTimekeeper" Type="Int32" />
+    <Property Name="ResponsibleTimekeeperName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SupervisingTimekeeper" Type="Int32" />
+    <Property Name="SupervisingTimekeeperName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Office" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="OfficeName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Arrangement" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="ArrangementDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Section" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="SectionDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Department" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="DepartmentDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PracticeGroup" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="PracticeGroupDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PTAGroup" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="PTAGroupDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IndustryGroup" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="IndustryGroupDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TechnicalReviewerNumber" Type="Int32" />
+    <Property Name="TechincalReviewerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EngineerOfRecordNo" Type="Int32" />
+    <Property Name="EngineerOfRecordName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BDManagerNo" Type="Int32" />
+    <Property Name="BDManagerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="StartDate2" Type="DateTime" Precision="3" />
+    <Property Name="SpecialClientInstruction" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SpecialClientInstructionDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SpecialInstructions" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceTo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Rate" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="RateDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RateExceptGroup" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RateExceptGroupDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TimeType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TimeTypeDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FlatFeeAmount" Type="Decimal" Precision="16" Scale="2" />
+    <Property Name="Budget" Type="Decimal" Precision="16" Scale="2" />
+    <Property Name="InsuranceType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InsuranceTypeDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClaimTypeDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RawJsonMsg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReportTo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+    <Property Name="QueueType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="IsProcessed" Type="Boolean" />
+    <Property Name="ErrorMsg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProcessedDate" Type="DateTime" Precision="3" />
+    <Property Name="NumOfAttempts" Type="Int32" />
+    <Property Name="UpdatedAt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Operation" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="SubmissionID" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CMSCoConsultantsAudit">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="MatterIndex" />
+      <PropertyRef Name="UpdatedAt" />
+      <PropertyRef Name="Operation" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="E3EID" Type="Int32" />
+    <Property Name="KenticoID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SubItemKenticoID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MatterIndex" Type="Int32" Nullable="false" />
+    <Property Name="MatterNumber" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Name="CoConsultantIndex" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="CoConsultantNumber" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="CoConsultantName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+    <Property Name="SvcOp" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="QueueType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="IsProcessed" Type="Boolean" />
+    <Property Name="ErrorMsg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProcessedDate" Type="DateTime" Precision="3" />
+    <Property Name="NumOfAttempts" Type="Int32" />
+    <Property Name="UpdatedAt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Operation" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CMSCustomerProfileAudit">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="UpdatedAt" />
+      <PropertyRef Name="Operation" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KenticoID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClientNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ContactID" Type="Int32" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Salutation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyAddress1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyAddress2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyAddressCity" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyAddressState" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyAddressZip" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyAddressCountry" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyAddressLon" Type="Decimal" Precision="16" Scale="6" />
+    <Property Name="CompanyAddressLat" Type="Decimal" Precision="16" Scale="6" />
+    <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+    <Property Name="QueueType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="IsProcessed" Type="Boolean" />
+    <Property Name="ErrorMsg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProcessedDate" Type="DateTime" Precision="3" />
+    <Property Name="NumOfAttempts" Type="Int32" />
+    <Property Name="UpdatedAt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Operation" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CMSIncidentLocationsAudit">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="E3EID" />
+      <PropertyRef Name="MatterIndex" />
+      <PropertyRef Name="UpdatedAt" />
+      <PropertyRef Name="Operation" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="E3EID" Type="Int32" Nullable="false" />
+    <Property Name="KenticoID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SubItemKenticoID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MatterIndex" Type="Int32" Nullable="false" />
+    <Property Name="MatterNumber" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Name="StreetOccurrence" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CityOccurrence" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CountyOccurrence" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="StateOccurrence" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ZipCodeOccurrence" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CountryOccurrence" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LatOccurrence" Type="Decimal" Precision="16" Scale="6" />
+    <Property Name="LonOccurrence" Type="Decimal" Precision="16" Scale="6" />
+    <Property Name="MattSiteID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SiteIndex" Type="Int32" />
+    <Property Name="AddrIndex" Type="Int32" />
+    <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+    <Property Name="SvcOp" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="QueueType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="IsProcessed" Type="Boolean" />
+    <Property Name="ErrorMsg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProcessedDate" Type="DateTime" Precision="3" />
+    <Property Name="NumOfAttempts" Type="Int32" />
+    <Property Name="UpdatedAt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Operation" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CMSKenticoAssignmentRelAudit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="E3EID" Type="Int32" />
+    <Property Name="KenticoID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MatterIndex" Type="Int32" />
+    <Property Name="MatterNumber" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Name="ClientIndex" Type="Int32" />
+    <Property Name="ClientNumber" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedAt" Type="DateTime" Precision="3" />
+    <Property Name="Operation" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CMSKenticoConfiguration">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NumOfDays" Type="Int32" />
+    <Property Name="TE3EAssignmentAzSBConn_Dev" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TE3EAssignmentAzSBQueueName_Dev" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KenticoAssignmentAzSBConn_Dev" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KenticoAssignmentAzSBQueueName_Dev" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DynamicsCustomersAzSBConn_Dev" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DynamicsCustomersAzSBQueueName_Dev" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KenticoCustomersAzSBConn_Dev" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KenticoCustomersAzSBQueueName_Dev" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TE3EAssignmentAzSBConn_Prod" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TE3EAssignmentAzSBQueueName_Prod" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KenticoAssignmentAzSBConn_Prod" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KenticoAssignmentAzSBQueueName_Prod" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DynamicsCustomersAzSBConn_Prod" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DynamicsCustomersAzSBQueueName_Prod" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KenticoCustomersAzSBConn_Prod" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KenticoCustomersAzSBQueueName_Prod" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Enotify_From" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Enotify_To" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Enotify_Cc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NumOfAttemptsAllowed" Type="Int32" />
+    <Property Name="TE3EAssignmentAzSBConn_Uat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TE3EAssignmentAzSBQueueName_Uat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KenticoAssignmentAzSBConn_Uat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KenticoAssignmentAzSBQueueName_Uat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DynamicsCustomersAzSBConn_Uat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DynamicsCustomersAzSBQueueName_Uat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KenticoCustomersAzSBConn_Uat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KenticoCustomersAzSBQueueName_Uat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KenticoAPIURL_DEV" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KenticoAPIURL_UAT" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KenticoAPIURL_PROD" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KenticoAPIKey_DEV" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KenticoAPIKey_UAT" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KenticoAPIKey_PROD" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CMSKenticoConfigurationAudit">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="updatedAt" />
+      <PropertyRef Name="operation" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NumOfDays" Type="Int32" />
+    <Property Name="TE3EAssignmentAzSBConn_Dev" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TE3EAssignmentAzSBQueueName_Dev" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KenticoAssignmentAzSBConn_Dev" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KenticoAssignmentAzSBQueueName_Dev" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DynamicsCustomersAzSBConn_Dev" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DynamicsCustomersAzSBQueueName_Dev" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KenticoCustomersAzSBConn_Dev" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KenticoCustomersAzSBQueueName_Dev" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TE3EAssignmentAzSBConn_Prod" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TE3EAssignmentAzSBQueueName_Prod" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KenticoAssignmentAzSBConn_Prod" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KenticoAssignmentAzSBQueueName_Prod" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DynamicsCustomersAzSBConn_Prod" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DynamicsCustomersAzSBQueueName_Prod" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KenticoCustomersAzSBConn_Prod" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KenticoCustomersAzSBQueueName_Prod" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Enotify_From" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Enotify_To" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Enotify_Cc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="updatedAt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="operation" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="NumOfAttemptsAllowed" Type="Int32" />
+    <Property Name="TE3EAssignmentAzSBConn_Uat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TE3EAssignmentAzSBQueueName_Uat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KenticoAssignmentAzSBConn_Uat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KenticoAssignmentAzSBQueueName_Uat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DynamicsCustomersAzSBConn_Uat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DynamicsCustomersAzSBQueueName_Uat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KenticoCustomersAzSBConn_Uat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KenticoCustomersAzSBQueueName_Uat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CMSKenticoCustomerRelAudit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KenticoID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClientNumber" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Name="ClientName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ClientType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ContactID" Type="Int32" />
+    <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedAt" Type="DateTime" Precision="3" />
+    <Property Name="Operation" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CMSOrderingClientsAudit">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="MatterIndex" />
+      <PropertyRef Name="UpdatedAt" />
+      <PropertyRef Name="Operation" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="E3EID" Type="Int32" />
+    <Property Name="KenticoID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MatterIndex" Type="Int32" Nullable="false" />
+    <Property Name="MatterNumber" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Name="ClientIndex" Type="Int32" />
+    <Property Name="ClientNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ContactSalutation" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="ContactFirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ContactLastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ContactEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ContactPhoneNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyAddress1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyAddress2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyAddressCity" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyAddressState" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyAddressZip" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyAddressCountry" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyTypeDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AdditionalInstr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyLatAddress" Type="Decimal" Precision="16" Scale="6" />
+    <Property Name="CompanyLonAddress" Type="Decimal" Precision="16" Scale="6" />
+    <Property Name="Style" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Representing" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RepresentingDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Court" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CauseNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+    <Property Name="QueueType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="IsProcessed" Type="Boolean" />
+    <Property Name="ErrorMsg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProcessedDate" Type="DateTime" Precision="3" />
+    <Property Name="NumOfAttempts" Type="Int32" />
+    <Property Name="UpdatedAt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Operation" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CMSPayorDetailsAudit">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="MatterIndex" />
+      <PropertyRef Name="UpdatedAt" />
+      <PropertyRef Name="Operation" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="E3EID" Type="Int32" />
+    <Property Name="KenticoID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SubItemKenticoID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MatterIndex" Type="Int32" Nullable="false" />
+    <Property Name="MatterNumber" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Name="ClientNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClientName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PayorIndex" Type="Int32" />
+    <Property Name="PayorName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Role" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="RoleDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Relationship" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RelationshipDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PercentFee" Type="Decimal" Precision="16" Scale="5" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClaimNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReferenceNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CorpType_CCC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Title_CCC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AddtlContactInfo_CCC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PONumber_CCC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Policy_CCC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UMR_CCC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="File_CCC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Tracking_CCC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Street" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="County" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="State" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ZipCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Country" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LatAddress" Type="Decimal" Precision="16" Scale="6" />
+    <Property Name="LonAddress" Type="Decimal" Precision="16" Scale="6" />
+    <Property Name="MattPayorID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MattPayorDetID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PayorID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PayorSiteIndex" Type="Int32" />
+    <Property Name="PayorAddrIndex" Type="Int32" />
+    <Property Name="PaymentAuthority" Type="Boolean" />
+    <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+    <Property Name="SvcOp" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="QueueType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="IsProcessed" Type="Boolean" />
+    <Property Name="ErrorMsg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProcessedDate" Type="DateTime" Precision="3" />
+    <Property Name="NumOfAttempts" Type="Int32" />
+    <Property Name="UpdatedAt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Operation" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CMSRefLookup">
+    <Key>
+      <PropertyRef Name="RefNumId" />
+    </Key>
+    <Property Name="RefNumId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RefType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="RCGKENTCMS_UAT01Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CMSAdditionalParties" EntityType="Self.CMSAdditionalParty" />
+    <EntitySet Name="CMSAssignmentJobs" EntityType="Self.CMSAssignmentJob" />
+    <EntitySet Name="CMSAssignments" EntityType="Self.CMSAssignment" />
+    <EntitySet Name="CMSCoConsultants" EntityType="Self.CMSCoConsultant" />
+    <EntitySet Name="CMSCustomerProfiles" EntityType="Self.CMSCustomerProfile" />
+    <EntitySet Name="CMSIncidentLocations" EntityType="Self.CMSIncidentLocation" />
+    <EntitySet Name="CMSKenticoAssignmentCopies" EntityType="Self.CMSKenticoAssignmentCopy" />
+    <EntitySet Name="CMSKenticoAssignmentRels" EntityType="Self.CMSKenticoAssignmentRel" />
+    <EntitySet Name="CMSKenticoCustomerCopies" EntityType="Self.CMSKenticoCustomerCopy" />
+    <EntitySet Name="CMSKenticoCustomerRels" EntityType="Self.CMSKenticoCustomerRel" />
+    <EntitySet Name="CMSKenticoSubEntityRels" EntityType="Self.CMSKenticoSubEntityRel" />
+    <EntitySet Name="CMSKenticoSubEntityRelAudits" EntityType="Self.CMSKenticoSubEntityRelAudit" />
+    <EntitySet Name="CMSKeyVaults" EntityType="Self.CMSKeyVault" />
+    <EntitySet Name="CMSOrderingClients" EntityType="Self.CMSOrderingClient" />
+    <EntitySet Name="CMSPayorDetails" EntityType="Self.CMSPayorDetail" />
+    <EntitySet Name="CMSAdditionalPartiesAudits" EntityType="Self.CMSAdditionalPartiesAudit" />
+    <EntitySet Name="CMSAssignmentsAudits" EntityType="Self.CMSAssignmentsAudit" />
+    <EntitySet Name="CMSCoConsultantsAudits" EntityType="Self.CMSCoConsultantsAudit" />
+    <EntitySet Name="CMSCustomerProfileAudits" EntityType="Self.CMSCustomerProfileAudit" />
+    <EntitySet Name="CMSIncidentLocationsAudits" EntityType="Self.CMSIncidentLocationsAudit" />
+    <EntitySet Name="CMSKenticoAssignmentRelAudits" EntityType="Self.CMSKenticoAssignmentRelAudit" />
+    <EntitySet Name="CMSKenticoConfigurations" EntityType="Self.CMSKenticoConfiguration" />
+    <EntitySet Name="CMSKenticoConfigurationAudits" EntityType="Self.CMSKenticoConfigurationAudit" />
+    <EntitySet Name="CMSKenticoCustomerRelAudits" EntityType="Self.CMSKenticoCustomerRelAudit" />
+    <EntitySet Name="CMSOrderingClientsAudits" EntityType="Self.CMSOrderingClientsAudit" />
+    <EntitySet Name="CMSPayorDetailsAudits" EntityType="Self.CMSPayorDetailsAudit" />
+    <EntitySet Name="CMSRefLookups" EntityType="Self.CMSRefLookup" />
+    <FunctionImport Name="CMSScanMattAdditionalPartiesChanges" IsComposable="true" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSScanMattAdditionalPartiesChanges_Result)">
+      <Parameter Name="numOfDays" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CMSScanMattAdditionalPartiesChangesDateTime" IsComposable="true" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSScanMattAdditionalPartiesChangesDateTime_Result)">
+      <Parameter Name="dateTime" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="CMSScanMattBudgetChanges" IsComposable="true" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSScanMattBudgetChanges_Result)">
+      <Parameter Name="numOfDays" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CMSScanMattBudgetChangesDateTime" IsComposable="true" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSScanMattBudgetChangesDateTime_Result)">
+      <Parameter Name="dateTime" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="CMSScanMattEffectiveDateChanges" IsComposable="true" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSScanMattEffectiveDateChanges_Result)">
+      <Parameter Name="numOfDays" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CMSScanMattEffectiveDateChangesDateTime" IsComposable="true" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSScanMattEffectiveDateChangesDateTime_Result)">
+      <Parameter Name="dateTime" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="CMSScanMatterChanges" IsComposable="true" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSScanMatterChanges_Result)">
+      <Parameter Name="numOfDays" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CMSScanMatterChangesDateTime" IsComposable="true" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSScanMatterChangesDateTime_Result)">
+      <Parameter Name="dateTime" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="CMSScanMattFlatFeeChanges" IsComposable="true" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSScanMattFlatFeeChanges_Result)">
+      <Parameter Name="numOfDays" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CMSScanMattFlatFeeChangesDateTime" IsComposable="true" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSScanMattFlatFeeChangesDateTime_Result)">
+      <Parameter Name="dateTime" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="CMSScanMattIncidentLocationChanges" IsComposable="true" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSScanMattIncidentLocationChanges_Result)">
+      <Parameter Name="numOfDays" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CMSScanMattIndustryGroupChanges" IsComposable="true" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSScanMattIndustryGroupChanges_Result)">
+      <Parameter Name="numOfDays" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CMSScanMattIndustryGroupChangesDateTime" IsComposable="true" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSScanMattIndustryGroupChangesDateTime_Result)">
+      <Parameter Name="dateTime" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="CMSScanMattPayorDetailChanges" IsComposable="true" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSScanMattPayorDetailChanges_Result)">
+      <Parameter Name="numOfDays" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CMSScanMattRateChanges" IsComposable="true" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSScanMattRateChanges_Result)">
+      <Parameter Name="numOfDays" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CMSScanMattRateChangesDateTime" IsComposable="true" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSScanMattRateChangesDateTime_Result)">
+      <Parameter Name="dateTime" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="CMSScanMattRateExcChanges" IsComposable="true" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSScanMattRateExcChanges_Result)">
+      <Parameter Name="numOfDays" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CMSScanMattRateExcChangesDateTime" IsComposable="true" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSScanMattRateExcChangesDateTime_Result)">
+      <Parameter Name="dateTime" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="CMSScanOrderingClientChanges" IsComposable="true" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSScanOrderingClientChanges_Result)">
+      <Parameter Name="numOfDays" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CMSScanSpecialInstructionChanges" IsComposable="true" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSScanSpecialInstructionChanges_Result)">
+      <Parameter Name="numOfDays" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CMSScanSpecialInstructionChangesDateTime" IsComposable="true" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSScanSpecialInstructionChangesDateTime_Result)">
+      <Parameter Name="dateTime" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="CMSScanTechnicalEngineerChanges" IsComposable="true" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSScanTechnicalEngineerChanges_Result)">
+      <Parameter Name="numOfDays" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SplitFullName" IsComposable="true" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.SplitFullName_Result)">
+      <Parameter Name="fullname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SplitStrings" IsComposable="true" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.SplitStrings_Result)">
+      <Parameter Name="List" Mode="In" Type="String" />
+      <Parameter Name="Delimiter" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="CMSConvertToCliTypeByCode" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSConvertToCliTypeByCode_Result)">
+      <Parameter Name="code" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="CMSGetAllClientMatters" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSGetAllClientMatters_Result)">
+      <Parameter Name="offset" Mode="In" Type="Int32" />
+      <Parameter Name="limit" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CMSGetAllClientMatters_Optimized" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSGetAllClientMatters_Optimized_Result)">
+      <Parameter Name="offset" Mode="In" Type="Int32" />
+      <Parameter Name="limit" Mode="In" Type="Int32" />
+      <Parameter Name="status" Mode="In" Type="String" />
+      <Parameter Name="search" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="CMSGetAllClientMatters_V2" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSGetAllClientMatters_V2_Result)">
+      <Parameter Name="offset" Mode="In" Type="Int32" />
+      <Parameter Name="limit" Mode="In" Type="Int32" />
+      <Parameter Name="status" Mode="In" Type="String" />
+      <Parameter Name="search" Mode="In" Type="String" />
+      <Parameter Name="email" Mode="In" Type="String" />
+      <Parameter Name="clientNumber" Mode="In" Type="String" />
+      <Parameter Name="totalCount" Mode="InOut" Type="Int32" />
+      <Parameter Name="filteredCount" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CMSGetAllClients" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSGetAllClients_Result)" />
+    <FunctionImport Name="CMSGetClientMatters" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSGetClientMatters_Result)">
+      <Parameter Name="clientNumber" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="CMSGetClientMattersByRelSiteEmail" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSGetClientMattersByRelSiteEmail_Result)">
+      <Parameter Name="email" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="CMSGetClientsByType" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSGetClientsByType_Result)">
+      <Parameter Name="cliTypeCode" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="CMSGetCliTypeFromCftRole" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSGetCliTypeFromCftRole_Result)">
+      <Parameter Name="cftRole" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CMSGetDefaultValue" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSGetDefaultValue_Result)" />
+    <FunctionImport Name="CMSGetFullMatterAdditionalPartiesDetails" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSGetFullMatterAdditionalPartiesDetails_Result)">
+      <Parameter Name="matterId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="CMSGetFullMatterCoConsultantDetails" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSGetFullMatterCoConsultantDetails_Result)">
+      <Parameter Name="matterId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="CMSGetFullMatterDetails" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSGetFullMatterDetails_Result)">
+      <Parameter Name="matterId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="CMSGetFullMatterIncidentLocationsDetails" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSGetFullMatterIncidentLocationsDetails_Result)">
+      <Parameter Name="matterId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="CMSGetFullMatterOrderingClientDetails" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSGetFullMatterOrderingClientDetails_Result)">
+      <Parameter Name="matterId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="CMSGetFullMatterPayorDetails" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSGetFullMatterPayorDetails_Result)">
+      <Parameter Name="matterId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="CMSGetLookupCodes" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSGetLookupCodes_Result)">
+      <Parameter Name="lookupType" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="CMSGetLookupTypes" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSGetLookupTypes_Result)" />
+    <FunctionImport Name="CMSGetMatterByNum" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSGetMatterByNum_Result)">
+      <Parameter Name="matterNo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="CMSGetMatterCode" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSGetMatterCode_Result)">
+      <Parameter Name="lookupType" Mode="In" Type="String" />
+      <Parameter Name="lookupValue" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="CMSGetMatterDetails" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSGetMatterDetails_Result)">
+      <Parameter Name="matterId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="CMSGetMatterNotes" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSGetMatterNotes_Result)">
+      <Parameter Name="matterId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="CMSGetOfficeAndTpk" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSGetOfficeAndTpk_Result)">
+      <Parameter Name="county" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="CMSGetOfficeAndTpkByCounty" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSGetOfficeAndTpkByCounty_Result)">
+      <Parameter Name="county" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="CMSGetOfficeAndTpkByZip" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSGetOfficeAndTpkByZip_Result)">
+      <Parameter Name="ZipNum" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="CMSRetrieveMattersForKentico" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSRetrieveMattersForKentico_Result)">
+      <Parameter Name="numOfDays" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CMSSearchClients" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSSearchClients_Result)">
+      <Parameter Name="name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="CMSSearchEntity" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSSearchEntity_Result)">
+      <Parameter Name="name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="CMSSearchOutAssignmentChanges">
+      <Parameter Name="numOfDays" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CMSSearchOutAssignmentChangesDateTime" />
+    <FunctionImport Name="CMSSearchOutCustomerChanges">
+      <Parameter Name="numOfDays" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CMSSearchOutCustomerChangesDateTime" />
+    <FunctionImport Name="CMSSearchRelMatters" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSSearchRelMatters_Result)">
+      <Parameter Name="name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="CMSSearchTimekeepers" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSSearchTimekeepers_Result)">
+      <Parameter Name="name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ConflictCheckAuditByDateRange" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.ConflictCheckAuditByDateRange_Result)">
+      <Parameter Name="numOfDays" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ConflictCheckAuditByMattNumber" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.ConflictCheckAuditByMattNumber_Result)">
+      <Parameter Name="mattNumber" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ConflictCheckAuditDrillDown" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.ConflictCheckAuditDrillDown_Result)">
+      <Parameter Name="jobNumber" Mode="In" Type="Int32" />
+      <Parameter Name="searchterms" Mode="In" Type="String" />
+      <Parameter Name="entitySearched" Mode="In" Type="String" />
+      <Parameter Name="whereFoundArchCode" Mode="In" Type="String" />
+      <Parameter Name="whereFoundAttrCode" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="CMSGetOfficeAndTpkByKeywords" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSGetOfficeAndTpkByKeywords_Result)">
+      <Parameter Name="keyPhrase" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="CMSDynamics365Configuration" EntityType="TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSDynamics365Configuration" />
+    <FunctionImport Name="CMSGetAllClientMatters_V3" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSGetAllClientMatters_V3_Result)">
+      <Parameter Name="offset" Mode="In" Type="Int32" />
+      <Parameter Name="limit" Mode="In" Type="Int32" />
+      <Parameter Name="status" Mode="In" Type="String" />
+      <Parameter Name="search" Mode="In" Type="String" />
+      <Parameter Name="searchcolumn" Mode="In" Type="String" />
+      <Parameter Name="fromdate" Mode="In" Type="DateTime" />
+      <Parameter Name="todate" Mode="In" Type="DateTime" />
+      <Parameter Name="email" Mode="In" Type="String" />
+      <Parameter Name="clientNumber" Mode="In" Type="String" />
+      <Parameter Name="totalCount" Mode="InOut" Type="Int32" />
+      <Parameter Name="filteredCount" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="CMSOfficeEmailLookups" EntityType="TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSOfficeEmailLookup" />
+    <FunctionImport Name="CMSGetOfficeAndTpkByCity" ReturnType="Collection(TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSGetOfficeAndTpkByCity_Result)">
+      <Parameter Name="city" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="CMSGetOfficeCode" ReturnType="Collection(String)">
+      <Parameter Name="keyword" Mode="In" Type="String" />
+      <Parameter Name="zipcode" Mode="In" Type="String" />
+      <Parameter Name="city" Mode="In" Type="String" />
+      <Parameter Name="state" Mode="In" Type="String" />
+      <Parameter Name="county" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="CMSConvertToCliTypeByCode_Result">
+    <Property Type="Guid" Name="CliTypeID" Nullable="false" />
+    <Property Type="String" Name="Code" Nullable="false" MaxLength="16" />
+    <Property Type="String" Name="Description" Nullable="false" MaxLength="64" />
+  </ComplexType>
+  <ComplexType Name="CMSGetAllClientMatters_Result">
+    <Property Type="Guid" Name="MatterID" Nullable="true" />
+    <Property Type="Int32" Name="MattIndex" Nullable="true" />
+    <Property Type="String" Name="MattNumber" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="MattName" Nullable="true" />
+    <Property Type="String" Name="MattDesc" Nullable="true" />
+    <Property Type="String" Name="CurrentStatusCode" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="CurrentStatus" Nullable="true" MaxLength="64" />
+    <Property Type="DateTime" Name="StatusDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="ClientNumber" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="ClientName" Nullable="true" />
+    <Property Type="DateTime" Name="OccurrenceDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="OccurrenceLocation" Nullable="true" />
+    <Property Type="String" Name="OccurrenceStreet" Nullable="true" />
+    <Property Type="String" Name="OccurrenceCity" Nullable="true" />
+    <Property Type="String" Name="OccurrenceState" Nullable="true" />
+    <Property Type="String" Name="OccurrenceZipCode" Nullable="true" />
+    <Property Type="String" Name="LatestNotes" Nullable="true" />
+    <Property Type="String" Name="ContactEmail" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ClaimNo" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="ReferenceNumber" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="Contact_Name" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="Contact_Phone" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="InsuredName" Nullable="true" />
+    <Property Type="String" Name="Claimant" Nullable="true" />
+    <Property Type="String" Name="Style" Nullable="true" MaxLength="1024" />
+    <Property Type="String" Name="CauseNumber" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="MatterSection" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="OrderClientCompanyAddress1" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="OrderClientCompanyAddress2" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="OrderClientCompanyAddressCity" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="OrderClientCompanyAddressState" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="OrderClientCompanyAddressZip" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="OrderClientCompanyAddressCountry" Nullable="true" MaxLength="8" />
+    <Property Type="Int32" Name="TotalCount" Nullable="true" />
+    <Property Type="DateTime" Name="TimeStamp" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="CMSGetAllClientMatters_Optimized_Result">
+    <Property Type="Guid" Name="MatterID" Nullable="true" />
+    <Property Type="Int32" Name="MattIndex" Nullable="true" />
+    <Property Type="String" Name="MattNumber" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="MattName" Nullable="true" />
+    <Property Type="String" Name="MattDesc" Nullable="true" />
+    <Property Type="String" Name="CurrentStatusCode" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="CurrentStatus" Nullable="true" MaxLength="64" />
+    <Property Type="DateTime" Name="StatusDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="ClientNumber" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="ClientName" Nullable="true" />
+    <Property Type="DateTime" Name="OccurrenceDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="OccurrenceLocation" Nullable="true" />
+    <Property Type="String" Name="OccurrenceStreet" Nullable="true" />
+    <Property Type="String" Name="OccurrenceCity" Nullable="true" />
+    <Property Type="String" Name="OccurrenceState" Nullable="true" />
+    <Property Type="String" Name="OccurrenceZipCode" Nullable="true" />
+    <Property Type="String" Name="LatestNotes" Nullable="true" />
+    <Property Type="String" Name="ContactEmail" Nullable="true" />
+    <Property Type="String" Name="ClaimNo" Nullable="true" />
+    <Property Type="String" Name="ReferenceNumber" Nullable="true" />
+    <Property Type="String" Name="Contact_Name" Nullable="true" />
+    <Property Type="String" Name="Contact_Phone" Nullable="true" />
+    <Property Type="String" Name="InsuredName" Nullable="true" />
+    <Property Type="String" Name="Claimant" Nullable="true" />
+    <Property Type="String" Name="Style" Nullable="true" />
+    <Property Type="String" Name="CauseNumber" Nullable="true" />
+    <Property Type="String" Name="MatterSection" Nullable="true" />
+    <Property Type="String" Name="OrderClientCompanyAddress1" Nullable="true" />
+    <Property Type="String" Name="OrderClientCompanyAddress2" Nullable="true" />
+    <Property Type="String" Name="OrderClientCompanyAddressCity" Nullable="true" />
+    <Property Type="String" Name="OrderClientCompanyAddressState" Nullable="true" />
+    <Property Type="String" Name="OrderClientCompanyAddressZip" Nullable="true" />
+    <Property Type="String" Name="OrderClientCompanyAddressCountry" Nullable="true" />
+    <Property Type="Int32" Name="TotalCount" Nullable="true" />
+    <Property Type="DateTime" Name="TimeStamp" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="CMSGetAllClientMatters_V2_Result">
+    <Property Type="Guid" Name="MatterID" Nullable="true" />
+    <Property Type="Int32" Name="MattIndex" Nullable="true" />
+    <Property Type="String" Name="MattNumber" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="MattName" Nullable="true" />
+    <Property Type="String" Name="MattDesc" Nullable="true" />
+    <Property Type="String" Name="CurrentStatusCode" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="CurrentStatus" Nullable="true" MaxLength="64" />
+    <Property Type="DateTime" Name="StatusDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="ClientNumber" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="ClientName" Nullable="true" />
+    <Property Type="DateTime" Name="OccurrenceDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="OccurrenceLocation" Nullable="true" />
+    <Property Type="String" Name="OccurrenceStreet" Nullable="true" />
+    <Property Type="String" Name="OccurrenceCity" Nullable="true" />
+    <Property Type="String" Name="OccurrenceState" Nullable="true" />
+    <Property Type="String" Name="OccurrenceZipCode" Nullable="true" />
+    <Property Type="String" Name="LatestNotes" Nullable="true" />
+    <Property Type="String" Name="ContactEmail" Nullable="true" />
+    <Property Type="String" Name="ClaimNo" Nullable="true" />
+    <Property Type="String" Name="ReferenceNumber" Nullable="true" />
+    <Property Type="String" Name="Contact_Name" Nullable="true" />
+    <Property Type="String" Name="Contact_Phone" Nullable="true" />
+    <Property Type="String" Name="InsuredName" Nullable="true" />
+    <Property Type="String" Name="Claimant" Nullable="true" />
+    <Property Type="String" Name="Style" Nullable="true" />
+    <Property Type="String" Name="CauseNumber" Nullable="true" />
+    <Property Type="String" Name="MatterSection" Nullable="true" />
+    <Property Type="String" Name="OrderClientCompanyAddress1" Nullable="true" />
+    <Property Type="String" Name="OrderClientCompanyAddress2" Nullable="true" />
+    <Property Type="String" Name="OrderClientCompanyAddressCity" Nullable="true" />
+    <Property Type="String" Name="OrderClientCompanyAddressState" Nullable="true" />
+    <Property Type="String" Name="OrderClientCompanyAddressZip" Nullable="true" />
+    <Property Type="String" Name="OrderClientCompanyAddressCountry" Nullable="true" />
+    <Property Type="DateTime" Name="TimeStamp" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="CMSGetAllClients_Result">
+    <Property Type="String" Name="ClientName" Nullable="false" MaxLength="195" />
+    <Property Type="Guid" Name="ClientID" Nullable="false" />
+    <Property Type="Int32" Name="Entity" Nullable="false" />
+    <Property Type="Int32" Name="ClientIndex" Nullable="false" />
+    <Property Type="String" Name="Number" Nullable="false" MaxLength="64" />
+    <Property Type="String" Name="AltNumber" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="DisplayName" Nullable="false" MaxLength="128" />
+    <Property Type="String" Name="SortString" Nullable="true" MaxLength="64" />
+    <Property Type="Int32" Name="RelatedClient" Nullable="true" />
+    <Property Type="String" Name="CliType" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="CliStatusType" Nullable="false" MaxLength="16" />
+    <Property Type="DateTime" Name="CliStatusDate" Nullable="false" Precision="23" />
+    <Property Type="Decimal" Name="CreditLimit" Nullable="true" Precision="16" Scale="2" />
+    <Property Type="String" Name="Currency" Nullable="true" MaxLength="8" />
+    <Property Type="DateTime" Name="CurrencyDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="OpenDate" Nullable="false" Precision="23" />
+    <Property Type="Byte" Name="IsPayor" Nullable="false" />
+    <Property Type="Int32" Name="InvoiceSite" Nullable="true" />
+    <Property Type="Int32" Name="StatementSite" Nullable="true" />
+    <Property Type="String" Name="ContactInfo" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="Industry" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="Narrative" Nullable="true" />
+    <Property Type="String" Name="Narrative_UnformattedText" Nullable="true" />
+    <Property Type="Int32" Name="Language" Nullable="true" />
+    <Property Type="String" Name="BillingInstruc" Nullable="true" MaxLength="1500" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="255" />
+    <Property Type="Int32" Name="OpenTkpr" Nullable="false" />
+    <Property Type="Int32" Name="CloseTkpr" Nullable="true" />
+    <Property Type="DateTime" Name="CloseDate" Nullable="true" Precision="23" />
+    <Property Type="Guid" Name="ProfDCSTemplate" Nullable="true" />
+    <Property Type="Guid" Name="BillDCSTemplate" Nullable="true" />
+    <Property Type="Guid" Name="StmtDCSTemplate" Nullable="true" />
+    <Property Type="String" Name="Country" Nullable="true" MaxLength="8" />
+    <Property Type="String" Name="CliAttribute" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="CliCategory" Nullable="true" MaxLength="16" />
+    <Property Type="DateTime" Name="EntryDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="VATRegistration" Nullable="true" MaxLength="64" />
+    <Property Type="Byte" Name="IsEngageLetterReq" Nullable="false" />
+    <Property Type="DateTime" Name="EngageLetterSubDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="EngageLetterRecDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="EngageLetterComment" Nullable="true" MaxLength="500" />
+    <Property Type="Byte" Name="IsWaiverLetterReq" Nullable="false" />
+    <Property Type="DateTime" Name="WaiverLetterSubDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="WaiverLetterRecDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="WaiverLetterComment" Nullable="true" MaxLength="500" />
+    <Property Type="Byte" Name="IsConflictsConfidential" Nullable="false" />
+    <Property Type="Int32" Name="ApproveTkpr" Nullable="true" />
+    <Property Type="String" Name="ConflictStatus" Nullable="true" MaxLength="16" />
+    <Property Type="Byte" Name="IsIdentified" Nullable="false" />
+    <Property Type="DateTime" Name="IdentificationDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="VolumeDiscountGroup" Nullable="true" MaxLength="16" />
+    <Property Type="Byte" Name="IsEBill" Nullable="false" />
+    <Property Type="Int32" Name="DueDays" Nullable="true" />
+    <Property Type="DateTime" Name="ApproveDate" Nullable="true" Precision="23" />
+    <Property Type="Byte" Name="IsICB" Nullable="false" />
+    <Property Type="String" Name="ICBUnit" Nullable="true" MaxLength="16" />
+    <Property Type="Byte" Name="IsCreateTaxInvOnRcpt" Nullable="false" />
+    <Property Type="String" Name="LoadSource" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="LoadGroup" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="LoadNumber" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="EbillValidationList" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="RSSFeed" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="TickerSymbol" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="URL" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="ArchetypeCode" Nullable="false" MaxLength="50" />
+    <Property Type="Guid" Name="CurrProcItemID" Nullable="true" />
+    <Property Type="Guid" Name="LastProcItemID" Nullable="true" />
+    <Property Type="Guid" Name="OrigProcItemID" Nullable="true" />
+    <Property Type="Byte" Name="HasAttachments" Nullable="true" />
+    <Property Type="DateTime" Name="TimeStamp" Nullable="true" Precision="23" />
+    <Property Type="Guid" Name="CreditNoteDCSTemplate" Nullable="true" />
+    <Property Type="Guid" Name="BillGroupDCSTemplate" Nullable="true" />
+    <Property Type="Guid" Name="CreditNoteGroupDCSTemplate" Nullable="true" />
+    <Property Type="Byte" Name="IsNoTC_CCC" Nullable="true" />
+    <Property Type="Int32" Name="EBHClientList" Nullable="true" />
+    <Property Type="String" Name="ConvNumber" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="ConvSource" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="ConvGroup" Nullable="true" MaxLength="64" />
+    <Property Type="Byte" Name="IsExportRestricted" Nullable="false" />
+    <Property Type="String" Name="VATRegistrationSeq" Nullable="true" MaxLength="64" />
+    <Property Type="Byte" Name="IsEbhAttachments" Nullable="false" />
+    <Property Type="Int32" Name="LxLabel" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="CMSGetClientMatters_Result">
+    <Property Type="Guid" Name="MatterID" Nullable="true" />
+    <Property Type="Int32" Name="MattIndex" Nullable="true" />
+    <Property Type="String" Name="MattNumber" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="MattName" Nullable="true" />
+    <Property Type="String" Name="MattDesc" Nullable="true" />
+    <Property Type="String" Name="CurrentStatusCode" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="CurrentStatus" Nullable="true" MaxLength="64" />
+    <Property Type="DateTime" Name="StatusDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="ClientNumber" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="ClientName" Nullable="true" />
+    <Property Type="DateTime" Name="OccurrenceDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="OccurrenceLocation" Nullable="true" />
+    <Property Type="String" Name="OccurrenceStreet" Nullable="true" />
+    <Property Type="String" Name="OccurrenceCity" Nullable="true" />
+    <Property Type="String" Name="OccurrenceState" Nullable="true" />
+    <Property Type="String" Name="OccurrenceZipCode" Nullable="true" />
+    <Property Type="String" Name="LatestNotes" Nullable="true" />
+    <Property Type="String" Name="ContactEmail" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ClaimNo" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="ReferenceNumber" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="Contact_Name" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="Contact_Phone" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="InsuredName" Nullable="true" />
+    <Property Type="String" Name="Claimant" Nullable="true" />
+    <Property Type="String" Name="Style" Nullable="true" MaxLength="1024" />
+    <Property Type="String" Name="CauseNumber" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="MatterSection" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="OrderClientCompanyAddress1" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="OrderClientCompanyAddress2" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="OrderClientCompanyAddressCity" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="OrderClientCompanyAddressState" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="OrderClientCompanyAddressZip" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="OrderClientCompanyAddressCountry" Nullable="true" MaxLength="8" />
+    <Property Type="DateTime" Name="TimeStamp" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="CMSGetClientMattersByRelSiteEmail_Result">
+    <Property Type="Guid" Name="MatterID" Nullable="true" />
+    <Property Type="Int32" Name="MattIndex" Nullable="true" />
+    <Property Type="String" Name="MattNumber" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="MattName" Nullable="true" />
+    <Property Type="String" Name="MattDesc" Nullable="true" />
+    <Property Type="String" Name="CurrentStatusCode" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="CurrentStatus" Nullable="true" MaxLength="64" />
+    <Property Type="DateTime" Name="StatusDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="ClientNumber" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="ClientName" Nullable="true" />
+    <Property Type="DateTime" Name="OccurrenceDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="OccurrenceLocation" Nullable="true" />
+    <Property Type="String" Name="OccurrenceStreet" Nullable="true" />
+    <Property Type="String" Name="OccurrenceCity" Nullable="true" />
+    <Property Type="String" Name="OccurrenceState" Nullable="true" />
+    <Property Type="String" Name="OccurrenceZipCode" Nullable="true" />
+    <Property Type="String" Name="LatestNotes" Nullable="true" />
+    <Property Type="String" Name="ContactEmail" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ClaimNo" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="ReferenceNumber" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="Contact_Name" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="Contact_Phone" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="InsuredName" Nullable="true" />
+    <Property Type="String" Name="Claimant" Nullable="true" />
+    <Property Type="String" Name="Style" Nullable="true" MaxLength="1024" />
+    <Property Type="String" Name="CauseNumber" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="MatterSection" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="OrderClientCompanyAddress1" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="OrderClientCompanyAddress2" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="OrderClientCompanyAddressCity" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="OrderClientCompanyAddressState" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="OrderClientCompanyAddressZip" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="OrderClientCompanyAddressCountry" Nullable="true" MaxLength="8" />
+    <Property Type="DateTime" Name="TimeStamp" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="CMSGetClientsByType_Result">
+    <Property Type="String" Name="CliType" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="CliTypeDescription" Nullable="false" MaxLength="64" />
+    <Property Type="String" Name="CliStatusType" Nullable="false" MaxLength="16" />
+    <Property Type="String" Name="CliStatusDescription" Nullable="false" MaxLength="64" />
+    <Property Type="DateTime" Name="CliStatusDate" Nullable="false" Precision="23" />
+    <Property Type="Guid" Name="ClientID" Nullable="false" />
+    <Property Type="Int32" Name="Entity" Nullable="false" />
+    <Property Type="Int32" Name="ClientIndex" Nullable="false" />
+    <Property Type="String" Name="Number" Nullable="false" MaxLength="64" />
+    <Property Type="String" Name="AltNumber" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="DisplayName" Nullable="false" MaxLength="128" />
+    <Property Type="String" Name="SortString" Nullable="true" MaxLength="64" />
+    <Property Type="Int32" Name="RelatedClient" Nullable="true" />
+    <Property Type="DateTime" Name="OpenDate" Nullable="false" Precision="23" />
+    <Property Type="Byte" Name="IsPayor" Nullable="false" />
+    <Property Type="Int32" Name="InvoiceSite" Nullable="true" />
+    <Property Type="Int32" Name="StatementSite" Nullable="true" />
+    <Property Type="String" Name="ContactInfo" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="Industry" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="Narrative" Nullable="true" />
+    <Property Type="String" Name="Narrative_UnformattedText" Nullable="true" />
+    <Property Type="DateTime" Name="TimeStamp" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="CMSGetCliTypeFromCftRole_Result">
+    <Property Type="String" Name="Code" Nullable="false" MaxLength="16" />
+    <Property Type="String" Name="Description" Nullable="false" MaxLength="64" />
+  </ComplexType>
+  <ComplexType Name="CMSGetDefaultValue_Result">
+    <Property Type="Guid" Name="OfficeID" Nullable="false" />
+    <Property Type="String" Name="Code" Nullable="false" MaxLength="16" />
+    <Property Type="String" Name="Description" Nullable="false" MaxLength="64" />
+  </ComplexType>
+  <ComplexType Name="CMSGetFullMatterAdditionalPartiesDetails_Result">
+    <Property Type="Int32" Name="E3EID" Nullable="false" />
+    <Property Type="String" Name="KenticoID" Nullable="true" />
+    <Property Type="Int32" Name="MatterIndex" Nullable="false" />
+    <Property Type="String" Name="MattNumber" Nullable="false" MaxLength="64" />
+    <Property Type="String" Name="PartyName" Nullable="true" MaxLength="512" />
+    <Property Type="String" Name="FirstName" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="LastName" Nullable="true" MaxLength="64" />
+    <Property Type="Int32" Name="EntityIndex" Nullable="true" />
+    <Property Type="String" Name="EntityType" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="EntityTypeDesc" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="Role" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="RoleDesc" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="HomePhone" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="WorkPhone" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="MobilePhone" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="EmailAddress" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="SiteIndex" Nullable="true" />
+    <Property Type="String" Name="OfficeType" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="OfficeTypeDesc" Nullable="true" MaxLength="64" />
+    <Property Type="Guid" Name="RelatedPartiesID" Nullable="true" />
+    <Property Type="String" Name="ArchetypeCode" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="TimeStamp" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="CMSGetFullMatterCoConsultantDetails_Result">
+    <Property Type="Int32" Name="E3EID" Nullable="false" />
+    <Property Type="String" Name="KenticoID" Nullable="true" />
+    <Property Type="Int32" Name="MatterIndex" Nullable="false" />
+    <Property Type="String" Name="MattNumber" Nullable="false" MaxLength="64" />
+    <Property Type="Int32" Name="CoConsultantIndex" Nullable="false" />
+    <Property Type="String" Name="CoConsultantNumber" Nullable="false" MaxLength="64" />
+    <Property Type="String" Name="CoConsultantName" Nullable="false" MaxLength="64" />
+    <Property Type="Guid" Name="TechRevEngRecID" Nullable="false" />
+    <Property Type="Guid" Name="CoConsultantID" Nullable="false" />
+    <Property Type="DateTime" Name="TimeStamp" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="CMSGetFullMatterDetails_Result">
+    <Property Type="Int32" Name="E3EID" Nullable="false" />
+    <Property Type="String" Name="KenticoID" Nullable="true" />
+    <Property Type="String" Name="MattNumber" Nullable="false" MaxLength="64" />
+    <Property Type="String" Name="MattName" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="CurrentStatusCode" Nullable="false" MaxLength="16" />
+    <Property Type="String" Name="CurrentStatus" Nullable="true" MaxLength="64" />
+    <Property Type="DateTime" Name="StatusDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="ClientIndex" Nullable="false" />
+    <Property Type="String" Name="ClientNumber" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="ClientName" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="RelatedMatter" Nullable="true" />
+    <Property Type="String" Name="RelatedMatterName" Nullable="true" MaxLength="255" />
+    <Property Type="DateTime" Name="OpenDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="Narrative" Nullable="true" />
+    <Property Type="String" Name="Narrative_UnformattedText" Nullable="true" />
+    <Property Type="DateTime" Name="CloseDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="ElecBillingType" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="ElecBillingTypeDesc" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="ElectronicNumber" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="OpenTimekeeper" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="OpenTimekeeperName" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="CloseTimekeeper" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="CloseTimekeeperName" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="FeesTaxCode" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="FeesTaxCodeDesc" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="Currency" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="CurrencyDesc" Nullable="true" MaxLength="64" />
+    <Property Type="DateTime" Name="EntryDate" Nullable="true" Precision="23" />
+    <Property Type="Byte" Name="EBilling" Nullable="false" />
+    <Property Type="DateTime" Name="DateOfOccurence" Nullable="true" Precision="23" />
+    <Property Type="String" Name="DateOfOccurenceTxt" Nullable="true" MaxLength="64" />
+    <Property Type="Byte" Name="IsProspective_CCC" Nullable="false" />
+    <Property Type="Byte" Name="WebOriginated" Nullable="true" />
+    <Property Type="Decimal" Name="RetainerAmount" Nullable="true" Precision="16" Scale="2" />
+    <Property Type="String" Name="ScopeOfWork" Nullable="true" />
+    <Property Type="Byte" Name="FixedPrice" Nullable="true" />
+    <Property Type="String" Name="DNENotes" Nullable="true" MaxLength="500" />
+    <Property Type="Byte" Name="IsConfLetterStd" Nullable="true" />
+    <Property Type="Byte" Name="IsConfLetterLegal" Nullable="true" />
+    <Property Type="Byte" Name="IsConfLetterNatAgmt" Nullable="true" />
+    <Property Type="Byte" Name="IsConfLetterEngSvcs" Nullable="true" />
+    <Property Type="Byte" Name="IsConfLetterCAT" Nullable="true" />
+    <Property Type="Byte" Name="IsConfLetterRtnr" Nullable="true" />
+    <Property Type="Byte" Name="IsConfLetterSign" Nullable="true" />
+    <Property Type="String" Name="ROFTemplate" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="ROFTemplateDesc" Nullable="true" MaxLength="128" />
+    <Property Type="DateTime" Name="StartDate1" Nullable="true" Precision="23" />
+    <Property Type="String" Name="BillingTimekeeper" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="BillingTimekeeperName" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="ResponsibleTimekeeper" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="ResponsibleTimekeeperName" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="SupervisorTimekeeper" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="SupervisorTimekeeperName" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="Office" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="OfficeDesc" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="Arrangement" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="ArrangementDesc" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="Section" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="SectionDesc" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="Department" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="DepartmentDesc" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="PracticeGroup" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="PracticeGroupDesc" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="PTAGroup" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="PTAGroupDesc" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="IndustryGroup" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="IndustryGroupDesc" Nullable="true" MaxLength="128" />
+    <Property Type="Guid" Name="TechRevEngRecID" Nullable="true" />
+    <Property Type="String" Name="TechnicalReviewerNumber" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="TechnicalReviewerName" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="EngineerOfRecordNo" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="EngineerOfRecordName" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="BDManagerNo" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="BDManagerName" Nullable="true" MaxLength="64" />
+    <Property Type="DateTime" Name="StartDate2" Nullable="true" Precision="23" />
+    <Property Type="String" Name="SpecialClientInstruction" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="SpecialClientInstructionDesc" Nullable="true" MaxLength="4000" />
+    <Property Type="String" Name="SpecialInstructions" Nullable="true" />
+    <Property Type="Guid" Name="InsuranceType" Nullable="true" />
+    <Property Type="String" Name="InsuranceTypeDesc" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="ClaimType" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="ClaimTypeDesc" Nullable="true" MaxLength="256" />
+    <Property Type="String" Name="InvoiceTo" Nullable="true" MaxLength="256" />
+    <Property Type="String" Name="Rate" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="RateDesc" Nullable="true" MaxLength="64" />
+    <Property Type="Guid" Name="RateExceptionGroup" Nullable="true" />
+    <Property Type="String" Name="RateExceptionGroupDesc" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="TimeType" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="TimeTypeDesc" Nullable="true" MaxLength="64" />
+    <Property Type="Decimal" Name="FlatFeeAmount" Nullable="true" Precision="16" Scale="2" />
+    <Property Type="Decimal" Name="BudgetAmount" Nullable="true" Precision="16" Scale="2" />
+    <Property Type="DateTime" Name="TimeStamp" Nullable="true" Precision="23" />
+    <Property Type="String" Name="ReportsTo" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="CMSGetFullMatterIncidentLocationsDetails_Result">
+    <Property Type="Int32" Name="E3EID" Nullable="false" />
+    <Property Type="String" Name="KenticoID" Nullable="true" />
+    <Property Type="Int32" Name="MatterIndex" Nullable="false" />
+    <Property Type="String" Name="MattNumber" Nullable="false" MaxLength="64" />
+    <Property Type="String" Name="StreetOccurrence" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="CityOccurrence" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="CountyOccurrence" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="StateOccurrence" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="ZipCodeOccurrence" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="CountryOccurrence" Nullable="true" MaxLength="8" />
+    <Property Type="Decimal" Name="LatOccurrence" Nullable="true" Precision="16" Scale="6" />
+    <Property Type="Decimal" Name="LonOccurrence" Nullable="true" Precision="16" Scale="6" />
+    <Property Type="Guid" Name="MattSiteID" Nullable="true" />
+    <Property Type="Int32" Name="SiteID" Nullable="true" />
+    <Property Type="Guid" Name="AddressID" Nullable="true" />
+    <Property Type="DateTime" Name="TimeStamp" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="CMSGetFullMatterOrderingClientDetails_Result">
+    <Property Type="Int32" Name="E3EID" Nullable="true" />
+    <Property Type="String" Name="KenticoID" Nullable="true" />
+    <Property Type="Int32" Name="MattIndex" Nullable="true" />
+    <Property Type="String" Name="MattNumber" Nullable="true" />
+    <Property Type="Int32" Name="OrderingClientIndex" Nullable="true" />
+    <Property Type="String" Name="OrderingClientNumber" Nullable="true" />
+    <Property Type="String" Name="OrderingClientSalutation" Nullable="true" />
+    <Property Type="String" Name="OrderingClientContactFirstName" Nullable="true" />
+    <Property Type="String" Name="OrderingClientContactLastName" Nullable="true" />
+    <Property Type="String" Name="OrderingClientContactEmail" Nullable="true" />
+    <Property Type="String" Name="OrderingClientContactPhoneNo" Nullable="true" />
+    <Property Type="String" Name="OrderingClientCompanyName" Nullable="true" />
+    <Property Type="String" Name="OrderingClientCompanyAddress1" Nullable="true" />
+    <Property Type="String" Name="OrderingClientCompanyAddress2" Nullable="true" />
+    <Property Type="String" Name="OrderingClientCompanyAddressCity" Nullable="true" />
+    <Property Type="String" Name="OrderingClientCompanyAddressState" Nullable="true" />
+    <Property Type="String" Name="OrderingClientCompanyAddressZip" Nullable="true" />
+    <Property Type="String" Name="OrderingClientCompanyAddressCountry" Nullable="true" />
+    <Property Type="String" Name="OrderingClientCompanyType" Nullable="true" />
+    <Property Type="String" Name="OrderingClientCompanyTypeDesc" Nullable="true" />
+    <Property Type="String" Name="OrderingClientAdditionalInstr" Nullable="true" />
+    <Property Type="String" Name="OrderingClientCompanyLatAddress" Nullable="true" />
+    <Property Type="String" Name="OrderingClientCompanyLonAddress" Nullable="true" />
+    <Property Type="String" Name="Style" Nullable="true" />
+    <Property Type="String" Name="Representing" Nullable="true" />
+    <Property Type="String" Name="RepresentingDesc" Nullable="true" />
+    <Property Type="String" Name="Court" Nullable="true" />
+    <Property Type="String" Name="CauseNumber" Nullable="true" />
+    <Property Type="DateTime" Name="TimeStamp" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="CMSGetFullMatterPayorDetails_Result">
+    <Property Type="Int32" Name="E3EID" Nullable="false" />
+    <Property Type="String" Name="KenticoID" Nullable="true" />
+    <Property Type="Int32" Name="MattIndex" Nullable="false" />
+    <Property Type="String" Name="MattNumber" Nullable="false" MaxLength="64" />
+    <Property Type="Int32" Name="ClientIndex" Nullable="true" />
+    <Property Type="String" Name="ClientName" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="PayorIndex" Nullable="true" />
+    <Property Type="String" Name="PayorName" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="Salutation" Nullable="true" />
+    <Property Type="String" Name="FirstName" Nullable="true" />
+    <Property Type="String" Name="LastName" Nullable="true" />
+    <Property Type="String" Name="Role" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="RoleDesc" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="Relationship" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="RelationshipDesc" Nullable="true" MaxLength="64" />
+    <Property Type="Decimal" Name="PercentFee" Nullable="true" Precision="16" Scale="5" />
+    <Property Type="String" Name="PhoneNumber" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ClaimNumber" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="ReferenceNumber" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="CorpType_CCC" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="Title_CCC" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="AddtlContactInfo_CCC" Nullable="true" />
+    <Property Type="String" Name="PONumber" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="Policy_CCC" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="UMR_CCC" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="File_CCC" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="Tracking_CCC" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="Street" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="City" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="County" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="State" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="ZipCode" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Country" Nullable="true" MaxLength="8" />
+    <Property Type="Decimal" Name="LatAddress" Nullable="true" Precision="16" Scale="6" />
+    <Property Type="Decimal" Name="LonAddress" Nullable="true" Precision="16" Scale="6" />
+    <Property Type="Guid" Name="MattPayorID" Nullable="false" />
+    <Property Type="Guid" Name="MattPayorDetID" Nullable="true" />
+    <Property Type="Guid" Name="PayorID" Nullable="true" />
+    <Property Type="Guid" Name="PayorSiteID" Nullable="true" />
+    <Property Type="Guid" Name="PayorAddressID" Nullable="true" />
+    <Property Type="Int32" Name="PaymentAuthority" Nullable="false" />
+    <Property Type="DateTime" Name="TimeStamp" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="CMSGetLookupCodes_Result">
+    <Property Type="Guid" Name="ID" Nullable="true" />
+    <Property Type="String" Name="Code" Nullable="true" />
+    <Property Type="String" Name="Description" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="CMSGetLookupTypes_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Type" Nullable="true" />
+    <Property Type="String" Name="Description" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="CMSGetMatterByNum_Result">
+    <Property Type="Guid" Name="MatterID" Nullable="false" />
+    <Property Type="Int32" Name="MattIndex" Nullable="false" />
+    <Property Type="String" Name="MattNumber" Nullable="false" MaxLength="64" />
+    <Property Type="String" Name="MattName" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="1024" />
+    <Property Type="String" Name="MattStatus" Nullable="false" MaxLength="16" />
+    <Property Type="DateTime" Name="MattStatusDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="MattType" Nullable="true" MaxLength="16" />
+    <Property Type="DateTime" Name="OpenDate" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="ClientIndex" Nullable="false" />
+    <Property Type="String" Name="ClientNumber" Nullable="false" MaxLength="64" />
+    <Property Type="String" Name="ClientName" Nullable="false" MaxLength="128" />
+    <Property Type="String" Name="ClientFormattedString" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="ClientStreet" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="ClientCity" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="ClientState" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="ClientZipCode" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Contact_Email" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ClaimNo" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="ReferenceNumber" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="Contact_Name" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="Contact_Phone" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="Insured_Name" Nullable="true" />
+    <Property Type="String" Name="Claimant" Nullable="true" />
+    <Property Type="String" Name="Style" Nullable="true" MaxLength="1024" />
+    <Property Type="String" Name="Cause_Number" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="Date_of_Loss" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="OfficeCode" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="OfficeDescription" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="OfficeFormattedString" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="OfficeName" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="OfficeStreet" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="OfficeCity" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="OfficeState" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="OfficeZipCode" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="OfficePhone" Nullable="true" />
+    <Property Type="String" Name="OfficeFax" Nullable="true" />
+    <Property Type="String" Name="CertAuthNo" Nullable="true" MaxLength="64" />
+  </ComplexType>
+  <ComplexType Name="CMSGetMatterCode_Result">
+    <Property Type="String" Name="Name" Nullable="true" />
+    <Property Type="String" Name="IndexOrCode" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="CMSGetMatterDetails_Result">
+    <Property Type="Int32" Name="MattIndex" Nullable="false" />
+    <Property Type="String" Name="MattNumber" Nullable="false" MaxLength="64" />
+    <Property Type="String" Name="MattName" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="MattDesc" Nullable="true" MaxLength="1024" />
+    <Property Type="String" Name="CurrentStatusCode" Nullable="false" MaxLength="16" />
+    <Property Type="String" Name="CurrentStatus" Nullable="true" MaxLength="64" />
+    <Property Type="DateTime" Name="StatusDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="ClientNumber" Nullable="false" MaxLength="64" />
+    <Property Type="String" Name="OrderClientContactEmail" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ClientName" Nullable="false" MaxLength="128" />
+    <Property Type="DateTime" Name="OccurrenceDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="OccurrenceLocation" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="OccurrenceStreet" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="OccurrenceCity" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="OccurrenceState" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="OccurrenceZipCode" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="PMCode" Nullable="true" />
+    <Property Type="String" Name="PMName" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="ClaimNo" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="OfficePhone" Nullable="true" />
+    <Property Type="String" Name="CellPhone" Nullable="true" />
+    <Property Type="String" Name="PMEmail" Nullable="true" />
+    <Property Type="Decimal" Name="BudgetAmount" Nullable="true" Precision="16" Scale="2" />
+    <Property Type="Decimal" Name="BudgetHours" Nullable="true" Precision="16" Scale="2" />
+    <Property Type="String" Name="KenticoID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="CMSGetMatterNotes_Result">
+    <Property Type="Int32" Name="MattIndex" Nullable="false" />
+    <Property Type="String" Name="MattNumber" Nullable="false" MaxLength="64" />
+    <Property Type="String" Name="MattName" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="MattNoteTypeCode" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="MattNoteTypeDesc" Nullable="true" MaxLength="64" />
+    <Property Type="DateTime" Name="DateEntered" Nullable="true" Precision="23" />
+    <Property Type="Guid" Name="EntryUserId" Nullable="true" />
+    <Property Type="String" Name="EntryUser" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="Note" Nullable="true" MaxLength="4000" />
+    <Property Type="DateTime" Name="TimeStamp" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="CMSGetOfficeAndTpk_Result">
+    <Property Type="String" Name="TimekeeperName" Nullable="false" MaxLength="64" />
+    <Property Type="Int32" Name="TimekeeperIndex" Nullable="true" />
+    <Property Type="String" Name="OfficeCode" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="OfficeName" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="TitleCode" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="TitleName" Nullable="true" MaxLength="64" />
+  </ComplexType>
+  <ComplexType Name="CMSGetOfficeAndTpkByCounty_Result">
+    <Property Type="String" Name="TimekeeperName" Nullable="true" MaxLength="64" />
+    <Property Type="Int32" Name="TimekeeperIndex" Nullable="true" />
+    <Property Type="String" Name="OfficeCode" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="OfficeName" Nullable="false" MaxLength="64" />
+    <Property Type="String" Name="TitleCode" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="TitleName" Nullable="true" MaxLength="64" />
+  </ComplexType>
+  <ComplexType Name="CMSGetOfficeAndTpkByZip_Result">
+    <Property Type="String" Name="TimekeeperName" Nullable="true" MaxLength="64" />
+    <Property Type="Int32" Name="TimekeeperIndex" Nullable="true" />
+    <Property Type="String" Name="OfficeCode" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="OfficeName" Nullable="false" MaxLength="64" />
+    <Property Type="String" Name="TitleCode" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="TitleName" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="ZipCode" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="CMSRetrieveMattersForKentico_Result">
+    <Property Type="Int32" Name="E3EID" Nullable="true" />
+    <Property Type="String" Name="KenticoID" Nullable="true" />
+    <Property Type="Int32" Name="MattIndex" Nullable="true" />
+    <Property Type="String" Name="MattNumber" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="MattName" Nullable="true" />
+    <Property Type="Int32" Name="ClientIndex" Nullable="true" />
+    <Property Type="String" Name="ClientNumber" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="ClientName" Nullable="true" />
+    <Property Type="Int32" Name="RelMattIndex" Nullable="true" />
+    <Property Type="String" Name="MattStatus" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="MattStatusDesc" Nullable="true" />
+    <Property Type="DateTime" Name="MattStatusDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="OpenDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Narrative" Nullable="true" />
+    <Property Type="String" Name="Narrative_UnformattedText" Nullable="true" />
+    <Property Type="DateTime" Name="CloseDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="ElecBillingType" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="ElecNumber" Nullable="true" MaxLength="64" />
+    <Property Type="Int32" Name="OpenTkpr" Nullable="true" />
+    <Property Type="String" Name="OpenTkprName" Nullable="true" />
+    <Property Type="Int32" Name="CloseTkpr" Nullable="true" />
+    <Property Type="String" Name="CloseTkprName" Nullable="true" />
+    <Property Type="String" Name="TimeTaxCode" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="Currency" Nullable="true" MaxLength="8" />
+    <Property Type="DateTime" Name="EntryDate" Nullable="true" Precision="23" />
+    <Property Type="Byte" Name="IsEBill" Nullable="true" />
+    <Property Type="DateTime" Name="DateOfOccurence_CCC" Nullable="true" Precision="23" />
+    <Property Type="String" Name="DateOfOccurenceTxt_CCC" Nullable="true" MaxLength="64" />
+    <Property Type="Byte" Name="IsProspective_CCC" Nullable="true" />
+    <Property Type="Byte" Name="IsWeb_CCC" Nullable="true" />
+    <Property Type="Decimal" Name="RetainerAmount_CCC" Nullable="true" Precision="16" Scale="2" />
+    <Property Type="String" Name="ScopeOfWork_CCC" Nullable="true" />
+    <Property Type="Byte" Name="IsFixedPrice_CCC" Nullable="true" />
+    <Property Type="String" Name="DNENotes_CCC" Nullable="true" MaxLength="500" />
+    <Property Type="Byte" Name="IsConfLetterStd_CCC" Nullable="true" />
+    <Property Type="Byte" Name="IsConfLetterLegal_CCC" Nullable="true" />
+    <Property Type="Byte" Name="IsConfLetterNatAgmt_CCC" Nullable="true" />
+    <Property Type="Byte" Name="IsConfLetterEngSvcs_CCC" Nullable="true" />
+    <Property Type="Byte" Name="IsConfLetterCAT_CCC" Nullable="true" />
+    <Property Type="Byte" Name="IsConfLetterRtnr_CCC" Nullable="true" />
+    <Property Type="Byte" Name="IsConfLetterSign_CCC" Nullable="true" />
+    <Property Type="String" Name="ReportOfFindings_CCC" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="ReportOfFindings_CCCDesc" Nullable="true" />
+    <Property Type="DateTime" Name="StartDate1" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="BillTkpr" Nullable="true" />
+    <Property Type="String" Name="BillTkprName" Nullable="true" />
+    <Property Type="Int32" Name="RspTkpr" Nullable="true" />
+    <Property Type="String" Name="RspTkprName" Nullable="true" />
+    <Property Type="Int32" Name="SpvTkpr" Nullable="true" />
+    <Property Type="String" Name="SpvTkprName" Nullable="true" />
+    <Property Type="String" Name="Office" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="OfficeName" Nullable="true" />
+    <Property Type="String" Name="Arrangement" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="Section" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="SectionDesc" Nullable="true" />
+    <Property Type="String" Name="Department" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="DepartmentDesc" Nullable="true" />
+    <Property Type="String" Name="PracticeGroup" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="PracticeGroupDesc" Nullable="true" />
+    <Property Type="String" Name="PTAGroup" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="IndustryGroup" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="IndustryGroupDesc" Nullable="true" />
+    <Property Type="Int32" Name="TechincalReviewer" Nullable="true" />
+    <Property Type="String" Name="TechincalReviewerName" Nullable="true" />
+    <Property Type="Int32" Name="EngineerOfRecord" Nullable="true" />
+    <Property Type="String" Name="EngineerOfRecordName" Nullable="true" />
+    <Property Type="Int32" Name="BDManager" Nullable="true" />
+    <Property Type="String" Name="BDManagerName" Nullable="true" />
+    <Property Type="DateTime" Name="StartDate2" Nullable="true" Precision="23" />
+    <Property Type="String" Name="SpecialClientInstruction" Nullable="true" />
+    <Property Type="String" Name="SpecialInstructions" Nullable="true" />
+    <Property Type="String" Name="Rate" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="RateDesc" Nullable="true" />
+    <Property Type="String" Name="RateExceptionGrp" Nullable="true" />
+    <Property Type="String" Name="TimeType" Nullable="true" />
+    <Property Type="Decimal" Name="FlatFeeAmount" Nullable="true" Precision="16" Scale="2" />
+    <Property Type="Decimal" Name="Budget" Nullable="true" Precision="16" Scale="2" />
+    <Property Type="DateTime" Name="TimeStamp" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="IsImported" Nullable="true" />
+    <Property Type="String" Name="ErrorMsg" Nullable="true" />
+    <Property Type="DateTime" Name="ImportedDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="NumOfAttempts" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="CMSSearchClients_Result">
+    <Property Type="Int32" Name="ClientIndex" Nullable="false" />
+    <Property Type="String" Name="Number" Nullable="false" MaxLength="64" />
+    <Property Type="String" Name="ClientName" Nullable="false" MaxLength="128" />
+    <Property Type="String" Name="ClientType" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="ClientTypeDesc" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="Status" Nullable="false" MaxLength="16" />
+    <Property Type="String" Name="StatusDesc" Nullable="true" MaxLength="64" />
+  </ComplexType>
+  <ComplexType Name="CMSSearchEntity_Result">
+    <Property Type="Int32" Name="EntIndex" Nullable="false" />
+    <Property Type="String" Name="EntityTypeCode" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="EntityTypeDesc" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="512" />
+    <Property Type="String" Name="Code" Nullable="false" MaxLength="50" />
+    <Property Type="Byte" Name="IsRequireSite" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="CMSSearchRelMatters_Result">
+    <Property Type="Int32" Name="MattIndex" Nullable="false" />
+    <Property Type="String" Name="Number" Nullable="false" MaxLength="64" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="255" />
+    <Property Type="Int32" Name="ClientIndex" Nullable="false" />
+    <Property Type="String" Name="StatusCode" Nullable="false" MaxLength="16" />
+    <Property Type="String" Name="StatusDesc" Nullable="false" MaxLength="64" />
+  </ComplexType>
+  <ComplexType Name="CMSSearchTimekeepers_Result">
+    <Property Type="Int32" Name="TkprIndex" Nullable="false" />
+    <Property Type="String" Name="Number" Nullable="false" MaxLength="64" />
+    <Property Type="String" Name="TimekeeperName" Nullable="false" MaxLength="64" />
+    <Property Type="String" Name="Status" Nullable="false" MaxLength="16" />
+    <Property Type="String" Name="StatusDesc" Nullable="true" MaxLength="64" />
+  </ComplexType>
+  <ComplexType Name="ConflictCheckAuditByDateRange_Result">
+    <Property Type="Int32" Name="JobNumber" Nullable="false" />
+    <Property Type="String" Name="MatterNumber" Nullable="false" MaxLength="64" />
+    <Property Type="DateTime" Name="SearchDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="DateRun" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="DateRouted" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="DateDecided" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="ElapsedSearchTime" Nullable="true" Precision="16" Scale="0" />
+    <Property Type="String" Name="SearchTerms" Nullable="true" />
+    <Property Type="String" Name="EntitySearched" Nullable="false" MaxLength="640" />
+    <Property Type="String" Name="WhereFoundArchCode" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="WhereFoundAttrCode" Nullable="true" MaxLength="64" />
+    <Property Type="Int32" Name="Results" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="ConflictCheckAuditByMattNumber_Result">
+    <Property Type="Int32" Name="JobNumber" Nullable="false" />
+    <Property Type="String" Name="MatterNumber" Nullable="false" MaxLength="64" />
+    <Property Type="DateTime" Name="SearchDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="DateRun" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="DateRouted" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="DateDecided" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="ElapsedSearchTime" Nullable="true" Precision="16" Scale="0" />
+    <Property Type="String" Name="SearchTerms" Nullable="true" />
+    <Property Type="String" Name="EntitySearched" Nullable="false" MaxLength="640" />
+    <Property Type="String" Name="WhereFoundArchCode" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="WhereFoundAttrCode" Nullable="true" MaxLength="64" />
+    <Property Type="Int32" Name="Results" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="ConflictCheckAuditDrillDown_Result">
+    <Property Type="Int32" Name="JobNumber" Nullable="false" />
+    <Property Type="String" Name="MatterNumber" Nullable="true" MaxLength="64" />
+    <Property Type="Int32" Name="MatterIndex" Nullable="true" />
+    <Property Type="String" Name="MatterName" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="ClientName" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Text" Nullable="true" />
+    <Property Type="String" Name="PartialText" Nullable="true" />
+    <Property Type="String" Name="WhereFoundArchCaption" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="WhereFoundAttrCaption" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="WhereFoundItemID" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="C3E_Link" Nullable="false" MaxLength="123" />
+  </ComplexType>
+  <ComplexType Name="CMSGetOfficeAndTpkByKeywords_Result">
+    <Property Type="String" Name="TimekeeperName" Nullable="true" MaxLength="64" />
+    <Property Type="Int32" Name="TimekeeperIndex" Nullable="true" />
+    <Property Type="String" Name="OfficeCode" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="OfficeName" Nullable="false" MaxLength="64" />
+    <Property Type="String" Name="TitleCode" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="TitleName" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="KeyWord" Nullable="true" />
+    <Property Type="DateTime" Name="EffStart" Nullable="true" Precision="23" />
+  </ComplexType>
+  <EntityType Name="CMSDynamics365Configuration">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BaseUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Username" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <ComplexType Name="CMSGetAllClientMatters_V3_Result">
+    <Property Type="Guid" Name="MatterID" Nullable="true" />
+    <Property Type="Int32" Name="MattIndex" Nullable="true" />
+    <Property Type="String" Name="MattNumber" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="MattName" Nullable="true" />
+    <Property Type="String" Name="MattDesc" Nullable="true" />
+    <Property Type="String" Name="CurrentStatusCode" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="CurrentStatus" Nullable="true" MaxLength="64" />
+    <Property Type="DateTime" Name="StatusDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="ClientNumber" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="ClientName" Nullable="true" />
+    <Property Type="DateTime" Name="OccurrenceDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="OccurrenceLocation" Nullable="true" />
+    <Property Type="String" Name="OccurrenceStreet" Nullable="true" />
+    <Property Type="String" Name="OccurrenceCity" Nullable="true" />
+    <Property Type="String" Name="OccurrenceState" Nullable="true" />
+    <Property Type="String" Name="OccurrenceZipCode" Nullable="true" />
+    <Property Type="String" Name="LatestNotes" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="ContactEmail" Nullable="true" />
+    <Property Type="String" Name="ClaimNo" Nullable="true" />
+    <Property Type="String" Name="ReferenceNumber" Nullable="true" />
+    <Property Type="String" Name="Contact_Name" Nullable="true" />
+    <Property Type="String" Name="Contact_Phone" Nullable="true" />
+    <Property Type="String" Name="InsuredName" Nullable="true" />
+    <Property Type="String" Name="Claimant" Nullable="true" />
+    <Property Type="String" Name="Style" Nullable="true" />
+    <Property Type="String" Name="CauseNumber" Nullable="true" />
+    <Property Type="String" Name="MatterSection" Nullable="true" />
+    <Property Type="String" Name="OrderClientCompanyAddress1" Nullable="true" />
+    <Property Type="String" Name="OrderClientCompanyAddress2" Nullable="true" />
+    <Property Type="String" Name="OrderClientCompanyAddressCity" Nullable="true" />
+    <Property Type="String" Name="OrderClientCompanyAddressState" Nullable="true" />
+    <Property Type="String" Name="OrderClientCompanyAddressZip" Nullable="true" />
+    <Property Type="String" Name="OrderClientCompanyAddressCountry" Nullable="true" />
+    <Property Type="String" Name="OpenTkprName" Nullable="true" />
+    <Property Type="String" Name="OpenTkprNumber" Nullable="true" />
+    <Property Type="String" Name="RespTkprName" Nullable="true" />
+    <Property Type="String" Name="RespTkprNumber" Nullable="true" />
+    <Property Type="String" Name="KenticoID" Nullable="true" />
+    <Property Type="DateTime" Name="TimeStamp" Nullable="true" Precision="23" />
+  </ComplexType>
+  <EntityType Name="CMSOfficeEmailLookup">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Office" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="County" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OfficeEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="State" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="StateAbbreviation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <ComplexType Name="CMSGetOfficeAndTpkByCity_Result">
+    <Property Type="String" Name="TimekeeperName" Nullable="true" MaxLength="64" />
+    <Property Type="Int32" Name="TimekeeperIndex" Nullable="true" />
+    <Property Type="String" Name="OfficeCode" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="OfficeName" Nullable="false" MaxLength="64" />
+    <Property Type="String" Name="TitleCode" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="TitleName" Nullable="true" MaxLength="64" />
+  </ComplexType>
+</Schema>

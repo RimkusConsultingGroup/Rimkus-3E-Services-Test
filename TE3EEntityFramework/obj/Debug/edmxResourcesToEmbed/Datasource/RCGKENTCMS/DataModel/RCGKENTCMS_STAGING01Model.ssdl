@@ -1,0 +1,1782 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CMSAdditionalParties">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="E3EID" Type="int" />
+    <Property Name="KenticoID" Type="nvarchar(max)" />
+    <Property Name="SubItemKenticoID" Type="nvarchar(max)" />
+    <Property Name="MatterIndex" Type="int" />
+    <Property Name="MatterNumber" Type="nvarchar" MaxLength="64" />
+    <Property Name="PartyName" Type="nvarchar(max)" />
+    <Property Name="PartyType" Type="nvarchar(max)" />
+    <Property Name="EntIndex" Type="nvarchar(max)" />
+    <Property Name="EntityType" Type="nvarchar(max)" />
+    <Property Name="EntityTypeDesc" Type="nvarchar(max)" />
+    <Property Name="Role" Type="nvarchar(max)" />
+    <Property Name="RoleDesc" Type="nvarchar(max)" />
+    <Property Name="HomePhone" Type="nvarchar(max)" />
+    <Property Name="WorkPhone" Type="nvarchar(max)" />
+    <Property Name="MobilePhone" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="RelatedPartiesID" Type="uniqueidentifier" />
+    <Property Name="ArchetypeCode" Type="nvarchar(max)" />
+    <Property Name="SvcOp" Type="nvarchar" MaxLength="10" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="QueueType" Type="nvarchar" MaxLength="10" />
+    <Property Name="IsProcessed" Type="bit" />
+    <Property Name="ErrorMsg" Type="nvarchar(max)" />
+    <Property Name="ProcessedDate" Type="datetime" />
+    <Property Name="NumOfAttempts" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RCGKENTCMS_STAGING01.dbo.CMSAdditionalPartiesAudit' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CMSAdditionalPartiesAudit">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="E3EID" />
+      <PropertyRef Name="MatterIndex" />
+      <PropertyRef Name="UpdatedAt" />
+      <PropertyRef Name="Operation" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="E3EID" Type="int" Nullable="false" />
+    <Property Name="KenticoID" Type="nvarchar(max)" />
+    <Property Name="SubItemKenticoID" Type="nvarchar(max)" />
+    <Property Name="MatterIndex" Type="int" Nullable="false" />
+    <Property Name="MatterNumber" Type="nvarchar" MaxLength="64" />
+    <Property Name="PartyName" Type="nvarchar(max)" />
+    <Property Name="PartyType" Type="nvarchar(max)" />
+    <Property Name="EntIndex" Type="nvarchar(max)" />
+    <Property Name="EntityType" Type="nvarchar(max)" />
+    <Property Name="EntityTypeDesc" Type="nvarchar(max)" />
+    <Property Name="Role" Type="nvarchar(max)" />
+    <Property Name="RoleDesc" Type="nvarchar(max)" />
+    <Property Name="HomePhone" Type="nvarchar(max)" />
+    <Property Name="WorkPhone" Type="nvarchar(max)" />
+    <Property Name="MobilePhone" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="SvcOp" Type="nvarchar" MaxLength="10" />
+    <Property Name="QueueType" Type="nvarchar" MaxLength="10" />
+    <Property Name="IsProcessed" Type="bit" />
+    <Property Name="ErrorMsg" Type="nvarchar(max)" />
+    <Property Name="ProcessedDate" Type="datetime" />
+    <Property Name="NumOfAttempts" Type="int" />
+    <Property Name="UpdatedAt" Type="datetime" Nullable="false" />
+    <Property Name="Operation" Type="char" MaxLength="3" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CMSAssignmentJob">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="E3EID" Type="int" />
+    <Property Name="KenticoID" Type="nvarchar(max)" />
+    <Property Name="MatterIndex" Type="int" />
+    <Property Name="MatterNumber" Type="nvarchar" MaxLength="64" />
+    <Property Name="PayLoad" Type="nvarchar(max)" />
+    <Property Name="ClientIndex" Type="int" />
+    <Property Name="ClientNumber" Type="nvarchar" MaxLength="64" />
+    <Property Name="ClientName" Type="nvarchar(max)" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="QueueType" Type="nvarchar" MaxLength="10" />
+    <Property Name="IsProcessed" Type="bit" />
+    <Property Name="ErrorMsg" Type="nvarchar(max)" />
+    <Property Name="ProcessedDate" Type="datetime" />
+    <Property Name="NumOfAttempts" Type="int" />
+  </EntityType>
+  <EntityType Name="CMSAssignments">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="E3EID" Type="int" />
+    <Property Name="KenticoID" Type="nvarchar(max)" />
+    <Property Name="MatterIndex" Type="int" />
+    <Property Name="MatterNumber" Type="nvarchar" MaxLength="64" />
+    <Property Name="MatterName" Type="nvarchar(max)" />
+    <Property Name="ClientIndex" Type="int" />
+    <Property Name="ClientNumber" Type="nvarchar" MaxLength="64" />
+    <Property Name="ClientName" Type="nvarchar(max)" />
+    <Property Name="RelatedMatter" Type="int" />
+    <Property Name="MattStatus" Type="nvarchar" MaxLength="16" />
+    <Property Name="MattStatusDesc" Type="nvarchar(max)" />
+    <Property Name="MattStatusDate" Type="datetime" />
+    <Property Name="OpenDate" Type="datetime" />
+    <Property Name="Narrative" Type="nvarchar(max)" />
+    <Property Name="Narrative_UnformattedText" Type="nvarchar(max)" />
+    <Property Name="CloseDate" Type="datetime" />
+    <Property Name="ElecBillingType" Type="nvarchar" MaxLength="16" />
+    <Property Name="ElecBillingTypeDesc" Type="nvarchar(max)" />
+    <Property Name="ElectronicNumber" Type="nvarchar" MaxLength="64" />
+    <Property Name="OpenTimekeeper" Type="int" />
+    <Property Name="OpenTimekeeperName" Type="nvarchar(max)" />
+    <Property Name="CloseTimekeeper" Type="int" />
+    <Property Name="CloseTimekeeperName" Type="nvarchar(max)" />
+    <Property Name="FeesTaxCode" Type="nvarchar(max)" />
+    <Property Name="FeeTaxCodeDesc" Type="nvarchar(max)" />
+    <Property Name="Currency" Type="nvarchar(max)" />
+    <Property Name="CurrencyDesc" Type="nvarchar(max)" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="EBilling" Type="tinyint" />
+    <Property Name="DateOccurence" Type="datetime" />
+    <Property Name="DateOfOccurenceTxt" Type="nvarchar" MaxLength="64" />
+    <Property Name="IsProspective_CCC" Type="tinyint" />
+    <Property Name="IsCheckWritingAuthority" Type="tinyint" />
+    <Property Name="WebOriginated" Type="tinyint" />
+    <Property Name="RetainerAmount" Type="decimal" Precision="16" Scale="2" />
+    <Property Name="ScopeOfWork" Type="nvarchar(max)" />
+    <Property Name="FixedPrice" Type="tinyint" />
+    <Property Name="DNENotes" Type="nvarchar" MaxLength="500" />
+    <Property Name="IsConfLetterStd" Type="tinyint" />
+    <Property Name="IsConfLetterLegal" Type="tinyint" />
+    <Property Name="IsConfLetterNatAgmt" Type="tinyint" />
+    <Property Name="IsConfLetterEngSvcs" Type="tinyint" />
+    <Property Name="IsConfLetterCAT" Type="tinyint" />
+    <Property Name="IsConfLetterRtnr" Type="tinyint" />
+    <Property Name="IsConfLetterSign" Type="tinyint" />
+    <Property Name="ROFTemplate" Type="nvarchar" MaxLength="64" />
+    <Property Name="ROFTemplateDesc" Type="nvarchar(max)" />
+    <Property Name="StartDate1" Type="datetime" />
+    <Property Name="BillingTimekeeper" Type="int" />
+    <Property Name="BillingTimekeeperName" Type="nvarchar(max)" />
+    <Property Name="ResponsibleTimekeeper" Type="int" />
+    <Property Name="ResponsibleTimekeeperName" Type="nvarchar(max)" />
+    <Property Name="SupervisingTimekeeper" Type="int" />
+    <Property Name="SupervisingTimekeeperName" Type="nvarchar(max)" />
+    <Property Name="Office" Type="nvarchar" MaxLength="16" />
+    <Property Name="OfficeName" Type="nvarchar(max)" />
+    <Property Name="Arrangement" Type="nvarchar" MaxLength="16" />
+    <Property Name="ArrangementDesc" Type="nvarchar(max)" />
+    <Property Name="Section" Type="nvarchar" MaxLength="16" />
+    <Property Name="SectionDesc" Type="nvarchar(max)" />
+    <Property Name="Department" Type="nvarchar" MaxLength="16" />
+    <Property Name="DepartmentDesc" Type="nvarchar(max)" />
+    <Property Name="PracticeGroup" Type="nvarchar" MaxLength="16" />
+    <Property Name="PracticeGroupDesc" Type="nvarchar(max)" />
+    <Property Name="PTAGroup" Type="nvarchar" MaxLength="16" />
+    <Property Name="PTAGroupDesc" Type="nvarchar(max)" />
+    <Property Name="IndustryGroup" Type="nvarchar" MaxLength="16" />
+    <Property Name="IndustryGroupDesc" Type="nvarchar(max)" />
+    <Property Name="TechnicalReviewerNumber" Type="int" />
+    <Property Name="TechincalReviewerName" Type="nvarchar(max)" />
+    <Property Name="EngineerOfRecordNo" Type="int" />
+    <Property Name="EngineerOfRecordName" Type="nvarchar(max)" />
+    <Property Name="BDManagerNo" Type="int" />
+    <Property Name="BDManagerName" Type="nvarchar(max)" />
+    <Property Name="StartDate2" Type="datetime" />
+    <Property Name="SpecialClientInstruction" Type="nvarchar(max)" />
+    <Property Name="SpecialClientInstructionDesc" Type="nvarchar(max)" />
+    <Property Name="SpecialInstructions" Type="nvarchar(max)" />
+    <Property Name="InvoiceTo" Type="nvarchar(max)" />
+    <Property Name="Rate" Type="nvarchar" MaxLength="16" />
+    <Property Name="RateDesc" Type="nvarchar(max)" />
+    <Property Name="RateExceptGroup" Type="nvarchar(max)" />
+    <Property Name="RateExceptGroupDesc" Type="nvarchar(max)" />
+    <Property Name="TimeType" Type="nvarchar(max)" />
+    <Property Name="TimeTypeDesc" Type="nvarchar(max)" />
+    <Property Name="FlatFeeAmount" Type="decimal" Precision="16" Scale="2" />
+    <Property Name="Budget" Type="decimal" Precision="16" Scale="2" />
+    <Property Name="InsuranceType" Type="nvarchar(max)" />
+    <Property Name="InsuranceTypeDesc" Type="nvarchar(max)" />
+    <Property Name="ClaimType" Type="nvarchar(max)" />
+    <Property Name="ClaimTypeDesc" Type="nvarchar(max)" />
+    <Property Name="ReportTo" Type="nvarchar(max)" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="QueueType" Type="nvarchar" MaxLength="10" />
+    <Property Name="IsProcessed" Type="bit" />
+    <Property Name="ErrorMsg" Type="nvarchar(max)" />
+    <Property Name="ProcessedDate" Type="datetime" />
+    <Property Name="NumOfAttempts" Type="int" />
+    <Property Name="SubmissionID" Type="varchar" MaxLength="64" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RCGKENTCMS_STAGING01.dbo.CMSAssignmentsAudit' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CMSAssignmentsAudit">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="UpdatedAt" />
+      <PropertyRef Name="Operation" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="E3EID" Type="int" />
+    <Property Name="KenticoID" Type="nvarchar(max)" />
+    <Property Name="MatterIndex" Type="int" />
+    <Property Name="MatterNumber" Type="nvarchar" MaxLength="64" />
+    <Property Name="MatterName" Type="nvarchar(max)" />
+    <Property Name="ClientIndex" Type="int" />
+    <Property Name="ClientNumber" Type="nvarchar" MaxLength="64" />
+    <Property Name="ClientName" Type="nvarchar(max)" />
+    <Property Name="RelatedMatter" Type="int" />
+    <Property Name="MattStatus" Type="nvarchar" MaxLength="16" />
+    <Property Name="MattStatusDesc" Type="nvarchar(max)" />
+    <Property Name="MattStatusDate" Type="datetime" />
+    <Property Name="OpenDate" Type="datetime" />
+    <Property Name="Narrative" Type="nvarchar(max)" />
+    <Property Name="Narrative_UnformattedText" Type="nvarchar(max)" />
+    <Property Name="CloseDate" Type="datetime" />
+    <Property Name="ElecBillingType" Type="nvarchar" MaxLength="16" />
+    <Property Name="ElecBillingTypeDesc" Type="nvarchar(max)" />
+    <Property Name="ElectronicNumber" Type="nvarchar" MaxLength="64" />
+    <Property Name="OpenTimekeeper" Type="int" />
+    <Property Name="OpenTimekeeperName" Type="nvarchar(max)" />
+    <Property Name="CloseTimekeeper" Type="int" />
+    <Property Name="CloseTimekeeperName" Type="nvarchar(max)" />
+    <Property Name="FeesTaxCode" Type="nvarchar(max)" />
+    <Property Name="FeeTaxCodeDesc" Type="nvarchar(max)" />
+    <Property Name="Currency" Type="nvarchar(max)" />
+    <Property Name="CurrencyDesc" Type="nvarchar(max)" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="EBilling" Type="tinyint" />
+    <Property Name="DateOccurence" Type="datetime" />
+    <Property Name="DateOfOccurenceTxt" Type="nvarchar" MaxLength="64" />
+    <Property Name="IsProspective_CCC" Type="tinyint" />
+    <Property Name="IsCheckWritingAuthority" Type="tinyint" />
+    <Property Name="WebOriginated" Type="tinyint" />
+    <Property Name="RetainerAmount" Type="decimal" Precision="16" Scale="2" />
+    <Property Name="ScopeOfWork" Type="nvarchar(max)" />
+    <Property Name="FixedPrice" Type="tinyint" />
+    <Property Name="DNENotes" Type="nvarchar" MaxLength="500" />
+    <Property Name="IsConfLetterStd" Type="tinyint" />
+    <Property Name="IsConfLetterLegal" Type="tinyint" />
+    <Property Name="IsConfLetterNatAgmt" Type="tinyint" />
+    <Property Name="IsConfLetterEngSvcs" Type="tinyint" />
+    <Property Name="IsConfLetterCAT" Type="tinyint" />
+    <Property Name="IsConfLetterRtnr" Type="tinyint" />
+    <Property Name="IsConfLetterSign" Type="tinyint" />
+    <Property Name="ROFTemplate" Type="nvarchar" MaxLength="64" />
+    <Property Name="ROFTemplateDesc" Type="nvarchar(max)" />
+    <Property Name="StartDate1" Type="datetime" />
+    <Property Name="BillingTimekeeper" Type="int" />
+    <Property Name="BillingTimekeeperName" Type="nvarchar(max)" />
+    <Property Name="ResponsibleTimekeeper" Type="int" />
+    <Property Name="ResponsibleTimekeeperName" Type="nvarchar(max)" />
+    <Property Name="SupervisingTimekeeper" Type="int" />
+    <Property Name="SupervisingTimekeeperName" Type="nvarchar(max)" />
+    <Property Name="Office" Type="nvarchar" MaxLength="16" />
+    <Property Name="OfficeName" Type="nvarchar(max)" />
+    <Property Name="Arrangement" Type="nvarchar" MaxLength="16" />
+    <Property Name="ArrangementDesc" Type="nvarchar(max)" />
+    <Property Name="Section" Type="nvarchar" MaxLength="16" />
+    <Property Name="SectionDesc" Type="nvarchar(max)" />
+    <Property Name="Department" Type="nvarchar" MaxLength="16" />
+    <Property Name="DepartmentDesc" Type="nvarchar(max)" />
+    <Property Name="PracticeGroup" Type="nvarchar" MaxLength="16" />
+    <Property Name="PracticeGroupDesc" Type="nvarchar(max)" />
+    <Property Name="PTAGroup" Type="nvarchar" MaxLength="16" />
+    <Property Name="PTAGroupDesc" Type="nvarchar(max)" />
+    <Property Name="IndustryGroup" Type="nvarchar" MaxLength="16" />
+    <Property Name="IndustryGroupDesc" Type="nvarchar(max)" />
+    <Property Name="TechnicalReviewerNumber" Type="int" />
+    <Property Name="TechincalReviewerName" Type="nvarchar(max)" />
+    <Property Name="EngineerOfRecordNo" Type="int" />
+    <Property Name="EngineerOfRecordName" Type="nvarchar(max)" />
+    <Property Name="BDManagerNo" Type="int" />
+    <Property Name="BDManagerName" Type="nvarchar(max)" />
+    <Property Name="StartDate2" Type="datetime" />
+    <Property Name="SpecialClientInstruction" Type="nvarchar(max)" />
+    <Property Name="SpecialClientInstructionDesc" Type="nvarchar(max)" />
+    <Property Name="SpecialInstructions" Type="nvarchar(max)" />
+    <Property Name="InvoiceTo" Type="nvarchar(max)" />
+    <Property Name="Rate" Type="nvarchar" MaxLength="16" />
+    <Property Name="RateDesc" Type="nvarchar(max)" />
+    <Property Name="RateExceptGroup" Type="nvarchar(max)" />
+    <Property Name="RateExceptGroupDesc" Type="nvarchar(max)" />
+    <Property Name="TimeType" Type="nvarchar(max)" />
+    <Property Name="TimeTypeDesc" Type="nvarchar(max)" />
+    <Property Name="FlatFeeAmount" Type="decimal" Precision="16" Scale="2" />
+    <Property Name="Budget" Type="decimal" Precision="16" Scale="2" />
+    <Property Name="InsuranceType" Type="nvarchar(max)" />
+    <Property Name="InsuranceTypeDesc" Type="nvarchar(max)" />
+    <Property Name="ClaimType" Type="nvarchar(max)" />
+    <Property Name="ClaimTypeDesc" Type="nvarchar(max)" />
+    <Property Name="RawJsonMsg" Type="nvarchar(max)" />
+    <Property Name="ReportTo" Type="nvarchar(max)" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="QueueType" Type="nvarchar" MaxLength="10" />
+    <Property Name="IsProcessed" Type="bit" />
+    <Property Name="ErrorMsg" Type="nvarchar(max)" />
+    <Property Name="ProcessedDate" Type="datetime" />
+    <Property Name="NumOfAttempts" Type="int" />
+    <Property Name="UpdatedAt" Type="datetime" Nullable="false" />
+    <Property Name="Operation" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="SubmissionID" Type="varchar" MaxLength="64" />
+  </EntityType>
+  <EntityType Name="CMSCoConsultants">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="E3EID" Type="int" />
+    <Property Name="KenticoID" Type="nvarchar(max)" />
+    <Property Name="SubItemKenticoID" Type="nvarchar(max)" />
+    <Property Name="MatterIndex" Type="int" />
+    <Property Name="MatterNumber" Type="nvarchar" MaxLength="64" />
+    <Property Name="CoConsultantIndex" Type="nvarchar" MaxLength="16" />
+    <Property Name="CoConsultantNumber" Type="nvarchar" MaxLength="16" />
+    <Property Name="CoConsultantName" Type="nvarchar(max)" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="SvcOp" Type="nvarchar" MaxLength="50" />
+    <Property Name="QueueType" Type="nvarchar" MaxLength="10" />
+    <Property Name="IsProcessed" Type="bit" />
+    <Property Name="ErrorMsg" Type="nvarchar(max)" />
+    <Property Name="ProcessedDate" Type="datetime" />
+    <Property Name="NumOfAttempts" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RCGKENTCMS_STAGING01.dbo.CMSCoConsultantsAudit' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CMSCoConsultantsAudit">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="MatterIndex" />
+      <PropertyRef Name="UpdatedAt" />
+      <PropertyRef Name="Operation" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="E3EID" Type="int" />
+    <Property Name="KenticoID" Type="nvarchar(max)" />
+    <Property Name="SubItemKenticoID" Type="nvarchar(max)" />
+    <Property Name="MatterIndex" Type="int" Nullable="false" />
+    <Property Name="MatterNumber" Type="nvarchar" MaxLength="64" />
+    <Property Name="CoConsultantIndex" Type="nvarchar" MaxLength="16" />
+    <Property Name="CoConsultantNumber" Type="nvarchar" MaxLength="16" />
+    <Property Name="CoConsultantName" Type="nvarchar(max)" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="SvcOp" Type="nvarchar" MaxLength="10" />
+    <Property Name="QueueType" Type="nvarchar" MaxLength="10" />
+    <Property Name="IsProcessed" Type="bit" />
+    <Property Name="ErrorMsg" Type="nvarchar(max)" />
+    <Property Name="ProcessedDate" Type="datetime" />
+    <Property Name="NumOfAttempts" Type="int" />
+    <Property Name="UpdatedAt" Type="datetime" Nullable="false" />
+    <Property Name="Operation" Type="char" MaxLength="3" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CMSCustomerProfile">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KenticoID" Type="nvarchar(max)" />
+    <Property Name="ClientNumber" Type="nvarchar(max)" />
+    <Property Name="ContactID" Type="int" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="Salutation" Type="nvarchar(max)" />
+    <Property Name="FirstName" Type="nvarchar(max)" />
+    <Property Name="LastName" Type="nvarchar(max)" />
+    <Property Name="Phone" Type="nvarchar(max)" />
+    <Property Name="CompanyName" Type="nvarchar(max)" />
+    <Property Name="CompanyType" Type="nvarchar(max)" />
+    <Property Name="CompanyAddress1" Type="nvarchar(max)" />
+    <Property Name="CompanyAddress2" Type="nvarchar(max)" />
+    <Property Name="CompanyAddressCity" Type="nvarchar(max)" />
+    <Property Name="CompanyAddressState" Type="nvarchar(max)" />
+    <Property Name="CompanyAddressZip" Type="nvarchar(max)" />
+    <Property Name="CompanyAddressCountry" Type="nvarchar(max)" />
+    <Property Name="CompanyAddressLon" Type="decimal" Precision="16" Scale="6" />
+    <Property Name="CompanyAddressLat" Type="decimal" Precision="16" Scale="6" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="QueueType" Type="nvarchar" MaxLength="10" />
+    <Property Name="IsProcessed" Type="bit" />
+    <Property Name="ErrorMsg" Type="nvarchar(max)" />
+    <Property Name="ProcessedDate" Type="datetime" />
+    <Property Name="NumOfAttempts" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RCGKENTCMS_STAGING01.dbo.CMSCustomerProfileAudit' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CMSCustomerProfileAudit">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="UpdatedAt" />
+      <PropertyRef Name="Operation" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KenticoID" Type="nvarchar(max)" />
+    <Property Name="ClientNumber" Type="nvarchar(max)" />
+    <Property Name="ContactID" Type="int" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="Salutation" Type="nvarchar(max)" />
+    <Property Name="FirstName" Type="nvarchar(max)" />
+    <Property Name="LastName" Type="nvarchar(max)" />
+    <Property Name="Phone" Type="nvarchar(max)" />
+    <Property Name="CompanyName" Type="nvarchar(max)" />
+    <Property Name="CompanyType" Type="nvarchar(max)" />
+    <Property Name="CompanyAddress1" Type="nvarchar(max)" />
+    <Property Name="CompanyAddress2" Type="nvarchar(max)" />
+    <Property Name="CompanyAddressCity" Type="nvarchar(max)" />
+    <Property Name="CompanyAddressState" Type="nvarchar(max)" />
+    <Property Name="CompanyAddressZip" Type="nvarchar(max)" />
+    <Property Name="CompanyAddressCountry" Type="nvarchar(max)" />
+    <Property Name="CompanyAddressLon" Type="decimal" Precision="16" Scale="6" />
+    <Property Name="CompanyAddressLat" Type="decimal" Precision="16" Scale="6" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="QueueType" Type="nvarchar" MaxLength="10" />
+    <Property Name="IsProcessed" Type="bit" />
+    <Property Name="ErrorMsg" Type="nvarchar(max)" />
+    <Property Name="ProcessedDate" Type="datetime" />
+    <Property Name="NumOfAttempts" Type="int" />
+    <Property Name="UpdatedAt" Type="datetime" Nullable="false" />
+    <Property Name="Operation" Type="char" MaxLength="3" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CMSDynamics365Configuration">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BaseUrl" Type="nvarchar(max)" />
+    <Property Name="Username" Type="nvarchar(max)" />
+    <Property Name="Password" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="CMSIncidentLocations">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="E3EID" Type="int" />
+    <Property Name="KenticoID" Type="nvarchar(max)" />
+    <Property Name="SubItemKenticoID" Type="nvarchar(max)" />
+    <Property Name="MatterIndex" Type="int" />
+    <Property Name="MatterNumber" Type="nvarchar" MaxLength="64" />
+    <Property Name="StreetOccurrence" Type="nvarchar(max)" />
+    <Property Name="CityOccurrence" Type="nvarchar(max)" />
+    <Property Name="CountyOccurrence" Type="nvarchar(max)" />
+    <Property Name="StateOccurrence" Type="nvarchar(max)" />
+    <Property Name="ZipCodeOccurrence" Type="nvarchar(max)" />
+    <Property Name="CountryOccurrence" Type="nvarchar(max)" />
+    <Property Name="LatOccurrence" Type="decimal" Precision="16" Scale="6" />
+    <Property Name="LonOccurrence" Type="decimal" Precision="16" Scale="6" />
+    <Property Name="MattSiteID" Type="nvarchar(max)" />
+    <Property Name="SiteIndex" Type="int" />
+    <Property Name="AddrIndex" Type="int" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="SvcOp" Type="nvarchar" MaxLength="10" />
+    <Property Name="QueueType" Type="nvarchar" MaxLength="10" />
+    <Property Name="IsProcessed" Type="bit" />
+    <Property Name="ErrorMsg" Type="nvarchar(max)" />
+    <Property Name="ProcessedDate" Type="datetime" />
+    <Property Name="NumOfAttempts" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RCGKENTCMS_STAGING01.dbo.CMSIncidentLocationsAudit' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CMSIncidentLocationsAudit">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="E3EID" />
+      <PropertyRef Name="MatterIndex" />
+      <PropertyRef Name="UpdatedAt" />
+      <PropertyRef Name="Operation" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="E3EID" Type="int" Nullable="false" />
+    <Property Name="KenticoID" Type="nvarchar(max)" />
+    <Property Name="SubItemKenticoID" Type="nvarchar(max)" />
+    <Property Name="MatterIndex" Type="int" Nullable="false" />
+    <Property Name="MatterNumber" Type="nvarchar" MaxLength="64" />
+    <Property Name="StreetOccurrence" Type="nvarchar(max)" />
+    <Property Name="CityOccurrence" Type="nvarchar(max)" />
+    <Property Name="CountyOccurrence" Type="nvarchar(max)" />
+    <Property Name="StateOccurrence" Type="nvarchar(max)" />
+    <Property Name="ZipCodeOccurrence" Type="nvarchar(max)" />
+    <Property Name="CountryOccurrence" Type="nvarchar(max)" />
+    <Property Name="LatOccurrence" Type="decimal" Precision="16" Scale="6" />
+    <Property Name="LonOccurrence" Type="decimal" Precision="16" Scale="6" />
+    <Property Name="MattSiteID" Type="nvarchar(max)" />
+    <Property Name="SiteIndex" Type="int" />
+    <Property Name="AddrIndex" Type="int" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="SvcOp" Type="nvarchar" MaxLength="10" />
+    <Property Name="QueueType" Type="nvarchar" MaxLength="10" />
+    <Property Name="IsProcessed" Type="bit" />
+    <Property Name="ErrorMsg" Type="nvarchar(max)" />
+    <Property Name="ProcessedDate" Type="datetime" />
+    <Property Name="NumOfAttempts" Type="int" />
+    <Property Name="UpdatedAt" Type="datetime" Nullable="false" />
+    <Property Name="Operation" Type="char" MaxLength="3" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CMSKenticoAssignmentCopies">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="E3EID" Type="int" />
+    <Property Name="KenticoId" Type="nvarchar(max)" />
+    <Property Name="MatterIndex" Type="int" />
+    <Property Name="AssignmentImageJson" Type="text" />
+    <Property Name="Timestamp" Type="datetime" />
+  </EntityType>
+  <EntityType Name="CMSKenticoAssignmentRel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="E3EID" Type="int" Nullable="false" />
+    <Property Name="KenticoID" Type="nvarchar(max)" />
+    <Property Name="MatterIndex" Type="int" Nullable="false" />
+    <Property Name="MatterNumber" Type="nvarchar" MaxLength="64" />
+    <Property Name="ClientIndex" Type="int" />
+    <Property Name="ClientNumber" Type="nvarchar" MaxLength="64" />
+    <Property Name="TimeStamp" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RCGKENTCMS_STAGING01.dbo.CMSKenticoAssignmentRelAudit' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CMSKenticoAssignmentRelAudit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="E3EID" Type="int" />
+    <Property Name="KenticoID" Type="nvarchar(max)" />
+    <Property Name="MatterIndex" Type="int" />
+    <Property Name="MatterNumber" Type="nvarchar" MaxLength="64" />
+    <Property Name="ClientIndex" Type="int" />
+    <Property Name="ClientNumber" Type="nvarchar" MaxLength="64" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="UpdatedAt" Type="datetime" />
+    <Property Name="Operation" Type="char" MaxLength="3" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RCGKENTCMS_STAGING01.dbo.CMSKenticoConfiguration' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CMSKenticoConfiguration">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NumOfDays" Type="int" />
+    <Property Name="TE3EAssignmentAzSBConn_Dev" Type="nvarchar(max)" />
+    <Property Name="TE3EAssignmentAzSBQueueName_Dev" Type="nvarchar(max)" />
+    <Property Name="KenticoAssignmentAzSBConn_Dev" Type="nvarchar(max)" />
+    <Property Name="KenticoAssignmentAzSBQueueName_Dev" Type="nvarchar(max)" />
+    <Property Name="DynamicsCustomersAzSBConn_Dev" Type="nvarchar(max)" />
+    <Property Name="DynamicsCustomersAzSBQueueName_Dev" Type="nvarchar(max)" />
+    <Property Name="KenticoCustomersAzSBConn_Dev" Type="nvarchar(max)" />
+    <Property Name="KenticoCustomersAzSBQueueName_Dev" Type="nvarchar(max)" />
+    <Property Name="TE3EAssignmentAzSBConn_Prod" Type="nvarchar(max)" />
+    <Property Name="TE3EAssignmentAzSBQueueName_Prod" Type="nvarchar(max)" />
+    <Property Name="KenticoAssignmentAzSBConn_Prod" Type="nvarchar(max)" />
+    <Property Name="KenticoAssignmentAzSBQueueName_Prod" Type="nvarchar(max)" />
+    <Property Name="DynamicsCustomersAzSBConn_Prod" Type="nvarchar(max)" />
+    <Property Name="DynamicsCustomersAzSBQueueName_Prod" Type="nvarchar(max)" />
+    <Property Name="KenticoCustomersAzSBConn_Prod" Type="nvarchar(max)" />
+    <Property Name="KenticoCustomersAzSBQueueName_Prod" Type="nvarchar(max)" />
+    <Property Name="Enotify_From" Type="nvarchar(max)" />
+    <Property Name="Enotify_To" Type="nvarchar(max)" />
+    <Property Name="Enotify_Cc" Type="nvarchar(max)" />
+    <Property Name="NumOfAttemptsAllowed" Type="int" />
+    <Property Name="TE3EAssignmentAzSBConn_Uat" Type="nvarchar(max)" />
+    <Property Name="TE3EAssignmentAzSBQueueName_Uat" Type="nvarchar(max)" />
+    <Property Name="KenticoAssignmentAzSBConn_Uat" Type="nvarchar(max)" />
+    <Property Name="KenticoAssignmentAzSBQueueName_Uat" Type="nvarchar(max)" />
+    <Property Name="DynamicsCustomersAzSBConn_Uat" Type="nvarchar(max)" />
+    <Property Name="DynamicsCustomersAzSBQueueName_Uat" Type="nvarchar(max)" />
+    <Property Name="KenticoCustomersAzSBConn_Uat" Type="nvarchar(max)" />
+    <Property Name="KenticoCustomersAzSBQueueName_Uat" Type="nvarchar(max)" />
+    <Property Name="KenticoAPIURL_DEV" Type="nvarchar(max)" />
+    <Property Name="KenticoAPIURL_UAT" Type="nvarchar(max)" />
+    <Property Name="KenticoAPIURL_PROD" Type="nvarchar(max)" />
+    <Property Name="KenticoAPIKey_DEV" Type="nvarchar(max)" />
+    <Property Name="KenticoAPIKey_UAT" Type="nvarchar(max)" />
+    <Property Name="KenticoAPIKey_PROD" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RCGKENTCMS_STAGING01.dbo.CMSKenticoConfigurationAudit' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CMSKenticoConfigurationAudit">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="updatedAt" />
+      <PropertyRef Name="operation" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NumOfDays" Type="int" />
+    <Property Name="TE3EAssignmentAzSBConn_Dev" Type="nvarchar(max)" />
+    <Property Name="TE3EAssignmentAzSBQueueName_Dev" Type="nvarchar(max)" />
+    <Property Name="KenticoAssignmentAzSBConn_Dev" Type="nvarchar(max)" />
+    <Property Name="KenticoAssignmentAzSBQueueName_Dev" Type="nvarchar(max)" />
+    <Property Name="DynamicsCustomersAzSBConn_Dev" Type="nvarchar(max)" />
+    <Property Name="DynamicsCustomersAzSBQueueName_Dev" Type="nvarchar(max)" />
+    <Property Name="KenticoCustomersAzSBConn_Dev" Type="nvarchar(max)" />
+    <Property Name="KenticoCustomersAzSBQueueName_Dev" Type="nvarchar(max)" />
+    <Property Name="TE3EAssignmentAzSBConn_Prod" Type="nvarchar(max)" />
+    <Property Name="TE3EAssignmentAzSBQueueName_Prod" Type="nvarchar(max)" />
+    <Property Name="KenticoAssignmentAzSBConn_Prod" Type="nvarchar(max)" />
+    <Property Name="KenticoAssignmentAzSBQueueName_Prod" Type="nvarchar(max)" />
+    <Property Name="DynamicsCustomersAzSBConn_Prod" Type="nvarchar(max)" />
+    <Property Name="DynamicsCustomersAzSBQueueName_Prod" Type="nvarchar(max)" />
+    <Property Name="KenticoCustomersAzSBConn_Prod" Type="nvarchar(max)" />
+    <Property Name="KenticoCustomersAzSBQueueName_Prod" Type="nvarchar(max)" />
+    <Property Name="Enotify_From" Type="nvarchar(max)" />
+    <Property Name="Enotify_To" Type="nvarchar(max)" />
+    <Property Name="Enotify_Cc" Type="nvarchar(max)" />
+    <Property Name="updatedAt" Type="datetime" Nullable="false" />
+    <Property Name="operation" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="NumOfAttemptsAllowed" Type="int" />
+    <Property Name="TE3EAssignmentAzSBConn_Uat" Type="nvarchar(max)" />
+    <Property Name="TE3EAssignmentAzSBQueueName_Uat" Type="nvarchar(max)" />
+    <Property Name="KenticoAssignmentAzSBConn_Uat" Type="nvarchar(max)" />
+    <Property Name="KenticoAssignmentAzSBQueueName_Uat" Type="nvarchar(max)" />
+    <Property Name="DynamicsCustomersAzSBConn_Uat" Type="nvarchar(max)" />
+    <Property Name="DynamicsCustomersAzSBQueueName_Uat" Type="nvarchar(max)" />
+    <Property Name="KenticoCustomersAzSBConn_Uat" Type="nvarchar(max)" />
+    <Property Name="KenticoCustomersAzSBQueueName_Uat" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="CMSKenticoCustomerCopies">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="E3EID" Type="int" />
+    <Property Name="KenticoId" Type="nvarchar(max)" />
+    <Property Name="ClientNumber" Type="nvarchar(max)" />
+    <Property Name="CustomerImageJson" Type="text" />
+    <Property Name="Timestamp" Type="datetime" />
+  </EntityType>
+  <EntityType Name="CMSKenticoCustomerRel">
+    <Key>
+      <PropertyRef Name="ClientNumber" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KenticoID" Type="nvarchar(max)" />
+    <Property Name="ClientNumber" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="ClientName" Type="nvarchar(max)" />
+    <Property Name="ClientType" Type="nvarchar(max)" />
+    <Property Name="ContactID" Type="int" />
+    <Property Name="TimeStamp" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RCGKENTCMS_STAGING01.dbo.CMSKenticoCustomerRelAudit' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CMSKenticoCustomerRelAudit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KenticoID" Type="nvarchar(max)" />
+    <Property Name="ClientNumber" Type="nvarchar" MaxLength="64" />
+    <Property Name="ClientName" Type="varchar(max)" />
+    <Property Name="ClientType" Type="nvarchar(max)" />
+    <Property Name="ContactID" Type="int" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="UpdatedAt" Type="datetime" />
+    <Property Name="Operation" Type="char" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="CMSKenticoSubEntityRel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="E3EID" Type="int" />
+    <Property Name="KenticoId" Type="nvarchar(max)" />
+    <Property Name="MatterIndex" Type="int" />
+    <Property Name="SubKenticoId" Type="nvarchar(max)" />
+    <Property Name="EntityKey" Type="nvarchar(max)" />
+    <Property Name="EntityType" Type="nvarchar" MaxLength="50" />
+    <Property Name="TimeStamp" Type="datetime" />
+  </EntityType>
+  <EntityType Name="CMSKenticoSubEntityRelAudit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="E3EID" Type="int" />
+    <Property Name="KenticoId" Type="nvarchar(max)" />
+    <Property Name="MatterIndex" Type="int" />
+    <Property Name="SubKenticoId" Type="nvarchar(max)" />
+    <Property Name="EntityKey" Type="nvarchar(max)" />
+    <Property Name="EntityType" Type="nvarchar" MaxLength="50" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="UpdatedAt" Type="datetime" />
+    <Property Name="Operation" Type="char" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="CMSKeyVaults">
+    <Key>
+      <PropertyRef Name="ClientKeyId" />
+    </Key>
+    <Property Name="ClientKeyId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AppId" Type="varchar" MaxLength="500" />
+    <Property Name="AppKey" Type="varchar" MaxLength="500" />
+    <Property Name="ClientName" Type="varchar" MaxLength="100" />
+    <Property Name="CreatedOn" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RCGKENTCMS_STAGING01.dbo.CMSOfficeEmailLookup' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CMSOfficeEmailLookup">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Office" Type="nvarchar(max)" />
+    <Property Name="Code" Type="nvarchar(max)" />
+    <Property Name="County" Type="nvarchar(max)" />
+    <Property Name="OfficeEmail" Type="nvarchar(max)" />
+    <Property Name="State" Type="nvarchar(max)" />
+    <Property Name="StateAbbreviation" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="CMSOrderingClients">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="E3EID" Type="int" />
+    <Property Name="KenticoID" Type="nvarchar(max)" />
+    <Property Name="MatterIndex" Type="int" />
+    <Property Name="MatterNumber" Type="nvarchar" MaxLength="64" />
+    <Property Name="ClientIndex" Type="int" />
+    <Property Name="ClientNumber" Type="nvarchar(max)" />
+    <Property Name="ContactSalutation" Type="nvarchar" MaxLength="16" />
+    <Property Name="ContactFirstName" Type="nvarchar(max)" />
+    <Property Name="ContactLastName" Type="nvarchar(max)" />
+    <Property Name="ContactEmail" Type="nvarchar(max)" />
+    <Property Name="ContactPhoneNo" Type="nvarchar(max)" />
+    <Property Name="CompanyName" Type="nvarchar(max)" />
+    <Property Name="CompanyAddress1" Type="nvarchar(max)" />
+    <Property Name="CompanyAddress2" Type="nvarchar(max)" />
+    <Property Name="CompanyAddressCity" Type="nvarchar(max)" />
+    <Property Name="CompanyAddressState" Type="nvarchar(max)" />
+    <Property Name="CompanyAddressZip" Type="nvarchar(max)" />
+    <Property Name="CompanyAddressCountry" Type="nvarchar(max)" />
+    <Property Name="CompanyType" Type="nvarchar(max)" />
+    <Property Name="CompanyTypeDesc" Type="nvarchar(max)" />
+    <Property Name="AdditionalInstr" Type="nvarchar(max)" />
+    <Property Name="CompanyLatAddress" Type="decimal" Precision="16" Scale="6" />
+    <Property Name="CompanyLonAddress" Type="decimal" Precision="16" Scale="6" />
+    <Property Name="Style" Type="nvarchar(max)" />
+    <Property Name="Representing" Type="nvarchar(max)" />
+    <Property Name="RepresentingDesc" Type="nvarchar(max)" />
+    <Property Name="Court" Type="nvarchar(max)" />
+    <Property Name="CauseNumber" Type="nvarchar(max)" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="QueueType" Type="nvarchar" MaxLength="10" />
+    <Property Name="IsProcessed" Type="bit" />
+    <Property Name="ErrorMsg" Type="nvarchar(max)" />
+    <Property Name="ProcessedDate" Type="datetime" />
+    <Property Name="NumOfAttempts" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RCGKENTCMS_STAGING01.dbo.CMSOrderingClientsAudit' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CMSOrderingClientsAudit">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="MatterIndex" />
+      <PropertyRef Name="UpdatedAt" />
+      <PropertyRef Name="Operation" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="E3EID" Type="int" />
+    <Property Name="KenticoID" Type="nvarchar(max)" />
+    <Property Name="MatterIndex" Type="int" Nullable="false" />
+    <Property Name="MatterNumber" Type="nvarchar" MaxLength="64" />
+    <Property Name="ClientIndex" Type="int" />
+    <Property Name="ClientNumber" Type="nvarchar(max)" />
+    <Property Name="ContactSalutation" Type="nvarchar" MaxLength="16" />
+    <Property Name="ContactFirstName" Type="nvarchar(max)" />
+    <Property Name="ContactLastName" Type="nvarchar(max)" />
+    <Property Name="ContactEmail" Type="nvarchar(max)" />
+    <Property Name="ContactPhoneNo" Type="nvarchar(max)" />
+    <Property Name="CompanyName" Type="nvarchar(max)" />
+    <Property Name="CompanyAddress1" Type="nvarchar(max)" />
+    <Property Name="CompanyAddress2" Type="nvarchar(max)" />
+    <Property Name="CompanyAddressCity" Type="nvarchar(max)" />
+    <Property Name="CompanyAddressState" Type="nvarchar(max)" />
+    <Property Name="CompanyAddressZip" Type="nvarchar(max)" />
+    <Property Name="CompanyAddressCountry" Type="nvarchar(max)" />
+    <Property Name="CompanyType" Type="nvarchar(max)" />
+    <Property Name="CompanyTypeDesc" Type="nvarchar(max)" />
+    <Property Name="AdditionalInstr" Type="nvarchar(max)" />
+    <Property Name="CompanyLatAddress" Type="decimal" Precision="16" Scale="6" />
+    <Property Name="CompanyLonAddress" Type="decimal" Precision="16" Scale="6" />
+    <Property Name="Style" Type="nvarchar(max)" />
+    <Property Name="Representing" Type="nvarchar(max)" />
+    <Property Name="RepresentingDesc" Type="nvarchar(max)" />
+    <Property Name="Court" Type="nvarchar(max)" />
+    <Property Name="CauseNumber" Type="nvarchar(max)" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="QueueType" Type="nvarchar" MaxLength="10" />
+    <Property Name="IsProcessed" Type="bit" />
+    <Property Name="ErrorMsg" Type="nvarchar(max)" />
+    <Property Name="ProcessedDate" Type="datetime" />
+    <Property Name="NumOfAttempts" Type="int" />
+    <Property Name="UpdatedAt" Type="datetime" Nullable="false" />
+    <Property Name="Operation" Type="char" MaxLength="3" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CMSPayorDetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="E3EID" Type="int" />
+    <Property Name="KenticoID" Type="nvarchar(max)" />
+    <Property Name="SubItemKenticoID" Type="nvarchar(max)" />
+    <Property Name="MatterIndex" Type="int" />
+    <Property Name="MatterNumber" Type="nvarchar" MaxLength="64" />
+    <Property Name="ClientNumber" Type="nvarchar(max)" />
+    <Property Name="ClientName" Type="nvarchar(max)" />
+    <Property Name="PayorIndex" Type="int" />
+    <Property Name="PayorName" Type="nvarchar(max)" />
+    <Property Name="FirstName" Type="nvarchar(max)" />
+    <Property Name="LastName" Type="nvarchar(max)" />
+    <Property Name="Role" Type="nvarchar" MaxLength="16" />
+    <Property Name="RoleDesc" Type="nvarchar(max)" />
+    <Property Name="Relationship" Type="nvarchar(max)" />
+    <Property Name="RelationshipDesc" Type="nvarchar(max)" />
+    <Property Name="PercentFee" Type="decimal" Precision="16" Scale="5" />
+    <Property Name="PhoneNumber" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="ClaimNumber" Type="nvarchar(max)" />
+    <Property Name="ReferenceNumber" Type="nvarchar(max)" />
+    <Property Name="CorpType_CCC" Type="nvarchar(max)" />
+    <Property Name="Title_CCC" Type="nvarchar(max)" />
+    <Property Name="AddtlContactInfo_CCC" Type="nvarchar(max)" />
+    <Property Name="PONumber_CCC" Type="nvarchar(max)" />
+    <Property Name="Policy_CCC" Type="nvarchar(max)" />
+    <Property Name="UMR_CCC" Type="nvarchar(max)" />
+    <Property Name="File_CCC" Type="nvarchar(max)" />
+    <Property Name="Tracking_CCC" Type="nvarchar(max)" />
+    <Property Name="Street" Type="nvarchar(max)" />
+    <Property Name="City" Type="nvarchar(max)" />
+    <Property Name="County" Type="nvarchar(max)" />
+    <Property Name="State" Type="nvarchar(max)" />
+    <Property Name="ZipCode" Type="nvarchar(max)" />
+    <Property Name="Country" Type="nvarchar(max)" />
+    <Property Name="LatAddress" Type="decimal" Precision="16" Scale="6" />
+    <Property Name="LonAddress" Type="decimal" Precision="16" Scale="6" />
+    <Property Name="MattPayorID" Type="nvarchar(max)" />
+    <Property Name="MattPayorDetID" Type="nvarchar(max)" />
+    <Property Name="PayorID" Type="nvarchar(max)" />
+    <Property Name="PayorSiteIndex" Type="int" />
+    <Property Name="PayorAddrIndex" Type="int" />
+    <Property Name="PaymentAuthority" Type="bit" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="SvcOp" Type="nvarchar" MaxLength="10" />
+    <Property Name="QueueType" Type="nvarchar" MaxLength="10" />
+    <Property Name="IsProcessed" Type="bit" />
+    <Property Name="ErrorMsg" Type="nvarchar(max)" />
+    <Property Name="ProcessedDate" Type="datetime" />
+    <Property Name="NumOfAttempts" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RCGKENTCMS_STAGING01.dbo.CMSPayorDetailsAudit' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CMSPayorDetailsAudit">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="MatterIndex" />
+      <PropertyRef Name="UpdatedAt" />
+      <PropertyRef Name="Operation" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="E3EID" Type="int" />
+    <Property Name="KenticoID" Type="nvarchar(max)" />
+    <Property Name="SubItemKenticoID" Type="nvarchar(max)" />
+    <Property Name="MatterIndex" Type="int" Nullable="false" />
+    <Property Name="MatterNumber" Type="nvarchar" MaxLength="64" />
+    <Property Name="ClientNumber" Type="nvarchar(max)" />
+    <Property Name="ClientName" Type="nvarchar(max)" />
+    <Property Name="PayorIndex" Type="int" />
+    <Property Name="PayorName" Type="nvarchar(max)" />
+    <Property Name="FirstName" Type="nvarchar(max)" />
+    <Property Name="LastName" Type="nvarchar(max)" />
+    <Property Name="Role" Type="nvarchar" MaxLength="16" />
+    <Property Name="RoleDesc" Type="nvarchar(max)" />
+    <Property Name="Relationship" Type="nvarchar(max)" />
+    <Property Name="RelationshipDesc" Type="nvarchar(max)" />
+    <Property Name="PercentFee" Type="decimal" Precision="16" Scale="5" />
+    <Property Name="PhoneNumber" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="ClaimNumber" Type="nvarchar(max)" />
+    <Property Name="ReferenceNumber" Type="nvarchar(max)" />
+    <Property Name="CorpType_CCC" Type="nvarchar(max)" />
+    <Property Name="Title_CCC" Type="nvarchar(max)" />
+    <Property Name="AddtlContactInfo_CCC" Type="nvarchar(max)" />
+    <Property Name="PONumber_CCC" Type="nvarchar(max)" />
+    <Property Name="Policy_CCC" Type="nvarchar(max)" />
+    <Property Name="UMR_CCC" Type="nvarchar(max)" />
+    <Property Name="File_CCC" Type="nvarchar(max)" />
+    <Property Name="Tracking_CCC" Type="nvarchar(max)" />
+    <Property Name="Street" Type="nvarchar(max)" />
+    <Property Name="City" Type="nvarchar(max)" />
+    <Property Name="County" Type="nvarchar(max)" />
+    <Property Name="State" Type="nvarchar(max)" />
+    <Property Name="ZipCode" Type="nvarchar(max)" />
+    <Property Name="Country" Type="nvarchar(max)" />
+    <Property Name="LatAddress" Type="decimal" Precision="16" Scale="6" />
+    <Property Name="LonAddress" Type="decimal" Precision="16" Scale="6" />
+    <Property Name="MattPayorID" Type="nvarchar(max)" />
+    <Property Name="MattPayorDetID" Type="nvarchar(max)" />
+    <Property Name="PayorID" Type="nvarchar(max)" />
+    <Property Name="PayorSiteIndex" Type="int" />
+    <Property Name="PayorAddrIndex" Type="int" />
+    <Property Name="PaymentAuthority" Type="bit" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="SvcOp" Type="nvarchar" MaxLength="10" />
+    <Property Name="QueueType" Type="nvarchar" MaxLength="10" />
+    <Property Name="IsProcessed" Type="bit" />
+    <Property Name="ErrorMsg" Type="nvarchar(max)" />
+    <Property Name="ProcessedDate" Type="datetime" />
+    <Property Name="NumOfAttempts" Type="int" />
+    <Property Name="UpdatedAt" Type="datetime" Nullable="false" />
+    <Property Name="Operation" Type="char" MaxLength="3" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RCGKENTCMS_STAGING01.dbo.CMSRefLookup' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CMSRefLookup">
+    <Key>
+      <PropertyRef Name="RefNumId" />
+    </Key>
+    <Property Name="RefNumId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RefType" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Function Name="CMSConvertToCliTypeByCode" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="code" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="CMSExtractFirstName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar(max)">
+    <Parameter Name="contactInfo" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="CMSExtractLastName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar(max)">
+    <Parameter Name="contactInfo" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="CMSExtractSalutation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar(max)">
+    <Parameter Name="contactInfo" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="CMSGetAllClientMatters_V3" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="offset" Type="int" Mode="In" />
+    <Parameter Name="limit" Type="int" Mode="In" />
+    <Parameter Name="status" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="search" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="searchcolumn" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fromdate" Type="datetime" Mode="In" />
+    <Parameter Name="todate" Type="datetime" Mode="In" />
+    <Parameter Name="email" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="clientNumber" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="totalCount" Type="int" Mode="InOut" />
+    <Parameter Name="filteredCount" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="CMSGetAllClients" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="CMSGetClientMatters" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="clientNumber" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="CMSGetClientMattersByRelSiteEmail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="email" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="CMSGetClientNameByEmail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar(max)">
+    <Parameter Name="emailAddr" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="CMSGetClientNumberByEmail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar(max)">
+    <Parameter Name="emailAddr" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="CMSGetClientsByType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cliTypeCode" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="CMSGetCliTypeFromCftRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cftRole" Type="int" Mode="In" />
+  </Function>
+  <Function Name="CMSGetDefaultValue" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="CMSGetFullMatterAdditionalPartiesDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="matterId" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="CMSGetFullMatterCoConsultantDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="matterId" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="CMSGetFullMatterDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="matterId" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="CMSGetFullMatterIncidentLocationsDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="matterId" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="CMSGetFullMatterOrderingClientDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="matterId" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="CMSGetFullMatterPayorDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="matterId" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="CMSGetLookupCodes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="lookupType" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="CMSGetLookupTypes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="CMSGetMatterByNum" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="matterNo" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="CMSGetMatterCode" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="lookupType" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="lookupValue" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="CMSGetMatterDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="matterId" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="CMSGetMatterNotes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="matterId" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="CMSGetOfficeAndTpk" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="county" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="CMSGetOfficeAndTpkByCity" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="city" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="CMSGetOfficeAndTpkByCounty" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="county" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="CMSGetOfficeAndTpkByKeywords" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="keyPhrase" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="CMSGetOfficeAndTpkByZip" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ZipNum" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="CMSGetOfficeCode" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="keyword" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="zipcode" Type="nvarchar" Mode="In" />
+    <Parameter Name="city" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="state" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="county" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="CMSIsContactChanges" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+    <Parameter Name="inEmail" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="inFirstName" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="inLastName" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="CMSRetrieveMattersForKentico" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numOfDays" Type="int" Mode="In" />
+  </Function>
+  <Function Name="CMSScanMattAdditionalPartiesChanges" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numOfDays" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="MattIndex" Type="int" Nullable="false" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="CMSScanMattAdditionalPartiesChangesDateTime" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dateTime" Type="datetime" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="MattIndex" Type="int" Nullable="false" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="CMSScanMattBudgetChanges" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numOfDays" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="MattIndex" Type="int" Nullable="false" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="CMSScanMattBudgetChangesDateTime" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dateTime" Type="datetime" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="MattIndex" Type="int" Nullable="false" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="CMSScanMattEffectiveDateChanges" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numOfDays" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="MattIndex" Type="int" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="CMSScanMattEffectiveDateChangesDateTime" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dateTime" Type="datetime" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="MattIndex" Type="int" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="CMSScanMatterChanges" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numOfDays" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="MattIndex" Type="int" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="CMSScanMatterChangesDateTime" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dateTime" Type="datetime" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="MattIndex" Type="int" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="CMSScanMattFlatFeeChanges" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numOfDays" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="MattIndex" Type="int" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="CMSScanMattFlatFeeChangesDateTime" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dateTime" Type="datetime" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="MattIndex" Type="int" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="CMSScanMattIncidentLocationChanges" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numOfDays" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="MattIndex" Type="int" Nullable="false" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="CMSScanMattIndustryGroupChanges" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numOfDays" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="MattIndex" Type="int" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="CMSScanMattIndustryGroupChangesDateTime" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dateTime" Type="datetime" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="MattIndex" Type="int" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="CMSScanMattPayorDetailChanges" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numOfDays" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="MattIndex" Type="int" Nullable="false" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="CMSScanMattRateChanges" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numOfDays" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="MattIndex" Type="int" Nullable="false" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="CMSScanMattRateChangesDateTime" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dateTime" Type="datetime" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="MattIndex" Type="int" Nullable="false" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="CMSScanMattRateExcChanges" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numOfDays" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="MattIndex" Type="int" Nullable="false" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="CMSScanMattRateExcChangesDateTime" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dateTime" Type="datetime" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="MattIndex" Type="int" Nullable="false" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="CMSScanOrderingClientChanges" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numOfDays" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="MattIndex" Type="int" Nullable="false" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="CMSScanSpecialInstructionChanges" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numOfDays" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="MattIndex" Type="int" Nullable="false" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="CMSScanSpecialInstructionChangesDateTime" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dateTime" Type="datetime" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="MattIndex" Type="int" Nullable="false" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="CMSScanTechnicalEngineerChanges" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numOfDays" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="MattIndex" Type="int" Nullable="false" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="CMSSearchClients" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="name" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="CMSSearchEntity" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="name" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="CMSSearchOutCustomerChanges" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numOfDays" Type="int" Mode="In" />
+  </Function>
+  <Function Name="CMSSearchOutCustomerChangesDateTime" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="CMSSearchRelMatters" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="name" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="CMSSearchTimekeepers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="name" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="ConflictCheckAuditByDateRange" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numOfDays" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ConflictCheckAuditByMattNumber" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="mattNumber" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="ConflictCheckAuditDrillDown" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="jobNumber" Type="int" Mode="In" />
+    <Parameter Name="searchterms" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="entitySearched" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="whereFoundArchCode" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="whereFoundAttrCode" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="GetClaimantOrInsuredName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar(max)">
+    <Parameter Name="matterNo" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="isInsured" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetMemberUsers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar(max)">
+    <Parameter Name="mattNo" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="GetPhoneOrFax" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar(max)">
+    <Parameter Name="matterNo" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="phoneType" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GetSubKenticoIDByMatterEntityKey" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar(max)">
+    <Parameter Name="EntityType" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="MatterIndex" Type="int" Mode="In" />
+    <Parameter Name="EntityKey" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="GetUserEmail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar(max)">
+    <Parameter Name="tkprIdx" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="SplitFullName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fullname" Type="nvarchar(max)" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="Firstname" Type="nvarchar(max)" />
+          <Property Name="Lastname" Type="nvarchar(max)" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="SplitStrings" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="List" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Delimiter" Type="nvarchar" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="Item" Type="nvarchar" MaxLength="4000" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <EntityContainer Name="TE3EEntityFrameworkDatasourceRCGKENTCMSDataModelStoreContainer">
+    <EntitySet Name="CMSAdditionalParties" EntityType="Self.CMSAdditionalParties" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CMSAssignmentJob" EntityType="Self.CMSAssignmentJob" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CMSAssignments" EntityType="Self.CMSAssignments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CMSCoConsultants" EntityType="Self.CMSCoConsultants" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CMSCustomerProfile" EntityType="Self.CMSCustomerProfile" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CMSDynamics365Configuration" EntityType="Self.CMSDynamics365Configuration" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CMSIncidentLocations" EntityType="Self.CMSIncidentLocations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CMSKenticoAssignmentCopies" EntityType="Self.CMSKenticoAssignmentCopies" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CMSKenticoAssignmentRel" EntityType="Self.CMSKenticoAssignmentRel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CMSKenticoCustomerCopies" EntityType="Self.CMSKenticoCustomerCopies" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CMSKenticoCustomerRel" EntityType="Self.CMSKenticoCustomerRel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CMSKenticoSubEntityRel" EntityType="Self.CMSKenticoSubEntityRel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CMSKenticoSubEntityRelAudit" EntityType="Self.CMSKenticoSubEntityRelAudit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CMSKeyVaults" EntityType="Self.CMSKeyVaults" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CMSOrderingClients" EntityType="Self.CMSOrderingClients" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CMSPayorDetails" EntityType="Self.CMSPayorDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CMSAdditionalPartiesAudit" EntityType="Self.CMSAdditionalPartiesAudit" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CMSAdditionalPartiesAudit].[Id] AS [Id], 
+    [CMSAdditionalPartiesAudit].[E3EID] AS [E3EID], 
+    [CMSAdditionalPartiesAudit].[KenticoID] AS [KenticoID], 
+    [CMSAdditionalPartiesAudit].[SubItemKenticoID] AS [SubItemKenticoID], 
+    [CMSAdditionalPartiesAudit].[MatterIndex] AS [MatterIndex], 
+    [CMSAdditionalPartiesAudit].[MatterNumber] AS [MatterNumber], 
+    [CMSAdditionalPartiesAudit].[PartyName] AS [PartyName], 
+    [CMSAdditionalPartiesAudit].[PartyType] AS [PartyType], 
+    [CMSAdditionalPartiesAudit].[EntIndex] AS [EntIndex], 
+    [CMSAdditionalPartiesAudit].[EntityType] AS [EntityType], 
+    [CMSAdditionalPartiesAudit].[EntityTypeDesc] AS [EntityTypeDesc], 
+    [CMSAdditionalPartiesAudit].[Role] AS [Role], 
+    [CMSAdditionalPartiesAudit].[RoleDesc] AS [RoleDesc], 
+    [CMSAdditionalPartiesAudit].[HomePhone] AS [HomePhone], 
+    [CMSAdditionalPartiesAudit].[WorkPhone] AS [WorkPhone], 
+    [CMSAdditionalPartiesAudit].[MobilePhone] AS [MobilePhone], 
+    [CMSAdditionalPartiesAudit].[Email] AS [Email], 
+    [CMSAdditionalPartiesAudit].[TimeStamp] AS [TimeStamp], 
+    [CMSAdditionalPartiesAudit].[SvcOp] AS [SvcOp], 
+    [CMSAdditionalPartiesAudit].[QueueType] AS [QueueType], 
+    [CMSAdditionalPartiesAudit].[IsProcessed] AS [IsProcessed], 
+    [CMSAdditionalPartiesAudit].[ErrorMsg] AS [ErrorMsg], 
+    [CMSAdditionalPartiesAudit].[ProcessedDate] AS [ProcessedDate], 
+    [CMSAdditionalPartiesAudit].[NumOfAttempts] AS [NumOfAttempts], 
+    [CMSAdditionalPartiesAudit].[UpdatedAt] AS [UpdatedAt], 
+    [CMSAdditionalPartiesAudit].[Operation] AS [Operation]
+    FROM [dbo].[CMSAdditionalPartiesAudit] AS [CMSAdditionalPartiesAudit]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CMSAssignmentsAudit" EntityType="Self.CMSAssignmentsAudit" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CMSAssignmentsAudit].[Id] AS [Id], 
+    [CMSAssignmentsAudit].[E3EID] AS [E3EID], 
+    [CMSAssignmentsAudit].[KenticoID] AS [KenticoID], 
+    [CMSAssignmentsAudit].[MatterIndex] AS [MatterIndex], 
+    [CMSAssignmentsAudit].[MatterNumber] AS [MatterNumber], 
+    [CMSAssignmentsAudit].[MatterName] AS [MatterName], 
+    [CMSAssignmentsAudit].[ClientIndex] AS [ClientIndex], 
+    [CMSAssignmentsAudit].[ClientNumber] AS [ClientNumber], 
+    [CMSAssignmentsAudit].[ClientName] AS [ClientName], 
+    [CMSAssignmentsAudit].[RelatedMatter] AS [RelatedMatter], 
+    [CMSAssignmentsAudit].[MattStatus] AS [MattStatus], 
+    [CMSAssignmentsAudit].[MattStatusDesc] AS [MattStatusDesc], 
+    [CMSAssignmentsAudit].[MattStatusDate] AS [MattStatusDate], 
+    [CMSAssignmentsAudit].[OpenDate] AS [OpenDate], 
+    [CMSAssignmentsAudit].[Narrative] AS [Narrative], 
+    [CMSAssignmentsAudit].[Narrative_UnformattedText] AS [Narrative_UnformattedText], 
+    [CMSAssignmentsAudit].[CloseDate] AS [CloseDate], 
+    [CMSAssignmentsAudit].[ElecBillingType] AS [ElecBillingType], 
+    [CMSAssignmentsAudit].[ElecBillingTypeDesc] AS [ElecBillingTypeDesc], 
+    [CMSAssignmentsAudit].[ElectronicNumber] AS [ElectronicNumber], 
+    [CMSAssignmentsAudit].[OpenTimekeeper] AS [OpenTimekeeper], 
+    [CMSAssignmentsAudit].[OpenTimekeeperName] AS [OpenTimekeeperName], 
+    [CMSAssignmentsAudit].[CloseTimekeeper] AS [CloseTimekeeper], 
+    [CMSAssignmentsAudit].[CloseTimekeeperName] AS [CloseTimekeeperName], 
+    [CMSAssignmentsAudit].[FeesTaxCode] AS [FeesTaxCode], 
+    [CMSAssignmentsAudit].[FeeTaxCodeDesc] AS [FeeTaxCodeDesc], 
+    [CMSAssignmentsAudit].[Currency] AS [Currency], 
+    [CMSAssignmentsAudit].[CurrencyDesc] AS [CurrencyDesc], 
+    [CMSAssignmentsAudit].[EntryDate] AS [EntryDate], 
+    [CMSAssignmentsAudit].[EBilling] AS [EBilling], 
+    [CMSAssignmentsAudit].[DateOccurence] AS [DateOccurence], 
+    [CMSAssignmentsAudit].[DateOfOccurenceTxt] AS [DateOfOccurenceTxt], 
+    [CMSAssignmentsAudit].[IsProspective_CCC] AS [IsProspective_CCC], 
+    [CMSAssignmentsAudit].[IsCheckWritingAuthority] AS [IsCheckWritingAuthority], 
+    [CMSAssignmentsAudit].[WebOriginated] AS [WebOriginated], 
+    [CMSAssignmentsAudit].[RetainerAmount] AS [RetainerAmount], 
+    [CMSAssignmentsAudit].[ScopeOfWork] AS [ScopeOfWork], 
+    [CMSAssignmentsAudit].[FixedPrice] AS [FixedPrice], 
+    [CMSAssignmentsAudit].[DNENotes] AS [DNENotes], 
+    [CMSAssignmentsAudit].[IsConfLetterStd] AS [IsConfLetterStd], 
+    [CMSAssignmentsAudit].[IsConfLetterLegal] AS [IsConfLetterLegal], 
+    [CMSAssignmentsAudit].[IsConfLetterNatAgmt] AS [IsConfLetterNatAgmt], 
+    [CMSAssignmentsAudit].[IsConfLetterEngSvcs] AS [IsConfLetterEngSvcs], 
+    [CMSAssignmentsAudit].[IsConfLetterCAT] AS [IsConfLetterCAT], 
+    [CMSAssignmentsAudit].[IsConfLetterRtnr] AS [IsConfLetterRtnr], 
+    [CMSAssignmentsAudit].[IsConfLetterSign] AS [IsConfLetterSign], 
+    [CMSAssignmentsAudit].[ROFTemplate] AS [ROFTemplate], 
+    [CMSAssignmentsAudit].[ROFTemplateDesc] AS [ROFTemplateDesc], 
+    [CMSAssignmentsAudit].[StartDate1] AS [StartDate1], 
+    [CMSAssignmentsAudit].[BillingTimekeeper] AS [BillingTimekeeper], 
+    [CMSAssignmentsAudit].[BillingTimekeeperName] AS [BillingTimekeeperName], 
+    [CMSAssignmentsAudit].[ResponsibleTimekeeper] AS [ResponsibleTimekeeper], 
+    [CMSAssignmentsAudit].[ResponsibleTimekeeperName] AS [ResponsibleTimekeeperName], 
+    [CMSAssignmentsAudit].[SupervisingTimekeeper] AS [SupervisingTimekeeper], 
+    [CMSAssignmentsAudit].[SupervisingTimekeeperName] AS [SupervisingTimekeeperName], 
+    [CMSAssignmentsAudit].[Office] AS [Office], 
+    [CMSAssignmentsAudit].[OfficeName] AS [OfficeName], 
+    [CMSAssignmentsAudit].[Arrangement] AS [Arrangement], 
+    [CMSAssignmentsAudit].[ArrangementDesc] AS [ArrangementDesc], 
+    [CMSAssignmentsAudit].[Section] AS [Section], 
+    [CMSAssignmentsAudit].[SectionDesc] AS [SectionDesc], 
+    [CMSAssignmentsAudit].[Department] AS [Department], 
+    [CMSAssignmentsAudit].[DepartmentDesc] AS [DepartmentDesc], 
+    [CMSAssignmentsAudit].[PracticeGroup] AS [PracticeGroup], 
+    [CMSAssignmentsAudit].[PracticeGroupDesc] AS [PracticeGroupDesc], 
+    [CMSAssignmentsAudit].[PTAGroup] AS [PTAGroup], 
+    [CMSAssignmentsAudit].[PTAGroupDesc] AS [PTAGroupDesc], 
+    [CMSAssignmentsAudit].[IndustryGroup] AS [IndustryGroup], 
+    [CMSAssignmentsAudit].[IndustryGroupDesc] AS [IndustryGroupDesc], 
+    [CMSAssignmentsAudit].[TechnicalReviewerNumber] AS [TechnicalReviewerNumber], 
+    [CMSAssignmentsAudit].[TechincalReviewerName] AS [TechincalReviewerName], 
+    [CMSAssignmentsAudit].[EngineerOfRecordNo] AS [EngineerOfRecordNo], 
+    [CMSAssignmentsAudit].[EngineerOfRecordName] AS [EngineerOfRecordName], 
+    [CMSAssignmentsAudit].[BDManagerNo] AS [BDManagerNo], 
+    [CMSAssignmentsAudit].[BDManagerName] AS [BDManagerName], 
+    [CMSAssignmentsAudit].[StartDate2] AS [StartDate2], 
+    [CMSAssignmentsAudit].[SpecialClientInstruction] AS [SpecialClientInstruction], 
+    [CMSAssignmentsAudit].[SpecialClientInstructionDesc] AS [SpecialClientInstructionDesc], 
+    [CMSAssignmentsAudit].[SpecialInstructions] AS [SpecialInstructions], 
+    [CMSAssignmentsAudit].[InvoiceTo] AS [InvoiceTo], 
+    [CMSAssignmentsAudit].[Rate] AS [Rate], 
+    [CMSAssignmentsAudit].[RateDesc] AS [RateDesc], 
+    [CMSAssignmentsAudit].[RateExceptGroup] AS [RateExceptGroup], 
+    [CMSAssignmentsAudit].[RateExceptGroupDesc] AS [RateExceptGroupDesc], 
+    [CMSAssignmentsAudit].[TimeType] AS [TimeType], 
+    [CMSAssignmentsAudit].[TimeTypeDesc] AS [TimeTypeDesc], 
+    [CMSAssignmentsAudit].[FlatFeeAmount] AS [FlatFeeAmount], 
+    [CMSAssignmentsAudit].[Budget] AS [Budget], 
+    [CMSAssignmentsAudit].[InsuranceType] AS [InsuranceType], 
+    [CMSAssignmentsAudit].[InsuranceTypeDesc] AS [InsuranceTypeDesc], 
+    [CMSAssignmentsAudit].[ClaimType] AS [ClaimType], 
+    [CMSAssignmentsAudit].[ClaimTypeDesc] AS [ClaimTypeDesc], 
+    [CMSAssignmentsAudit].[RawJsonMsg] AS [RawJsonMsg], 
+    [CMSAssignmentsAudit].[ReportTo] AS [ReportTo], 
+    [CMSAssignmentsAudit].[TimeStamp] AS [TimeStamp], 
+    [CMSAssignmentsAudit].[QueueType] AS [QueueType], 
+    [CMSAssignmentsAudit].[IsProcessed] AS [IsProcessed], 
+    [CMSAssignmentsAudit].[ErrorMsg] AS [ErrorMsg], 
+    [CMSAssignmentsAudit].[ProcessedDate] AS [ProcessedDate], 
+    [CMSAssignmentsAudit].[NumOfAttempts] AS [NumOfAttempts], 
+    [CMSAssignmentsAudit].[UpdatedAt] AS [UpdatedAt], 
+    [CMSAssignmentsAudit].[Operation] AS [Operation], 
+    [CMSAssignmentsAudit].[SubmissionID] AS [SubmissionID]
+    FROM [dbo].[CMSAssignmentsAudit] AS [CMSAssignmentsAudit]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CMSCoConsultantsAudit" EntityType="Self.CMSCoConsultantsAudit" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CMSCoConsultantsAudit].[Id] AS [Id], 
+    [CMSCoConsultantsAudit].[E3EID] AS [E3EID], 
+    [CMSCoConsultantsAudit].[KenticoID] AS [KenticoID], 
+    [CMSCoConsultantsAudit].[SubItemKenticoID] AS [SubItemKenticoID], 
+    [CMSCoConsultantsAudit].[MatterIndex] AS [MatterIndex], 
+    [CMSCoConsultantsAudit].[MatterNumber] AS [MatterNumber], 
+    [CMSCoConsultantsAudit].[CoConsultantIndex] AS [CoConsultantIndex], 
+    [CMSCoConsultantsAudit].[CoConsultantNumber] AS [CoConsultantNumber], 
+    [CMSCoConsultantsAudit].[CoConsultantName] AS [CoConsultantName], 
+    [CMSCoConsultantsAudit].[TimeStamp] AS [TimeStamp], 
+    [CMSCoConsultantsAudit].[SvcOp] AS [SvcOp], 
+    [CMSCoConsultantsAudit].[QueueType] AS [QueueType], 
+    [CMSCoConsultantsAudit].[IsProcessed] AS [IsProcessed], 
+    [CMSCoConsultantsAudit].[ErrorMsg] AS [ErrorMsg], 
+    [CMSCoConsultantsAudit].[ProcessedDate] AS [ProcessedDate], 
+    [CMSCoConsultantsAudit].[NumOfAttempts] AS [NumOfAttempts], 
+    [CMSCoConsultantsAudit].[UpdatedAt] AS [UpdatedAt], 
+    [CMSCoConsultantsAudit].[Operation] AS [Operation]
+    FROM [dbo].[CMSCoConsultantsAudit] AS [CMSCoConsultantsAudit]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CMSCustomerProfileAudit" EntityType="Self.CMSCustomerProfileAudit" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CMSCustomerProfileAudit].[Id] AS [Id], 
+    [CMSCustomerProfileAudit].[KenticoID] AS [KenticoID], 
+    [CMSCustomerProfileAudit].[ClientNumber] AS [ClientNumber], 
+    [CMSCustomerProfileAudit].[ContactID] AS [ContactID], 
+    [CMSCustomerProfileAudit].[Email] AS [Email], 
+    [CMSCustomerProfileAudit].[Salutation] AS [Salutation], 
+    [CMSCustomerProfileAudit].[FirstName] AS [FirstName], 
+    [CMSCustomerProfileAudit].[LastName] AS [LastName], 
+    [CMSCustomerProfileAudit].[Phone] AS [Phone], 
+    [CMSCustomerProfileAudit].[CompanyName] AS [CompanyName], 
+    [CMSCustomerProfileAudit].[CompanyType] AS [CompanyType], 
+    [CMSCustomerProfileAudit].[CompanyAddress1] AS [CompanyAddress1], 
+    [CMSCustomerProfileAudit].[CompanyAddress2] AS [CompanyAddress2], 
+    [CMSCustomerProfileAudit].[CompanyAddressCity] AS [CompanyAddressCity], 
+    [CMSCustomerProfileAudit].[CompanyAddressState] AS [CompanyAddressState], 
+    [CMSCustomerProfileAudit].[CompanyAddressZip] AS [CompanyAddressZip], 
+    [CMSCustomerProfileAudit].[CompanyAddressCountry] AS [CompanyAddressCountry], 
+    [CMSCustomerProfileAudit].[CompanyAddressLon] AS [CompanyAddressLon], 
+    [CMSCustomerProfileAudit].[CompanyAddressLat] AS [CompanyAddressLat], 
+    [CMSCustomerProfileAudit].[TimeStamp] AS [TimeStamp], 
+    [CMSCustomerProfileAudit].[QueueType] AS [QueueType], 
+    [CMSCustomerProfileAudit].[IsProcessed] AS [IsProcessed], 
+    [CMSCustomerProfileAudit].[ErrorMsg] AS [ErrorMsg], 
+    [CMSCustomerProfileAudit].[ProcessedDate] AS [ProcessedDate], 
+    [CMSCustomerProfileAudit].[NumOfAttempts] AS [NumOfAttempts], 
+    [CMSCustomerProfileAudit].[UpdatedAt] AS [UpdatedAt], 
+    [CMSCustomerProfileAudit].[Operation] AS [Operation]
+    FROM [dbo].[CMSCustomerProfileAudit] AS [CMSCustomerProfileAudit]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CMSIncidentLocationsAudit" EntityType="Self.CMSIncidentLocationsAudit" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CMSIncidentLocationsAudit].[Id] AS [Id], 
+    [CMSIncidentLocationsAudit].[E3EID] AS [E3EID], 
+    [CMSIncidentLocationsAudit].[KenticoID] AS [KenticoID], 
+    [CMSIncidentLocationsAudit].[SubItemKenticoID] AS [SubItemKenticoID], 
+    [CMSIncidentLocationsAudit].[MatterIndex] AS [MatterIndex], 
+    [CMSIncidentLocationsAudit].[MatterNumber] AS [MatterNumber], 
+    [CMSIncidentLocationsAudit].[StreetOccurrence] AS [StreetOccurrence], 
+    [CMSIncidentLocationsAudit].[CityOccurrence] AS [CityOccurrence], 
+    [CMSIncidentLocationsAudit].[CountyOccurrence] AS [CountyOccurrence], 
+    [CMSIncidentLocationsAudit].[StateOccurrence] AS [StateOccurrence], 
+    [CMSIncidentLocationsAudit].[ZipCodeOccurrence] AS [ZipCodeOccurrence], 
+    [CMSIncidentLocationsAudit].[CountryOccurrence] AS [CountryOccurrence], 
+    [CMSIncidentLocationsAudit].[LatOccurrence] AS [LatOccurrence], 
+    [CMSIncidentLocationsAudit].[LonOccurrence] AS [LonOccurrence], 
+    [CMSIncidentLocationsAudit].[MattSiteID] AS [MattSiteID], 
+    [CMSIncidentLocationsAudit].[SiteIndex] AS [SiteIndex], 
+    [CMSIncidentLocationsAudit].[AddrIndex] AS [AddrIndex], 
+    [CMSIncidentLocationsAudit].[TimeStamp] AS [TimeStamp], 
+    [CMSIncidentLocationsAudit].[SvcOp] AS [SvcOp], 
+    [CMSIncidentLocationsAudit].[QueueType] AS [QueueType], 
+    [CMSIncidentLocationsAudit].[IsProcessed] AS [IsProcessed], 
+    [CMSIncidentLocationsAudit].[ErrorMsg] AS [ErrorMsg], 
+    [CMSIncidentLocationsAudit].[ProcessedDate] AS [ProcessedDate], 
+    [CMSIncidentLocationsAudit].[NumOfAttempts] AS [NumOfAttempts], 
+    [CMSIncidentLocationsAudit].[UpdatedAt] AS [UpdatedAt], 
+    [CMSIncidentLocationsAudit].[Operation] AS [Operation]
+    FROM [dbo].[CMSIncidentLocationsAudit] AS [CMSIncidentLocationsAudit]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CMSKenticoAssignmentRelAudit" EntityType="Self.CMSKenticoAssignmentRelAudit" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CMSKenticoAssignmentRelAudit].[Id] AS [Id], 
+    [CMSKenticoAssignmentRelAudit].[E3EID] AS [E3EID], 
+    [CMSKenticoAssignmentRelAudit].[KenticoID] AS [KenticoID], 
+    [CMSKenticoAssignmentRelAudit].[MatterIndex] AS [MatterIndex], 
+    [CMSKenticoAssignmentRelAudit].[MatterNumber] AS [MatterNumber], 
+    [CMSKenticoAssignmentRelAudit].[ClientIndex] AS [ClientIndex], 
+    [CMSKenticoAssignmentRelAudit].[ClientNumber] AS [ClientNumber], 
+    [CMSKenticoAssignmentRelAudit].[TimeStamp] AS [TimeStamp], 
+    [CMSKenticoAssignmentRelAudit].[UpdatedAt] AS [UpdatedAt], 
+    [CMSKenticoAssignmentRelAudit].[Operation] AS [Operation]
+    FROM [dbo].[CMSKenticoAssignmentRelAudit] AS [CMSKenticoAssignmentRelAudit]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CMSKenticoConfiguration" EntityType="Self.CMSKenticoConfiguration" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CMSKenticoConfiguration].[Id] AS [Id], 
+    [CMSKenticoConfiguration].[NumOfDays] AS [NumOfDays], 
+    [CMSKenticoConfiguration].[TE3EAssignmentAzSBConn_Dev] AS [TE3EAssignmentAzSBConn_Dev], 
+    [CMSKenticoConfiguration].[TE3EAssignmentAzSBQueueName_Dev] AS [TE3EAssignmentAzSBQueueName_Dev], 
+    [CMSKenticoConfiguration].[KenticoAssignmentAzSBConn_Dev] AS [KenticoAssignmentAzSBConn_Dev], 
+    [CMSKenticoConfiguration].[KenticoAssignmentAzSBQueueName_Dev] AS [KenticoAssignmentAzSBQueueName_Dev], 
+    [CMSKenticoConfiguration].[DynamicsCustomersAzSBConn_Dev] AS [DynamicsCustomersAzSBConn_Dev], 
+    [CMSKenticoConfiguration].[DynamicsCustomersAzSBQueueName_Dev] AS [DynamicsCustomersAzSBQueueName_Dev], 
+    [CMSKenticoConfiguration].[KenticoCustomersAzSBConn_Dev] AS [KenticoCustomersAzSBConn_Dev], 
+    [CMSKenticoConfiguration].[KenticoCustomersAzSBQueueName_Dev] AS [KenticoCustomersAzSBQueueName_Dev], 
+    [CMSKenticoConfiguration].[TE3EAssignmentAzSBConn_Prod] AS [TE3EAssignmentAzSBConn_Prod], 
+    [CMSKenticoConfiguration].[TE3EAssignmentAzSBQueueName_Prod] AS [TE3EAssignmentAzSBQueueName_Prod], 
+    [CMSKenticoConfiguration].[KenticoAssignmentAzSBConn_Prod] AS [KenticoAssignmentAzSBConn_Prod], 
+    [CMSKenticoConfiguration].[KenticoAssignmentAzSBQueueName_Prod] AS [KenticoAssignmentAzSBQueueName_Prod], 
+    [CMSKenticoConfiguration].[DynamicsCustomersAzSBConn_Prod] AS [DynamicsCustomersAzSBConn_Prod], 
+    [CMSKenticoConfiguration].[DynamicsCustomersAzSBQueueName_Prod] AS [DynamicsCustomersAzSBQueueName_Prod], 
+    [CMSKenticoConfiguration].[KenticoCustomersAzSBConn_Prod] AS [KenticoCustomersAzSBConn_Prod], 
+    [CMSKenticoConfiguration].[KenticoCustomersAzSBQueueName_Prod] AS [KenticoCustomersAzSBQueueName_Prod], 
+    [CMSKenticoConfiguration].[Enotify_From] AS [Enotify_From], 
+    [CMSKenticoConfiguration].[Enotify_To] AS [Enotify_To], 
+    [CMSKenticoConfiguration].[Enotify_Cc] AS [Enotify_Cc], 
+    [CMSKenticoConfiguration].[NumOfAttemptsAllowed] AS [NumOfAttemptsAllowed], 
+    [CMSKenticoConfiguration].[TE3EAssignmentAzSBConn_Uat] AS [TE3EAssignmentAzSBConn_Uat], 
+    [CMSKenticoConfiguration].[TE3EAssignmentAzSBQueueName_Uat] AS [TE3EAssignmentAzSBQueueName_Uat], 
+    [CMSKenticoConfiguration].[KenticoAssignmentAzSBConn_Uat] AS [KenticoAssignmentAzSBConn_Uat], 
+    [CMSKenticoConfiguration].[KenticoAssignmentAzSBQueueName_Uat] AS [KenticoAssignmentAzSBQueueName_Uat], 
+    [CMSKenticoConfiguration].[DynamicsCustomersAzSBConn_Uat] AS [DynamicsCustomersAzSBConn_Uat], 
+    [CMSKenticoConfiguration].[DynamicsCustomersAzSBQueueName_Uat] AS [DynamicsCustomersAzSBQueueName_Uat], 
+    [CMSKenticoConfiguration].[KenticoCustomersAzSBConn_Uat] AS [KenticoCustomersAzSBConn_Uat], 
+    [CMSKenticoConfiguration].[KenticoCustomersAzSBQueueName_Uat] AS [KenticoCustomersAzSBQueueName_Uat], 
+    [CMSKenticoConfiguration].[KenticoAPIURL_DEV] AS [KenticoAPIURL_DEV], 
+    [CMSKenticoConfiguration].[KenticoAPIURL_UAT] AS [KenticoAPIURL_UAT], 
+    [CMSKenticoConfiguration].[KenticoAPIURL_PROD] AS [KenticoAPIURL_PROD], 
+    [CMSKenticoConfiguration].[KenticoAPIKey_DEV] AS [KenticoAPIKey_DEV], 
+    [CMSKenticoConfiguration].[KenticoAPIKey_UAT] AS [KenticoAPIKey_UAT], 
+    [CMSKenticoConfiguration].[KenticoAPIKey_PROD] AS [KenticoAPIKey_PROD]
+    FROM [dbo].[CMSKenticoConfiguration] AS [CMSKenticoConfiguration]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CMSKenticoConfigurationAudit" EntityType="Self.CMSKenticoConfigurationAudit" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CMSKenticoConfigurationAudit].[Id] AS [Id], 
+    [CMSKenticoConfigurationAudit].[NumOfDays] AS [NumOfDays], 
+    [CMSKenticoConfigurationAudit].[TE3EAssignmentAzSBConn_Dev] AS [TE3EAssignmentAzSBConn_Dev], 
+    [CMSKenticoConfigurationAudit].[TE3EAssignmentAzSBQueueName_Dev] AS [TE3EAssignmentAzSBQueueName_Dev], 
+    [CMSKenticoConfigurationAudit].[KenticoAssignmentAzSBConn_Dev] AS [KenticoAssignmentAzSBConn_Dev], 
+    [CMSKenticoConfigurationAudit].[KenticoAssignmentAzSBQueueName_Dev] AS [KenticoAssignmentAzSBQueueName_Dev], 
+    [CMSKenticoConfigurationAudit].[DynamicsCustomersAzSBConn_Dev] AS [DynamicsCustomersAzSBConn_Dev], 
+    [CMSKenticoConfigurationAudit].[DynamicsCustomersAzSBQueueName_Dev] AS [DynamicsCustomersAzSBQueueName_Dev], 
+    [CMSKenticoConfigurationAudit].[KenticoCustomersAzSBConn_Dev] AS [KenticoCustomersAzSBConn_Dev], 
+    [CMSKenticoConfigurationAudit].[KenticoCustomersAzSBQueueName_Dev] AS [KenticoCustomersAzSBQueueName_Dev], 
+    [CMSKenticoConfigurationAudit].[TE3EAssignmentAzSBConn_Prod] AS [TE3EAssignmentAzSBConn_Prod], 
+    [CMSKenticoConfigurationAudit].[TE3EAssignmentAzSBQueueName_Prod] AS [TE3EAssignmentAzSBQueueName_Prod], 
+    [CMSKenticoConfigurationAudit].[KenticoAssignmentAzSBConn_Prod] AS [KenticoAssignmentAzSBConn_Prod], 
+    [CMSKenticoConfigurationAudit].[KenticoAssignmentAzSBQueueName_Prod] AS [KenticoAssignmentAzSBQueueName_Prod], 
+    [CMSKenticoConfigurationAudit].[DynamicsCustomersAzSBConn_Prod] AS [DynamicsCustomersAzSBConn_Prod], 
+    [CMSKenticoConfigurationAudit].[DynamicsCustomersAzSBQueueName_Prod] AS [DynamicsCustomersAzSBQueueName_Prod], 
+    [CMSKenticoConfigurationAudit].[KenticoCustomersAzSBConn_Prod] AS [KenticoCustomersAzSBConn_Prod], 
+    [CMSKenticoConfigurationAudit].[KenticoCustomersAzSBQueueName_Prod] AS [KenticoCustomersAzSBQueueName_Prod], 
+    [CMSKenticoConfigurationAudit].[Enotify_From] AS [Enotify_From], 
+    [CMSKenticoConfigurationAudit].[Enotify_To] AS [Enotify_To], 
+    [CMSKenticoConfigurationAudit].[Enotify_Cc] AS [Enotify_Cc], 
+    [CMSKenticoConfigurationAudit].[updatedAt] AS [updatedAt], 
+    [CMSKenticoConfigurationAudit].[operation] AS [operation], 
+    [CMSKenticoConfigurationAudit].[NumOfAttemptsAllowed] AS [NumOfAttemptsAllowed], 
+    [CMSKenticoConfigurationAudit].[TE3EAssignmentAzSBConn_Uat] AS [TE3EAssignmentAzSBConn_Uat], 
+    [CMSKenticoConfigurationAudit].[TE3EAssignmentAzSBQueueName_Uat] AS [TE3EAssignmentAzSBQueueName_Uat], 
+    [CMSKenticoConfigurationAudit].[KenticoAssignmentAzSBConn_Uat] AS [KenticoAssignmentAzSBConn_Uat], 
+    [CMSKenticoConfigurationAudit].[KenticoAssignmentAzSBQueueName_Uat] AS [KenticoAssignmentAzSBQueueName_Uat], 
+    [CMSKenticoConfigurationAudit].[DynamicsCustomersAzSBConn_Uat] AS [DynamicsCustomersAzSBConn_Uat], 
+    [CMSKenticoConfigurationAudit].[DynamicsCustomersAzSBQueueName_Uat] AS [DynamicsCustomersAzSBQueueName_Uat], 
+    [CMSKenticoConfigurationAudit].[KenticoCustomersAzSBConn_Uat] AS [KenticoCustomersAzSBConn_Uat], 
+    [CMSKenticoConfigurationAudit].[KenticoCustomersAzSBQueueName_Uat] AS [KenticoCustomersAzSBQueueName_Uat]
+    FROM [dbo].[CMSKenticoConfigurationAudit] AS [CMSKenticoConfigurationAudit]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CMSKenticoCustomerRelAudit" EntityType="Self.CMSKenticoCustomerRelAudit" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CMSKenticoCustomerRelAudit].[Id] AS [Id], 
+    [CMSKenticoCustomerRelAudit].[KenticoID] AS [KenticoID], 
+    [CMSKenticoCustomerRelAudit].[ClientNumber] AS [ClientNumber], 
+    [CMSKenticoCustomerRelAudit].[ClientName] AS [ClientName], 
+    [CMSKenticoCustomerRelAudit].[ClientType] AS [ClientType], 
+    [CMSKenticoCustomerRelAudit].[ContactID] AS [ContactID], 
+    [CMSKenticoCustomerRelAudit].[TimeStamp] AS [TimeStamp], 
+    [CMSKenticoCustomerRelAudit].[UpdatedAt] AS [UpdatedAt], 
+    [CMSKenticoCustomerRelAudit].[Operation] AS [Operation]
+    FROM [dbo].[CMSKenticoCustomerRelAudit] AS [CMSKenticoCustomerRelAudit]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CMSOfficeEmailLookup" EntityType="Self.CMSOfficeEmailLookup" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CMSOfficeEmailLookup].[Id] AS [Id], 
+    [CMSOfficeEmailLookup].[Office] AS [Office], 
+    [CMSOfficeEmailLookup].[Code] AS [Code], 
+    [CMSOfficeEmailLookup].[County] AS [County], 
+    [CMSOfficeEmailLookup].[OfficeEmail] AS [OfficeEmail], 
+    [CMSOfficeEmailLookup].[State] AS [State], 
+    [CMSOfficeEmailLookup].[StateAbbreviation] AS [StateAbbreviation]
+    FROM [dbo].[CMSOfficeEmailLookup] AS [CMSOfficeEmailLookup]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CMSOrderingClientsAudit" EntityType="Self.CMSOrderingClientsAudit" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CMSOrderingClientsAudit].[Id] AS [Id], 
+    [CMSOrderingClientsAudit].[E3EID] AS [E3EID], 
+    [CMSOrderingClientsAudit].[KenticoID] AS [KenticoID], 
+    [CMSOrderingClientsAudit].[MatterIndex] AS [MatterIndex], 
+    [CMSOrderingClientsAudit].[MatterNumber] AS [MatterNumber], 
+    [CMSOrderingClientsAudit].[ClientIndex] AS [ClientIndex], 
+    [CMSOrderingClientsAudit].[ClientNumber] AS [ClientNumber], 
+    [CMSOrderingClientsAudit].[ContactSalutation] AS [ContactSalutation], 
+    [CMSOrderingClientsAudit].[ContactFirstName] AS [ContactFirstName], 
+    [CMSOrderingClientsAudit].[ContactLastName] AS [ContactLastName], 
+    [CMSOrderingClientsAudit].[ContactEmail] AS [ContactEmail], 
+    [CMSOrderingClientsAudit].[ContactPhoneNo] AS [ContactPhoneNo], 
+    [CMSOrderingClientsAudit].[CompanyName] AS [CompanyName], 
+    [CMSOrderingClientsAudit].[CompanyAddress1] AS [CompanyAddress1], 
+    [CMSOrderingClientsAudit].[CompanyAddress2] AS [CompanyAddress2], 
+    [CMSOrderingClientsAudit].[CompanyAddressCity] AS [CompanyAddressCity], 
+    [CMSOrderingClientsAudit].[CompanyAddressState] AS [CompanyAddressState], 
+    [CMSOrderingClientsAudit].[CompanyAddressZip] AS [CompanyAddressZip], 
+    [CMSOrderingClientsAudit].[CompanyAddressCountry] AS [CompanyAddressCountry], 
+    [CMSOrderingClientsAudit].[CompanyType] AS [CompanyType], 
+    [CMSOrderingClientsAudit].[CompanyTypeDesc] AS [CompanyTypeDesc], 
+    [CMSOrderingClientsAudit].[AdditionalInstr] AS [AdditionalInstr], 
+    [CMSOrderingClientsAudit].[CompanyLatAddress] AS [CompanyLatAddress], 
+    [CMSOrderingClientsAudit].[CompanyLonAddress] AS [CompanyLonAddress], 
+    [CMSOrderingClientsAudit].[Style] AS [Style], 
+    [CMSOrderingClientsAudit].[Representing] AS [Representing], 
+    [CMSOrderingClientsAudit].[RepresentingDesc] AS [RepresentingDesc], 
+    [CMSOrderingClientsAudit].[Court] AS [Court], 
+    [CMSOrderingClientsAudit].[CauseNumber] AS [CauseNumber], 
+    [CMSOrderingClientsAudit].[TimeStamp] AS [TimeStamp], 
+    [CMSOrderingClientsAudit].[QueueType] AS [QueueType], 
+    [CMSOrderingClientsAudit].[IsProcessed] AS [IsProcessed], 
+    [CMSOrderingClientsAudit].[ErrorMsg] AS [ErrorMsg], 
+    [CMSOrderingClientsAudit].[ProcessedDate] AS [ProcessedDate], 
+    [CMSOrderingClientsAudit].[NumOfAttempts] AS [NumOfAttempts], 
+    [CMSOrderingClientsAudit].[UpdatedAt] AS [UpdatedAt], 
+    [CMSOrderingClientsAudit].[Operation] AS [Operation]
+    FROM [dbo].[CMSOrderingClientsAudit] AS [CMSOrderingClientsAudit]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CMSPayorDetailsAudit" EntityType="Self.CMSPayorDetailsAudit" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CMSPayorDetailsAudit].[Id] AS [Id], 
+    [CMSPayorDetailsAudit].[E3EID] AS [E3EID], 
+    [CMSPayorDetailsAudit].[KenticoID] AS [KenticoID], 
+    [CMSPayorDetailsAudit].[SubItemKenticoID] AS [SubItemKenticoID], 
+    [CMSPayorDetailsAudit].[MatterIndex] AS [MatterIndex], 
+    [CMSPayorDetailsAudit].[MatterNumber] AS [MatterNumber], 
+    [CMSPayorDetailsAudit].[ClientNumber] AS [ClientNumber], 
+    [CMSPayorDetailsAudit].[ClientName] AS [ClientName], 
+    [CMSPayorDetailsAudit].[PayorIndex] AS [PayorIndex], 
+    [CMSPayorDetailsAudit].[PayorName] AS [PayorName], 
+    [CMSPayorDetailsAudit].[FirstName] AS [FirstName], 
+    [CMSPayorDetailsAudit].[LastName] AS [LastName], 
+    [CMSPayorDetailsAudit].[Role] AS [Role], 
+    [CMSPayorDetailsAudit].[RoleDesc] AS [RoleDesc], 
+    [CMSPayorDetailsAudit].[Relationship] AS [Relationship], 
+    [CMSPayorDetailsAudit].[RelationshipDesc] AS [RelationshipDesc], 
+    [CMSPayorDetailsAudit].[PercentFee] AS [PercentFee], 
+    [CMSPayorDetailsAudit].[PhoneNumber] AS [PhoneNumber], 
+    [CMSPayorDetailsAudit].[Email] AS [Email], 
+    [CMSPayorDetailsAudit].[ClaimNumber] AS [ClaimNumber], 
+    [CMSPayorDetailsAudit].[ReferenceNumber] AS [ReferenceNumber], 
+    [CMSPayorDetailsAudit].[CorpType_CCC] AS [CorpType_CCC], 
+    [CMSPayorDetailsAudit].[Title_CCC] AS [Title_CCC], 
+    [CMSPayorDetailsAudit].[AddtlContactInfo_CCC] AS [AddtlContactInfo_CCC], 
+    [CMSPayorDetailsAudit].[PONumber_CCC] AS [PONumber_CCC], 
+    [CMSPayorDetailsAudit].[Policy_CCC] AS [Policy_CCC], 
+    [CMSPayorDetailsAudit].[UMR_CCC] AS [UMR_CCC], 
+    [CMSPayorDetailsAudit].[File_CCC] AS [File_CCC], 
+    [CMSPayorDetailsAudit].[Tracking_CCC] AS [Tracking_CCC], 
+    [CMSPayorDetailsAudit].[Street] AS [Street], 
+    [CMSPayorDetailsAudit].[City] AS [City], 
+    [CMSPayorDetailsAudit].[County] AS [County], 
+    [CMSPayorDetailsAudit].[State] AS [State], 
+    [CMSPayorDetailsAudit].[ZipCode] AS [ZipCode], 
+    [CMSPayorDetailsAudit].[Country] AS [Country], 
+    [CMSPayorDetailsAudit].[LatAddress] AS [LatAddress], 
+    [CMSPayorDetailsAudit].[LonAddress] AS [LonAddress], 
+    [CMSPayorDetailsAudit].[MattPayorID] AS [MattPayorID], 
+    [CMSPayorDetailsAudit].[MattPayorDetID] AS [MattPayorDetID], 
+    [CMSPayorDetailsAudit].[PayorID] AS [PayorID], 
+    [CMSPayorDetailsAudit].[PayorSiteIndex] AS [PayorSiteIndex], 
+    [CMSPayorDetailsAudit].[PayorAddrIndex] AS [PayorAddrIndex], 
+    [CMSPayorDetailsAudit].[PaymentAuthority] AS [PaymentAuthority], 
+    [CMSPayorDetailsAudit].[TimeStamp] AS [TimeStamp], 
+    [CMSPayorDetailsAudit].[SvcOp] AS [SvcOp], 
+    [CMSPayorDetailsAudit].[QueueType] AS [QueueType], 
+    [CMSPayorDetailsAudit].[IsProcessed] AS [IsProcessed], 
+    [CMSPayorDetailsAudit].[ErrorMsg] AS [ErrorMsg], 
+    [CMSPayorDetailsAudit].[ProcessedDate] AS [ProcessedDate], 
+    [CMSPayorDetailsAudit].[NumOfAttempts] AS [NumOfAttempts], 
+    [CMSPayorDetailsAudit].[UpdatedAt] AS [UpdatedAt], 
+    [CMSPayorDetailsAudit].[Operation] AS [Operation]
+    FROM [dbo].[CMSPayorDetailsAudit] AS [CMSPayorDetailsAudit]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CMSRefLookup" EntityType="Self.CMSRefLookup" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CMSRefLookup].[RefNumId] AS [RefNumId], 
+    [CMSRefLookup].[RefType] AS [RefType]
+    FROM [dbo].[CMSRefLookup] AS [CMSRefLookup]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

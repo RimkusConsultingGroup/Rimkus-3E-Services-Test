@@ -1,0 +1,9 @@
+ <CftWorkflowTracking>
+                               
+		<CftWorkflowStep />
+		<StepOwner />
+		<StartTime>0001-01-02T00:00:00</StartTime>
+		<FinishTime>0001-01-02T00:00:00</FinishTime>
+		<ElapsedTime>NewValue</ElapsedTime>
+   
+</CftWorkflowTracking>

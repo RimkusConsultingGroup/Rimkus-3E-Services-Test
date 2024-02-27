@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="RCGCLAIMS_DEV01Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AppConfig">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KeyName" Type="nvarchar" MaxLength="50" />
+          <Property Name="DevValue" Type="nvarchar(max)" />
+          <Property Name="ProdValue" Type="nvarchar(max)" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Timestamp" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'RCGCLAIMS_DEV01.dbo.KeyVaults' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="KeyVaults">
+          <Key>
+            <PropertyRef Name="ClientKeyId" />
+          </Key>
+          <Property Name="ClientKeyId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ApiKey" Type="varchar" MaxLength="500" />
+          <Property Name="ClientName" Type="varchar" MaxLength="100" />
+          <Property Name="CreatedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="LMAssignment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ClaimUniqueId" Type="nvarchar" MaxLength="100" />
+          <Property Name="AssignmentSentDate" Type="date" />
+          <Property Name="BillingName" Type="nvarchar" MaxLength="100" />
+          <Property Name="BillingTitle" Type="nvarchar" MaxLength="100" />
+          <Property Name="BillingCompany" Type="nvarchar" MaxLength="100" />
+          <Property Name="BillingAddress" Type="nvarchar" MaxLength="150" />
+          <Property Name="BillingCity" Type="nvarchar" MaxLength="50" />
+          <Property Name="BillingState" Type="nvarchar" MaxLength="50" />
+          <Property Name="BillingZip" Type="nvarchar" MaxLength="20" />
+          <Property Name="BillingEmail" Type="nvarchar" MaxLength="200" />
+          <Property Name="BillingPhone" Type="nvarchar" MaxLength="25" />
+          <Property Name="BillingCell" Type="nvarchar" MaxLength="25" />
+          <Property Name="BillingFax" Type="nvarchar" MaxLength="25" />
+          <Property Name="ClientName" Type="nvarchar" MaxLength="100" />
+          <Property Name="ClaimNumber" Type="varchar" MaxLength="250" />
+          <Property Name="TPAFileNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="ClaimDescription" Type="nvarchar(max)" />
+          <Property Name="UnlistedService" Type="nvarchar(max)" />
+          <Property Name="OccurrenceDate" Type="date" />
+          <Property Name="OccurrenceLocation" Type="nvarchar" MaxLength="150" />
+          <Property Name="OccurrenceCity" Type="nvarchar" MaxLength="50" />
+          <Property Name="OccurrenceState" Type="nvarchar" MaxLength="50" />
+          <Property Name="OccurrenceZip" Type="nvarchar" MaxLength="20" />
+          <Property Name="InsuranceCompany" Type="nvarchar" MaxLength="150" />
+          <Property Name="InsuredName" Type="nvarchar" MaxLength="150" />
+          <Property Name="InsuredPhone" Type="nvarchar" MaxLength="25" />
+          <Property Name="InsuredCell" Type="nvarchar" MaxLength="25" />
+          <Property Name="AdjustmentCompany" Type="nvarchar" MaxLength="100" />
+          <Property Name="AdjustmentPhone" Type="nvarchar" MaxLength="25" />
+          <Property Name="AdjustorName" Type="nvarchar" MaxLength="100" />
+          <Property Name="AdjustorEmail" Type="nvarchar" MaxLength="200" />
+          <Property Name="InvoiceTo" Type="nvarchar" MaxLength="100" />
+          <Property Name="InvoiceCompany" Type="nvarchar" MaxLength="100" />
+          <Property Name="InvoicePhone" Type="nvarchar" MaxLength="25" />
+          <Property Name="InvoiceAddress" Type="nvarchar" MaxLength="150" />
+          <Property Name="InvoiceCity" Type="nvarchar" MaxLength="50" />
+          <Property Name="InvoiceState" Type="nvarchar" MaxLength="50" />
+          <Property Name="AdditionalData" Type="nvarchar(max)" />
+          <Property Name="TimeStamp" Type="datetime" />
+          <Property Name="Title" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="LMAssignmentServiceLogs">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ClaimNumber" Type="varchar" MaxLength="250" />
+          <Property Name="ClaimUniqueId" Type="varchar" MaxLength="250" />
+          <Property Name="SubmissionId" Type="int" />
+          <Property Name="Status" Type="varchar" MaxLength="250" />
+          <Property Name="Message" Type="nvarchar(max)" />
+          <Property Name="TimeStamp" Type="date" />
+        </EntityType>
+        <EntityType Name="LMClaimNotifications">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ClaimNumber" Type="nvarchar(max)" />
+          <Property Name="ClaimUniqueId" Type="nvarchar(max)" />
+          <Property Name="ExternalReference" Type="nvarchar(max)" />
+          <Property Name="PolicyNumber" Type="nvarchar(max)" />
+          <Property Name="FileNumber" Type="nvarchar(max)" />
+          <Property Name="Status" Type="nvarchar(max)" />
+          <Property Name="OriginatorCompanyID" Type="nvarchar(max)" />
+          <Property Name="OriginatorCompanyName" Type="nvarchar(max)" />
+          <Property Name="NotificationJson" Type="nvarchar(max)" />
+          <Property Name="TimeStamp" Type="datetime" />
+          <Property Name="ImportedAt" Type="datetime" />
+          <Property Name="NumOfAttempts" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="RCGCLAIMS_DEV01ModelStoreContainer">
+          <EntitySet Name="AppConfig" EntityType="Self.AppConfig" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LMAssignment" EntityType="Self.LMAssignment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LMAssignmentServiceLogs" EntityType="Self.LMAssignmentServiceLogs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LMClaimNotifications" EntityType="Self.LMClaimNotifications" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KeyVaults" EntityType="Self.KeyVaults" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [KeyVaults].[ClientKeyId] AS [ClientKeyId], 
+    [KeyVaults].[ApiKey] AS [ApiKey], 
+    [KeyVaults].[ClientName] AS [ClientName], 
+    [KeyVaults].[CreatedOn] AS [CreatedOn]
+    FROM [dbo].[KeyVaults] AS [KeyVaults]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RCGCLAIMS_DEV01Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="KeyVault">
+          <Key>
+            <PropertyRef Name="ClientKeyId" />
+          </Key>
+          <Property Name="ClientKeyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ApiKey" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="ClientName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="RCGCLAIMS_DEV01Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="KeyVaults" EntityType="Self.KeyVault" />
+          <EntitySet Name="LMClaimNotifications" EntityType="RCGCLAIMS_DEV01Model.LMClaimNotification" />
+          <EntitySet Name="LMAssignments" EntityType="RCGCLAIMS_DEV01Model.LMAssignment" />
+          <EntitySet Name="LMAssignmentServiceLogs" EntityType="RCGCLAIMS_DEV01Model.LMAssignmentServiceLog" />
+          <EntitySet Name="AppConfigs" EntityType="RCGCLAIMS_DEV01Model.AppConfig" />
+        </EntityContainer>
+        <EntityType Name="LMClaimNotification">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClaimNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ClaimUniqueId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ExternalReference" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PolicyNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FileNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OriginatorCompanyID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OriginatorCompanyName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NotificationJson" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+          <Property Name="ImportedAt" Type="DateTime" Precision="3" />
+          <Property Name="NumOfAttempts" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LMAssignment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClaimUniqueId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="AssignmentSentDate" Type="DateTime" Precision="0" />
+          <Property Name="BillingName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="BillingTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="BillingCompany" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="BillingAddress" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="BillingCity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BillingState" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BillingZip" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="BillingEmail" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="BillingPhone" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="BillingCell" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="BillingFax" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="ClientName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ClaimNumber" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="TPAFileNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ClaimDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UnlistedService" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OccurrenceDate" Type="DateTime" Precision="0" />
+          <Property Name="OccurrenceLocation" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="OccurrenceCity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OccurrenceState" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OccurrenceZip" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="InsuranceCompany" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="InsuredName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="InsuredPhone" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="InsuredCell" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="AdjustmentCompany" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="AdjustmentPhone" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="AdjustorName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="AdjustorEmail" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="InvoiceTo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="InvoiceCompany" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="InvoicePhone" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="InvoiceAddress" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="InvoiceCity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InvoiceState" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AdditionalData" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+          <Property Name="Title" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="LMAssignmentServiceLog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClaimNumber" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="ClaimUniqueId" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="SubmissionId" Type="Int32" />
+          <Property Name="Status" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TimeStamp" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="AppConfig">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KeyName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DevValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ProdValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Timestamp" Type="DateTime" Precision="3" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="RCGCLAIMS_DEV01ModelStoreContainer" CdmEntityContainer="RCGCLAIMS_DEV01Entities">
+          <EntitySetMapping Name="KeyVaults">
+            <EntityTypeMapping TypeName="RCGCLAIMS_DEV01Model.KeyVault">
+              <MappingFragment StoreEntitySet="KeyVaults">
+                <ScalarProperty Name="ClientKeyId" ColumnName="ClientKeyId" />
+                <ScalarProperty Name="ApiKey" ColumnName="ApiKey" />
+                <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LMClaimNotifications">
+            <EntityTypeMapping TypeName="RCGCLAIMS_DEV01Model.LMClaimNotification">
+              <MappingFragment StoreEntitySet="LMClaimNotifications">
+                <ScalarProperty Name="NumOfAttempts" ColumnName="NumOfAttempts" />
+                <ScalarProperty Name="ImportedAt" ColumnName="ImportedAt" />
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+                <ScalarProperty Name="NotificationJson" ColumnName="NotificationJson" />
+                <ScalarProperty Name="OriginatorCompanyName" ColumnName="OriginatorCompanyName" />
+                <ScalarProperty Name="OriginatorCompanyID" ColumnName="OriginatorCompanyID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="FileNumber" ColumnName="FileNumber" />
+                <ScalarProperty Name="PolicyNumber" ColumnName="PolicyNumber" />
+                <ScalarProperty Name="ExternalReference" ColumnName="ExternalReference" />
+                <ScalarProperty Name="ClaimUniqueId" ColumnName="ClaimUniqueId" />
+                <ScalarProperty Name="ClaimNumber" ColumnName="ClaimNumber" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LMAssignments">
+            <EntityTypeMapping TypeName="RCGCLAIMS_DEV01Model.LMAssignment">
+              <MappingFragment StoreEntitySet="LMAssignment">
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+                <ScalarProperty Name="AdditionalData" ColumnName="AdditionalData" />
+                <ScalarProperty Name="InvoiceState" ColumnName="InvoiceState" />
+                <ScalarProperty Name="InvoiceCity" ColumnName="InvoiceCity" />
+                <ScalarProperty Name="InvoiceAddress" ColumnName="InvoiceAddress" />
+                <ScalarProperty Name="InvoicePhone" ColumnName="InvoicePhone" />
+                <ScalarProperty Name="InvoiceCompany" ColumnName="InvoiceCompany" />
+                <ScalarProperty Name="InvoiceTo" ColumnName="InvoiceTo" />
+                <ScalarProperty Name="AdjustorEmail" ColumnName="AdjustorEmail" />
+                <ScalarProperty Name="AdjustorName" ColumnName="AdjustorName" />
+                <ScalarProperty Name="AdjustmentPhone" ColumnName="AdjustmentPhone" />
+                <ScalarProperty Name="AdjustmentCompany" ColumnName="AdjustmentCompany" />
+                <ScalarProperty Name="InsuredCell" ColumnName="InsuredCell" />
+                <ScalarProperty Name="InsuredPhone" ColumnName="InsuredPhone" />
+                <ScalarProperty Name="InsuredName" ColumnName="InsuredName" />
+                <ScalarProperty Name="InsuranceCompany" ColumnName="InsuranceCompany" />
+                <ScalarProperty Name="OccurrenceZip" ColumnName="OccurrenceZip" />
+                <ScalarProperty Name="OccurrenceState" ColumnName="OccurrenceState" />
+                <ScalarProperty Name="OccurrenceCity" ColumnName="OccurrenceCity" />
+                <ScalarProperty Name="OccurrenceLocation" ColumnName="OccurrenceLocation" />
+                <ScalarProperty Name="OccurrenceDate" ColumnName="OccurrenceDate" />
+                <ScalarProperty Name="UnlistedService" ColumnName="UnlistedService" />
+                <ScalarProperty Name="ClaimDescription" ColumnName="ClaimDescription" />
+                <ScalarProperty Name="TPAFileNumber" ColumnName="TPAFileNumber" />
+                <ScalarProperty Name="ClaimNumber" ColumnName="ClaimNumber" />
+                <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+                <ScalarProperty Name="BillingFax" ColumnName="BillingFax" />
+                <ScalarProperty Name="BillingCell" ColumnName="BillingCell" />
+                <ScalarProperty Name="BillingPhone" ColumnName="BillingPhone" />
+                <ScalarProperty Name="BillingEmail" ColumnName="BillingEmail" />
+                <ScalarProperty Name="BillingZip" ColumnName="BillingZip" />
+                <ScalarProperty Name="BillingState" ColumnName="BillingState" />
+                <ScalarProperty Name="BillingCity" ColumnName="BillingCity" />
+                <ScalarProperty Name="BillingAddress" ColumnName="BillingAddress" />
+                <ScalarProperty Name="BillingCompany" ColumnName="BillingCompany" />
+                <ScalarProperty Name="BillingTitle" ColumnName="BillingTitle" />
+                <ScalarProperty Name="BillingName" ColumnName="BillingName" />
+                <ScalarProperty Name="AssignmentSentDate" ColumnName="AssignmentSentDate" />
+                <ScalarProperty Name="ClaimUniqueId" ColumnName="ClaimUniqueId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LMAssignmentServiceLogs">
+            <EntityTypeMapping TypeName="RCGCLAIMS_DEV01Model.LMAssignmentServiceLog">
+              <MappingFragment StoreEntitySet="LMAssignmentServiceLogs">
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="SubmissionId" ColumnName="SubmissionId" />
+                <ScalarProperty Name="ClaimUniqueId" ColumnName="ClaimUniqueId" />
+                <ScalarProperty Name="ClaimNumber" ColumnName="ClaimNumber" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AppConfigs">
+            <EntityTypeMapping TypeName="RCGCLAIMS_DEV01Model.AppConfig">
+              <MappingFragment StoreEntitySet="AppConfig">
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ProdValue" ColumnName="ProdValue" />
+                <ScalarProperty Name="DevValue" ColumnName="DevValue" />
+                <ScalarProperty Name="KeyName" ColumnName="KeyName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ffa3d60caa09440e8b38cd96b9d06d6f" Name="Diagram1">
+        <EntityTypeShape EntityType="TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSAdditionalParty" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSAssignmentJob" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSAssignment" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSCoConsultant" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSCustomerProfile" Width="1.5" PointX="6.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSDynamics365Configuration" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSIncidentLocation" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSKenticoAssignmentCopy" Width="1.5" PointX="8.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSKenticoAssignmentRel" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSKenticoCustomerCopy" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSKenticoCustomerRel" Width="1.5" PointX="10.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSKenticoSubEntityRel" Width="1.5" PointX="10.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSKenticoSubEntityRelAudit" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSKeyVault" Width="1.5" PointX="12.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSOrderingClient" Width="1.5" PointX="6.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSPayorDetail" Width="1.5" PointX="12.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSAdditionalPartiesAudit" Width="1.5" PointX="8.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSAssignmentsAudit" Width="1.5" PointX="0.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSCoConsultantsAudit" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSCustomerProfileAudit" Width="1.5" PointX="14.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSIncidentLocationsAudit" Width="1.5" PointX="14.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSKenticoAssignmentRelAudit" Width="1.5" PointX="16.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSKenticoConfiguration" Width="1.5" PointX="16.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSKenticoConfigurationAudit" Width="1.5" PointX="16.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSKenticoCustomerRelAudit" Width="1.5" PointX="18.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSOrderingClientsAudit" Width="1.5" PointX="18.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSPayorDetailsAudit" Width="1.5" PointX="18.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSRefLookup" Width="1.5" PointX="8.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TE3EEntityFramework.Datasource.RCGKENTCMS.DataModel.CMSOfficeEmailLookup" Width="1.5" PointX="11.375" PointY="19.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

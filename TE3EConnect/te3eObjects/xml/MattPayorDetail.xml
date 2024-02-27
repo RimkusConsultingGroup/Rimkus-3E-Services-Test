@@ -1,0 +1,31 @@
+<MattPayorDetail>
+                                                    <Payor />
+                                                    <Site />
+                                                    <IsDefault>1</IsDefault>
+                                                    <PctFee>1</PctFee>
+                                                    <PctHCo>1</PctHCo>
+                                                    <PctSCo>1</PctSCo>
+                                                    <PctTax>1</PctTax>
+                                                    <PctInt>1</PctInt>
+                                                    <PctBOA>1</PctBOA>
+                                                    <PctOth>1</PctOth>
+                                                    <StmtSite />
+                                                    <ForAttentionOf>NewValue</ForAttentionOf>
+                                                    <RefNumber>NewValue</RefNumber>
+                                                    <FeeRate />
+                                                    <CftRole_CCC />
+                                                    <EntityContact_CCC />
+                                                    <CftRelationship_CCC />
+                                                    <ClaimNum_CCC>NewValue</ClaimNum_CCC>
+                                                    <Contact_CCC>NewValue</Contact_CCC>
+                                                    <CorpType_CCC />
+                                                    <Email_CCC>NewValue</Email_CCC>
+                                                    <PhoneNum_CCC>NewValue</PhoneNum_CCC>
+                                                    <Title_CCC>NewValue</Title_CCC>
+                                                    <Fax_CCC>NewValue</Fax_CCC>
+                                                    <MobileNum_CCC>NewValue</MobileNum_CCC>
+                                                    <IsDeposition_CCC>1</IsDeposition_CCC>
+                                                    <AddtlContactInfo_CCC>NewValue</AddtlContactInfo_CCC>
+                                                    <DepoRetainer_CCC>1</DepoRetainer_CCC>
+                                            
+                                            </MattPayorDetail>

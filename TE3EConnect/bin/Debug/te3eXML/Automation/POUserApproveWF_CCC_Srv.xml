@@ -1,0 +1,6 @@
+<POUserApproveWF_CCC xmlns="http://elite.com/schemas/transaction/process/write/POUserApproveWF_CCC">
+  <Initialize xmlns="http://elite.com/schemas/transaction/object/write/POReq">
+    @AddPOUserApproveWF_CCC
+  </Initialize>
+</POUserApproveWF_CCC>
+

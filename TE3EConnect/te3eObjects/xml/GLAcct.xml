@@ -1,0 +1,47 @@
+<GLAcct>
+    <GLAcctID>2dd07d59-f23d-4084-9889-408dbc82edb0</GLAcctID>
+    <AcctIndex>1</AcctIndex>
+    <Description>Compass Operating Account - Default - Default - Rimkus Consulting Group, Inc.</Description>
+    <Timekeeper />
+    <Number />
+    <ExportGLNum />
+    <IsControl>0</IsControl>
+    <IsActive>1</IsActive>
+    <IsRollup>0</IsRollup>
+    <IsParent>0</IsParent>
+    <IsAggregate>0</IsAggregate>
+    <GLNatural>b2348ba7-1aaa-4a3b-b243-d3b7b288914d</GLNatural>
+    <GLNat>1135</GLNat>
+    <GLLocal />
+    <NxUnit>01</NxUnit>
+    <Description>Rimkus Consulting Group, Inc.</Description>
+    <RestrictCurr />
+    <GLArrangement />
+    <GLValue />
+    <GLUnit>c4222503-3398-4b47-b3a3-0490a07ca593</GLUnit>
+    <GLValue>01</GLValue>
+    <GLOffice>7343b6fe-856b-464a-ac48-16841fd0d571</GLOffice>
+    <GLValue>000</GLValue>
+    <GLDepartment>ef40de67-55f3-4555-8cd0-877da9fded76</GLDepartment>
+    <GLValue>000</GLValue>
+    <GLPracticeGroup />
+    <GLValue />
+    <GLSection />
+    <GLValue />
+    <GLTimekeeper />
+    <GLValue />
+    <GLTitle />
+    <GLValue />
+    <GLUnitLocal />
+    <GLLocal />
+    <GLWorkType />
+    <GLValue />
+    <IsPostable>1</IsPostable>
+    <MaskedAlias>1135-000-000-01</MaskedAlias>
+    <UnMaskedAlias>113500000001</UnMaskedAlias>
+    <IsCreateZeroGJE>0</IsCreateZeroGJE>
+    <GLType />
+    <Description />
+    <GLActivity />
+    <GLValue />
+  </GLAcct>

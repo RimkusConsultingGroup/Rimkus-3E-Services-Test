@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="CftNewBizRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Client" type="xs:string" minOccurs="0" />
+        <xs:element name="Matter" type="xs:string" minOccurs="0" />
+        <xs:element name="RequestDateTime" type="xs:string" minOccurs="0" />
+        <xs:element name="CftSearchReason" type="xs:string" minOccurs="0" />
+        <xs:element name="Description" type="xs:string" minOccurs="0" />
+        <xs:element name="CurrentSearchID" type="xs:string" minOccurs="0" />
+        <xs:element name="IsCreatedMatter" type="xs:string" minOccurs="0" />
+        <xs:element name="IsCreatedClient" type="xs:string" minOccurs="0" />
+        <xs:element name="StartTime" type="xs:string" minOccurs="0" />
+        <xs:element name="CftNBRStatus" type="xs:string" minOccurs="0" />
+        <xs:element name="CurrentWorkflowStep" type="xs:string" minOccurs="0" />
+        <xs:element name="OrgProc" type="xs:string" minOccurs="0" />
+        <xs:element name="ClientSearchNameId" type="xs:string" minOccurs="0" />
+        <xs:element name="Submitter" type="xs:string" minOccurs="0" />
+        <xs:element name="FinalizeResult" type="xs:string" minOccurs="0" />
+        <xs:element name="DateRouted" type="xs:string" minOccurs="0" />
+        <xs:element name="DateDecided" type="xs:string" minOccurs="0" />
+        <xs:element name="DeclineReason" type="xs:string" minOccurs="0" />
+        <xs:element name="DeclineComment" type="xs:string" minOccurs="0" />
+        <xs:element name="DecidedBy" type="xs:string" minOccurs="0" />
+        <xs:element name="LoadNumber" type="xs:string" minOccurs="0" />
+        <xs:element name="LoadSource" type="xs:string" minOccurs="0" />
+        <xs:element name="LoadGroup" type="xs:string" minOccurs="0" />
+        <xs:element name="LoadBatchID" type="xs:string" minOccurs="0" />
+        <xs:element name="LoadFlag" type="xs:string" minOccurs="0" />
+        <xs:element name="CftSearchClient" type="xs:string" minOccurs="0" />
+        <xs:element name="CftResultView" type="xs:string" minOccurs="0" />
+        <xs:element name="FromCMCase" type="xs:string" minOccurs="0" />
+        <xs:element name="CmCase" type="xs:string" minOccurs="0" />
+        <xs:element name="AdminComments" type="xs:string" minOccurs="0" />
+        <xs:element name="IsNBIntake" type="xs:string" minOccurs="0" />
+        <xs:element name="Entity" type="xs:string" minOccurs="0" />
+        <xs:element name="CreatedEntityIndex" type="xs:string" minOccurs="0" />
+        <xs:element name="ClientMatterCreationRouteTo" type="xs:string" minOccurs="0" />
+        <xs:element name="IsCurrentClientMatterCreationStep" type="xs:string" minOccurs="0" />
+        <xs:element name="EstimatedNumResults" type="xs:string" minOccurs="0" />
+        <xs:element name="IsLargeResultSetAllowed" type="xs:string" minOccurs="0" />
+        <xs:element name="LastEditedBy" type="xs:string" minOccurs="0" />
+        <xs:element name="IsNoSearchNecessary" type="xs:string" minOccurs="0" />
+        <xs:element name="ClientMatterCreationStep" type="xs:string" minOccurs="0" />
+        <xs:element name="IsProspective_CCC" type="xs:string" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="CftNewBizRequest" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

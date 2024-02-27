@@ -1,0 +1,20 @@
+<CmInsurance>
+                                             
+                                                    <LossAmt>1</LossAmt>
+                                                    <IsSubrogationAllowed>1</IsSubrogationAllowed>
+                                                    <CmSettleRelList />
+                                                    <PolicyNumber>NewValue</PolicyNumber>
+                                                    <AccidentLocation>NewValue</AccidentLocation>
+                                                    <AdjusterName>NewValue</AdjusterName>
+                                                    <Currency />
+                                                    <ConvDate>0001-01-02T00:00:00</ConvDate>
+                                                    <InsuredEntity />
+                                                    <AdjusterEntity />
+                                                    <JudgeEntity />
+                                                    <SettledAmt>1</SettledAmt>
+                                                    <AuthorizedAmt>1</AuthorizedAmt>
+                                                    <FinalAmt>1</FinalAmt>
+                                                    <IsJuryTrialRequired>1</IsJuryTrialRequired>
+                                                    <CmDisposition />
+                                                    <ClosingNotes>NewValue</ClosingNotes>
+                                                </CmInsurance>

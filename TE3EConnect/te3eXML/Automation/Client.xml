@@ -1,0 +1,46 @@
+<Client_Srv_RC xmlns="http://elite.com/schemas/transaction/process/write/Client_Srv_RC">
+    <Initialize xmlns="http://elite.com/schemas/transaction/object/write/Client">
+        <Add>
+            <Client>
+                <Attributes>
+                    <Entity>@Entity</Entity>
+                    <CliType>@CliType</CliType>
+                    <CliStatusType>@CliStatusType</CliStatusType>
+                    <CliStatusDate>@CliStatusDate</CliStatusDate>
+                    <Currency>USD</Currency>
+					<OpenDate>@OpenDate</OpenDate>
+                    <InvoiceSite>@InvoiceSite</InvoiceSite> <!-- must be a site related to the client entity -->
+                    <Language>1033</Language>
+                    <LoadSource>Kentico</LoadSource>
+					<DisplayName>@DisplayName</DisplayName>
+					<OpenTkpr>@OpenTkpr</OpenTkpr> <!-- Administrative Division (46)-->
+                </Attributes>
+                <Children>
+                    <CliDate>
+                        <Add>
+                            <CliDate>
+                                <Attributes>
+                                    <EffStart>@EffStart</EffStart>
+                                    <Office>@Office</Office> <!-- Houston (001)-->
+                                    <RspTkpr>@RspTkpr</RspTkpr> <!-- Administrative Division (46)-->
+                                    <BillTkpr>@BillTkpr</BillTkpr> <!-- Administrative Division (46)-->
+                                    <SpvTkpr>@SpvTkpr</SpvTkpr> <!-- Administrative Division (46)-->
+                                    <NxStartDate>@EffStart</NxStartDate>
+                                </Attributes>
+                            </CliDate>
+                        </Add>
+                    </CliDate>
+                    <ClientSpecialInstructions_CCC>
+                        <Add>
+                            <ClientSpecialInstructions_CCC>
+                                <Attributes>
+                                    <ClientInstructions_CCC>000</ClientInstructions_CCC>
+                                </Attributes>
+                            </ClientSpecialInstructions_CCC>
+                        </Add>
+                    </ClientSpecialInstructions_CCC>
+                </Children>
+            </Client>
+        </Add>
+    </Initialize>
+</Client_Srv_RC>

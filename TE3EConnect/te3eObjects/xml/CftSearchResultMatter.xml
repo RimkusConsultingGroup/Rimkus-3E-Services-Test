@@ -1,0 +1,89 @@
+<CftSearchResultMatter>
+                                                
+                                                    <SearchTermGroupingLabel>NewValue</SearchTermGroupingLabel>
+                                                    <Name>NewValue</Name>
+                                                    <Text>NewValue</Text>
+                                                    <ProviderCode>NewValue</ProviderCode>
+                                                    <FullTextDocumentID>NewValue</FullTextDocumentID>
+                                                    <HitCount>1</HitCount>
+                                                    <TextLanguage>1</TextLanguage>
+                                                    <DataItemID>NewValue</DataItemID>
+                                                    <ArchCode>NewValue</ArchCode>
+                                                    <AttrCode>NewValue</AttrCode>
+                                                    <IsExcluded>1</IsExcluded>
+                                                    <PartialText>NewValue</PartialText>
+                                                    <WhereFoundSortOrder>1</WhereFoundSortOrder>
+                                                    <StatusSortString>NewValue</StatusSortString>
+                                                    <WhereFoundArchCode>NewValue</WhereFoundArchCode>
+                                                    <WhereFoundAttrCode>NewValue</WhereFoundAttrCode>
+                                                    <WhereFoundArchCaption>NewValue</WhereFoundArchCaption>
+                                                    <WhereFoundAttrCaption>NewValue</WhereFoundAttrCaption>
+                                                    <WhereFound>NewValue</WhereFound>
+                                                    <WhereFoundItemID>NewValue</WhereFoundItemID>
+                                                    <CftSearchTerm>NewValue</CftSearchTerm>
+                                                    <RiskImage />
+                                                    <SearchTermSortOrder>1</SearchTermSortOrder>
+                                                    <DebugInfo>NewValue</DebugInfo>
+                                                    <DetailItemID>NewValue</DetailItemID>
+                                                    <DetailArchCode>NewValue</DetailArchCode>
+                                                    <OpenMatters>1</OpenMatters>
+                                                    <ClosedMatters>1</ClosedMatters>
+                                                    <OpCLMatters>NewValue</OpCLMatters>
+                                                    <WhereFoundFrameworkItemID>NewValue</WhereFoundFrameworkItemID>
+                                                    <RiskflagText>NewValue</RiskflagText>
+                                                    <IsSelected>1</IsSelected>
+                                                    <Assessment>NewValue</Assessment>
+                                                    <Routed>NewValue</Routed>
+                                                    <IsFiltered>1</IsFiltered>
+                                                    <CorporateTreeImage />
+                                                    <SearchNo>1</SearchNo>
+                                                    <ClientName>NewValue</ClientName>
+                                                    <MatterName>NewValue</MatterName>
+                                                    <Role>NewValue</Role>
+                                                    <Relationship>NewValue</Relationship>
+                                                    <ConflictsContact>NewValue</ConflictsContact>
+                                                    <CftEntityOrMatterIndex>1</CftEntityOrMatterIndex>
+                                                    <EthicalWallImage />
+                                                    <CftClientIndex>1</CftClientIndex>
+                                                    <EntitySanctionLoad />
+                                                    <IsMattercentricHit>1</IsMattercentricHit>
+                                                    <DisplayNumber>NewValue</DisplayNumber>
+                                                    <IsRouteSelected>1</IsRouteSelected>
+                                                    <EntityIndex>1</EntityIndex>
+                                                    <MatterIndex>1</MatterIndex>
+                                                    <DisplayText>NewValue</DisplayText>
+                                                    <DisplayPartialText>NewValue</DisplayPartialText>
+                                                    <DisplayClientName>NewValue</DisplayClientName>
+                                                    <DisplayMatterName>NewValue</DisplayMatterName>
+                                                    <DisplayNum>NewValue</DisplayNum>
+                                                    <IsFilterAppliedToDetail>1</IsFilterAppliedToDetail>
+                                                    <TimekeeperContact />
+                                                    <NxUserContact />
+                                                    <DisplayOpenMattersCount>1</DisplayOpenMattersCount>
+                                                    <DisplayClosedMattersCount>1</DisplayClosedMattersCount>
+                                                    <DisplayEthicalWallImage />
+                                                    <DisplayCorporateTreeImage />
+                                                    <DisplayConflictsContact>NewValue</DisplayConflictsContact>
+                                                    <IsResultSelected>1</IsResultSelected>
+                                                    <CftRoleCode />
+                                                    <ThresholdIndicator>NewValue</ThresholdIndicator>
+                                                    <IsSearchHasFilter>1</IsSearchHasFilter>
+                                                    <IsForceRetrieveDetails>1</IsForceRetrieveDetails>
+                                                    <ResultsDifferenceImage />
+                                                    <CftSearchCompareStatus />
+                                                    <IsResultModified>1</IsResultModified>
+                                                    <SourceCollection>NewValue</SourceCollection>
+                                                    <IsExternalHit>1</IsExternalHit>
+                                                    <FTXSourceType />
+                                                    <PageNumber>1</PageNumber>
+                                                    <IsViewDifference>1</IsViewDifference>
+                                                    <CftFullTextResults>NewValue</CftFullTextResults>
+                                                    <LocationOfOccurenceTxt_CCC>NewValue</LocationOfOccurenceTxt_CCC>
+                                                    <DateOfOccurenceTxt_CCC>NewValue</DateOfOccurenceTxt_CCC>
+                                                    <MattIndex>1</MattIndex>
+                                                    <ClientIndex>1</ClientIndex>
+                                                    <ClientID>NewValue</ClientID>
+                                                    <ClientEntIndex>1</ClientEntIndex>
+                                                    <ClientEntityID>NewValue</ClientEntityID>
+                                                    <ClientEntityArchetypeCode>NewValue</ClientEntityArchetypeCode>
+</CftSearchResultMatter>

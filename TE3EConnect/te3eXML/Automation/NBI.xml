@@ -1,0 +1,62 @@
+<CftWFNewBizIntake_RC xmlns="http://elite.com/schemas/transaction/process/write/CftWFNewBizIntake_RC">
+    <Initialize xmlns="http://elite.com/schemas/transaction/object/write/CftNewBizRequest">
+        <Add>
+            <CftNewBizRequest>
+                <Attributes>
+                    <Client>@Client</Client>
+                    <Matter>@Matter</Matter> <!-- Matter must be related to the client -->
+                    <RequestDateTime>@RequestDateTime</RequestDateTime>
+                    <CftSearchReason>NewPartyExistingMatter</CftSearchReason> <!-- NewPartyExistingMatter must be selected to avoid matter creation resolution/popups, but must provide client and matter index -->
+                    <Description>@Description</Description>
+                </Attributes>
+                <Children>
+                    <CftNewBizSearchName>
+                        <Add>
+                            <CftNewBizSearchName>
+                                <Attributes>
+                                    <CftPartyType>@CftPartyType</CftPartyType> <!-- CftPartyType - EntityPerson, EntityOrg -->
+                                    <CftRelationshipCode>@CftRelationshipCode</CftRelationshipCode> <!-- CftRelationshipCode - Both (01) -->
+                                    <EntityDisplayName>@EntityDisplayName</EntityDisplayName>
+                                    <FirstName>@FirstName</FirstName>
+                                    <MiddleName>@MiddleName</MiddleName>
+                                    <LastName>@LastName</LastName>
+				    				<!-- <CompanyName>NewValue</CompanyName> Required when CftPartyType = EntityOrg-->
+                                    <Entity>@Entity</Entity>
+                                    <CftRole>@CftRole</CftRole>
+                                    <IsCreatedEntity>0</IsCreatedEntity>
+                                    <AddedRelatedParty>1</AddedRelatedParty>
+                                    <Resolved>1</Resolved>
+                                    <CurEntityIndex>Entity</CurEntityIndex>
+                                    <LinkType>Matter</LinkType>
+                                    <!--Notes>comments</Notes-->
+                                    <IsPhoneticSearch>0</IsPhoneticSearch>
+                                    <SortOrder>1</SortOrder>
+                                    <IsClientAsSearchName>1</IsClientAsSearchName>
+                                    <IsNotSearch>0</IsNotSearch>
+                                    <IsNotCreateLink>0</IsNotCreateLink>
+                                    <SearchTerm>@SearchTerm</SearchTerm> <!-- Diane &amp; Kotowski -->
+                                    <CftEntityType>@CftEntityType</CftEntityType> <!-- CftEntityType - Additional Party (300) -->
+                                    <!-- CftRelatedParty /-->
+                                    <FullTextSearchResultCount>1</FullTextSearchResultCount>
+                                </Attributes>
+                            </CftNewBizSearchName>
+                        </Add>
+                    </CftNewBizSearchName>
+
+					<CftNewBizAddress_CCC>
+						<Add>
+					    <CftNewBizAddress_CCC>
+							<Attributes>
+								<City>@City</City>
+								<Country>@Country</Country>
+								<Location>@Location</Location>
+								<State>@State</State>
+							</Attributes>
+						</CftNewBizAddress_CCC>
+						</Add>
+					</CftNewBizAddress_CCC>
+                </Children>
+            </CftNewBizRequest>
+        </Add>
+    </Initialize>
+</CftWFNewBizIntake_RC>
